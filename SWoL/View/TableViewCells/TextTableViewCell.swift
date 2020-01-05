@@ -12,6 +12,7 @@ import UIKit
     public static var xib: String = "TextTableViewCell"
     public static var identifier: String = "TextTableViewCell"
     public var completionCharacters: ((String?) -> Void)?
+    public var changedCharacters: ((String?) -> Void)?
 
     @IBOutlet public weak var txtField: UITextField!
     @IBInspectable var maxCharacters: Int = -1
@@ -47,13 +48,16 @@ import UIKit
         if maxCharacters != -1 && textField.text?.count !=  maxCharacters {
             textField.text = ""
         }
+        completionCharacters?(textField.text)
     }
 
     @objc private func textFieldEditingChanged(_ textField: UITextField) {
-        guard maxCharacters > 0, let text = textField.text else {
+        guard let text = textField.text else {
+            changedCharacters?(nil)
             return
         }
-        if text.count == maxCharacters {
+        changedCharacters?(text)
+        if maxCharacters > 0 && text.count == maxCharacters {
             completionCharacters?(text)
         }
     }
