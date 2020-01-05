@@ -35,7 +35,18 @@ public class AddingDeviceTableViewController: UITableViewController {
     @IBOutlet weak var footerTableViewCell: UITableViewCell!
     var footerText: String = "footer0".localized()
 
+    public weak var device: Device?
+
     public override func viewDidLoad() {
+        if let device = device {
+            self.navigationItem.title = "Editing".localized()
+            btnDone.title = "Save".localized()
+            btnDone.isEnabled = true
+            nameTableViewCell.txtText = device.name
+            ipTableViewCell.txtText = device.address
+            macTableViewCell.txtText = device.mac
+            portTableViewCell.txtText = String(device.port)
+        }
         ipTableViewCell.changedCharacters = checkDone(_:)
         macTableViewCell.changedCharacters = checkDone(_:)
         portTableViewCell.changedCharacters = checkDone(_:)
@@ -81,7 +92,11 @@ public class AddingDeviceTableViewController: UITableViewController {
         }
         mac = mac.replacingOccurrences(of: "-", with: ":").uppercased()
         do {
-            try DataController.shared().registerDevice(name: name, address: ip, macAddress: mac, port: port)
+            if let device = device {
+                try DataController.shared().editDevice(device, newAddress: ip, newMacAddress: mac, newPort: port)
+            } else {
+                try DataController.shared().registerDevice(name: name, address: ip, macAddress: mac, port: port)
+            }
             self.dismiss(animated: true)
         } catch let err {
             footerTableViewCell.textLabel?.tintColor = .red

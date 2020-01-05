@@ -3,25 +3,9 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="MJ2-rV-BEb">
-            <objects>
-                <viewController id="LBW-hd-47r" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5rd-vs-SUv">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="2KA-ne-xBQ"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jRw-a2-VBf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1345" y="-1115"/>
-        </scene>
         <!--Devices Menu-->
         <scene sceneID="TcF-bu-qGV">
             <objects>
@@ -30,11 +14,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="deviceCell" textLabel="eve-Hy-DhF" detailTextLabel="7kR-MV-6VA" imageView="FXn-ad-ozc" style="IBUITableViewCellStyleSubtitle" id="J8h-gd-GOO">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="detailButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="deviceCell" textLabel="eve-Hy-DhF" detailTextLabel="7kR-MV-6VA" imageView="FXn-ad-ozc" style="IBUITableViewCellStyleSubtitle" id="J8h-gd-GOO">
                                 <rect key="frame" x="20" y="55.5" width="374" height="55.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="J8h-gd-GOO" id="YIU-wQ-aek">
-                                    <rect key="frame" x="0.0" y="0.0" width="374" height="55.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="330" height="55.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eve-Hy-DhF">
@@ -57,7 +41,6 @@
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <color key="tintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
@@ -67,10 +50,10 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Devices Menu" largeTitleDisplayMode="always" id="zmM-bA-rcm">
-                        <barButtonItem key="leftBarButtonItem" title="info" image="info.circle" catalog="system" id="kwC-3b-SKU"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="kwC-3b-SKU"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="hXL-Xc-sho">
                             <connections>
-                                <segue destination="S7d-eC-h4w" kind="presentation" id="lkZ-wd-GDi"/>
+                                <segue destination="S7d-eC-h4w" kind="presentation" identifier="newDevice" id="lkZ-wd-GDi"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -90,7 +73,7 @@
                         <sections>
                             <tableViewSection headerTitle="Identifier" footerTitle="If no name is given the device will be called John." id="xPn-gD-aIA">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="vja-Sv-wGG" customClass="TextTableViewCell" customModule="SWoL" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="vja-Sv-wGG" customClass="TextTableViewCell" customModule="SWoL" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="55.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vja-Sv-wGG" id="FpE-uJ-uep">
@@ -98,7 +81,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Device name" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vCY-ES-V5E">
-                                                    <rect key="frame" x="20" y="11.5" width="374" height="21.5"/>
+                                                    <rect key="frame" x="20" y="11" width="394" height="22"/>
                                                     <accessibility key="accessibilityConfiguration" hint="The optional identifier to the device" label="Device name"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done" textContentType="nickname"/>
@@ -106,9 +89,9 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="vCY-ES-V5E" firstAttribute="leading" secondItem="FpE-uJ-uep" secondAttribute="leading" constant="20" symbolic="YES" id="4wJ-LR-rhp"/>
-                                                <constraint firstAttribute="trailing" secondItem="vCY-ES-V5E" secondAttribute="trailing" constant="20" symbolic="YES" id="X1q-hq-W6i"/>
+                                                <constraint firstAttribute="trailing" secondItem="vCY-ES-V5E" secondAttribute="trailing" id="X1q-hq-W6i"/>
                                                 <constraint firstItem="vCY-ES-V5E" firstAttribute="bottom" secondItem="FpE-uJ-uep" secondAttribute="bottomMargin" id="Xpc-xK-l25"/>
-                                                <constraint firstItem="vCY-ES-V5E" firstAttribute="top" secondItem="FpE-uJ-uep" secondAttribute="topMargin" constant="0.5" id="yOx-xd-KhD"/>
+                                                <constraint firstItem="vCY-ES-V5E" firstAttribute="top" secondItem="FpE-uJ-uep" secondAttribute="topMargin" id="yOx-xd-KhD"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -119,7 +102,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Connection Properties" id="SWW-QY-Sb6">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="7RF-1j-36M" customClass="TextTableViewCell" customModule="SWoL" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="7RF-1j-36M" customClass="TextTableViewCell" customModule="SWoL" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="167" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7RF-1j-36M" id="Srg-Qm-NHb">
@@ -127,16 +110,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Device IP" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2xf-Qb-t4e">
-                                                    <rect key="frame" x="20" y="11.5" width="374" height="21.5"/>
+                                                    <rect key="frame" x="20" y="11" width="394" height="22"/>
                                                     <accessibility key="accessibilityConfiguration" hint="The IP address of the device" label="Device IP"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="2xf-Qb-t4e" firstAttribute="bottom" secondItem="Srg-Qm-NHb" secondAttribute="bottomMargin" id="8WN-wo-TzR"/>
-                                                <constraint firstAttribute="trailing" secondItem="2xf-Qb-t4e" secondAttribute="trailing" constant="20" symbolic="YES" id="EWC-vW-fDY"/>
-                                                <constraint firstItem="2xf-Qb-t4e" firstAttribute="top" secondItem="Srg-Qm-NHb" secondAttribute="topMargin" constant="0.5" id="cFy-OC-7Zl"/>
+                                                <constraint firstAttribute="trailing" secondItem="2xf-Qb-t4e" secondAttribute="trailing" id="EWC-vW-fDY"/>
+                                                <constraint firstItem="2xf-Qb-t4e" firstAttribute="top" secondItem="Srg-Qm-NHb" secondAttribute="topMargin" id="cFy-OC-7Zl"/>
                                                 <constraint firstItem="2xf-Qb-t4e" firstAttribute="leading" secondItem="Srg-Qm-NHb" secondAttribute="leading" constant="20" symbolic="YES" id="pIo-Ah-EdD"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -144,7 +127,7 @@
                                             <outlet property="txtField" destination="2xf-Qb-t4e" id="Mly-hj-evN"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="KXk-6r-Wta" customClass="TextTableViewCell" customModule="SWoL" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="KXk-6r-Wta" customClass="TextTableViewCell" customModule="SWoL" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="210.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KXk-6r-Wta" id="7od-ZV-LI5">
@@ -152,7 +135,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Device MAC" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pt2-mC-pxv">
-                                                    <rect key="frame" x="20" y="11.5" width="374" height="21.5"/>
+                                                    <rect key="frame" x="20" y="11" width="394" height="22"/>
                                                     <accessibility key="accessibilityConfiguration" hint="The MAC address of the device" label="Device MAC"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                     <textInputTraits key="textInputTraits" returnKeyType="done"/>
@@ -160,16 +143,16 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Pt2-mC-pxv" firstAttribute="leading" secondItem="7od-ZV-LI5" secondAttribute="leading" constant="20" symbolic="YES" id="2CB-sh-4Tn"/>
-                                                <constraint firstItem="Pt2-mC-pxv" firstAttribute="top" secondItem="7od-ZV-LI5" secondAttribute="topMargin" constant="0.5" id="6JW-pZ-aJD"/>
+                                                <constraint firstItem="Pt2-mC-pxv" firstAttribute="top" secondItem="7od-ZV-LI5" secondAttribute="topMargin" id="6JW-pZ-aJD"/>
                                                 <constraint firstItem="Pt2-mC-pxv" firstAttribute="bottom" secondItem="7od-ZV-LI5" secondAttribute="bottomMargin" id="F0w-M2-ins"/>
-                                                <constraint firstAttribute="trailing" secondItem="Pt2-mC-pxv" secondAttribute="trailing" constant="20" symbolic="YES" id="jKm-7l-NrL"/>
+                                                <constraint firstAttribute="trailing" secondItem="Pt2-mC-pxv" secondAttribute="trailing" id="jKm-7l-NrL"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="txtField" destination="Pt2-mC-pxv" id="G9U-uY-I5Z"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="9GK-Mi-oFx" customClass="TextTableViewCell" customModule="SWoL" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="9GK-Mi-oFx" customClass="TextTableViewCell" customModule="SWoL" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="254" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9GK-Mi-oFx" id="X1c-9b-ddN">
@@ -177,16 +160,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Port" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1TY-A7-Dvi">
-                                                    <rect key="frame" x="20" y="11.5" width="374" height="21.5"/>
+                                                    <rect key="frame" x="20" y="11" width="394" height="22"/>
                                                     <accessibility key="accessibilityConfiguration" hint="The port of the router" label="Port"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="1TY-A7-Dvi" secondAttribute="trailing" constant="20" symbolic="YES" id="DGt-H7-bvk"/>
+                                                <constraint firstAttribute="trailing" secondItem="1TY-A7-Dvi" secondAttribute="trailing" id="DGt-H7-bvk"/>
                                                 <constraint firstItem="1TY-A7-Dvi" firstAttribute="leading" secondItem="X1c-9b-ddN" secondAttribute="leading" constant="20" symbolic="YES" id="Ozr-aQ-EFk"/>
-                                                <constraint firstItem="1TY-A7-Dvi" firstAttribute="top" secondItem="X1c-9b-ddN" secondAttribute="topMargin" constant="0.5" id="jcr-dO-EIh"/>
+                                                <constraint firstItem="1TY-A7-Dvi" firstAttribute="top" secondItem="X1c-9b-ddN" secondAttribute="topMargin" id="jcr-dO-EIh"/>
                                                 <constraint firstItem="1TY-A7-Dvi" firstAttribute="bottom" secondItem="X1c-9b-ddN" secondAttribute="bottomMargin" id="tQJ-Dt-g7U"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -227,8 +210,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Register new device" id="Clc-iE-gYG">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="LCs-0T-MMx"/>
-                        <barButtonItem key="rightBarButtonItem" enabled="NO" style="done" systemItem="done" id="hTk-p2-1Lv">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="LCs-0T-MMx">
+                            <connections>
+                                <action selector="cancelTap:" destination="Bt2-h4-cKe" id="kUb-Gp-e5j"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Done" style="done" id="hTk-p2-1Lv">
                             <connections>
                                 <action selector="doneTap:" destination="Bt2-h4-cKe" id="dQV-bC-BP5"/>
                             </connections>
@@ -286,6 +273,5 @@
     </scenes>
     <resources>
         <image name="desktopcomputer" catalog="system" width="64" height="50"/>
-        <image name="info.circle" catalog="system" width="64" height="60"/>
     </resources>
 </document>

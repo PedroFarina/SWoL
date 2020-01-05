@@ -20,3 +20,16 @@
 "footer6" = "Device IP are required to register a device.";
 "footer7" = "Success! :)";
 "footer8" = "Port must be numeric.";
+"Example Device " = "Example Device ";
+"Waking confirmation" = "Waking confirmation";
+"Do you want to wake " = "Do you want to wake ";
+"Yes!" = "Yes!";
+"Error!" = "Error!";
+"Success" = "Success";
+"Packet sent to " = "Packet sent to ";
+"No" = "No";
+"Delete" = "Delete";
+"Edit" = "Edit";
+"Deletion confirmation" = "Deletion confirmation";
+"Do you want to delete " = "Do you want to delete ";
+"Error!" = "Error!";

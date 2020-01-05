@@ -82,15 +82,15 @@ public class DataController {
         let oldMac = device.mac
         let oldPort = device.port
 
-        if address != nil {
+        if address != nil && address != device.address {
             device.address = address
             modified = true
         }
-        if macAddress != nil {
+        if macAddress != nil && macAddress != device.mac {
             device.mac = macAddress
             modified = true
         }
-        if let port = port {
+        if let port = port, port != device.port {
             device.port = port
             modified = true
         }
