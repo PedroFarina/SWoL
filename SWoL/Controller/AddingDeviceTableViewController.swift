@@ -36,9 +36,9 @@ public class AddingDeviceTableViewController: UITableViewController {
     var footerText: String = "footer0".localized()
 
     public override func viewDidLoad() {
-        ipTableViewCell.completionCharacters = checkDone(_:)
-        macTableViewCell.completionCharacters = checkDone(_:)
-        portTableViewCell.completionCharacters = checkDone(_:)
+        ipTableViewCell.changedCharacters = checkDone(_:)
+        macTableViewCell.changedCharacters = checkDone(_:)
+        portTableViewCell.changedCharacters = checkDone(_:)
         footerTableViewCell.textLabel?.text = footerText
         footerTableViewCell.accessibilityLabel = footerText
         footerTableViewCell.accessibilityNavigationStyle = .combined
@@ -74,11 +74,12 @@ public class AddingDeviceTableViewController: UITableViewController {
     @IBAction func doneTap(_ sender: UIBarButtonItem) {
         guard let name = nameTableViewCell.txtText,
             let ip = ipTableViewCell.txtText,
-            let mac = macTableViewCell.txtText,
+            var mac = macTableViewCell.txtText,
             let portString = portTableViewCell.txtText,
             let port = Int32(portString) else {
                 return
         }
+        mac = mac.replacingOccurrences(of: "-", with: ":").uppercased()
         do {
             try DataController.shared().registerDevice(name: name, address: ip, macAddress: mac, port: port)
             self.dismiss(animated: true)
@@ -87,5 +88,8 @@ public class AddingDeviceTableViewController: UITableViewController {
             footerTableViewCell.textLabel?.text = err.localizedDescription
             UIAccessibility.post(notification: .announcement, argument: footerTableViewCell)
         }
+    }
+    @IBAction func cancelTap(_ sender: Any) {
+        self.dismiss(animated: true)
     }
 }
