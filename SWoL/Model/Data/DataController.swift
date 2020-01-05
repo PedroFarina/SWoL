@@ -10,6 +10,10 @@ import CoreData
 import Foundation
 import UIKit
 
+public protocol DataWatcher: NSObject {
+    func dataUpdated()
+}
+
 public class DataController {
     enum DataError: Error {
         case FailedToParseNSObject(reason: String)
@@ -18,7 +22,27 @@ public class DataController {
 
     private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
-    private var _devices: [Device]
+    private var _devices: [Device] {
+        didSet {
+            for watcher in watchers {
+                watcher.dataUpdated()
+            }
+        }
+    }
+
+    private var watchers: [DataWatcher] = []
+
+    //MARK: Watchers
+    public func addAsWatcher(_ watcher: DataWatcher) {
+        watchers.append(watcher)
+    }
+    public func removeAsWatcher(_ watcher: DataWatcher) {
+        if let index = watchers.firstIndex(where: { (comp) -> Bool in
+            return watcher == comp
+        }) {
+            watchers.remove(at: index)
+        }
+    }
 
     //MARK: Devices
     public var devices: [Device] {
