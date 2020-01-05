@@ -15,6 +15,7 @@ public class DevicesTableViewController: UITableViewController, DataWatcher {
 
     public override func viewDidLoad() {
         tableView.tableFooterView = UIView()
+        navigationItem.leftBarButtonItem = self.editButtonItem
         DataController.shared().addAsWatcher(self)
     }
     public override func viewWillDisappear(_ animated: Bool) {
@@ -73,9 +74,8 @@ public class DevicesTableViewController: UITableViewController, DataWatcher {
 
         let edit = UIContextualAction(style: .normal, title: "Edit".localized()) { (_, _, success) in
             DispatchQueue.main.async {
-                self.selectedDevice = self.devices[indexPath.row]
+                self.editAction(on: self.devices[indexPath.row])
                 success(true)
-                self.performSegue(withIdentifier: "newDevice", sender: self)
             }
         }
         edit.backgroundColor = .systemOrange
@@ -86,9 +86,8 @@ public class DevicesTableViewController: UITableViewController, DataWatcher {
     }
 
     public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedDevice = devices[indexPath.row]
         if tableView.isEditing {
-            self.performSegue(withIdentifier: "newDevice", sender: self)
+            editAction(on: devices[indexPath.row])
         } else {
             wakeAction(on: devices[indexPath.row])
         }
@@ -111,6 +110,12 @@ public class DevicesTableViewController: UITableViewController, DataWatcher {
         cont.addAction(yes)
         cont.addAction(no)
         self.present(cont, animated: true)
+    }
+
+    private func editAction(on device:  Device) {
+        selectedDevice = device
+        self.performSegue(withIdentifier: "newDevice", sender: self)
+        selectedDevice = nil
     }
 
     private func wakeAction(on device: Device) {
