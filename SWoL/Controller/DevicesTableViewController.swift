@@ -102,7 +102,9 @@ public class DevicesTableViewController: UITableViewController, DataWatcher {
                 try DataController.shared().removeDevice(device)
             } catch let err {
                 DispatchQueue.main.async {
-                    self.present(UIAlertController(title: "Error!".localized(), message: err.localizedDescription, preferredStyle: .alert), animated: true)
+                    let error = UIAlertController(title: "Error!".localized(), message: err.localizedDescription, preferredStyle: .alert)
+                    error.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                    self.present(error, animated: true)
                 }
             }
         }
@@ -123,11 +125,15 @@ public class DevicesTableViewController: UITableViewController, DataWatcher {
         let yes = UIAlertAction(title: "Yes".localized(), style: .default) { (_) in
             if let err = Awake.target(device: device) {
                 DispatchQueue.main.async {
-                    self.present(UIAlertController(title: "Error!".localized(), message: err.localizedDescription, preferredStyle: .alert), animated: true)
+                    let error = UIAlertController(title: "Error!".localized(), message: err.localizedDescription, preferredStyle: .alert)
+                    error.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                    self.present(error, animated: true)
                 }
             } else {
                 DispatchQueue.main.async {
-                    self.present(UIAlertController(title: "Success".localized(), message: "Packet sent to  ".localized() + (device.getBroadcast() ?? ""), preferredStyle: .alert), animated: true)
+                    let success = UIAlertController(title: "Success".localized(), message: "Packet sent to  ".localized() + (device.getBroadcast() ?? ""), preferredStyle: .alert)
+                    success.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                    self.present(success, animated: true)
                 }
             }
         }
