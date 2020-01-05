@@ -92,6 +92,8 @@ public class DevicesTableViewController: UITableViewController, DataWatcher {
         } else {
             wakeAction(on: devices[indexPath.row])
         }
+
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 
     private func deleteAction(on device: Device) {

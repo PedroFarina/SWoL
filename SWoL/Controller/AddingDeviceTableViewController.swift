@@ -46,6 +46,7 @@ public class AddingDeviceTableViewController: UITableViewController {
             ipTableViewCell.txtText = device.address
             macTableViewCell.txtText = device.mac
             portTableViewCell.txtText = String(device.port)
+            footerText = "footer7".localized()
         }
         ipTableViewCell.changedCharacters = checkDone(_:)
         macTableViewCell.changedCharacters = checkDone(_:)
@@ -93,7 +94,7 @@ public class AddingDeviceTableViewController: UITableViewController {
         mac = mac.replacingOccurrences(of: "-", with: ":").uppercased()
         do {
             if let device = device {
-                try DataController.shared().editDevice(device, newAddress: ip, newMacAddress: mac, newPort: port)
+                try DataController.shared().editDevice(device, newName: name, newAddress: ip, newMacAddress: mac, newPort: port)
             } else {
                 try DataController.shared().registerDevice(name: name, address: ip, macAddress: mac, port: port)
             }

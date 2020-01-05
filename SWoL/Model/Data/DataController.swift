@@ -74,23 +74,29 @@ public class DataController {
             throw DataError.FailedToSaveContext(reason: "Could not save device.".localized())
         }
     }
-    public func editDevice(_ device:Device, newAddress address: String?,
+    public func editDevice(_ device:Device, newName name: String?, newAddress address: String?,
                            newMacAddress macAddress: String?,
                            newPort port: Int32?) throws {
         var modified: Bool = false
+        let oldName = device.name
         let oldAddress = device.address
         let oldMac = device.mac
         let oldPort = device.port
 
-        if address != nil && address != device.address {
+        if name != nil && name != oldName {
+            device.name = name
+            modified = true
+        }
+
+        if address != nil && address != oldAddress {
             device.address = address
             modified = true
         }
-        if macAddress != nil && macAddress != device.mac {
+        if macAddress != nil && macAddress != oldMac {
             device.mac = macAddress
             modified = true
         }
-        if let port = port, port != device.port {
+        if let port = port, port != oldPort {
             device.port = port
             modified = true
         }
@@ -98,6 +104,9 @@ public class DataController {
         if modified {
             do {
                 try saveContext()
+                for watcher in watchers {
+                    watcher.dataUpdated()
+                }
             } catch {
                 device.address = oldAddress
                 device.mac = oldMac
