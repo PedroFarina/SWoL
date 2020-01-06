@@ -20,29 +20,18 @@ public class DataController {
         case FailedToSaveContext(reason: String)
     }
 
-    private let context:NSManagedObjectContext = {
-        guard let modelURL = Bundle.init(for: DataController.self).url(forResource: "Swol", withExtension: "momd") else
-        {
-            fatalError("Failed to find data model")
-        }
+    lazy var persistentContainer: NSPersistentContainer = {
+        let container = NSCustomPersistentContainer(name: "Swol")
 
-        guard let mom = NSManagedObjectModel(contentsOf: modelURL) else {
-            fatalError("Failed to create model from file: \(modelURL)")
-        }
-        let psc = NSPersistentStoreCoordinator(managedObjectModel: mom)
-        let dirURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last
-        let fileURL = URL(string: "DataModel.sql", relativeTo: dirURL)
-        do {
-            try psc.addPersistentStore(ofType: NSSQLiteStoreType,
-                                       configurationName: nil,
-                                       at: fileURL, options: nil)
-        } catch {
-            fatalError("Error configuring persistent store: \(error)")
-        }
-        let moc = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
-        moc.persistentStoreCoordinator = psc
-        return moc
+        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+            if let error = error as NSError? {
+                fatalError("Unresolved error \(error), \(error.userInfo)")
+            }
+        })
+        return container
     }()
+
+    private lazy var context:NSManagedObjectContext = persistentContainer.viewContext
 
     private var _devices: [Device] = [] {
         didSet {

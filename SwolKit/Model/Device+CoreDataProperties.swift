@@ -29,7 +29,7 @@ extension Device {
         var newAddress = ""
         let groups = address.components(separatedBy: ".")
 
-        for i in 0...2 {
+        for i in 0..<min(3, groups.count) {
             newAddress += "\(groups[i])."
         }
         newAddress += "255"

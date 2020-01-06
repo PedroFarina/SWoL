@@ -8,8 +8,25 @@
 // code mainly from https://github.com/jesper-lindberg/Awake <- these guys are awesome
 
 import Foundation
+import Intents
+import os.log
 
 public class Awake {
+
+    private static func donateInteraction(for device: Device) {
+        let interaction = INInteraction(intent: device.intent, response: nil)
+        if let mac = device.mac {
+            interaction.identifier = mac
+        }
+
+        interaction.donate { (error) in
+            if let error = error as NSError? {
+                os_log("Interaction donation failed: %@", log: OSLog.default, type: .error, error)
+            } else {
+                os_log("Successfully donated interaction")
+            }
+        }
+    }
     
     public enum WakeError: Error {
         case SocketSetupFailed(reason: String)
@@ -19,6 +36,7 @@ public class Awake {
     }
 
     public static func target(device: Device) -> Error? {
+        donateInteraction(for: device)
         guard let broadcastAddress = device.getBroadcast(),
             let macAddress = device.mac else {
                 return WakeError.DeviceIncomplete(reason: "")
