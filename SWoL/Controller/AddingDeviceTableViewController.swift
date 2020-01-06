@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwolKit
 
 public class AddingDeviceTableViewController: UITableViewController {
 

@@ -9,16 +9,16 @@
 
 import Foundation
 
-class Awake {
+public class Awake {
     
-    enum WakeError: Error {
+    public enum WakeError: Error {
         case SocketSetupFailed(reason: String)
         case SetSocketOptionsFailed(reason: String)
         case SendMagicPacketFailed(reason: String)
         case DeviceIncomplete(reason: String)
     }
 
-    static func target(device: Device) -> Error? {
+    public static func target(device: Device) -> Error? {
         guard let broadcastAddress = device.getBroadcast(),
             let macAddress = device.mac else {
                 return WakeError.DeviceIncomplete(reason: "")

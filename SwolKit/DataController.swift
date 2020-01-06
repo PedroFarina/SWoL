@@ -1,6 +1,6 @@
 //
 //  DataController.swift
-//  SWoL
+//  SwolKit
 //
 //  Created by Pedro Giuliano Farina on 04/01/20.
 //  Copyright © 2020 Pedro Giuliano Farina. All rights reserved.
@@ -20,9 +20,31 @@ public class DataController {
         case FailedToSaveContext(reason: String)
     }
 
-    private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    private let context:NSManagedObjectContext = {
+        guard let modelURL = Bundle.init(for: DataController.self).url(forResource: "Swol", withExtension: "momd") else
+        {
+            fatalError("Failed to find data model")
+        }
 
-    private var _devices: [Device] {
+        guard let mom = NSManagedObjectModel(contentsOf: modelURL) else {
+            fatalError("Failed to create model from file: \(modelURL)")
+        }
+        let psc = NSPersistentStoreCoordinator(managedObjectModel: mom)
+        let dirURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last
+        let fileURL = URL(string: "DataModel.sql", relativeTo: dirURL)
+        do {
+            try psc.addPersistentStore(ofType: NSSQLiteStoreType,
+                                       configurationName: nil,
+                                       at: fileURL, options: nil)
+        } catch {
+            fatalError("Error configuring persistent store: \(error)")
+        }
+        let moc = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
+        moc.persistentStoreCoordinator = psc
+        return moc
+    }()
+
+    private var _devices: [Device] = [] {
         didSet {
             for watcher in watchers {
                 watcher.dataUpdated()
@@ -152,7 +174,7 @@ public class DataController {
         }
     }
 
-    class func shared() -> DataController {
+    public class func shared() -> DataController {
         return sharedDataController
     }
 
