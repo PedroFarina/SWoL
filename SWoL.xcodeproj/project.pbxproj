@@ -10,20 +10,21 @@
 		020208A923C2EDF400159427 /* SwolKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 020208A723C2EDF400159427 /* SwolKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		020208AC23C2EDF400159427 /* SwolKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 020208A523C2EDF400159427 /* SwolKit.framework */; };
 		020208AD23C2EDF400159427 /* SwolKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 020208A523C2EDF400159427 /* SwolKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		020208B423C2EE9E00159427 /* Swol.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 020208B223C2EE9E00159427 /* Swol.xcdatamodeld */; };
+		020208B423C2EE9E00159427 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 020208B223C2EE9E00159427 /* DataModel.xcdatamodeld */; };
 		020208B723C2EED000159427 /* Device+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020208B523C2EED000159427 /* Device+CoreDataClass.swift */; };
 		020208B823C2EED000159427 /* Device+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020208B623C2EED000159427 /* Device+CoreDataProperties.swift */; };
 		020208C423C2F0C600159427 /* Awake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D5786F23C03693001FA8A5 /* Awake.swift */; };
 		020208C623C2F36400159427 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020208C523C2F36400159427 /* DataController.swift */; };
 		020208CA23C2F41500159427 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020208C923C2F41500159427 /* StringExtension.swift */; };
+		0211BAB123C3FAD400867893 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 020208B223C2EE9E00159427 /* DataModel.xcdatamodeld */; };
+		0211BAB323C3FAE200867893 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 02C11C8C23C38AAC00920674 /* Intents.intentdefinition */; };
 		024024B723C0478E0065B8DD /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024024B623C0478E0065B8DD /* StringExtension.swift */; };
 		024024BC23C048500065B8DD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 024024BE23C048500065B8DD /* Localizable.strings */; };
 		024024C123C050830065B8DD /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024024C023C050830065B8DD /* TextTableViewCell.swift */; };
 		024024C323C050D70065B8DD /* TextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 024024C223C050D70065B8DD /* TextTableViewCell.xib */; };
 		028801BE23C398BA0079D8F6 /* NSUserActivities + IntentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028801B923C396D60079D8F6 /* NSUserActivities + IntentData.swift */; };
 		0289B22923C03DE300D610AB /* DevicesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0289B22823C03DE300D610AB /* DevicesTableViewController.swift */; };
-		02942E5423C3F4AB00EB2148 /* Swol.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 020208B223C2EE9E00159427 /* Swol.xcdatamodeld */; };
-		02942E5523C3F4AB00EB2148 /* Swol.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 020208B223C2EE9E00159427 /* Swol.xcdatamodeld */; };
+		02942E5523C3F4AB00EB2148 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 020208B223C2EE9E00159427 /* DataModel.xcdatamodeld */; };
 		02942E5823C3F6E800EB2148 /* NSPersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02942E5723C3F6E800EB2148 /* NSPersistentContainer.swift */; };
 		02C11C6B23C389EB00920674 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C11C6A23C389EB00920674 /* IntentHandler.swift */; };
 		02C11C8123C389EB00920674 /* SWoLIntents.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 02C11C6823C389EB00920674 /* SWoLIntents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -31,7 +32,6 @@
 		02C11C9023C38D7000920674 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 024024BE23C048500065B8DD /* Localizable.strings */; };
 		02C11C9123C38D7100920674 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 024024BE23C048500065B8DD /* Localizable.strings */; };
 		02C11C9623C38EDF00920674 /* Device + Intents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C11C8E23C38D5400920674 /* Device + Intents.swift */; };
-		02C11C9723C38F5400920674 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 02C11C8C23C38AAC00920674 /* Intents.intentdefinition */; };
 		02C11C9823C38F5400920674 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 02C11C8C23C38AAC00920674 /* Intents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
 		02C11C9D23C3932700920674 /* WakeDeviceIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C11C9A23C3915900920674 /* WakeDeviceIntentHandler.swift */; };
 		02D5785923C03684001FA8A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D5785823C03684001FA8A5 /* AppDelegate.swift */; };
@@ -163,7 +163,7 @@
 		020208B923C2EEF900159427 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				020208B223C2EE9E00159427 /* Swol.xcdatamodeld */,
+				020208B223C2EE9E00159427 /* DataModel.xcdatamodeld */,
 				020208B523C2EED000159427 /* Device+CoreDataClass.swift */,
 				020208B623C2EED000159427 /* Device+CoreDataProperties.swift */,
 			);
@@ -440,13 +440,13 @@
 				020208CA23C2F41500159427 /* StringExtension.swift in Sources */,
 				02942E5823C3F6E800EB2148 /* NSPersistentContainer.swift in Sources */,
 				020208C623C2F36400159427 /* DataController.swift in Sources */,
+				0211BAB323C3FAE200867893 /* Intents.intentdefinition in Sources */,
 				02C11C9623C38EDF00920674 /* Device + Intents.swift in Sources */,
 				02C11C9D23C3932700920674 /* WakeDeviceIntentHandler.swift in Sources */,
-				020208B423C2EE9E00159427 /* Swol.xcdatamodeld in Sources */,
+				020208B423C2EE9E00159427 /* DataModel.xcdatamodeld in Sources */,
 				020208B823C2EED000159427 /* Device+CoreDataProperties.swift in Sources */,
 				028801BE23C398BA0079D8F6 /* NSUserActivities + IntentData.swift in Sources */,
 				020208B723C2EED000159427 /* Device+CoreDataClass.swift in Sources */,
-				02C11C9723C38F5400920674 /* Intents.intentdefinition in Sources */,
 				020208C423C2F0C600159427 /* Awake.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -456,7 +456,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				02C11C8D23C38AAC00920674 /* Intents.intentdefinition in Sources */,
-				02942E5423C3F4AB00EB2148 /* Swol.xcdatamodeld in Sources */,
+				0211BAB123C3FAD400867893 /* DataModel.xcdatamodeld in Sources */,
 				02C11C6B23C389EB00920674 /* IntentHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -471,7 +471,7 @@
 				024024C123C050830065B8DD /* TextTableViewCell.swift in Sources */,
 				02D5785B23C03684001FA8A5 /* SceneDelegate.swift in Sources */,
 				02C11C9823C38F5400920674 /* Intents.intentdefinition in Sources */,
-				02942E5523C3F4AB00EB2148 /* Swol.xcdatamodeld in Sources */,
+				02942E5523C3F4AB00EB2148 /* DataModel.xcdatamodeld in Sources */,
 				02D8486D23C057ED00675A14 /* AddingDeviceTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -812,13 +812,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		020208B223C2EE9E00159427 /* Swol.xcdatamodeld */ = {
+		020208B223C2EE9E00159427 /* DataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				020208B323C2EE9E00159427 /* Swol.xcdatamodel */,
 			);
 			currentVersion = 020208B323C2EE9E00159427 /* Swol.xcdatamodel */;
-			path = Swol.xcdatamodeld;
+			path = DataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

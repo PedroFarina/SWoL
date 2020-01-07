@@ -15,7 +15,10 @@ class NSCustomPersistentContainer: NSPersistentContainer {
 
     override open class func defaultDirectoryURL() -> URL {
         var storeURL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.Swol")
-        storeURL = storeURL?.appendingPathComponent("Swol.sqlite")
+        storeURL = storeURL?.appendingPathComponent("Swol")
+        if let url = storeURL {
+            try? FileManager.default.createDirectory(at: url, withIntermediateDirectories: false, attributes: nil)
+        }
         return storeURL!
     }
 
