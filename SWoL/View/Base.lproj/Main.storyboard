@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView verifyAmbiguity="off" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLc-Je-XCp">
-                                <rect key="frame" x="0.0" y="88" width="414" height="2928"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="2876"/>
                                 <subviews>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mtJ-Nm-oKi" userLabel="ContentView">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="3050"/>
@@ -222,7 +222,7 @@ On the advanced settings, enable wake on Magic Packet settings.
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="detailButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="deviceCell" editingAccessoryType="disclosureIndicator" textLabel="eve-Hy-DhF" detailTextLabel="7kR-MV-6VA" imageView="FXn-ad-ozc" style="IBUITableViewCellStyleSubtitle" id="J8h-gd-GOO">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="detailButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="deviceCell" editingAccessoryType="disclosureIndicator" textLabel="eve-Hy-DhF" detailTextLabel="7kR-MV-6VA" imageView="Y0v-IX-tie" style="IBUITableViewCellStyleSubtitle" id="J8h-gd-GOO">
                                 <rect key="frame" x="20" y="55.5" width="374" height="55.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="J8h-gd-GOO" id="YIU-wQ-aek">
@@ -243,12 +243,13 @@ On the advanced settings, enable wake on Magic Packet settings.
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="desktopcomputer" catalog="system" id="FXn-ad-ozc">
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="desktopcomputer" catalog="system" id="Y0v-IX-tie">
                                             <rect key="frame" x="20" y="18" width="24" height="19"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="tintColor" red="0.24313725490196078" green="0.47843137254901957" blue="0.76078431372549016" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
@@ -258,8 +259,11 @@ On the advanced settings, enable wake on Magic Packet settings.
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Devices Menu" largeTitleDisplayMode="always" id="zmM-bA-rcm">
-                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="kwC-3b-SKU"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="kwC-3b-SKU">
+                            <color key="tintColor" red="0.24313725489999999" green="0.47843137250000001" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="hXL-Xc-sho">
+                            <color key="tintColor" red="0.24313725489999999" green="0.47843137250000001" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <segue destination="S7d-eC-h4w" kind="presentation" identifier="newDevice" id="lkZ-wd-GDi"/>
                             </connections>
@@ -422,11 +426,13 @@ On the advanced settings, enable wake on Magic Packet settings.
                     </tableView>
                     <navigationItem key="navigationItem" title="Register new device" id="Clc-iE-gYG">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="LCs-0T-MMx">
+                            <color key="tintColor" red="0.24313725489999999" green="0.47843137250000001" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <action selector="cancelTap:" destination="Bt2-h4-cKe" id="kUb-Gp-e5j"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" enabled="NO" title="Done" style="done" id="hTk-p2-1Lv">
+                            <color key="tintColor" red="0.24313725489999999" green="0.47843137250000001" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <action selector="doneTap:" destination="Bt2-h4-cKe" id="dQV-bC-BP5"/>
                             </connections>
@@ -450,11 +456,14 @@ On the advanced settings, enable wake on Magic Packet settings.
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FQx-7N-Rqh" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0b5-QJ-BIX">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="0b5-QJ-BIX">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KFB-gC-th0">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="urX-mC-Z5J" kind="relationship" relationship="rootViewController" id="g0M-QB-LNH"/>
                     </connections>
@@ -490,4 +499,5 @@ On the advanced settings, enable wake on Magic Packet settings.
         <image name="Windows 10 Wake on magic packet" width="396" height="451"/>
         <image name="desktopcomputer" catalog="system" width="64" height="50"/>
     </resources>
+    <color key="tintColor" red="0.24313725490196078" green="0.47843137254901957" blue="0.76078431372549016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

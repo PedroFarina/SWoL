@@ -1,0 +1,105 @@
+
+/* Class = "UITextField"; accessibilityHint = "The port of the router"; ObjectID = "1TY-A7-Dvi"; */
+"1TY-A7-Dvi.accessibilityHint" = "A porta de rede do roteador";
+
+/* Class = "UITextField"; accessibilityLabel = "Port"; ObjectID = "1TY-A7-Dvi"; */
+"1TY-A7-Dvi.accessibilityLabel" = "Porta de rede";
+
+/* Class = "UITextField"; placeholder = "Port"; ObjectID = "1TY-A7-Dvi"; */
+"1TY-A7-Dvi.placeholder" = "Porta de rede";
+
+/* Class = "UITextField"; accessibilityHint = "The IP address of the device"; ObjectID = "2xf-Qb-t4e"; */
+"2xf-Qb-t4e.accessibilityHint" = "O endereço IP do dispositivo";
+
+/* Class = "UITextField"; accessibilityLabel = "Device IP"; ObjectID = "2xf-Qb-t4e"; */
+"2xf-Qb-t4e.accessibilityLabel" = "Endereço IP";
+
+/* Class = "UITextField"; placeholder = "Device IP"; ObjectID = "2xf-Qb-t4e"; */
+"2xf-Qb-t4e.placeholder" = "Endereço IP";
+
+/* Class = "UINavigationItem"; title = "Quick Guide"; ObjectID = "4jd-OI-xGJ"; */
+"4jd-OI-xGJ.title" = "Guia Rápido";
+
+/* Class = "UILabel"; text = "Enabling in MacOS"; ObjectID = "6HV-fP-hFs"; */
+"6HV-fP-hFs.text" = "Ativando no MacOS";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "7kR-MV-6VA"; */
+"7kR-MV-6VA.text" = "Subtitulo";
+
+/* Class = "UINavigationItem"; title = "Register new device"; ObjectID = "Clc-iE-gYG"; */
+"Clc-iE-gYG.title" = "Registrar novo dispositivo";
+
+/* Class = "UILabel"; text = "WOL(Wake-on-Lan) is a pattern that allows a device to be turned on or woken by a network message. It relies on your router settings and a receiver proper configured on your device.\n\nThe easiest router setting is to foward(NAT) an UDP port as 9 to the broadcast address xxx.xxx.xxx.255. If your router arealdy has a configuration, you'll have to calculate its broadcast mask."; ObjectID = "GNl-Xg-Aud"; */
+"GNl-Xg-Aud.text" = "WOL(Wake-on-Lan) é um padrão que permite que um dispositivo seja ligado ou acordado por uma mensagem internética. Ele depende da configuração do seu roteador e um dispositivo que receberá a informação propriamente configurado.\n\nO jeito mais rápido de configurar o roteador é encaminhando(NAT) a porta de rede UDP 9 para o endereço de broadcast xxx.xxx.xxx.255. Se o seu roteador já tem uma configuração de máscaraa, você terá que calcular sua máscara de broadcast.";
+
+/* Class = "UILabel"; text = "In \"System and Preferences\", select \"Energy Saver\", and check for \"Wake for network access\""; ObjectID = "Lqv-wi-BS9"; */
+"Lqv-wi-BS9.text" = "Em \"Preferencias do sistema\", selecione \"Economia de Energia\", e marque a opção \"Acordar por internet\"";
+
+/* Class = "UITextField"; accessibilityHint = "The MAC address of the device"; ObjectID = "Pt2-mC-pxv"; */
+"Pt2-mC-pxv.accessibilityHint" = "O endereço MAC do dispositivo";
+
+/* Class = "UITextField"; accessibilityLabel = "Device MAC"; ObjectID = "Pt2-mC-pxv"; */
+"Pt2-mC-pxv.accessibilityLabel" = "Endereço MAC";
+
+/* Class = "UITextField"; placeholder = "Device MAC"; ObjectID = "Pt2-mC-pxv"; */
+"Pt2-mC-pxv.placeholder" = "Endereço MAC";
+
+/* Class = "UILabel"; text = "Now head to the Power Management settings, and enable all three checkboxes."; ObjectID = "Qu9-am-1Qs"; */
+"Qu9-am-1Qs.text" = "Agora vá para a configuração de energia, e marque todas as caixas de opção.";
+
+/* Class = "UITableViewSection"; headerTitle = "Connection Properties"; ObjectID = "SWW-QY-Sb6"; */
+"SWW-QY-Sb6.headerTitle" = "Propriedades de conexão";
+
+/* Class = "UIImageView"; accessibilityLabel = "MacOS Energy Saver with Wake for network access checked"; ObjectID = "UHd-DH-Sax"; */
+"UHd-DH-Sax.accessibilityLabel" = "Economia de energia MacOS com a opção de  acesso pela internet marcada";
+
+/* Class = "UILabel"; text = "Usually, Windows has a hidden setting that helps your computer startup faster arealdy enable. In most cases it also disables Wake On Lan features.\n\n• Head to the Control Panel\n• Power Options\n• Choose what the power buttons do\n• Change settings that are currently unavailable\n• Disable \"turn on fast startup\""; ObjectID = "bLv-Oi-RpP"; */
+"bLv-Oi-RpP.text" = "Normalmente, o Windows têm uma configuração escondida que ajuda o sistema operacional a ligar mais rapidamente. Na maioria dos casos, essa configuração também desativa o Wake-On-Lan..\n\n• Vá para o painel de controle\n• Opções de Energia\n• Escolher o que os botões de energia fazem\n• Mudar configurações que estão indisponíveis\n• Desabilitar \"iniciar o computador rapidamente\"";
+
+/* Class = "UIImageView"; accessibilityLabel = "Windows 10 Power Management with all checkboxes checked."; ObjectID = "dMA-wC-ZUz"; */
+"dMA-wC-ZUz.accessibilityLabel" = "Opções de energia do Windows 10 com todas opções marcadas.";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "eve-Hy-DhF"; */
+"eve-Hy-DhF.text" = "Titulo";
+
+/* Class = "UIBarButtonItem"; title = "Done"; ObjectID = "hTk-p2-1Lv"; */
+"hTk-p2-1Lv.title" = "OK";
+
+/* Class = "UIImageView"; accessibilityLabel = "MacOS advanced network settings showing IP settings"; ObjectID = "jR0-aB-kVl"; */
+"jR0-aB-kVl.accessibilityLabel" = "Configurações avançadas de internet do MacOS mostrando o endereço IP";
+
+/* Class = "UILabel"; text = "It will also require the IP and the Mac address of the device. Which can also be found in \"System and Preferences\", \"Network\" then \"Advanced\""; ObjectID = "l9g-As-N0r"; */
+"l9g-As-N0r.text" = "Também será necessário o endereço IP e MAC do dispositivo. Que podem ser  encontrados em \"Preferencias do Sistema\", \"Rede\" e depois \"Avançado\".";
+
+/* Class = "UILabel"; text = "Enabling in Windows 7 or later"; ObjectID = "lDz-9u-SY4"; */
+"lDz-9u-SY4.text" = "Ativando no Windows 7 ou 10";
+
+/* Class = "UITableViewCell"; accessibilityHint = "The states of the filled informations."; ObjectID = "pEF-1w-mvG"; */
+"pEF-1w-mvG.accessibilityHint" = "Os estados das informações preenchidas.";
+
+/* Class = "UILabel"; text = "Footnote"; ObjectID = "rSu-fQ-hQc"; */
+"rSu-fQ-hQc.text" = "Footnote";
+
+/* Class = "UILabel"; text = "Firstly you have to make sure your motherboard is equiped with a receiver, and activate it in its BIOS settings. Once its activated there's a few extra steps to activate it in your OS.\n\n• Open \"Windows Settings\".\n• Open \"Network and Internet\" settings.\n• Click on \"Change adapter settings\".\n• Right click the network connection you want to enable/disable power management support and click on Properties.\n\nOn the advanced settings, enable wake on Magic Packet settings.\n"; ObjectID = "sAc-G0-NLW"; */
+"sAc-G0-NLW.text" = "Primeiramente você deve se certificar de que sua placa mãe suporta WOL(Wake on Lan) e ativar na BIOS. Uma vez ativado tem alguns passos a mais a seguir.\n\n• Abra \"Configurações do Windows\".\n• Selecione as configurações de \"Rede e internet\".\n• Clique em \"Mudar configurações do adaptador\".\n• Dê o clique da direita na conexão de  internet onde você deseja ativar ou desativar o WOL e clique em Propriedades.\n\nNas opções avançadas, ative a opção de acordar com pacote mágico.\n";
+
+/* Class = "UITextField"; accessibilityHint = "The optional identifier to the device"; ObjectID = "vCY-ES-V5E"; */
+"vCY-ES-V5E.accessibilityHint" = "O identificador opcional do dispositivo";
+
+/* Class = "UITextField"; accessibilityLabel = "Device name"; ObjectID = "vCY-ES-V5E"; */
+"vCY-ES-V5E.accessibilityLabel" = "Nome do dispositivo";
+
+/* Class = "UITextField"; placeholder = "Device name"; ObjectID = "vCY-ES-V5E"; */
+"vCY-ES-V5E.placeholder" = "Nome do dispositivo";
+
+/* Class = "UITableViewSection"; footerTitle = "If no name is given the device will be called John."; ObjectID = "xPn-gD-aIA"; */
+"xPn-gD-aIA.footerTitle" = "Se nenhum nome for preenchido, o dispositivo se chamará Cleber.";
+
+/* Class = "UITableViewSection"; headerTitle = "Identifier"; ObjectID = "xPn-gD-aIA"; */
+"xPn-gD-aIA.headerTitle" = "Identificador";
+
+/* Class = "UIImageView"; accessibilityLabel = "Windows 10 on advanced settings with Wake on Magic Packet enabled."; ObjectID = "xTe-bj-YU5"; */
+"xTe-bj-YU5.accessibilityLabel" = "Configurações avançadas do Windows 10 com a configuração de pacotes mágicos habilitada.";
+
+/* Class = "UINavigationItem"; title = "Devices Menu"; ObjectID = "zmM-bA-rcm"; */
+"zmM-bA-rcm.title" = "Dispositivos";

@@ -7,14 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		020208A923C2EDF400159427 /* SwolKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 020208A723C2EDF400159427 /* SwolKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		020208AC23C2EDF400159427 /* SwolKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 020208A523C2EDF400159427 /* SwolKit.framework */; };
 		020208AD23C2EDF400159427 /* SwolKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 020208A523C2EDF400159427 /* SwolKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		020208B423C2EE9E00159427 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 020208B223C2EE9E00159427 /* DataModel.xcdatamodeld */; };
 		020208B723C2EED000159427 /* Device+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020208B523C2EED000159427 /* Device+CoreDataClass.swift */; };
 		020208B823C2EED000159427 /* Device+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020208B623C2EED000159427 /* Device+CoreDataProperties.swift */; };
 		020208C423C2F0C600159427 /* Awake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D5786F23C03693001FA8A5 /* Awake.swift */; };
-		020208C623C2F36400159427 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020208C523C2F36400159427 /* DataController.swift */; };
 		020208CA23C2F41500159427 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020208C923C2F41500159427 /* StringExtension.swift */; };
 		0211BAB123C3FAD400867893 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 020208B223C2EE9E00159427 /* DataModel.xcdatamodeld */; };
 		0211BAB323C3FAE200867893 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 02C11C8C23C38AAC00920674 /* Intents.intentdefinition */; };
@@ -26,7 +24,9 @@
 		028801BE23C398BA0079D8F6 /* NSUserActivities + IntentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028801B923C396D60079D8F6 /* NSUserActivities + IntentData.swift */; };
 		0289B22923C03DE300D610AB /* DevicesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0289B22823C03DE300D610AB /* DevicesTableViewController.swift */; };
 		02942E5523C3F4AB00EB2148 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 020208B223C2EE9E00159427 /* DataModel.xcdatamodeld */; };
-		02942E5823C3F6E800EB2148 /* NSPersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02942E5723C3F6E800EB2148 /* NSPersistentContainer.swift */; };
+		02A7DC6323C4476C00ED7957 /* NSPersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02942E5723C3F6E800EB2148 /* NSPersistentContainer.swift */; };
+		02A7DC6423C4477600ED7957 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020208C523C2F36400159427 /* DataController.swift */; };
+		02A7DC6523C447B500ED7957 /* SwolKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 020208A723C2EDF400159427 /* SwolKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		02C11C6B23C389EB00920674 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C11C6A23C389EB00920674 /* IntentHandler.swift */; };
 		02C11C8123C389EB00920674 /* SWoLIntents.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 02C11C6823C389EB00920674 /* SWoLIntents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		02C11C8D23C38AAC00920674 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 02C11C8C23C38AAC00920674 /* Intents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
@@ -98,6 +98,9 @@
 		024024BD23C048500065B8DD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		024024C023C050830065B8DD /* TextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
 		024024C223C050D70065B8DD /* TextTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextTableViewCell.xib; sourceTree = "<group>"; };
+		024C602623C4309A00C1071D /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
+		024C602723C4309A00C1071D /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		024C602823C4309A00C1071D /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		028801B923C396D60079D8F6 /* NSUserActivities + IntentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSUserActivities + IntentData.swift"; sourceTree = "<group>"; };
 		0289B22823C03DE300D610AB /* DevicesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesTableViewController.swift; sourceTree = "<group>"; };
 		02942E5623C3F4F700EB2148 /* SWoLIntents.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SWoLIntents.entitlements; sourceTree = "<group>"; };
@@ -281,7 +284,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				020208A923C2EDF400159427 /* SwolKit.h in Headers */,
+				02A7DC6523C447B500ED7957 /* SwolKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +376,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = 02D5784C23C03684001FA8A5;
 			productRefGroup = 02D5785623C03684001FA8A5 /* Products */;
@@ -423,11 +427,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				020208CA23C2F41500159427 /* StringExtension.swift in Sources */,
-				02942E5823C3F6E800EB2148 /* NSPersistentContainer.swift in Sources */,
-				020208C623C2F36400159427 /* DataController.swift in Sources */,
+				02A7DC6323C4476C00ED7957 /* NSPersistentContainer.swift in Sources */,
 				0211BAB323C3FAE200867893 /* Intents.intentdefinition in Sources */,
 				02C11C9623C38EDF00920674 /* Device + Intents.swift in Sources */,
 				02C11C9D23C3932700920674 /* WakeDeviceIntentHandler.swift in Sources */,
+				02A7DC6423C4477600ED7957 /* DataController.swift in Sources */,
 				020208B423C2EE9E00159427 /* DataModel.xcdatamodeld in Sources */,
 				020208B823C2EED000159427 /* Device+CoreDataProperties.swift in Sources */,
 				028801BE23C398BA0079D8F6 /* NSUserActivities + IntentData.swift in Sources */,
@@ -482,6 +486,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				024024BD23C048500065B8DD /* en */,
+				024C602823C4309A00C1071D /* pt-BR */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -490,6 +495,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				02D5785F23C03684001FA8A5 /* Base */,
+				024C602623C4309A00C1071D /* pt-BR */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -498,6 +504,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				02D5786723C03685001FA8A5 /* Base */,
+				024C602723C4309A00C1071D /* pt-BR */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -526,6 +533,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = PGF.SwolKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -555,6 +563,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = PGF.SwolKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -606,6 +615,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -666,6 +676,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -723,6 +734,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SWoL/SWoL.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BVZY57RJZG;
 				INFOPLIST_FILE = SWoL/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -743,6 +755,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SWoL/SWoL.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BVZY57RJZG;
 				INFOPLIST_FILE = SWoL/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

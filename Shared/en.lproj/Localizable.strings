@@ -17,7 +17,7 @@
 "footer3" = "Port is required to register a device.";
 "footer4" = "Device IP and Device Mac are required to register a device.";
 "footer5" = "Device Mac is required to register a device.";
-"footer6" = "Device IP are required to register a device.";
+"footer6" = "Device IP is required to register a device.";
 "footer7" = "Success! :)";
 "footer8" = "Port must be numeric.";
 "Example Device " = "Example Device ";
@@ -33,4 +33,3 @@
 "Deletion confirmation" = "Deletion confirmation";
 "Do you want to delete " = "Do you want to delete ";
 "Error!" = "Error!";
-"Wake up time" = "Wake up time";
