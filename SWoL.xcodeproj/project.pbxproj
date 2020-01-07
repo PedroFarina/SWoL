@@ -18,7 +18,8 @@
 		020208CA23C2F41500159427 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020208C923C2F41500159427 /* StringExtension.swift */; };
 		0211BAB123C3FAD400867893 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 020208B223C2EE9E00159427 /* DataModel.xcdatamodeld */; };
 		0211BAB323C3FAE200867893 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 02C11C8C23C38AAC00920674 /* Intents.intentdefinition */; };
-		024024B723C0478E0065B8DD /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024024B623C0478E0065B8DD /* StringExtension.swift */; };
+		0211BAB423C4080000867893 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020208C923C2F41500159427 /* StringExtension.swift */; };
+		0211BAB623C4085F00867893 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0211BAB523C4085F00867893 /* DetailViewController.swift */; };
 		024024BC23C048500065B8DD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 024024BE23C048500065B8DD /* Localizable.strings */; };
 		024024C123C050830065B8DD /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024024C023C050830065B8DD /* TextTableViewCell.swift */; };
 		024024C323C050D70065B8DD /* TextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 024024C223C050D70065B8DD /* TextTableViewCell.xib */; };
@@ -93,7 +94,7 @@
 		020208B623C2EED000159427 /* Device+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Device+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		020208C523C2F36400159427 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		020208C923C2F41500159427 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
-		024024B623C0478E0065B8DD /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		0211BAB523C4085F00867893 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		024024BD23C048500065B8DD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		024024C023C050830065B8DD /* TextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
 		024024C223C050D70065B8DD /* TextTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextTableViewCell.xib; sourceTree = "<group>"; };
@@ -152,7 +153,6 @@
 				02D5786F23C03693001FA8A5 /* Awake.swift */,
 				02942E5723C3F6E800EB2148 /* NSPersistentContainer.swift */,
 				020208C523C2F36400159427 /* DataController.swift */,
-				020208C923C2F41500159427 /* StringExtension.swift */,
 				020208B923C2EEF900159427 /* Model */,
 				020208A723C2EDF400159427 /* SwolKit.h */,
 				020208A823C2EDF400159427 /* Info.plist */,
@@ -168,14 +168,6 @@
 				020208B623C2EED000159427 /* Device+CoreDataProperties.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		024024B823C0481E0065B8DD /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				024024B623C0478E0065B8DD /* StringExtension.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		024024BF23C050720065B8DD /* TableViewCells */ = {
@@ -195,14 +187,6 @@
 			path = Support;
 			sourceTree = "<group>";
 		};
-		0289B22A23C03DEC00D610AB /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				024024B823C0481E0065B8DD /* Extensions */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		0289B22B23C03DF500D610AB /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,6 +201,7 @@
 			children = (
 				0289B22823C03DE300D610AB /* DevicesTableViewController.swift */,
 				02D8486C23C057ED00675A14 /* AddingDeviceTableViewController.swift */,
+				0211BAB523C4085F00867893 /* DetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -224,6 +209,7 @@
 		02C11C6323C3888500920674 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				020208C923C2F41500159427 /* StringExtension.swift */,
 				028801B823C396C10079D8F6 /* Support */,
 				02C11C8C23C38AAC00920674 /* Intents.intentdefinition */,
 				024024BE23C048500065B8DD /* Localizable.strings */,
@@ -279,7 +265,6 @@
 				02C11C8923C38A6800920674 /* SWoL.entitlements */,
 				0289B22C23C03DF900D610AB /* Controller */,
 				0289B22B23C03DF500D610AB /* View */,
-				0289B22A23C03DEC00D610AB /* Model */,
 				02D5785823C03684001FA8A5 /* AppDelegate.swift */,
 				02D5785A23C03684001FA8A5 /* SceneDelegate.swift */,
 				02D5786423C03685001FA8A5 /* Assets.xcassets */,
@@ -465,11 +450,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				024024B723C0478E0065B8DD /* StringExtension.swift in Sources */,
+				0211BAB623C4085F00867893 /* DetailViewController.swift in Sources */,
 				0289B22923C03DE300D610AB /* DevicesTableViewController.swift in Sources */,
 				02D5785923C03684001FA8A5 /* AppDelegate.swift in Sources */,
 				024024C123C050830065B8DD /* TextTableViewCell.swift in Sources */,
 				02D5785B23C03684001FA8A5 /* SceneDelegate.swift in Sources */,
+				0211BAB423C4080000867893 /* StringExtension.swift in Sources */,
 				02C11C9823C38F5400920674 /* Intents.intentdefinition in Sources */,
 				02942E5523C3F4AB00EB2148 /* DataModel.xcdatamodeld in Sources */,
 				02D8486D23C057ED00675A14 /* AddingDeviceTableViewController.swift in Sources */,

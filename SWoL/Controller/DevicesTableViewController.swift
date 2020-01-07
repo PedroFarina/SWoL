@@ -96,6 +96,10 @@ public class DevicesTableViewController: UITableViewController, DataWatcher {
         tableView.deselectRow(at: indexPath, animated: true)
     }
 
+    public override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "detailTap", sender: self)
+    }
+
     private func deleteAction(on device: Device) {
         let cont = UIAlertController(title: "Deletion confirmation".localized(), message: "Do you want to delete ".localized() + (device.name ?? "John".localized()), preferredStyle: .alert)
         let yes = UIAlertAction(title: "Yes".localized(), style: .destructive) { (_) in
