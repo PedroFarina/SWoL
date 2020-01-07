@@ -9,7 +9,7 @@
 import Foundation
 import Intents
 
-public class MyWakeDeviceIntentHandler: NSObject, WakeDeviceIntentHandling {
+public class WakeDeviceIntentHandler: NSObject, WakeDeviceIntentHandling {
     public func handle(intent: WakeDeviceIntent, completion: @escaping (WakeDeviceIntentResponse) -> Void) {
         guard let device = Device.getDevice(from: intent),
             let intentName = intent.name else {

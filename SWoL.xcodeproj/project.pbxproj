@@ -7,34 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		020208AC23C2EDF400159427 /* SwolKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 020208A523C2EDF400159427 /* SwolKit.framework */; };
-		020208AD23C2EDF400159427 /* SwolKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 020208A523C2EDF400159427 /* SwolKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		020208B423C2EE9E00159427 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 020208B223C2EE9E00159427 /* DataModel.xcdatamodeld */; };
-		020208B723C2EED000159427 /* Device+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020208B523C2EED000159427 /* Device+CoreDataClass.swift */; };
-		020208B823C2EED000159427 /* Device+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020208B623C2EED000159427 /* Device+CoreDataProperties.swift */; };
-		020208C423C2F0C600159427 /* Awake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D5786F23C03693001FA8A5 /* Awake.swift */; };
-		020208CA23C2F41500159427 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020208C923C2F41500159427 /* StringExtension.swift */; };
-		0211BAB123C3FAD400867893 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 020208B223C2EE9E00159427 /* DataModel.xcdatamodeld */; };
-		0211BAB323C3FAE200867893 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 02C11C8C23C38AAC00920674 /* Intents.intentdefinition */; };
 		0211BAB423C4080000867893 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020208C923C2F41500159427 /* StringExtension.swift */; };
 		0211BAB623C4085F00867893 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0211BAB523C4085F00867893 /* DetailViewController.swift */; };
 		024024BC23C048500065B8DD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 024024BE23C048500065B8DD /* Localizable.strings */; };
 		024024C123C050830065B8DD /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024024C023C050830065B8DD /* TextTableViewCell.swift */; };
 		024024C323C050D70065B8DD /* TextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 024024C223C050D70065B8DD /* TextTableViewCell.xib */; };
-		028801BE23C398BA0079D8F6 /* NSUserActivities + IntentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028801B923C396D60079D8F6 /* NSUserActivities + IntentData.swift */; };
 		0289B22923C03DE300D610AB /* DevicesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0289B22823C03DE300D610AB /* DevicesTableViewController.swift */; };
 		02942E5523C3F4AB00EB2148 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 020208B223C2EE9E00159427 /* DataModel.xcdatamodeld */; };
-		02A7DC6323C4476C00ED7957 /* NSPersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02942E5723C3F6E800EB2148 /* NSPersistentContainer.swift */; };
-		02A7DC6423C4477600ED7957 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020208C523C2F36400159427 /* DataController.swift */; };
-		02A7DC6523C447B500ED7957 /* SwolKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 020208A723C2EDF400159427 /* SwolKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		02C11C6B23C389EB00920674 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C11C6A23C389EB00920674 /* IntentHandler.swift */; };
-		02C11C8123C389EB00920674 /* SWoLIntents.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 02C11C6823C389EB00920674 /* SWoLIntents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		02C11C8D23C38AAC00920674 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 02C11C8C23C38AAC00920674 /* Intents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
-		02C11C9023C38D7000920674 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 024024BE23C048500065B8DD /* Localizable.strings */; };
-		02C11C9123C38D7100920674 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 024024BE23C048500065B8DD /* Localizable.strings */; };
-		02C11C9623C38EDF00920674 /* Device + Intents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C11C8E23C38D5400920674 /* Device + Intents.swift */; };
+		02A1EF9523C44DA500625723 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A1EF9423C44DA500625723 /* IntentHandler.swift */; };
+		02A1EF9923C44DA500625723 /* SwolIntents.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 02A1EF9223C44DA500625723 /* SwolIntents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		02A1EF9D23C44DBC00625723 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 02C11C8C23C38AAC00920674 /* Intents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
+		02A7DC6F23C448C200ED7957 /* SwolBackEnd.h in Headers */ = {isa = PBXBuildFile; fileRef = 02A7DC6D23C448C200ED7957 /* SwolBackEnd.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		02A7DC7223C448C200ED7957 /* SwolBackEnd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02A7DC6B23C448C200ED7957 /* SwolBackEnd.framework */; };
+		02A7DC7323C448C200ED7957 /* SwolBackEnd.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 02A7DC6B23C448C200ED7957 /* SwolBackEnd.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		02A7DC7723C448CC00ED7957 /* Awake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D5786F23C03693001FA8A5 /* Awake.swift */; };
+		02A7DC7823C448CF00ED7957 /* NSPersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02942E5723C3F6E800EB2148 /* NSPersistentContainer.swift */; };
+		02A7DC7923C448D100ED7957 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020208C523C2F36400159427 /* DataController.swift */; };
+		02A7DC7A23C448D800ED7957 /* Device+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020208B523C2EED000159427 /* Device+CoreDataClass.swift */; };
+		02A7DC7B23C448DB00ED7957 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 020208B223C2EE9E00159427 /* DataModel.xcdatamodeld */; };
+		02A7DC7C23C448DD00ED7957 /* Device+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020208B623C2EED000159427 /* Device+CoreDataProperties.swift */; };
+		02A7DC7F23C4494C00ED7957 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020208C923C2F41500159427 /* StringExtension.swift */; };
+		02A7DC8023C4494F00ED7957 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 024024BE23C048500065B8DD /* Localizable.strings */; };
+		02A7DC8223C4498700ED7957 /* Device + Intents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C11C8E23C38D5400920674 /* Device + Intents.swift */; };
+		02A7DC8423C4498F00ED7957 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 02C11C8C23C38AAC00920674 /* Intents.intentdefinition */; };
+		02A7DC8823C44A2D00ED7957 /* NSUserActivities + IntentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028801B923C396D60079D8F6 /* NSUserActivities + IntentData.swift */; };
+		02A7DC8923C44AEF00ED7957 /* WakeDeviceIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C11C9A23C3915900920674 /* WakeDeviceIntentHandler.swift */; };
 		02C11C9823C38F5400920674 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 02C11C8C23C38AAC00920674 /* Intents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
-		02C11C9D23C3932700920674 /* WakeDeviceIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C11C9A23C3915900920674 /* WakeDeviceIntentHandler.swift */; };
 		02D5785923C03684001FA8A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D5785823C03684001FA8A5 /* AppDelegate.swift */; };
 		02D5785B23C03684001FA8A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D5785A23C03684001FA8A5 /* SceneDelegate.swift */; };
 		02D5786023C03684001FA8A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02D5785E23C03684001FA8A5 /* Main.storyboard */; };
@@ -44,19 +42,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		020208AA23C2EDF400159427 /* PBXContainerItemProxy */ = {
+		02A1EF9723C44DA500625723 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 02D5784D23C03684001FA8A5 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 020208A423C2EDF400159427;
-			remoteInfo = SwolKit;
+			remoteGlobalIDString = 02A1EF9123C44DA500625723;
+			remoteInfo = SwolIntents;
 		};
-		02C11C7F23C389EB00920674 /* PBXContainerItemProxy */ = {
+		02A7DC7023C448C200ED7957 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 02D5784D23C03684001FA8A5 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 02C11C6723C389EB00920674;
-			remoteInfo = SWoLIntents;
+			remoteGlobalIDString = 02A7DC6A23C448C200ED7957;
+			remoteInfo = SwolBackEnd;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -67,7 +65,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				020208AD23C2EDF400159427 /* SwolKit.framework in Embed Frameworks */,
+				02A7DC7323C448C200ED7957 /* SwolBackEnd.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -78,7 +76,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				02C11C8123C389EB00920674 /* SWoLIntents.appex in Embed App Extensions */,
+				02A1EF9923C44DA500625723 /* SwolIntents.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -86,9 +84,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		020208A523C2EDF400159427 /* SwolKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwolKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		020208A723C2EDF400159427 /* SwolKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwolKit.h; sourceTree = "<group>"; };
-		020208A823C2EDF400159427 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		020208B323C2EE9E00159427 /* Swol.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Swol.xcdatamodel; sourceTree = "<group>"; };
 		020208B523C2EED000159427 /* Device+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Device+CoreDataClass.swift"; sourceTree = "<group>"; };
 		020208B623C2EED000159427 /* Device+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Device+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -103,11 +98,14 @@
 		024C602823C4309A00C1071D /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		028801B923C396D60079D8F6 /* NSUserActivities + IntentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSUserActivities + IntentData.swift"; sourceTree = "<group>"; };
 		0289B22823C03DE300D610AB /* DevicesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesTableViewController.swift; sourceTree = "<group>"; };
-		02942E5623C3F4F700EB2148 /* SWoLIntents.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SWoLIntents.entitlements; sourceTree = "<group>"; };
 		02942E5723C3F6E800EB2148 /* NSPersistentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSPersistentContainer.swift; sourceTree = "<group>"; };
-		02C11C6823C389EB00920674 /* SWoLIntents.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SWoLIntents.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		02C11C6A23C389EB00920674 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
-		02C11C6C23C389EB00920674 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02A1EF9223C44DA500625723 /* SwolIntents.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SwolIntents.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		02A1EF9423C44DA500625723 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		02A1EF9623C44DA500625723 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02A1EF9F23C44E4B00625723 /* SwolIntents.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwolIntents.entitlements; sourceTree = "<group>"; };
+		02A7DC6B23C448C200ED7957 /* SwolBackEnd.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwolBackEnd.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		02A7DC6D23C448C200ED7957 /* SwolBackEnd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwolBackEnd.h; sourceTree = "<group>"; };
+		02A7DC6E23C448C200ED7957 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02C11C7323C389EB00920674 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
 		02C11C8923C38A6800920674 /* SWoL.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SWoL.entitlements; sourceTree = "<group>"; };
 		02C11C8C23C38AAC00920674 /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
@@ -125,14 +123,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		020208A223C2EDF400159427 /* Frameworks */ = {
+		02A1EF8F23C44DA500625723 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		02C11C6523C389EB00920674 /* Frameworks */ = {
+		02A7DC6823C448C200ED7957 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -143,26 +141,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				020208AC23C2EDF400159427 /* SwolKit.framework in Frameworks */,
+				02A7DC7223C448C200ED7957 /* SwolBackEnd.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		020208A623C2EDF400159427 /* SwolKit */ = {
-			isa = PBXGroup;
-			children = (
-				02D5786F23C03693001FA8A5 /* Awake.swift */,
-				02942E5723C3F6E800EB2148 /* NSPersistentContainer.swift */,
-				020208C523C2F36400159427 /* DataController.swift */,
-				020208B923C2EEF900159427 /* Model */,
-				020208A723C2EDF400159427 /* SwolKit.h */,
-				020208A823C2EDF400159427 /* Info.plist */,
-			);
-			path = SwolKit;
-			sourceTree = "<group>";
-		};
 		020208B923C2EEF900159427 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,27 +194,56 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		02A1EF9323C44DA500625723 /* SwolIntents */ = {
+			isa = PBXGroup;
+			children = (
+				02A1EF9F23C44E4B00625723 /* SwolIntents.entitlements */,
+				02A1EF9423C44DA500625723 /* IntentHandler.swift */,
+				02A1EF9623C44DA500625723 /* Info.plist */,
+			);
+			path = SwolIntents;
+			sourceTree = "<group>";
+		};
+		02A7DC6C23C448C200ED7957 /* SwolBackEnd */ = {
+			isa = PBXGroup;
+			children = (
+				02D5786F23C03693001FA8A5 /* Awake.swift */,
+				02A7DC8B23C44B3100ED7957 /* Data */,
+				02A7DC8A23C44B2400ED7957 /* Intents */,
+				028801B823C396C10079D8F6 /* Support */,
+				020208B923C2EEF900159427 /* Model */,
+				02A7DC6D23C448C200ED7957 /* SwolBackEnd.h */,
+				02A7DC6E23C448C200ED7957 /* Info.plist */,
+			);
+			path = SwolBackEnd;
+			sourceTree = "<group>";
+		};
+		02A7DC8A23C44B2400ED7957 /* Intents */ = {
+			isa = PBXGroup;
+			children = (
+				02C11C8E23C38D5400920674 /* Device + Intents.swift */,
+				02C11C9A23C3915900920674 /* WakeDeviceIntentHandler.swift */,
+			);
+			path = Intents;
+			sourceTree = "<group>";
+		};
+		02A7DC8B23C44B3100ED7957 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				02942E5723C3F6E800EB2148 /* NSPersistentContainer.swift */,
+				020208C523C2F36400159427 /* DataController.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		02C11C6323C3888500920674 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
 				020208C923C2F41500159427 /* StringExtension.swift */,
-				028801B823C396C10079D8F6 /* Support */,
 				02C11C8C23C38AAC00920674 /* Intents.intentdefinition */,
 				024024BE23C048500065B8DD /* Localizable.strings */,
-				02C11C8E23C38D5400920674 /* Device + Intents.swift */,
-				02C11C9A23C3915900920674 /* WakeDeviceIntentHandler.swift */,
 			);
 			path = Shared;
-			sourceTree = "<group>";
-		};
-		02C11C6923C389EB00920674 /* SWoLIntents */ = {
-			isa = PBXGroup;
-			children = (
-				02942E5623C3F4F700EB2148 /* SWoLIntents.entitlements */,
-				02C11C6A23C389EB00920674 /* IntentHandler.swift */,
-				02C11C6C23C389EB00920674 /* Info.plist */,
-			);
-			path = SWoLIntents;
 			sourceTree = "<group>";
 		};
 		02C11C7223C389EB00920674 /* Frameworks */ = {
@@ -245,8 +259,8 @@
 			children = (
 				02C11C6323C3888500920674 /* Shared */,
 				02D5785723C03684001FA8A5 /* SWoL */,
-				020208A623C2EDF400159427 /* SwolKit */,
-				02C11C6923C389EB00920674 /* SWoLIntents */,
+				02A7DC6C23C448C200ED7957 /* SwolBackEnd */,
+				02A1EF9323C44DA500625723 /* SwolIntents */,
 				02C11C7223C389EB00920674 /* Frameworks */,
 				02D5785623C03684001FA8A5 /* Products */,
 			);
@@ -256,8 +270,8 @@
 			isa = PBXGroup;
 			children = (
 				02D5785523C03684001FA8A5 /* SWoL.app */,
-				020208A523C2EDF400159427 /* SwolKit.framework */,
-				02C11C6823C389EB00920674 /* SWoLIntents.appex */,
+				02A7DC6B23C448C200ED7957 /* SwolBackEnd.framework */,
+				02A1EF9223C44DA500625723 /* SwolIntents.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -280,51 +294,51 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		020208A023C2EDF400159427 /* Headers */ = {
+		02A7DC6623C448C200ED7957 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02A7DC6523C447B500ED7957 /* SwolKit.h in Headers */,
+				02A7DC6F23C448C200ED7957 /* SwolBackEnd.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		020208A423C2EDF400159427 /* SwolKit */ = {
+		02A1EF9123C44DA500625723 /* SwolIntents */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 020208B123C2EDF400159427 /* Build configuration list for PBXNativeTarget "SwolKit" */;
+			buildConfigurationList = 02A1EF9A23C44DA500625723 /* Build configuration list for PBXNativeTarget "SwolIntents" */;
 			buildPhases = (
-				020208A023C2EDF400159427 /* Headers */,
-				020208A123C2EDF400159427 /* Sources */,
-				020208A223C2EDF400159427 /* Frameworks */,
-				020208A323C2EDF400159427 /* Resources */,
+				02A1EF8E23C44DA500625723 /* Sources */,
+				02A1EF8F23C44DA500625723 /* Frameworks */,
+				02A1EF9023C44DA500625723 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = SwolKit;
-			productName = SwolKit;
-			productReference = 020208A523C2EDF400159427 /* SwolKit.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		02C11C6723C389EB00920674 /* SWoLIntents */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 02C11C8523C389EB00920674 /* Build configuration list for PBXNativeTarget "SWoLIntents" */;
-			buildPhases = (
-				02C11C6423C389EB00920674 /* Sources */,
-				02C11C6523C389EB00920674 /* Frameworks */,
-				02C11C6623C389EB00920674 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = SWoLIntents;
-			productName = SWoLIntents;
-			productReference = 02C11C6823C389EB00920674 /* SWoLIntents.appex */;
+			name = SwolIntents;
+			productName = SwolIntents;
+			productReference = 02A1EF9223C44DA500625723 /* SwolIntents.appex */;
 			productType = "com.apple.product-type.app-extension";
+		};
+		02A7DC6A23C448C200ED7957 /* SwolBackEnd */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02A7DC7423C448C200ED7957 /* Build configuration list for PBXNativeTarget "SwolBackEnd" */;
+			buildPhases = (
+				02A7DC6623C448C200ED7957 /* Headers */,
+				02A7DC6723C448C200ED7957 /* Sources */,
+				02A7DC6823C448C200ED7957 /* Frameworks */,
+				02A7DC6923C448C200ED7957 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwolBackEnd;
+			productName = SwolBackEnd;
+			productReference = 02A7DC6B23C448C200ED7957 /* SwolBackEnd.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 		02D5785423C03684001FA8A5 /* SWoL */ = {
 			isa = PBXNativeTarget;
@@ -339,8 +353,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				020208AB23C2EDF400159427 /* PBXTargetDependency */,
-				02C11C8023C389EB00920674 /* PBXTargetDependency */,
+				02A7DC7123C448C200ED7957 /* PBXTargetDependency */,
+				02A1EF9823C44DA500625723 /* PBXTargetDependency */,
 			);
 			name = SWoL;
 			productName = SWoL;
@@ -357,11 +371,10 @@
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Pedro Giuliano Farina";
 				TargetAttributes = {
-					020208A423C2EDF400159427 = {
+					02A1EF9123C44DA500625723 = {
 						CreatedOnToolsVersion = 11.3;
-						LastSwiftMigration = 1130;
 					};
-					02C11C6723C389EB00920674 = {
+					02A7DC6A23C448C200ED7957 = {
 						CreatedOnToolsVersion = 11.3;
 					};
 					02D5785423C03684001FA8A5 = {
@@ -384,26 +397,25 @@
 			projectRoot = "";
 			targets = (
 				02D5785423C03684001FA8A5 /* SWoL */,
-				020208A423C2EDF400159427 /* SwolKit */,
-				02C11C6723C389EB00920674 /* SWoLIntents */,
+				02A7DC6A23C448C200ED7957 /* SwolBackEnd */,
+				02A1EF9123C44DA500625723 /* SwolIntents */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		020208A323C2EDF400159427 /* Resources */ = {
+		02A1EF9023C44DA500625723 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02C11C9023C38D7000920674 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		02C11C6623C389EB00920674 /* Resources */ = {
+		02A7DC6923C448C200ED7957 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02C11C9123C38D7100920674 /* Localizable.strings in Resources */,
+				02A7DC8023C4494F00ED7957 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,31 +434,30 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		020208A123C2EDF400159427 /* Sources */ = {
+		02A1EF8E23C44DA500625723 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				020208CA23C2F41500159427 /* StringExtension.swift in Sources */,
-				02A7DC6323C4476C00ED7957 /* NSPersistentContainer.swift in Sources */,
-				0211BAB323C3FAE200867893 /* Intents.intentdefinition in Sources */,
-				02C11C9623C38EDF00920674 /* Device + Intents.swift in Sources */,
-				02C11C9D23C3932700920674 /* WakeDeviceIntentHandler.swift in Sources */,
-				02A7DC6423C4477600ED7957 /* DataController.swift in Sources */,
-				020208B423C2EE9E00159427 /* DataModel.xcdatamodeld in Sources */,
-				020208B823C2EED000159427 /* Device+CoreDataProperties.swift in Sources */,
-				028801BE23C398BA0079D8F6 /* NSUserActivities + IntentData.swift in Sources */,
-				020208B723C2EED000159427 /* Device+CoreDataClass.swift in Sources */,
-				020208C423C2F0C600159427 /* Awake.swift in Sources */,
+				02A1EF9D23C44DBC00625723 /* Intents.intentdefinition in Sources */,
+				02A1EF9523C44DA500625723 /* IntentHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		02C11C6423C389EB00920674 /* Sources */ = {
+		02A7DC6723C448C200ED7957 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02C11C8D23C38AAC00920674 /* Intents.intentdefinition in Sources */,
-				0211BAB123C3FAD400867893 /* DataModel.xcdatamodeld in Sources */,
-				02C11C6B23C389EB00920674 /* IntentHandler.swift in Sources */,
+				02A7DC7723C448CC00ED7957 /* Awake.swift in Sources */,
+				02A7DC8223C4498700ED7957 /* Device + Intents.swift in Sources */,
+				02A7DC7F23C4494C00ED7957 /* StringExtension.swift in Sources */,
+				02A7DC8423C4498F00ED7957 /* Intents.intentdefinition in Sources */,
+				02A7DC8923C44AEF00ED7957 /* WakeDeviceIntentHandler.swift in Sources */,
+				02A7DC7C23C448DD00ED7957 /* Device+CoreDataProperties.swift in Sources */,
+				02A7DC7B23C448DB00ED7957 /* DataModel.xcdatamodeld in Sources */,
+				02A7DC7A23C448D800ED7957 /* Device+CoreDataClass.swift in Sources */,
+				02A7DC7923C448D100ED7957 /* DataController.swift in Sources */,
+				02A7DC7823C448CF00ED7957 /* NSPersistentContainer.swift in Sources */,
+				02A7DC8823C44A2D00ED7957 /* NSUserActivities + IntentData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,15 +480,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		020208AB23C2EDF400159427 /* PBXTargetDependency */ = {
+		02A1EF9823C44DA500625723 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 020208A423C2EDF400159427 /* SwolKit */;
-			targetProxy = 020208AA23C2EDF400159427 /* PBXContainerItemProxy */;
+			target = 02A1EF9123C44DA500625723 /* SwolIntents */;
+			targetProxy = 02A1EF9723C44DA500625723 /* PBXContainerItemProxy */;
 		};
-		02C11C8023C389EB00920674 /* PBXTargetDependency */ = {
+		02A7DC7123C448C200ED7957 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 02C11C6723C389EB00920674 /* SWoLIntents */;
-			targetProxy = 02C11C7F23C389EB00920674 /* PBXContainerItemProxy */;
+			target = 02A7DC6A23C448C200ED7957 /* SwolBackEnd */;
+			targetProxy = 02A7DC7023C448C200ED7957 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -512,102 +523,101 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		020208AF23C2EDF400159427 /* Debug */ = {
+		02A1EF9B23C44DA500625723 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = SwolIntents/SwolIntents.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = BVZY57RJZG;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = SwolKit/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				INFOPLIST_FILE = SwolIntents/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
+					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = PGF.SwolKit;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = PGF.SWoL.Intents;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SUPPORTS_MACCATALYST = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		020208B023C2EDF400159427 /* Release */ = {
+		02A1EF9C23C44DA500625723 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = SwolIntents/SwolIntents.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = BVZY57RJZG;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = SwolKit/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				INFOPLIST_FILE = SwolIntents/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
+					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = PGF.SwolKit;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = PGF.SWoL.Intents;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		02C11C8623C389EB00920674 /* Debug */ = {
+		02A7DC7523C448C200ED7957 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = SWoLIntents/SWoLIntents.entitlements;
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = BVZY57RJZG;
-				INFOPLIST_FILE = SWoLIntents/Info.plist;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SwolBackEnd/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
+					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = PGF.SWoL.SWoLIntents;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = PGF.SwolBackEnd;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		02C11C8723C389EB00920674 /* Release */ = {
+		02A7DC7623C448C200ED7957 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = SWoLIntents/SWoLIntents.entitlements;
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = BVZY57RJZG;
-				INFOPLIST_FILE = SWoLIntents/Info.plist;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SwolBackEnd/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
+					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = PGF.SWoL.SWoLIntents;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = PGF.SwolBackEnd;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -772,20 +782,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		020208B123C2EDF400159427 /* Build configuration list for PBXNativeTarget "SwolKit" */ = {
+		02A1EF9A23C44DA500625723 /* Build configuration list for PBXNativeTarget "SwolIntents" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				020208AF23C2EDF400159427 /* Debug */,
-				020208B023C2EDF400159427 /* Release */,
+				02A1EF9B23C44DA500625723 /* Debug */,
+				02A1EF9C23C44DA500625723 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		02C11C8523C389EB00920674 /* Build configuration list for PBXNativeTarget "SWoLIntents" */ = {
+		02A7DC7423C448C200ED7957 /* Build configuration list for PBXNativeTarget "SwolBackEnd" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				02C11C8623C389EB00920674 /* Debug */,
-				02C11C8723C389EB00920674 /* Release */,
+				02A7DC7523C448C200ED7957 /* Debug */,
+				02A7DC7623C448C200ED7957 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
