@@ -16,7 +16,11 @@
 		02942E5523C3F4AB00EB2148 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 020208B223C2EE9E00159427 /* DataModel.xcdatamodeld */; };
 		02A1EF9523C44DA500625723 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A1EF9423C44DA500625723 /* IntentHandler.swift */; };
 		02A1EF9923C44DA500625723 /* SwolIntents.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 02A1EF9223C44DA500625723 /* SwolIntents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		02A1EF9D23C44DBC00625723 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 02C11C8C23C38AAC00920674 /* Intents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
+		02A1EF9D23C44DBC00625723 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 02C11C8C23C38AAC00920674 /* Intents.intentdefinition */; settings = {ATTRIBUTES = (project_codegen, ); }; };
+		02A1EFA023C4511D00625723 /* Device+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020208B623C2EED000159427 /* Device+CoreDataProperties.swift */; };
+		02A1EFA323C4512900625723 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 020208B223C2EE9E00159427 /* DataModel.xcdatamodeld */; };
+		02A1EFAA23C4525F00625723 /* Device + Intents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C11C8E23C38D5400920674 /* Device + Intents.swift */; };
+		02A1EFAB23C4526300625723 /* WakeDeviceIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C11C9A23C3915900920674 /* WakeDeviceIntentHandler.swift */; };
 		02A7DC6F23C448C200ED7957 /* SwolBackEnd.h in Headers */ = {isa = PBXBuildFile; fileRef = 02A7DC6D23C448C200ED7957 /* SwolBackEnd.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		02A7DC7223C448C200ED7957 /* SwolBackEnd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02A7DC6B23C448C200ED7957 /* SwolBackEnd.framework */; };
 		02A7DC7323C448C200ED7957 /* SwolBackEnd.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 02A7DC6B23C448C200ED7957 /* SwolBackEnd.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -25,13 +29,10 @@
 		02A7DC7923C448D100ED7957 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020208C523C2F36400159427 /* DataController.swift */; };
 		02A7DC7A23C448D800ED7957 /* Device+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020208B523C2EED000159427 /* Device+CoreDataClass.swift */; };
 		02A7DC7B23C448DB00ED7957 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 020208B223C2EE9E00159427 /* DataModel.xcdatamodeld */; };
-		02A7DC7C23C448DD00ED7957 /* Device+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020208B623C2EED000159427 /* Device+CoreDataProperties.swift */; };
 		02A7DC7F23C4494C00ED7957 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020208C923C2F41500159427 /* StringExtension.swift */; };
 		02A7DC8023C4494F00ED7957 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 024024BE23C048500065B8DD /* Localizable.strings */; };
-		02A7DC8223C4498700ED7957 /* Device + Intents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C11C8E23C38D5400920674 /* Device + Intents.swift */; };
 		02A7DC8423C4498F00ED7957 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 02C11C8C23C38AAC00920674 /* Intents.intentdefinition */; };
 		02A7DC8823C44A2D00ED7957 /* NSUserActivities + IntentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028801B923C396D60079D8F6 /* NSUserActivities + IntentData.swift */; };
-		02A7DC8923C44AEF00ED7957 /* WakeDeviceIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C11C9A23C3915900920674 /* WakeDeviceIntentHandler.swift */; };
 		02C11C9823C38F5400920674 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 02C11C8C23C38AAC00920674 /* Intents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
 		02D5785923C03684001FA8A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D5785823C03684001FA8A5 /* AppDelegate.swift */; };
 		02D5785B23C03684001FA8A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D5785A23C03684001FA8A5 /* SceneDelegate.swift */; };
@@ -438,6 +439,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02A1EFA323C4512900625723 /* DataModel.xcdatamodeld in Sources */,
 				02A1EF9D23C44DBC00625723 /* Intents.intentdefinition in Sources */,
 				02A1EF9523C44DA500625723 /* IntentHandler.swift in Sources */,
 			);
@@ -447,12 +449,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02A1EFA023C4511D00625723 /* Device+CoreDataProperties.swift in Sources */,
 				02A7DC7723C448CC00ED7957 /* Awake.swift in Sources */,
-				02A7DC8223C4498700ED7957 /* Device + Intents.swift in Sources */,
 				02A7DC7F23C4494C00ED7957 /* StringExtension.swift in Sources */,
+				02A1EFAA23C4525F00625723 /* Device + Intents.swift in Sources */,
+				02A1EFAB23C4526300625723 /* WakeDeviceIntentHandler.swift in Sources */,
 				02A7DC8423C4498F00ED7957 /* Intents.intentdefinition in Sources */,
-				02A7DC8923C44AEF00ED7957 /* WakeDeviceIntentHandler.swift in Sources */,
-				02A7DC7C23C448DD00ED7957 /* Device+CoreDataProperties.swift in Sources */,
 				02A7DC7B23C448DB00ED7957 /* DataModel.xcdatamodeld in Sources */,
 				02A7DC7A23C448D800ED7957 /* Device+CoreDataClass.swift in Sources */,
 				02A7DC7923C448D100ED7957 /* DataController.swift in Sources */,
@@ -526,6 +528,7 @@
 		02A1EF9B23C44DA500625723 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_ENTITLEMENTS = SwolIntents/SwolIntents.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BVZY57RJZG;
@@ -546,6 +549,7 @@
 		02A1EF9C23C44DA500625723 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_ENTITLEMENTS = SwolIntents/SwolIntents.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BVZY57RJZG;
@@ -566,7 +570,7 @@
 		02A7DC7523C448C200ED7957 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -585,6 +589,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = PGF.SwolBackEnd;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -595,7 +600,7 @@
 		02A7DC7623C448C200ED7957 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -614,6 +619,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = PGF.SwolBackEnd;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";

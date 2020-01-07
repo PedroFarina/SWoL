@@ -15,5 +15,3 @@ FOUNDATION_EXPORT double SwolBackEndVersionNumber;
 FOUNDATION_EXPORT const unsigned char SwolBackEndVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <SwolBackEnd/PublicHeader.h>
-
-
