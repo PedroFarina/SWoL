@@ -25,7 +25,7 @@
                                                 <rect key="frame" x="16" y="16" width="382" height="218.5"/>
                                                 <string key="text">WOL(Wake-on-Lan) is a pattern that allows a device to be turned on or woken by a network message. It relies on your router settings and a receiver proper configured on your device.
 
-                                                    The easiest router setting is to foward(NAT) an UDP port as 9 to the broadcast address xxx.xxx.xxx.255. If your router arealdy has a configuration, you'll have to calculate its broadcast mask.</string>
+The easiest router setting is to foward(NAT) an UDP port as 9 to the broadcast address xxx.xxx.xxx.255. If your router arealdy has a configuration, you'll have to calculate its broadcast mask.</string>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -83,15 +83,15 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sAc-G0-NLW">
                                                 <rect key="frame" x="16" y="1166.5" width="382" height="328.5"/>
-                                                <string key="text">Firstly you have to make sure your motherboard is equiped with a receiver, and activate it in its BIOS settings. Once its activated there's a few extra steps to activate it in your OS.
+                                                <mutableString key="text">Firstly you have to make sure your motherboard is equiped with a receiver, and activate it in its BIOS settings. Once its activated there's a few extra steps to activate it in your OS.
 
-                                                    • Open "Windows Settings".
-                                                    • Open "Network and Internet" settings.
-                                                    • Click on "Change adapter settings".
-                                                    • Right click the network connection you want to enable/disable power management support and click on Properties.
+• Open "Windows Settings".
+• Open "Network and Internet" settings.
+• Click on "Change adapter settings".
+• Right click the network connection you want to enable/disable power management support and click on Properties.
 
-                                                    On the advanced settings, enable wake on Magic Packet settings.
-                                                </string>
+On the advanced settings, enable wake on Magic Packet settings.
+                                                </mutableString>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -126,11 +126,11 @@
                                                 <rect key="frame" x="16" y="2503.5" width="382" height="196.5"/>
                                                 <string key="text">Usually, Windows has a hidden setting that helps your computer startup faster arealdy enable. In most cases it also disables Wake On Lan features.
 
-                                                    • Head to the Control Panel
-                                                    • Power Options
-                                                    • Choose what the power buttons do
-                                                    • Change settings that are currently unavailable
-                                                    • Disable "turn on fast startup"</string>
+• Head to the Control Panel
+• Power Options
+• Choose what the power buttons do
+• Change settings that are currently unavailable
+• Disable "turn on fast startup"</string>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -217,7 +217,7 @@
         <!--Devices Menu-->
         <scene sceneID="TcF-bu-qGV">
             <objects>
-                <tableViewController id="urX-mC-Z5J" customClass="DevicesTableViewController" customModule="SWoL" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="urX-mC-Z5J" customClass="DevicesTableViewController" customModule="Swol" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" allowsSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Sni-WC-DZ0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -280,7 +280,7 @@
         <!--Register new device-->
         <scene sceneID="J9G-E7-kfn">
             <objects>
-                <tableViewController id="Bt2-h4-cKe" customClass="AddingDeviceTableViewController" customModule="SWoL" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Bt2-h4-cKe" customClass="AddingDeviceTableViewController" customModule="Swol" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="ZNW-6D-1SV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -288,7 +288,7 @@
                         <sections>
                             <tableViewSection headerTitle="Identifier" footerTitle="If no name is given the device will be called John." id="xPn-gD-aIA">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="vja-Sv-wGG" customClass="TextTableViewCell" customModule="SWoL" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="vja-Sv-wGG" customClass="TextTableViewCell" customModule="Swol" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="55.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vja-Sv-wGG" id="FpE-uJ-uep">
@@ -317,7 +317,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Connection Properties" id="SWW-QY-Sb6">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="7RF-1j-36M" customClass="TextTableViewCell" customModule="SWoL" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="7RF-1j-36M" customClass="TextTableViewCell" customModule="Swol" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="167" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7RF-1j-36M" id="Srg-Qm-NHb">
@@ -328,7 +328,7 @@
                                                     <rect key="frame" x="20" y="11" width="394" height="22"/>
                                                     <accessibility key="accessibilityConfiguration" hint="The IP address of the device" label="Device IP"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" returnKeyType="done"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -338,11 +338,16 @@
                                                 <constraint firstItem="2xf-Qb-t4e" firstAttribute="leading" secondItem="Srg-Qm-NHb" secondAttribute="leading" constant="20" symbolic="YES" id="pIo-Ah-EdD"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maxCharacters">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="txtField" destination="2xf-Qb-t4e" id="Mly-hj-evN"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="KXk-6r-Wta" customClass="TextTableViewCell" customModule="SWoL" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="KXk-6r-Wta" customClass="TextTableViewCell" customModule="Swol" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="210.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KXk-6r-Wta" id="7od-ZV-LI5">
@@ -353,7 +358,7 @@
                                                     <rect key="frame" x="20" y="11" width="394" height="22"/>
                                                     <accessibility key="accessibilityConfiguration" hint="The MAC address of the device" label="Device MAC"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -363,11 +368,16 @@
                                                 <constraint firstAttribute="trailing" secondItem="Pt2-mC-pxv" secondAttribute="trailing" id="jKm-7l-NrL"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maxCharacters">
+                                                <integer key="value" value="17"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="txtField" destination="Pt2-mC-pxv" id="G9U-uY-I5Z"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="9GK-Mi-oFx" customClass="TextTableViewCell" customModule="SWoL" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="9GK-Mi-oFx" customClass="TextTableViewCell" customModule="Swol" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="254" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9GK-Mi-oFx" id="X1c-9b-ddN">
@@ -378,7 +388,7 @@
                                                     <rect key="frame" x="20" y="11" width="394" height="22"/>
                                                     <accessibility key="accessibilityConfiguration" hint="The port of the router" label="Port"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" returnKeyType="done"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
