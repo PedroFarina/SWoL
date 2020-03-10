@@ -20,7 +20,7 @@
 "footer6" = "Device IP is required to register a device.";
 "footer7" = "Success! :)";
 "footer8" = "Port must be numeric.";
-"Example Device " = "Example Device ";
+"You have no devices yet.\nPlease tap on '+' to create one." = "You have no devices yet.\nPlease tap on '+' to create one.";
 "Waking confirmation" = "Waking confirmation";
 "Do you want to wake " = "Do you want to wake ";
 "Yes!" = "Yes!";

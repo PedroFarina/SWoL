@@ -20,7 +20,7 @@
 "footer6" = "O endereço IP é necessário para registrar um dispositivo.";
 "footer7" = "Sucesso! :)";
 "footer8" = "A porta de rede deve ser numérica.";
-"Example Device " = "Dispositivo Exemplo ";
+"You have no devices yet.\nPlease tap on '+' to create one." = "Você ainda não tem dispositivos.\nPor favor toque no '+' para criar um.";
 "Waking confirmation" = "Confirmação de envio";
 "Do you want to wake " = "Você deseja acordar ";
 "Yes!" = "Sim!";

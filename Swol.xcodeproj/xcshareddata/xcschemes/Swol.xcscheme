@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "02D5785423C03684001FA8A5"
-               BuildableName = "SWoL.app"
-               BlueprintName = "SWoL"
-               ReferencedContainer = "container:SWoL.xcodeproj">
+               BuildableName = "Swol.app"
+               BlueprintName = "Swol"
+               ReferencedContainer = "container:Swol.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "02D5785423C03684001FA8A5"
-            BuildableName = "SWoL.app"
-            BlueprintName = "SWoL"
-            ReferencedContainer = "container:SWoL.xcodeproj">
+            BuildableName = "Swol.app"
+            BlueprintName = "Swol"
+            ReferencedContainer = "container:Swol.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "02D5785423C03684001FA8A5"
-            BuildableName = "SWoL.app"
-            BlueprintName = "SWoL"
-            ReferencedContainer = "container:SWoL.xcodeproj">
+            BuildableName = "Swol.app"
+            BlueprintName = "Swol"
+            ReferencedContainer = "container:Swol.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

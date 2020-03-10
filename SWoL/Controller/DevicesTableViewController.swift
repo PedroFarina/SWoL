@@ -41,22 +41,24 @@ public class DevicesTableViewController: UITableViewController, DataWatcher {
     }
 
     public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return devices.isEmpty ? 5 : devices.count
+        return devices.isEmpty ? 1 : devices.count
     }
 
     public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if devices.isEmpty {
+            let cell = UITableViewCell()
+            cell.textLabel?.numberOfLines = 0
+            cell.textLabel?.textAlignment = .center
+            cell.textLabel?.text = "You have no devices yet.\nPlease tap on '+' to create one.".localized()
+            cell.isUserInteractionEnabled = false
+            return cell
+        }
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "deviceCell") else {
             return UITableViewCell()
         }
-        if devices.isEmpty {
-            cell.textLabel?.text = "Example Device ".localized() + "\(indexPath.row + 1)"
-            cell.detailTextLabel?.text = "12:34:56:78:90:12"
-            cell.isUserInteractionEnabled = false
-        } else {
-            cell.textLabel?.text = devices[indexPath.row].name
-            cell.detailTextLabel?.text = devices[indexPath.row].mac
-            cell.isUserInteractionEnabled = true
-        }
+        cell.textLabel?.text = devices[indexPath.row].name
+        cell.detailTextLabel?.text = devices[indexPath.row].mac
+        cell.isUserInteractionEnabled = true
         return cell
     }
 
