@@ -45,6 +45,9 @@ import UIKit
     }
 
     @objc private func textFieldEditingDidEnd(_ textField: UITextField) {
+        if maxCharacters != -1 && textField.text?.count !=  maxCharacters {
+            textField.text = ""
+        }
         completionCharacters?(textField.text)
     }
 

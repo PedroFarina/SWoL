@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwolBackend
 
 public class DevicesTableViewController: UITableViewController, DataWatcher {
 
@@ -16,12 +17,12 @@ public class DevicesTableViewController: UITableViewController, DataWatcher {
     public override func viewDidLoad() {
         tableView.tableFooterView = UIView()
         navigationItem.leftBarButtonItem = self.editButtonItem
+        DataController.shared().addAsWatcher(self)
     }
     public override func viewWillDisappear(_ animated: Bool) {
         DataController.shared().removeAsWatcher(self)
     }
     public override func viewWillAppear(_ animated: Bool) {
-        DataController.shared().addAsWatcher(self)
         updateData()
     }
 
@@ -135,7 +136,7 @@ public class DevicesTableViewController: UITableViewController, DataWatcher {
                 }
             } else {
                 DispatchQueue.main.async {
-                    let success = UIAlertController(title: "Success".localized(), message: "Packet sent to ".localized() + (device.getBroadcast() ?? ""), preferredStyle: .alert)
+                    let success = UIAlertController(title: "Success".localized(), message: "Packet sent to  ".localized() + (device.getBroadcast() ?? ""), preferredStyle: .alert)
                     success.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
                     self.present(success, animated: true)
                 }
