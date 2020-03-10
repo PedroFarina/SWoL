@@ -13,6 +13,10 @@
 		024024C123C050830065B8DD /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024024C023C050830065B8DD /* TextTableViewCell.swift */; };
 		024024C323C050D70065B8DD /* TextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 024024C223C050D70065B8DD /* TextTableViewCell.xib */; };
 		0289B22923C03DE300D610AB /* DevicesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0289B22823C03DE300D610AB /* DevicesTableViewController.swift */; };
+		028F58F224181608001C1A33 /* SwolBackEnd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02A7DC6B23C448C200ED7957 /* SwolBackEnd.framework */; };
+		028F58F324181608001C1A33 /* SwolBackEnd.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 02A7DC6B23C448C200ED7957 /* SwolBackEnd.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		028F58F724181638001C1A33 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 024024BE23C048500065B8DD /* Localizable.strings */; };
+		028F58F82418163B001C1A33 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020208C923C2F41500159427 /* StringExtension.swift */; };
 		02942E5523C3F4AB00EB2148 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 020208B223C2EE9E00159427 /* DataModel.xcdatamodeld */; };
 		02A1EF9523C44DA500625723 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A1EF9423C44DA500625723 /* IntentHandler.swift */; };
 		02A1EF9923C44DA500625723 /* SwolIntents.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 02A1EF9223C44DA500625723 /* SwolIntents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -43,6 +47,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		028F58F424181608001C1A33 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 02D5784D23C03684001FA8A5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 02A7DC6A23C448C200ED7957;
+			remoteInfo = SwolBackEnd;
+		};
 		02A1EF9723C44DA500625723 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 02D5784D23C03684001FA8A5 /* Project object */;
@@ -67,6 +78,17 @@
 			dstSubfolderSpec = 10;
 			files = (
 				02A7DC7323C448C200ED7957 /* SwolBackEnd.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		028F58F624181608001C1A33 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				028F58F324181608001C1A33 /* SwolBackEnd.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -128,6 +150,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				028F58F224181608001C1A33 /* SwolBackEnd.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,10 +336,12 @@
 				02A1EF8E23C44DA500625723 /* Sources */,
 				02A1EF8F23C44DA500625723 /* Frameworks */,
 				02A1EF9023C44DA500625723 /* Resources */,
+				028F58F624181608001C1A33 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				028F58F524181608001C1A33 /* PBXTargetDependency */,
 			);
 			name = SwolIntents;
 			productName = SwolIntents;
@@ -409,6 +434,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				028F58F724181638001C1A33 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +465,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				028F58F82418163B001C1A33 /* StringExtension.swift in Sources */,
 				02A1EFA323C4512900625723 /* DataModel.xcdatamodeld in Sources */,
 				02A1EF9D23C44DBC00625723 /* Intents.intentdefinition in Sources */,
 				02A1EF9523C44DA500625723 /* IntentHandler.swift in Sources */,
@@ -482,6 +509,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		028F58F524181608001C1A33 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 02A7DC6A23C448C200ED7957 /* SwolBackEnd */;
+			targetProxy = 028F58F424181608001C1A33 /* PBXContainerItemProxy */;
+		};
 		02A1EF9823C44DA500625723 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 02A1EF9123C44DA500625723 /* SwolIntents */;
