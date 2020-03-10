@@ -1,0 +1,35 @@
+/* 
+  Localizable.strings
+  SWoL
+
+  Created by Pedro Giuliano Farina on 04/01/20.
+  Copyright © 2020 Pedro Giuliano Farina. All rights reserved.
+*/
+"John" = "John";
+"Could not parse object as Device." = "Could not parse object as Device.";
+"Could not save device." = "Could not save device.";
+"Could not edit device." = "Could not edit device.";
+"Could not save context." = "Could not save context.";
+"Could not communicate with Core Data." = "Could not communicate with Core Data.";
+"footer0" = "Device IP, Device Mac and Port are required to register a device.";
+"footer1" = "Device Mac and Port are required to register a device.";
+"footer2" = "Device IP and Port are required to register a device.";
+"footer3" = "Port is required to register a device.";
+"footer4" = "Device IP and Device Mac are required to register a device.";
+"footer5" = "Device Mac is required to register a device.";
+"footer6" = "Device IP is required to register a device.";
+"footer7" = "Success! :)";
+"footer8" = "Port must be numeric.";
+"You have no devices yet.\nPlease tap on '+' to create one." = "You have no devices yet.\nPlease tap on '+' to create one.";
+"Waking confirmation" = "Waking confirmation";
+"Do you want to wake " = "Do you want to wake ";
+"Yes!" = "Yes!";
+"Error!" = "Error!";
+"Success" = "Success";
+"Packet sent to " = "Packet sent to ";
+"No" = "No";
+"Delete" = "Delete";
+"Edit" = "Edit";
+"Deletion confirmation" = "Deletion confirmation";
+"Do you want to delete " = "Do you want to delete ";
+"Error!" = "Error!";
