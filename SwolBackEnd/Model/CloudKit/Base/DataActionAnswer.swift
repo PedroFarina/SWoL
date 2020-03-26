@@ -1,13 +1,14 @@
 //
-//  DataSyncronizer.swift
+//  DataActionAnswer.swift
 //  SwolBackEnd
 //
 //  Created by Pedro Giuliano Farina on 26/03/20.
 //  Copyright © 2020 Pedro Giuliano Farina. All rights reserved.
 //
 
-import Foundation
+import CloudKit
 
-protocol DataSynchronizer {
-    func dataChanged(to devices: [DeviceProtocol])
+public enum DataActionAnswer {
+    case fail(error: CKError, description: String)
+    case successful
 }

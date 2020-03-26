@@ -46,7 +46,15 @@
 		02D8486D23C057ED00675A14 /* AddingDeviceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8486C23C057ED00675A14 /* AddingDeviceTableViewController.swift */; };
 		02E36552242CEAD80050C509 /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E36551242CEAD80050C509 /* CoreDataController.swift */; };
 		02E36554242CEC0B0050C509 /* DeviceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E36553242CEC0B0050C509 /* DeviceProtocol.swift */; };
-		02E36556242CED5E0050C509 /* DataSynchronizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E36555242CED5E0050C509 /* DataSynchronizer.swift */; };
+		02E3655B242D25F60050C509 /* EntityObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E3655A242D25F60050C509 /* EntityObject.swift */; };
+		02E3655F242D262A0050C509 /* DataActionAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E3655E242D262A0050C509 /* DataActionAnswer.swift */; };
+		02E36561242D26410050C509 /* DataFetchAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E36560242D26410050C509 /* DataFetchAnswer.swift */; };
+		02E36565242D267C0050C509 /* DataProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E36564242D267C0050C509 /* DataProperty.swift */; };
+		02E36568242D269D0050C509 /* DeviceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E36567242D269D0050C509 /* DeviceEntity.swift */; };
+		02E3656A242D29250050C509 /* DeviceEntity+Intents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E36569242D29250050C509 /* DeviceEntity+Intents.swift */; };
+		02E3656C242D29690050C509 /* CloudKitDataConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E3656B242D29690050C509 /* CloudKitDataConnector.swift */; };
+		02E3656E242D29FA0050C509 /* CloudKitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E3656D242D29FA0050C509 /* CloudKitController.swift */; };
+		02E36570242D36C60050C509 /* DataProtocols+Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E3656F242D36C60050C509 /* DataProtocols+Enums.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,7 +157,15 @@
 		02D8486C23C057ED00675A14 /* AddingDeviceTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingDeviceTableViewController.swift; sourceTree = "<group>"; };
 		02E36551242CEAD80050C509 /* CoreDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
 		02E36553242CEC0B0050C509 /* DeviceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceProtocol.swift; sourceTree = "<group>"; };
-		02E36555242CED5E0050C509 /* DataSynchronizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSynchronizer.swift; sourceTree = "<group>"; };
+		02E3655A242D25F60050C509 /* EntityObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityObject.swift; sourceTree = "<group>"; };
+		02E3655E242D262A0050C509 /* DataActionAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataActionAnswer.swift; sourceTree = "<group>"; };
+		02E36560242D26410050C509 /* DataFetchAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetchAnswer.swift; sourceTree = "<group>"; };
+		02E36564242D267C0050C509 /* DataProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProperty.swift; sourceTree = "<group>"; };
+		02E36567242D269D0050C509 /* DeviceEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceEntity.swift; sourceTree = "<group>"; };
+		02E36569242D29250050C509 /* DeviceEntity+Intents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DeviceEntity+Intents.swift"; sourceTree = "<group>"; };
+		02E3656B242D29690050C509 /* CloudKitDataConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitDataConnector.swift; sourceTree = "<group>"; };
+		02E3656D242D29FA0050C509 /* CloudKitController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitController.swift; sourceTree = "<group>"; };
+		02E3656F242D36C60050C509 /* DataProtocols+Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataProtocols+Enums.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +217,8 @@
 		02154856242CE97A00EF7DDD /* CloudKit */ = {
 			isa = PBXGroup;
 			children = (
+				02E3656B242D29690050C509 /* CloudKitDataConnector.swift */,
+				02E3656D242D29FA0050C509 /* CloudKitController.swift */,
 			);
 			path = CloudKit;
 			sourceTree = "<group>";
@@ -218,6 +236,8 @@
 		02154858242CEA3C00EF7DDD /* CloudKit */ = {
 			isa = PBXGroup;
 			children = (
+				02E36559242D25E40050C509 /* Base */,
+				02E36567242D269D0050C509 /* DeviceEntity.swift */,
 			);
 			path = CloudKit;
 			sourceTree = "<group>";
@@ -285,6 +305,7 @@
 		02A7DC8A23C44B2400ED7957 /* Intents */ = {
 			isa = PBXGroup;
 			children = (
+				02E36569242D29250050C509 /* DeviceEntity+Intents.swift */,
 				02C11C8E23C38D5400920674 /* Device+Intents.swift */,
 				02C11C9A23C3915900920674 /* WakeDeviceIntentHandler.swift */,
 			);
@@ -294,8 +315,8 @@
 		02A7DC8B23C44B3100ED7957 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				02E3656F242D36C60050C509 /* DataProtocols+Enums.swift */,
 				020208C523C2F36400159427 /* DataManager.swift */,
-				02E36555242CED5E0050C509 /* DataSynchronizer.swift */,
 				02E36553242CEC0B0050C509 /* DeviceProtocol.swift */,
 				02154856242CE97A00EF7DDD /* CloudKit */,
 				02154855242CE97000EF7DDD /* CoreData */,
@@ -357,6 +378,33 @@
 				02D5786923C03685001FA8A5 /* Info.plist */,
 			);
 			path = SWoL;
+			sourceTree = "<group>";
+		};
+		02E36559242D25E40050C509 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				02E36563242D266B0050C509 /* RecordTypes */,
+				02E3655D242D261A0050C509 /* QueryAnswers */,
+				02E3655A242D25F60050C509 /* EntityObject.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		02E3655D242D261A0050C509 /* QueryAnswers */ = {
+			isa = PBXGroup;
+			children = (
+				02E3655E242D262A0050C509 /* DataActionAnswer.swift */,
+				02E36560242D26410050C509 /* DataFetchAnswer.swift */,
+			);
+			name = QueryAnswers;
+			sourceTree = "<group>";
+		};
+		02E36563242D266B0050C509 /* RecordTypes */ = {
+			isa = PBXGroup;
+			children = (
+				02E36564242D267C0050C509 /* DataProperty.swift */,
+			);
+			name = RecordTypes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -520,19 +568,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02E36565242D267C0050C509 /* DataProperty.swift in Sources */,
 				02E36554242CEC0B0050C509 /* DeviceProtocol.swift in Sources */,
 				02A1EFA023C4511D00625723 /* Device+CoreDataProperties.swift in Sources */,
 				02A7DC7723C448CC00ED7957 /* Awake.swift in Sources */,
 				02E36552242CEAD80050C509 /* CoreDataController.swift in Sources */,
 				02A7DC7F23C4494C00ED7957 /* StringExtension.swift in Sources */,
+				02E36568242D269D0050C509 /* DeviceEntity.swift in Sources */,
 				02A1EFAA23C4525F00625723 /* Device+Intents.swift in Sources */,
+				02E3656C242D29690050C509 /* CloudKitDataConnector.swift in Sources */,
 				02A1EFAB23C4526300625723 /* WakeDeviceIntentHandler.swift in Sources */,
 				02A7DC8423C4498F00ED7957 /* Intents.intentdefinition in Sources */,
-				02E36556242CED5E0050C509 /* DataSynchronizer.swift in Sources */,
+				02E3655F242D262A0050C509 /* DataActionAnswer.swift in Sources */,
+				02E36570242D36C60050C509 /* DataProtocols+Enums.swift in Sources */,
 				02A7DC7B23C448DB00ED7957 /* DataModel.xcdatamodeld in Sources */,
 				02A7DC7A23C448D800ED7957 /* Device+CoreDataClass.swift in Sources */,
+				02E3655B242D25F60050C509 /* EntityObject.swift in Sources */,
 				02A7DC7923C448D100ED7957 /* DataManager.swift in Sources */,
+				02E36561242D26410050C509 /* DataFetchAnswer.swift in Sources */,
 				02A7DC7823C448CF00ED7957 /* NSPersistentContainer.swift in Sources */,
+				02E3656A242D29250050C509 /* DeviceEntity+Intents.swift in Sources */,
+				02E3656E242D29FA0050C509 /* CloudKitController.swift in Sources */,
 				02A7DC8823C44A2D00ED7957 /* NSUserActivities + IntentData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

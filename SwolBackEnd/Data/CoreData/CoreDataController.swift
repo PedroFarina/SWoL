@@ -22,11 +22,6 @@ internal class CoreDataController {
     let synchronizer: DataSynchronizer
     var devices: [Device] = []
 
-    enum DataError: Error {
-        case FailedToParseNSObject(reason: String)
-        case FailedToSaveContext(reason: String)
-    }
-
     lazy var persistentContainer: NSPersistentContainer = {
         let container = NSCustomPersistentContainer(name: "DataModel")
 
@@ -41,15 +36,14 @@ internal class CoreDataController {
     private lazy var context:NSManagedObjectContext = persistentContainer.viewContext
 
     //MARK: Core Data Devices
-    public func registerDevice(name: String, address: String, macAddress: String, port: Int32?) throws {
+    public func registerDevice(name: String, address: String, macAddress: String, port: Int32?) throws -> Device {
         let newAddress = address.isEmpty ? nil : address
         let newMacAddress = macAddress.isEmpty ? nil : macAddress
-        let newName = name.isEmpty ? "John".localized() : name
         guard let device = NSEntityDescription.insertNewObject(forEntityName: "Device", into: context)
             as? Device else {
-                throw DataError.FailedToParseNSObject(reason: "Could not parse object as Device.".localized())
+                throw CDError.FailedToParseObject(reason: "Could not parse object as Device.".localized())
         }
-        device.name = newName
+        device.name = name
         device.address = newAddress
         device.mac = newMacAddress
         device.cloudID = UUID()
@@ -60,11 +54,16 @@ internal class CoreDataController {
         do {
             devices.append(device)
             try saveContext()
+            return device
         } catch {
             devices.removeLast()
-            throw DataError.FailedToSaveContext(reason: "Could not save device.".localized())
+            throw CDError.FailedToSaveContext(reason: "Could not save device.".localized())
         }
     }
+    public func registerDevice(_ device: DeviceEntity) throws -> Device {
+        return try registerDevice(name: device._name.value, address: device._address.value, macAddress: device._mac.value, port: device.port)
+    }
+
     public func editDevice(_ device:Device, newName name: String?, newAddress address: String?,
                            newMacAddress macAddress: String?,
                            newPort port: Int32?) throws {
@@ -99,7 +98,7 @@ internal class CoreDataController {
                 device.address = oldAddress
                 device.mac = oldMac
                 device.port = oldPort
-                throw DataError.FailedToSaveContext(reason: "Could not edit device.".localized())
+                throw CDError.FailedToSaveContext(reason: "Could not edit device.".localized())
             }
         }
     }
@@ -116,7 +115,7 @@ internal class CoreDataController {
             try saveContext()
         } catch {
             devices.insert(device, at: index)
-            throw DataError.FailedToSaveContext(reason: "Could not remove device.".localized())
+            throw CDError.FailedToSaveContext(reason: "Could not remove device.".localized())
         }
     }
 
@@ -127,7 +126,7 @@ internal class CoreDataController {
                 try context.save()
                 synchronizer.dataChanged(to: devices)
             } catch {
-                throw DataError.FailedToSaveContext(reason: "Could not save context.".localized())
+                throw CDError.FailedToSaveContext(reason: "Could not save context.".localized())
             }
         }
     }

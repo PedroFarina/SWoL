@@ -11,16 +11,6 @@ import CloudKit
 import Foundation
 import UIKit
 
-public enum DataPermission: Int {
-    case CoreData = 1
-    case CloudKit = 2
-    case Both = 3
-}
-
-public protocol DataWatcher: NSObject {
-    func dataUpdated()
-}
-
 public class DataManager: DataSynchronizer {
 
     //MARK: Synchronization and permission
@@ -33,15 +23,59 @@ public class DataManager: DataSynchronizer {
         return ((self.permission?.rawValue ?? 0) & permission.rawValue) == permission.rawValue
     }
     lazy var coreDataController: CoreDataController = CoreDataController(synchronizer: self)
+    lazy var cloudKitDataController: CloudKitDataController = CloudKitDataController(synchronizer: self)
 
     private func fetch() {
         if hasPermissionTo(access: .CoreData) {
             do {
                 try coreDataController.fetchData()
             } catch {
-                fatalError("Could no communicate with CoreData")
+                self.conflictHandler.errDidOccur(err: error)
             }
         }
+        if hasPermissionTo(access: .CloudKit) {
+            cloudKitDataController.fetchData { (error) in
+                if let error = error {
+                    self.conflictHandler.errDidOccur(err: error)
+                } else {
+                    self.syncData()
+                }
+            }
+        }
+    }
+
+    func syncData() {
+        guard permission == DataPermission.Both else {
+            return
+        }
+        var ckCopy: [DeviceEntity] = []
+        ckCopy.append(contentsOf: cloudKitDataController.devices)
+        var cdCopy: [Device] = []
+        cdCopy.append(contentsOf: coreDataController.devices)
+
+        //Adding CloudKit devices do CoreData
+        for ckDevice in ckCopy where !cdCopy.contains(where: { (cdDevice) -> Bool in
+            return cdDevice.cloudID ?? UUID() == ckDevice.cloudID
+        }) {
+            do {
+                _ = try coreDataController.registerDevice(ckDevice)
+            } catch {
+                self.conflictHandler.errDidOccur(err: error)
+            }
+        }
+
+        //Adding CoreData devices do CloudKit
+        for cdDevice in cdCopy where !ckCopy.contains(where: { (ckDevice) -> Bool in
+            return ckDevice.cloudID ?? UUID() == cdDevice.cloudID
+        }) {
+            do {
+                try cloudKitDataController.registerDevice(cdDevice)
+            } catch {
+                self.conflictHandler.errDidOccur(err: error)
+            }
+        }
+
+        //Check conflicts(implement it before adding any other target)
     }
 
     func dataChanged(to devices: [DeviceProtocol]) {
@@ -68,11 +102,14 @@ public class DataManager: DataSynchronizer {
     }
 
     public func registerDevice(name: String, address: String, macAddress: String, port: Int32?) throws {
+        var device: Device?
+        let newName = name.isEmpty ? "John".localized() : name
         if hasPermissionTo(access: .CoreData) {
-            try coreDataController.registerDevice(name: name, address: address, macAddress: macAddress, port: port)
+            device = try coreDataController.registerDevice(name: newName, address: address, macAddress: macAddress, port: port)
         }
         if hasPermissionTo(access: .CloudKit) {
-            //Cria no CloudKit também
+            cloudKitDataController.registerDevice(id: device?.cloudID ?? UUID(),
+                                                  name: newName, address: address, macAddress: macAddress, port: port ?? 9)
         }
     }
 
@@ -82,17 +119,19 @@ public class DataManager: DataSynchronizer {
         if hasPermissionTo(access: .CoreData), let device = device as? Device {
             try coreDataController.editDevice(device, newName: name, newAddress: address, newMacAddress: macAddress, newPort: port)
         }
-        if hasPermissionTo(access: .CloudKit) {
-            //Edita no CloudKit também
+        if hasPermissionTo(access: .CloudKit), let device = cloudKitDataController.findDeviceBy(id: device.cloudID ?? UUID()) {
+            cloudKitDataController.editDevice(device, newName: name, newAddress: address, newMacAddress: macAddress, newPort: port)
         }
     }
 
     public func removeDevice(_ device: DeviceProtocol) throws {
+        var id: UUID?
         if hasPermissionTo(access: .CoreData), let device = device as? Device {
+            id = device.cloudID
             try coreDataController.removeDevice(device)
         }
-        if hasPermissionTo(access: .CloudKit) {
-            //Remove do CloudKit também
+        if hasPermissionTo(access: .CloudKit), let device = cloudKitDataController.findDeviceBy(id: id ?? device.cloudID ?? UUID()) {
+            cloudKitDataController.removeDevice(device)
         }
     }
 
@@ -101,7 +140,7 @@ public class DataManager: DataSynchronizer {
             try coreDataController.removeDeviceAt(index)
         }
         if hasPermissionTo(access: .CloudKit) {
-            //Remove do CloudKit também
+            cloudKitDataController.removeDeviceAt(index)
         }
     }
 
@@ -117,6 +156,8 @@ public class DataManager: DataSynchronizer {
             watchers.remove(at: index)
         }
     }
+
+    public var conflictHandler: ConflictHandler = DefaultConflictHandler()
 
     //MARK: Singleton Basic Properties
     private init() {
