@@ -1,8 +1,8 @@
 //
 //  Device+CoreDataProperties.swift
-//  SwolKit
+//  SwolBackEnd
 //
-//  Created by Pedro Giuliano Farina on 06/01/20.
+//  Created by Pedro Giuliano Farina on 26/03/20.
 //  Copyright © 2020 Pedro Giuliano Farina. All rights reserved.
 //
 //
@@ -21,6 +21,7 @@ extension Device {
     @NSManaged public var mac: String?
     @NSManaged public var name: String?
     @NSManaged public var port: Int32
+    @NSManaged public var cloudID: UUID?
 
     @nonobjc public func getBroadcast() -> String? {
         guard let address = address else {

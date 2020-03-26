@@ -36,7 +36,7 @@ public class AddingDeviceTableViewController: UITableViewController {
     @IBOutlet weak var footerTableViewCell: UITableViewCell!
     var footerText: String = "footer0".localized()
 
-    public weak var device: Device?
+    public var device: DeviceProtocol?
 
     public override func viewDidLoad() {
         if let device = device {
@@ -108,9 +108,9 @@ public class AddingDeviceTableViewController: UITableViewController {
         mac = mac.replacingOccurrences(of: "-", with: ":").uppercased()
         do {
             if let device = device {
-                try DataController.shared().editDevice(device, newName: name, newAddress: ip, newMacAddress: mac, newPort: port)
+                try DataManager.shared().editDevice(device, newName: name, newAddress: ip, newMacAddress: mac, newPort: port)
             } else {
-                try DataController.shared().registerDevice(name: name, address: ip, macAddress: mac, port: port)
+                try DataManager.shared().registerDevice(name: name, address: ip, macAddress: mac, port: port)
             }
             self.dismiss(animated: true)
         } catch let err {

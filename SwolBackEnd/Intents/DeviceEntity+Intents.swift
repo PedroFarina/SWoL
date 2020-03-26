@@ -1,14 +1,14 @@
 //
-//  Device + Intents.swift
-//  SWoLIntents
+//  DeviceEntity+Intents.swift
+//  SwolBackEnd
 //
-//  Created by Pedro Giuliano Farina on 06/01/20.
+//  Created by Pedro Giuliano Farina on 26/03/20.
 //  Copyright © 2020 Pedro Giuliano Farina. All rights reserved.
 //
 
 import Intents
 
-extension Device {
+extension DeviceEntity {
     public var intent: WakeDeviceIntent {
         let wakeUp = WakeDeviceIntent()
         wakeUp.name = name
@@ -18,8 +18,8 @@ extension Device {
         return wakeUp
     }
 
-    public static func getDevice(from intent: WakeDeviceIntent) -> Device? {
-        return DataController.shared().devices.first { (dev) -> Bool in
+    public static func getDevice(from intent: WakeDeviceIntent) -> DeviceProtocol? {
+        return DataManager.shared(with: .CloudKit).devices.first { (dev) -> Bool in
             return dev.name?.uppercased() == intent.name?.uppercased()
         }
     }

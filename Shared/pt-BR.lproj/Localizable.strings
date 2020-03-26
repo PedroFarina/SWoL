@@ -33,3 +33,5 @@
 "Deletion confirmation" = "Confirmação de deleção";
 "Do you want to delete " = "Você deseja excluir ";
 "Wake up time" = "Hora de acordar";
+"Couldn't convert device to send to Cloud" = "Não foi possível enviar o objeto local para nuvem";
+"Could not convert cloud data to local device" = "Não foi possível converter o dado da nuvem para objeto local";

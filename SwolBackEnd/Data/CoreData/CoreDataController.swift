@@ -1,8 +1,8 @@
 //
-//  DataController.swift
-//  SwolKit
+//  CoreDataController.swift
+//  SwolBackEnd
 //
-//  Created by Pedro Giuliano Farina on 04/01/20.
+//  Created by Pedro Giuliano Farina on 26/03/20.
 //  Copyright © 2020 Pedro Giuliano Farina. All rights reserved.
 //
 
@@ -10,15 +10,17 @@ import CoreData
 import Foundation
 import UIKit
 
-public protocol DataWatcher: NSObject {
-    func dataUpdated()
-}
-
-public class DataController {
-    enum DataError: Error {
-        case FailedToParseNSObject(reason: String)
-        case FailedToSaveContext(reason: String)
+internal class CoreDataController {
+    internal init(synchronizer: DataSynchronizer) {
+        self.synchronizer = synchronizer
     }
+    func fetchData() throws {
+        devices = try context.fetch(Device.fetchRequest())
+        synchronizer.dataChanged(to: devices)
+    }
+
+    let synchronizer: DataSynchronizer
+    var devices: [Device] = []
 
     lazy var persistentContainer: NSPersistentContainer = {
         let container = NSCustomPersistentContainer(name: "DataModel")
@@ -33,58 +35,38 @@ public class DataController {
 
     private lazy var context:NSManagedObjectContext = persistentContainer.viewContext
 
-    private var _devices: [Device] = [] {
-        didSet {
-            for watcher in watchers {
-                watcher.dataUpdated()
-            }
-        }
-    }
-
-    private var watchers: [DataWatcher] = []
-
-    //MARK: Watchers
-    public func addAsWatcher(_ watcher: DataWatcher) {
-        watchers.append(watcher)
-    }
-    public func removeAsWatcher(_ watcher: DataWatcher) {
-        if let index = watchers.firstIndex(where: { (comp) -> Bool in
-            return watcher == comp
-        }) {
-            watchers.remove(at: index)
-        }
-    }
-
-    //MARK: Devices
-    public var devices: [Device] {
-        var copy: [Device] = []
-        copy.append(contentsOf: _devices)
-        return copy
-    }
-
-    public func registerDevice(name: String, address: String, macAddress: String, port: Int32?) throws {
+    //MARK: Core Data Devices
+    public func registerDevice(id: UUID = UUID(), name: String, address: String, macAddress: String, port: Int32?) throws -> Device {
         let newAddress = address.isEmpty ? nil : address
         let newMacAddress = macAddress.isEmpty ? nil : macAddress
-        let newName = name.isEmpty ? "John".localized() : name
         guard let device = NSEntityDescription.insertNewObject(forEntityName: "Device", into: context)
             as? Device else {
-                throw DataError.FailedToParseNSObject(reason: "Could not parse object as Device.".localized())
+                throw CDError.FailedToParseObject(reason: "Could not parse object as Device.".localized())
         }
-        device.name = newName
+        device.name = name
         device.address = newAddress
         device.mac = newMacAddress
+        device.cloudID = id
         if let port = port {
             device.port = port
         }
 
         do {
-            _devices.append(device)
+            devices.append(device)
             try saveContext()
+            return device
         } catch {
-            _devices.removeLast()
-            throw DataError.FailedToSaveContext(reason: "Could not save device.".localized())
+            devices.removeLast()
+            throw CDError.FailedToSaveContext(reason: "Could not save device.".localized())
         }
     }
+    public func registerDevice(_ device: DeviceEntity) throws -> Device {
+        guard let id = UUID(uuidString: device.record.recordID.recordName) else {
+            throw CDError.FailedToParseObject(reason: "Could not convert cloud data to local device".localized())
+        }
+        return try registerDevice(id: id, name: device._name.value, address: device._address.value, macAddress: device._mac.value, port: device.port)
+    }
+
     public func editDevice(_ device:Device, newName name: String?, newAddress address: String?,
                            newMacAddress macAddress: String?,
                            newPort port: Int32?) throws {
@@ -115,31 +97,28 @@ public class DataController {
         if modified {
             do {
                 try saveContext()
-                for watcher in watchers {
-                    watcher.dataUpdated()
-                }
             } catch {
                 device.address = oldAddress
                 device.mac = oldMac
                 device.port = oldPort
-                throw DataError.FailedToSaveContext(reason: "Could not edit device.".localized())
+                throw CDError.FailedToSaveContext(reason: "Could not edit device.".localized())
             }
         }
     }
     public func removeDevice(_ device: Device) throws {
-        if let index = _devices.firstIndex(of: device) {
+        if let index = devices.firstIndex(of: device) {
             try removeDeviceAt(index)
         }
     }
     public func removeDeviceAt(_ index: Int) throws {
-        let device = _devices.remove(at: index)
+        let device = devices.remove(at: index)
         context.delete(device)
 
         do {
             try saveContext()
         } catch {
-            _devices.insert(device, at: index)
-            throw DataError.FailedToSaveContext(reason: "Could not remove device.".localized())
+            devices.insert(device, at: index)
+            throw CDError.FailedToSaveContext(reason: "Could not remove device.".localized())
         }
     }
 
@@ -148,27 +127,10 @@ public class DataController {
         if context.hasChanges {
             do {
                 try context.save()
+                synchronizer.dataChanged(to: devices)
             } catch {
-                throw DataError.FailedToSaveContext(reason: "Could not save context.".localized())
+                throw CDError.FailedToSaveContext(reason: "Could not save context.".localized())
             }
         }
     }
-
-    //MARK: Singleton Basic Properties
-    private init() {
-        do {
-            _devices = try context.fetch(Device.fetchRequest())
-        } catch {
-            fatalError("Could not communicate with Core Data.".localized())
-        }
-    }
-
-    public class func shared() -> DataController {
-        return sharedDataController
-    }
-
-    private static var sharedDataController: DataController = {
-        let dController = DataController()
-        return dController
-    }()
 }

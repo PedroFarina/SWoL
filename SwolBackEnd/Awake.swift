@@ -13,7 +13,7 @@ import os.log
 
 public class Awake {
 
-    private static func donateInteraction(for device: Device) {
+    private static func donateInteraction(for device: DeviceProtocol) {
         let interaction = INInteraction(intent: device.intent, response: nil)
         if let mac = device.mac {
             interaction.identifier = mac
@@ -35,7 +35,7 @@ public class Awake {
         case DeviceIncomplete(reason: String)
     }
 
-    public static func target(device: Device) -> Error? {
+    public static func target(device: DeviceProtocol) -> Error? {
         donateInteraction(for: device)
         guard let broadcastAddress = device.getBroadcast(),
             let macAddress = device.mac else {
