@@ -36,7 +36,7 @@ internal class CoreDataController {
     private lazy var context:NSManagedObjectContext = persistentContainer.viewContext
 
     //MARK: Core Data Devices
-    public func registerDevice(name: String, address: String, macAddress: String, port: Int32?) throws -> Device {
+    public func registerDevice(id: UUID = UUID(), name: String, address: String, macAddress: String, port: Int32?) throws -> Device {
         let newAddress = address.isEmpty ? nil : address
         let newMacAddress = macAddress.isEmpty ? nil : macAddress
         guard let device = NSEntityDescription.insertNewObject(forEntityName: "Device", into: context)
@@ -46,7 +46,7 @@ internal class CoreDataController {
         device.name = name
         device.address = newAddress
         device.mac = newMacAddress
-        device.cloudID = UUID()
+        device.cloudID = id
         if let port = port {
             device.port = port
         }
@@ -61,7 +61,10 @@ internal class CoreDataController {
         }
     }
     public func registerDevice(_ device: DeviceEntity) throws -> Device {
-        return try registerDevice(name: device._name.value, address: device._address.value, macAddress: device._mac.value, port: device.port)
+        guard let id = UUID(uuidString: device.record.recordID.recordName) else {
+            throw CDError.FailedToParseObject(reason: "Could not convert cloud data to local device".localized())
+        }
+        return try registerDevice(id: id, name: device._name.value, address: device._address.value, macAddress: device._mac.value, port: device.port)
     }
 
     public func editDevice(_ device:Device, newName name: String?, newAddress address: String?,

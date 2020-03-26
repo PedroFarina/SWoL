@@ -108,7 +108,7 @@ internal class DataConnector {
                 }
                 return
             }
-            completionHandler(.successful(result: userID))
+            completionHandler(.successfulWith(result: userID))
         }
     }
 
@@ -128,7 +128,7 @@ internal class DataConnector {
             }
 
             DispatchQueue.main.async {
-                completionHandler(.successful(results: results))
+                completionHandler(.successful(results: results ?? []))
             }
         }
     }

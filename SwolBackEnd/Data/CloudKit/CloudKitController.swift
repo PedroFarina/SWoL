@@ -17,7 +17,7 @@ internal class CloudKitDataController {
             switch answer {
             case .fail(let err, _):
                 completionHandler?(err)
-            case .successful(let results as [CKRecord]):
+            case .successful(let results):
                 for result in results {
                     let device = DeviceEntity(record: result)
                     self.devices.append(device)

@@ -34,3 +34,4 @@
 "Do you want to delete " = "Do you want to delete ";
 "Error!" = "Error!";
 "Couldn't convert device to send to Cloud" = "Couldn't convert device to send to Cloud";
+"Could not convert cloud data to local device" = "Could not convert cloud data to local device";
