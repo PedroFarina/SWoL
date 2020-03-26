@@ -11,18 +11,18 @@ import SwolBackEnd
 
 public class DevicesTableViewController: UITableViewController, DataWatcher {
 
-    private var devices: [Device] = DataController.shared().devices
-    private weak var selectedDevice: Device?
+    private var devices: [DeviceProtocol] = DataManager.shared().devices
+    private var selectedDevice: DeviceProtocol?
 
     public override func viewDidLoad() {
         tableView.tableFooterView = UIView()
         navigationItem.leftBarButtonItem = self.editButtonItem
     }
     public override func viewWillDisappear(_ animated: Bool) {
-        DataController.shared().removeAsWatcher(self)
+        DataManager.shared().removeAsWatcher(self)
     }
     public override func viewWillAppear(_ animated: Bool) {
-        DataController.shared().addAsWatcher(self)
+        DataManager.shared().addAsWatcher(self)
         updateData()
     }
 
@@ -31,7 +31,7 @@ public class DevicesTableViewController: UITableViewController, DataWatcher {
     }
 
     private func updateData() {
-        devices = DataController.shared().devices
+        devices = DataManager.shared().devices
         tableView.reloadData()
     }
 
@@ -102,11 +102,11 @@ public class DevicesTableViewController: UITableViewController, DataWatcher {
         self.performSegue(withIdentifier: "detailTap", sender: self)
     }
 
-    private func deleteAction(on device: Device) {
+    private func deleteAction(on device: DeviceProtocol) {
         let cont = UIAlertController(title: "Deletion confirmation".localized(), message: "Do you want to delete ".localized() + (device.name ?? "John".localized()), preferredStyle: .alert)
         let yes = UIAlertAction(title: "Yes".localized(), style: .destructive) { (_) in
             do {
-                try DataController.shared().removeDevice(device)
+                try DataManager.shared().removeDevice(device)
             } catch let err {
                 DispatchQueue.main.async {
                     let error = UIAlertController(title: "Error!".localized(), message: err.localizedDescription, preferredStyle: .alert)
@@ -121,13 +121,13 @@ public class DevicesTableViewController: UITableViewController, DataWatcher {
         self.present(cont, animated: true)
     }
 
-    private func editAction(on device:  Device) {
+    private func editAction(on device:  DeviceProtocol) {
         selectedDevice = device
         self.performSegue(withIdentifier: "newDevice", sender: self)
         selectedDevice = nil
     }
 
-    private func wakeAction(on device: Device) {
+    private func wakeAction(on device: DeviceProtocol) {
         let cont = UIAlertController(title: "Waking confirmation".localized(), message: "Do you want to wake ".localized() + (device.name ?? "John") + "?", preferredStyle: .alert)
         let yes = UIAlertAction(title: "Yes".localized(), style: .default) { (_) in
             if let err = Awake.target(device: device) {

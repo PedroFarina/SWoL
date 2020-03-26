@@ -18,8 +18,8 @@ extension Device {
         return wakeUp
     }
 
-    public static func getDevice(from intent: WakeDeviceIntent) -> Device? {
-        return DataController.shared().devices.first { (dev) -> Bool in
+    public static func getDevice(from intent: WakeDeviceIntent) -> DeviceProtocol? {
+        return DataManager.shared(with: .CoreData).devices.first { (dev) -> Bool in
             return dev.name?.uppercased() == intent.name?.uppercased()
         }
     }

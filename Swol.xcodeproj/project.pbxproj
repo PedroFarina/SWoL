@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0211BAB423C4080000867893 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020208C923C2F41500159427 /* StringExtension.swift */; };
 		0211BAB623C4085F00867893 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0211BAB523C4085F00867893 /* DetailViewController.swift */; };
+		02154854242CE71100EF7DDD /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02154853242CE71100EF7DDD /* CloudKit.framework */; };
 		024024BC23C048500065B8DD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 024024BE23C048500065B8DD /* Localizable.strings */; };
 		024024C123C050830065B8DD /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024024C023C050830065B8DD /* TextTableViewCell.swift */; };
 		024024C323C050D70065B8DD /* TextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 024024C223C050D70065B8DD /* TextTableViewCell.xib */; };
@@ -20,12 +21,12 @@
 		02A1EF9D23C44DBC00625723 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 02C11C8C23C38AAC00920674 /* Intents.intentdefinition */; settings = {ATTRIBUTES = (project_codegen, ); }; };
 		02A1EFA023C4511D00625723 /* Device+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020208B623C2EED000159427 /* Device+CoreDataProperties.swift */; };
 		02A1EFA323C4512900625723 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 020208B223C2EE9E00159427 /* DataModel.xcdatamodeld */; };
-		02A1EFAA23C4525F00625723 /* Device + Intents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C11C8E23C38D5400920674 /* Device + Intents.swift */; };
+		02A1EFAA23C4525F00625723 /* Device+Intents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C11C8E23C38D5400920674 /* Device+Intents.swift */; };
 		02A1EFAB23C4526300625723 /* WakeDeviceIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C11C9A23C3915900920674 /* WakeDeviceIntentHandler.swift */; };
 		02A7DC6F23C448C200ED7957 /* SwolBackEnd.h in Headers */ = {isa = PBXBuildFile; fileRef = 02A7DC6D23C448C200ED7957 /* SwolBackEnd.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		02A7DC7723C448CC00ED7957 /* Awake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D5786F23C03693001FA8A5 /* Awake.swift */; };
 		02A7DC7823C448CF00ED7957 /* NSPersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02942E5723C3F6E800EB2148 /* NSPersistentContainer.swift */; };
-		02A7DC7923C448D100ED7957 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020208C523C2F36400159427 /* DataController.swift */; };
+		02A7DC7923C448D100ED7957 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020208C523C2F36400159427 /* DataManager.swift */; };
 		02A7DC7A23C448D800ED7957 /* Device+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020208B523C2EED000159427 /* Device+CoreDataClass.swift */; };
 		02A7DC7B23C448DB00ED7957 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 020208B223C2EE9E00159427 /* DataModel.xcdatamodeld */; };
 		02A7DC7F23C4494C00ED7957 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020208C923C2F41500159427 /* StringExtension.swift */; };
@@ -43,6 +44,9 @@
 		02D5786523C03685001FA8A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02D5786423C03685001FA8A5 /* Assets.xcassets */; };
 		02D5786823C03685001FA8A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02D5786623C03685001FA8A5 /* LaunchScreen.storyboard */; };
 		02D8486D23C057ED00675A14 /* AddingDeviceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8486C23C057ED00675A14 /* AddingDeviceTableViewController.swift */; };
+		02E36552242CEAD80050C509 /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E36551242CEAD80050C509 /* CoreDataController.swift */; };
+		02E36554242CEC0B0050C509 /* DeviceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E36553242CEC0B0050C509 /* DeviceProtocol.swift */; };
+		02E36556242CED5E0050C509 /* DataSynchronizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E36555242CED5E0050C509 /* DataSynchronizer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,9 +112,10 @@
 		020208B323C2EE9E00159427 /* Swol.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Swol.xcdatamodel; sourceTree = "<group>"; };
 		020208B523C2EED000159427 /* Device+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Device+CoreDataClass.swift"; sourceTree = "<group>"; };
 		020208B623C2EED000159427 /* Device+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Device+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		020208C523C2F36400159427 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		020208C523C2F36400159427 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		020208C923C2F41500159427 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		0211BAB523C4085F00867893 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		02154853242CE71100EF7DDD /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		024024BD23C048500065B8DD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		024024C023C050830065B8DD /* TextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
 		024024C223C050D70065B8DD /* TextTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextTableViewCell.xib; sourceTree = "<group>"; };
@@ -131,7 +136,7 @@
 		02C11C7323C389EB00920674 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
 		02C11C8923C38A6800920674 /* SWoL.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SWoL.entitlements; sourceTree = "<group>"; };
 		02C11C8C23C38AAC00920674 /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
-		02C11C8E23C38D5400920674 /* Device + Intents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Device + Intents.swift"; sourceTree = "<group>"; };
+		02C11C8E23C38D5400920674 /* Device+Intents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Device+Intents.swift"; sourceTree = "<group>"; };
 		02C11C9A23C3915900920674 /* WakeDeviceIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakeDeviceIntentHandler.swift; sourceTree = "<group>"; };
 		02D5785523C03684001FA8A5 /* Swol.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swol.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02D5785823C03684001FA8A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +147,9 @@
 		02D5786923C03685001FA8A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02D5786F23C03693001FA8A5 /* Awake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Awake.swift; sourceTree = "<group>"; };
 		02D8486C23C057ED00675A14 /* AddingDeviceTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingDeviceTableViewController.swift; sourceTree = "<group>"; };
+		02E36551242CEAD80050C509 /* CoreDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
+		02E36553242CEC0B0050C509 /* DeviceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceProtocol.swift; sourceTree = "<group>"; };
+		02E36555242CED5E0050C509 /* DataSynchronizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSynchronizer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				02C98628241843570040242A /* SwolBackEnd.framework in Frameworks */,
+				02154854242CE71100EF7DDD /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,11 +183,43 @@
 		020208B923C2EEF900159427 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				02154858242CEA3C00EF7DDD /* CloudKit */,
+				02154857242CEA2F00EF7DDD /* CoreData */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		02154855242CE97000EF7DDD /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				02942E5723C3F6E800EB2148 /* NSPersistentContainer.swift */,
+				02E36551242CEAD80050C509 /* CoreDataController.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		02154856242CE97A00EF7DDD /* CloudKit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CloudKit;
+			sourceTree = "<group>";
+		};
+		02154857242CEA2F00EF7DDD /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
 				020208B223C2EE9E00159427 /* DataModel.xcdatamodeld */,
 				020208B523C2EED000159427 /* Device+CoreDataClass.swift */,
 				020208B623C2EED000159427 /* Device+CoreDataProperties.swift */,
 			);
-			path = Model;
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		02154858242CEA3C00EF7DDD /* CloudKit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CloudKit;
 			sourceTree = "<group>";
 		};
 		024024BF23C050720065B8DD /* TableViewCells */ = {
@@ -244,7 +285,7 @@
 		02A7DC8A23C44B2400ED7957 /* Intents */ = {
 			isa = PBXGroup;
 			children = (
-				02C11C8E23C38D5400920674 /* Device + Intents.swift */,
+				02C11C8E23C38D5400920674 /* Device+Intents.swift */,
 				02C11C9A23C3915900920674 /* WakeDeviceIntentHandler.swift */,
 			);
 			path = Intents;
@@ -253,8 +294,11 @@
 		02A7DC8B23C44B3100ED7957 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				02942E5723C3F6E800EB2148 /* NSPersistentContainer.swift */,
-				020208C523C2F36400159427 /* DataController.swift */,
+				020208C523C2F36400159427 /* DataManager.swift */,
+				02E36555242CED5E0050C509 /* DataSynchronizer.swift */,
+				02E36553242CEC0B0050C509 /* DeviceProtocol.swift */,
+				02154856242CE97A00EF7DDD /* CloudKit */,
+				02154855242CE97000EF7DDD /* CoreData */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -272,6 +316,7 @@
 		02C11C7223C389EB00920674 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				02154853242CE71100EF7DDD /* CloudKit.framework */,
 				02C11C7323C389EB00920674 /* IntentsUI.framework */,
 			);
 			name = Frameworks;
@@ -475,15 +520,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02E36554242CEC0B0050C509 /* DeviceProtocol.swift in Sources */,
 				02A1EFA023C4511D00625723 /* Device+CoreDataProperties.swift in Sources */,
 				02A7DC7723C448CC00ED7957 /* Awake.swift in Sources */,
+				02E36552242CEAD80050C509 /* CoreDataController.swift in Sources */,
 				02A7DC7F23C4494C00ED7957 /* StringExtension.swift in Sources */,
-				02A1EFAA23C4525F00625723 /* Device + Intents.swift in Sources */,
+				02A1EFAA23C4525F00625723 /* Device+Intents.swift in Sources */,
 				02A1EFAB23C4526300625723 /* WakeDeviceIntentHandler.swift in Sources */,
 				02A7DC8423C4498F00ED7957 /* Intents.intentdefinition in Sources */,
+				02E36556242CED5E0050C509 /* DataSynchronizer.swift in Sources */,
 				02A7DC7B23C448DB00ED7957 /* DataModel.xcdatamodeld in Sources */,
 				02A7DC7A23C448D800ED7957 /* Device+CoreDataClass.swift in Sources */,
-				02A7DC7923C448D100ED7957 /* DataController.swift in Sources */,
+				02A7DC7923C448D100ED7957 /* DataManager.swift in Sources */,
 				02A7DC7823C448CF00ED7957 /* NSPersistentContainer.swift in Sources */,
 				02A7DC8823C44A2D00ED7957 /* NSUserActivities + IntentData.swift in Sources */,
 			);

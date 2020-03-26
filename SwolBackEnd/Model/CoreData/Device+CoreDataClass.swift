@@ -11,6 +11,6 @@ import Foundation
 import CoreData
 
 @objc(Device)
-public class Device: NSManagedObject {
+public class Device: NSManagedObject, DeviceProtocol {
 
 }
