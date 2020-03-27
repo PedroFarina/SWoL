@@ -152,7 +152,7 @@
 						<key>INIntentResponseCodeConciseFormatStringID</key>
 						<string>vpsKjQ</string>
 						<key>INIntentResponseCodeFormatString</key>
-						<string>${name} not  found</string>
+						<string>${name} could not be found.</string>
 						<key>INIntentResponseCodeFormatStringID</key>
 						<string>HDXdkP</string>
 						<key>INIntentResponseCodeName</key>

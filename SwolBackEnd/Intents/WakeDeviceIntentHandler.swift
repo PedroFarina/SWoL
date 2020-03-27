@@ -18,6 +18,10 @@ public class WakeDeviceIntentHandler: NSObject, WakeDeviceIntentHandling {
         }
 
         let userActivity = NSUserActivity(activityType: NSUserActivity.wakeDeviceActivityType)
+        userActivity.title = "Start up a device".localized()
+        userActivity.suggestedInvocationPhrase = "Start up device".localized()
+        userActivity.persistentIdentifier = NSUserActivity.wakeDeviceActivityType
+        userActivity.isEligibleForSearch = true
 
         let response: WakeDeviceIntentResponse
         if let deviceName = device.name,
