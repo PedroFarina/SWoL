@@ -20,7 +20,7 @@ public class DataManager: DataSynchronizer {
         }
     }
     private func hasPermissionTo(access permission: DataPermission) -> Bool {
-        return ((self.permission?.rawValue ?? 0) & permission.rawValue) == permission.rawValue
+        return ((self.permission?.rawValue ?? 0) & permission.rawValue) >= permission.rawValue
     }
     lazy var coreDataController: CoreDataController = CoreDataController(synchronizer: self)
     lazy var cloudKitDataController: CloudKitDataController = CloudKitDataController(synchronizer: self)
@@ -75,11 +75,31 @@ public class DataManager: DataSynchronizer {
             }
         }
 
-        //Check conflicts(implement it before adding any other target)
+        //Checking for conflicts
+        ckCopy = []
+        ckCopy.append(contentsOf: cloudKitDataController.devices)
+        cdCopy = []
+        cdCopy.append(contentsOf: coreDataController.devices)
+        for i in 0 ..< min(ckCopy.count, cdCopy.count) {
+            if ckCopy[i] <> cdCopy[i] {
+                conflictHandler.chooseVersion { (version) in
+                    if version == .Local {
+                        self.cloudKitDataController.overrideDevices(with: cdCopy)
+                    } else {
+                        do {
+                            try self.coreDataController.overrideDevices(with: ckCopy)
+                        } catch {
+                            self.conflictHandler.errDidOccur(err: error)
+                        }
+                    }
+                }
+                break
+            }
+        }
     }
 
-    func dataChanged(to devices: [DeviceProtocol]) {
-        if hasPermissionTo(access: .Both) && (devices as? [Device]) == nil {
+    func dataChanged(to devices: [DeviceProtocol], in system: DataPermission) {
+        if hasPermissionTo(access: .CoreData) && system == .CloudKit {
             return
         }
         self._devices = devices
@@ -144,6 +164,10 @@ public class DataManager: DataSynchronizer {
         }
     }
 
+    public func deleteCloudData() {
+        cloudKitDataController.removeDevices(cloudKitDataController.devices)
+    }
+
     //MARK: Watchers
     private var watchers: [DataWatcher] = []
     public func addAsWatcher(_ watcher: DataWatcher) {
@@ -163,7 +187,7 @@ public class DataManager: DataSynchronizer {
     private init() {
     }
 
-    public class func shared(with permit: DataPermission = .Both) -> DataManager {
+    public class func shared(with permit: DataPermission) -> DataManager {
         if permit != sharedDataController.permission {
             sharedDataController.permission = permit
         }

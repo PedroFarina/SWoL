@@ -26,7 +26,7 @@ public enum DataVersion {
     case Cloud
 }
 public protocol ConflictHandler {
-    func chooseVersion() -> DataVersion
+    func chooseVersion(completionHandler: @escaping (DataVersion) -> Void)
     func errDidOccur(err: Error)
 }
 public struct DefaultConflictHandler: ConflictHandler {
@@ -34,11 +34,11 @@ public struct DefaultConflictHandler: ConflictHandler {
         fatalError(err.localizedDescription)
     }
 
-    public func chooseVersion() -> DataVersion {
-        return .Local
+    public func chooseVersion(completionHandler: @escaping (DataVersion) -> Void) {
+        completionHandler(.Local)
     }
 }
 
 internal protocol DataSynchronizer {
-    func dataChanged(to devices: [DeviceProtocol])
+    func dataChanged(to devices: [DeviceProtocol], in system: DataPermission)
 }

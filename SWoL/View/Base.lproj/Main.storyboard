@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FQx-7N-Rqh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ePr-kf-qA9">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView verifyAmbiguity="off" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLc-Je-XCp">
-                                <rect key="frame" x="0.0" y="88" width="414" height="2928"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="2879"/>
                                 <subviews>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mtJ-Nm-oKi" userLabel="ContentView">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="3050"/>
@@ -222,31 +222,27 @@ On the advanced settings, enable wake on Magic Packet settings.
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="detailButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="deviceCell" editingAccessoryType="disclosureIndicator" textLabel="eve-Hy-DhF" detailTextLabel="7kR-MV-6VA" imageView="Y0v-IX-tie" style="IBUITableViewCellStyleSubtitle" id="J8h-gd-GOO">
-                                <rect key="frame" x="20" y="55.5" width="374" height="55.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="detailButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="deviceCell" editingAccessoryType="disclosureIndicator" textLabel="eve-Hy-DhF" detailTextLabel="7kR-MV-6VA" style="IBUITableViewCellStyleSubtitle" id="J8h-gd-GOO">
+                                <rect key="frame" x="20" y="55.5" width="374" height="57.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="J8h-gd-GOO" id="YIU-wQ-aek">
-                                    <rect key="frame" x="0.0" y="0.0" width="330" height="55.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="330" height="57.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eve-Hy-DhF">
-                                            <rect key="frame" x="59" y="10" width="33.5" height="20.5"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" id="eve-Hy-DhF">
+                                            <rect key="frame" x="20" y="9" width="33.5" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7kR-MV-6VA">
-                                            <rect key="frame" x="59" y="31.5" width="44" height="14.5"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" id="7kR-MV-6VA">
+                                            <rect key="frame" x="20" y="32.5" width="44" height="14.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="desktopcomputer" catalog="system" id="Y0v-IX-tie">
-                                            <rect key="frame" x="20" y="18" width="24" height="19"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <color key="tintColor" red="0.24313725490196078" green="0.47843137254901957" blue="0.76078431372549016" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -275,7 +271,7 @@ On the advanced settings, enable wake on Magic Packet settings.
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DSx-oT-GFa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1344.9275362318842" y="-276.5625"/>
+            <point key="canvasLocation" x="1614.4927536231885" y="-277.23214285714283"/>
         </scene>
         <!--Register new device-->
         <scene sceneID="J9G-E7-kfn">
@@ -449,28 +445,72 @@ On the advanced settings, enable wake on Magic Packet settings.
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jg7-N5-x9s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3173.913043478261" y="-277.23214285714283"/>
+            <point key="canvasLocation" x="3670" y="-277"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Z3Z-rf-gOg">
+        <!--Settings-->
+        <scene sceneID="C3M-hw-kbN">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FQx-7N-Rqh" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="0b5-QJ-BIX">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KFB-gC-th0">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </toolbar>
+                <tableViewController id="erM-4b-10g" customClass="SettingsTableViewController" customModule="Swol" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="bID-SJ-wuI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="iCloud Settings" id="bfB-Tl-xzl">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="dax-Ki-isc" style="IBUITableViewCellStyleDefault" id="hxL-4h-FTe" customClass="SwitchTableViewCell" customModule="Swol" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="55.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hxL-4h-FTe" id="1Dt-MV-YUg">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="iCloud Synchronization" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" id="dax-Ki-isc" userLabel="iCloud Synchronization">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="b3W-LB-MEJ">
+                                        <rect key="frame" x="0.0" y="99" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="b3W-LB-MEJ" id="7NU-lM-s2M">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Erase All iCloud Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IHL-mx-XCg">
+                                                    <rect key="frame" x="127" y="11.5" width="160" height="21"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="IHL-mx-XCg" firstAttribute="centerY" secondItem="7NU-lM-s2M" secondAttribute="centerY" id="9qZ-Eb-zNc"/>
+                                                <constraint firstItem="IHL-mx-XCg" firstAttribute="centerX" secondItem="7NU-lM-s2M" secondAttribute="centerX" id="MB7-61-6XY"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="erM-4b-10g" id="EEM-cL-Msx"/>
+                            <outlet property="delegate" destination="erM-4b-10g" id="Uje-sh-5Gr"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Settings" image="ellipsis.circle" catalog="system" selectedImage="ellipsis.circle.fill" id="z6l-q0-Ddl"/>
                     <connections>
-                        <segue destination="urX-mC-Z5J" kind="relationship" relationship="rootViewController" id="g0M-QB-LNH"/>
+                        <outlet property="iCloudTableViewCell" destination="hxL-4h-FTe" id="UGc-fJ-lfV"/>
                     </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YXe-bq-jnd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Swd-ht-22W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="434.78260869565219" y="-276.5625"/>
+            <point key="canvasLocation" x="1490" y="471"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Njt-P0-bi5">
@@ -488,7 +528,47 @@ On the advanced settings, enable wake on Magic Packet settings.
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z7G-hd-kh5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2263.768115942029" y="-277.23214285714283"/>
+            <point key="canvasLocation" x="2683" y="-277"/>
+        </scene>
+        <!--Swol Tab Bar Controller-->
+        <scene sceneID="MlG-rQ-Hll">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ePr-kf-qA9" customClass="SwolTabBarController" customModule="Swol" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="n3F-m3-zvv"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Pxc-qt-0J2">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.24313725490196078" green="0.47843137254901957" blue="0.76078431372549016" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="qOV-g2-E6P" kind="relationship" relationship="viewControllers" id="in5-f6-pHf"/>
+                        <segue destination="erM-4b-10g" kind="relationship" relationship="viewControllers" id="SDa-7R-fUn"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aid-eD-RTD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-86" y="-277"/>
+        </scene>
+        <!--Devices-->
+        <scene sceneID="EJQ-PZ-V8A">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qOV-g2-E6P" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Devices" image="desktopcomputer" catalog="system" selectedImage="desktopcomputer" id="eJI-j3-Rzg"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="e1f-YC-A7F">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="urX-mC-Z5J" kind="relationship" relationship="rootViewController" id="lIV-dP-i6M"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eoA-Dl-US9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="705.79710144927537" y="-277.23214285714283"/>
         </scene>
     </scenes>
     <resources>
@@ -498,6 +578,8 @@ On the advanced settings, enable wake on Magic Packet settings.
         <image name="Windows 10 Power Management" width="398" height="451"/>
         <image name="Windows 10 Wake on magic packet" width="396" height="451"/>
         <image name="desktopcomputer" catalog="system" width="64" height="50"/>
+        <image name="ellipsis.circle" catalog="system" width="64" height="60"/>
+        <image name="ellipsis.circle.fill" catalog="system" width="64" height="60"/>
     </resources>
     <color key="tintColor" red="0.24313725490196078" green="0.47843137254901957" blue="0.76078431372549016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

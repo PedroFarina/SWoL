@@ -108,9 +108,9 @@ public class AddingDeviceTableViewController: UITableViewController {
         mac = mac.replacingOccurrences(of: "-", with: ":").uppercased()
         do {
             if let device = device {
-                try DataManager.shared().editDevice(device, newName: name, newAddress: ip, newMacAddress: mac, newPort: port)
+                try DataManager.shared(with: iCloudAccessManager.permission).editDevice(device, newName: name, newAddress: ip, newMacAddress: mac, newPort: port)
             } else {
-                try DataManager.shared().registerDevice(name: name, address: ip, macAddress: mac, port: port)
+                try DataManager.shared(with: iCloudAccessManager.permission).registerDevice(name: name, address: ip, macAddress: mac, port: port)
             }
             self.dismiss(animated: true)
         } catch let err {
