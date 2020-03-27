@@ -40,5 +40,5 @@ public struct DefaultConflictHandler: ConflictHandler {
 }
 
 internal protocol DataSynchronizer {
-    func dataChanged(to devices: [DeviceProtocol])
+    func dataChanged(to devices: [DeviceProtocol], in system: DataPermission)
 }

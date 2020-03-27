@@ -16,7 +16,7 @@ internal class CoreDataController {
     }
     func fetchData() throws {
         devices = try context.fetch(Device.fetchRequest())
-        synchronizer.dataChanged(to: devices)
+        synchronizer.dataChanged(to: devices, in: .CoreData)
     }
 
     let synchronizer: DataSynchronizer
@@ -127,7 +127,7 @@ internal class CoreDataController {
         if context.hasChanges {
             do {
                 try context.save()
-                synchronizer.dataChanged(to: devices)
+                synchronizer.dataChanged(to: devices, in: .CoreData)
             } catch {
                 throw CDError.FailedToSaveContext(reason: "Could not save context.".localized())
             }

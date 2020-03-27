@@ -23,7 +23,7 @@
 "You have no devices yet.\nPlease tap on '+' to create one." = "You have no devices yet.\nPlease tap on '+' to create one.";
 "Waking confirmation" = "Waking confirmation";
 "Do you want to wake " = "Do you want to wake ";
-"Yes!" = "Yes!";
+"Yes" = "Yes";
 "Error!" = "Error!";
 "Success" = "Success";
 "Packet sent to " = "Packet sent to ";
@@ -37,3 +37,4 @@
 "Could not convert cloud data to local device" = "Could not convert cloud data to local device";
 "Start up device" = "Start up device";
 "Start up a device" = "Start up a device";
+"This action will delete all your devices from iCloud. It can't be undone." = "This action will delete all your devices from iCloud. It can't be undone.";

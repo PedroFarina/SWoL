@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0211BAB423C4080000867893 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020208C923C2F41500159427 /* StringExtension.swift */; };
-		0211BAB623C4085F00867893 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0211BAB523C4085F00867893 /* DetailViewController.swift */; };
 		02154854242CE71100EF7DDD /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02154853242CE71100EF7DDD /* CloudKit.framework */; };
 		024024BC23C048500065B8DD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 024024BE23C048500065B8DD /* Localizable.strings */; };
 		024024C123C050830065B8DD /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024024C023C050830065B8DD /* TextTableViewCell.swift */; };
@@ -36,6 +35,12 @@
 		02C11C9823C38F5400920674 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 02C11C8C23C38AAC00920674 /* Intents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
 		02C490E7242E665400A388A1 /* NSUserActivities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028801B923C396D60079D8F6 /* NSUserActivities.swift */; };
 		02C490E8242E665900A388A1 /* NSUserActivities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028801B923C396D60079D8F6 /* NSUserActivities.swift */; };
+		02C5BAE0242E7790007F57BE /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C5BADF242E7790007F57BE /* SwitchTableViewCell.swift */; };
+		02C5BAE2242E789D007F57BE /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C5BAE1242E789D007F57BE /* SettingsTableViewController.swift */; };
+		02C5BAE4242E790F007F57BE /* UserDefaultsNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C5BAE3242E790F007F57BE /* UserDefaultsNames.swift */; };
+		02C5BAE5242E7915007F57BE /* UserDefaultsNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C5BAE3242E790F007F57BE /* UserDefaultsNames.swift */; };
+		02C5BAE6242E7916007F57BE /* UserDefaultsNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C5BAE3242E790F007F57BE /* UserDefaultsNames.swift */; };
+		02C5BAE9242E7ADA007F57BE /* iCloudAccessManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C5BAE8242E7ADA007F57BE /* iCloudAccessManager.swift */; };
 		02C98628241843570040242A /* SwolBackEnd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02A7DC6B23C448C200ED7957 /* SwolBackEnd.framework */; };
 		02C98629241843570040242A /* SwolBackEnd.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 02A7DC6B23C448C200ED7957 /* SwolBackEnd.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		02C9862C241843570040242A /* SwolIntents.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 02A1EF9223C44DA500625723 /* SwolIntents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -124,7 +129,6 @@
 		020208B623C2EED000159427 /* Device+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Device+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		020208C523C2F36400159427 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		020208C923C2F41500159427 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
-		0211BAB523C4085F00867893 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		02154853242CE71100EF7DDD /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		024024BD23C048500065B8DD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		024024C023C050830065B8DD /* TextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
@@ -148,6 +152,10 @@
 		02C11C8C23C38AAC00920674 /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
 		02C11C8E23C38D5400920674 /* Device+Intents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Device+Intents.swift"; sourceTree = "<group>"; };
 		02C11C9A23C3915900920674 /* WakeDeviceIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakeDeviceIntentHandler.swift; sourceTree = "<group>"; };
+		02C5BADF242E7790007F57BE /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SwitchTableViewCell.swift; path = Swol/View/TableViewCells/SwitchTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		02C5BAE1242E789D007F57BE /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsTableViewController.swift; path = Swol/Controller/SettingsTableViewController.swift; sourceTree = SOURCE_ROOT; };
+		02C5BAE3242E790F007F57BE /* UserDefaultsNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsNames.swift; sourceTree = "<group>"; };
+		02C5BAE8242E7ADA007F57BE /* iCloudAccessManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = iCloudAccessManager.swift; path = Swol/Model/iCloudAccessManager.swift; sourceTree = SOURCE_ROOT; };
 		02D5785523C03684001FA8A5 /* Swol.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swol.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02D5785823C03684001FA8A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02D5785A23C03684001FA8A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -249,6 +257,7 @@
 			children = (
 				024024C023C050830065B8DD /* TextTableViewCell.swift */,
 				024024C223C050D70065B8DD /* TextTableViewCell.xib */,
+				02C5BADF242E7790007F57BE /* SwitchTableViewCell.swift */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -267,7 +276,7 @@
 			children = (
 				0289B22823C03DE300D610AB /* DevicesTableViewController.swift */,
 				02D8486C23C057ED00675A14 /* AddingDeviceTableViewController.swift */,
-				0211BAB523C4085F00867893 /* DetailViewController.swift */,
+				02C5BAE1242E789D007F57BE /* SettingsTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -320,6 +329,7 @@
 		02C11C6323C3888500920674 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				02C5BAE3242E790F007F57BE /* UserDefaultsNames.swift */,
 				028801B923C396D60079D8F6 /* NSUserActivities.swift */,
 				020208C923C2F41500159427 /* StringExtension.swift */,
 				02C11C8C23C38AAC00920674 /* Intents.intentdefinition */,
@@ -335,6 +345,14 @@
 				02C11C7323C389EB00920674 /* IntentsUI.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		02C5BAE7242E7AB9007F57BE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				02C5BAE8242E7ADA007F57BE /* iCloudAccessManager.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		02D5784C23C03684001FA8A5 = {
@@ -363,8 +381,9 @@
 			isa = PBXGroup;
 			children = (
 				02C11C8923C38A6800920674 /* SWoL.entitlements */,
-				0289B22C23C03DF900D610AB /* Controller */,
+				02C5BAE7242E7AB9007F57BE /* Model */,
 				0289B22B23C03DF500D610AB /* View */,
+				0289B22C23C03DF900D610AB /* Controller */,
 				02D5785823C03684001FA8A5 /* AppDelegate.swift */,
 				02D5785A23C03684001FA8A5 /* SceneDelegate.swift */,
 				02D5786423C03685001FA8A5 /* Assets.xcassets */,
@@ -554,6 +573,7 @@
 				028F58F82418163B001C1A33 /* StringExtension.swift in Sources */,
 				02C490E8242E665900A388A1 /* NSUserActivities.swift in Sources */,
 				02A1EFA323C4512900625723 /* DataModel.xcdatamodeld in Sources */,
+				02C5BAE6242E7916007F57BE /* UserDefaultsNames.swift in Sources */,
 				02A1EF9D23C44DBC00625723 /* Intents.intentdefinition in Sources */,
 				02A1EF9523C44DA500625723 /* IntentHandler.swift in Sources */,
 			);
@@ -564,6 +584,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				02E36565242D267C0050C509 /* DataProperty.swift in Sources */,
+				02C5BAE5242E7915007F57BE /* UserDefaultsNames.swift in Sources */,
 				02E36554242CEC0B0050C509 /* DeviceProtocol.swift in Sources */,
 				02A1EFA023C4511D00625723 /* Device+CoreDataProperties.swift in Sources */,
 				02A7DC7723C448CC00ED7957 /* Awake.swift in Sources */,
@@ -592,13 +613,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0211BAB623C4085F00867893 /* DetailViewController.swift in Sources */,
 				0289B22923C03DE300D610AB /* DevicesTableViewController.swift in Sources */,
+				02C5BAE0242E7790007F57BE /* SwitchTableViewCell.swift in Sources */,
 				02D5785923C03684001FA8A5 /* AppDelegate.swift in Sources */,
 				024024C123C050830065B8DD /* TextTableViewCell.swift in Sources */,
 				02D5785B23C03684001FA8A5 /* SceneDelegate.swift in Sources */,
 				0211BAB423C4080000867893 /* StringExtension.swift in Sources */,
 				02C490E7242E665400A388A1 /* NSUserActivities.swift in Sources */,
+				02C5BAE9242E7ADA007F57BE /* iCloudAccessManager.swift in Sources */,
+				02C5BAE4242E790F007F57BE /* UserDefaultsNames.swift in Sources */,
+				02C5BAE2242E789D007F57BE /* SettingsTableViewController.swift in Sources */,
 				02C11C9823C38F5400920674 /* Intents.intentdefinition in Sources */,
 				02942E5523C3F4AB00EB2148 /* DataModel.xcdatamodeld in Sources */,
 				02D8486D23C057ED00675A14 /* AddingDeviceTableViewController.swift in Sources */,

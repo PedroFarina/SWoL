@@ -23,7 +23,7 @@
 "You have no devices yet.\nPlease tap on '+' to create one." = "Você ainda não tem dispositivos.\nPor favor toque no '+' para criar um.";
 "Waking confirmation" = "Confirmação de envio";
 "Do you want to wake " = "Você deseja acordar ";
-"Yes!" = "Sim!";
+"Yes" = "Sim";
 "Error!" = "Erro!";
 "Success" = "Successo";
 "Packet sent to " = "Pacote enviado para ";
@@ -36,3 +36,4 @@
 "Could not convert cloud data to local device" = "Não foi possível converter o dado da nuvem para objeto local";
 "Start up a device" = "Ligar um dispositivo";
 "Start up device" = "Ligar dispositivo";
+"This action will delete all your devices from iCloud. It can't be undone." = "Essa ação removerá todos seus dispositivos do iCloud. Essa ação não pode ser desfeita.";

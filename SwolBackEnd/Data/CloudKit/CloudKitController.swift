@@ -18,11 +18,12 @@ internal class CloudKitDataController {
             case .fail(let err, _):
                 completionHandler?(err)
             case .successful(let results):
+                self.devices = []
                 for result in results {
                     let device = DeviceEntity(record: result)
                     self.devices.append(device)
                 }
-                self.synchronizer.dataChanged(to: self.devices)
+                self.synchronizer.dataChanged(to: self.devices, in: .CloudKit)
                 completionHandler?(nil)
                 break
             default:
@@ -100,9 +101,13 @@ internal class CloudKitDataController {
         saveData(entitiesToDelete: [device])
     }
 
+    public func removeDevices(_ devices: [DeviceEntity]) {
+        saveData(entitiesToDelete: devices)
+    }
+
     //MARK: Saving data
     private func saveData(entitiesToSave: [EntityObject] = [], entitiesToDelete: [EntityObject] = []) {
         DataConnector.saveData(database: .Private, entitiesToSave: entitiesToSave, entitiesToDelete: entitiesToDelete)
-        synchronizer.dataChanged(to: devices)
+        synchronizer.dataChanged(to: devices, in: .CloudKit)
     }
 }
