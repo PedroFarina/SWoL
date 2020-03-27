@@ -38,3 +38,17 @@
 "Start up device" = "Start up device";
 "Start up a device" = "Start up a device";
 "This action will delete all your devices from iCloud. It can't be undone." = "This action will delete all your devices from iCloud. It can't be undone.";
+"You are not connected to iCloud" = "You are not connected to iCloud";
+"This app uses iCloud to synchronize your data accross devices." = "This app uses iCloud to synchronize your data accross devices.";
+"Deactivate iCloud Sync" = "Deactivate iCloud Sync";
+"Open Settings" = "Open Settings";
+"Connection Error!" = "Connection Error!";
+"Seems that you're not connected to the internet." = "Seems that you're not connected to the internet.";
+"Your changes will not be saved to iCloud, but you can still use the app." = "Your changes will not be saved to iCloud, but you can still use the app.";
+"Unkown Error!" = "Unkown Error!";
+"Error!" = "Error!";
+"Unable to save data locally!" = "Unable to save data locally!";
+"The cloud data are different from local data!" = "The cloud data are different from local data!";
+"There was a conflict in the data from the cloud." = "There was a conflict in the data from the cloud.";
+"Keep local data" = "Keep local data";
+"Keep cloud data" = "Keep cloud data";

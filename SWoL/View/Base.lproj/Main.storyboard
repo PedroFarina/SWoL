@@ -530,10 +530,10 @@ On the advanced settings, enable wake on Magic Packet settings.
             </objects>
             <point key="canvasLocation" x="2683" y="-277"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Swol Tab Bar Controller-->
         <scene sceneID="MlG-rQ-Hll">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ePr-kf-qA9" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ePr-kf-qA9" customClass="SwolTabBarController" customModule="Swol" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="n3F-m3-zvv"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Pxc-qt-0J2">

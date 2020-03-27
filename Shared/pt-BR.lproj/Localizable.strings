@@ -37,3 +37,17 @@
 "Start up a device" = "Ligar um dispositivo";
 "Start up device" = "Ligar dispositivo";
 "This action will delete all your devices from iCloud. It can't be undone." = "Essa ação removerá todos seus dispositivos do iCloud. Essa ação não pode ser desfeita.";
+"You are not connected to iCloud" = "Você não está conectado ao iCloud";
+"This app uses iCloud to synchronize your data accross devices." = "Esse aplicativo usa iCloud para sincronizar os seus dados entre os dispositivos.";
+"Deactivate iCloud Sync" = "Desativar sincronização iCloud";
+"Open Settings" = "Abrir Ajustes";
+"Connection Error!" = "Erro de conexão!";
+"Seems that you're not connected to the internet." = "Parece que você não está conectado a internet.";
+"Your changes will not be saved to iCloud, but you can still use the app." = "Suas modificações não serão salvas no iCloud, mas você ainda pode usar o aplicativo.";
+"Unkown Error!" = "Erro desconhecido!";
+"Error!" = "Erro!";
+"Unable to save data locally!" = "Não foi possível salvar o dado localmente!";
+"The cloud data are different from local data!" = "Os dados na nuvem estão diferentes dos locais";
+"There was a conflict in the data from the cloud." = "Houve um conflito de dados na nuvem.";
+"Keep local data" = "Manter dados locais";
+"Keep cloud data" = "Manter dados da nuvem";

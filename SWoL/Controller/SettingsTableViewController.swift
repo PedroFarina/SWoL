@@ -24,10 +24,13 @@ public class SettingsTableViewController: UITableViewController {
     }()
 
     public override func viewDidLoad() {
-        iCloudTableViewCell.onOff.isOn = iCloudAccessManager.isEnabled
         iCloudTableViewCell.onOffChanged = { (onOffSwitch) in
             iCloudAccessManager.isEnabled = onOffSwitch.isOn
         }
+    }
+
+    public override func viewWillAppear(_ animated: Bool){
+        iCloudTableViewCell.onOff.isOn = iCloudAccessManager.isEnabled
     }
 
     public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

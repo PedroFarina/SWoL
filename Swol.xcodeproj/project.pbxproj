@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0211BAB423C4080000867893 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020208C923C2F41500159427 /* StringExtension.swift */; };
 		02154854242CE71100EF7DDD /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02154853242CE71100EF7DDD /* CloudKit.framework */; };
+		0218352D242E8DC700C8D8AA /* SwolTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0218352C242E8DC700C8D8AA /* SwolTabBarController.swift */; };
 		024024BC23C048500065B8DD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 024024BE23C048500065B8DD /* Localizable.strings */; };
 		024024C123C050830065B8DD /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024024C023C050830065B8DD /* TextTableViewCell.swift */; };
 		024024C323C050D70065B8DD /* TextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 024024C223C050D70065B8DD /* TextTableViewCell.xib */; };
@@ -130,6 +131,7 @@
 		020208C523C2F36400159427 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		020208C923C2F41500159427 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		02154853242CE71100EF7DDD /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		0218352C242E8DC700C8D8AA /* SwolTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SwolTabBarController.swift; path = Swol/Controller/SwolTabBarController.swift; sourceTree = SOURCE_ROOT; };
 		024024BD23C048500065B8DD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		024024C023C050830065B8DD /* TextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
 		024024C223C050D70065B8DD /* TextTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextTableViewCell.xib; sourceTree = "<group>"; };
@@ -277,6 +279,7 @@
 				0289B22823C03DE300D610AB /* DevicesTableViewController.swift */,
 				02D8486C23C057ED00675A14 /* AddingDeviceTableViewController.swift */,
 				02C5BAE1242E789D007F57BE /* SettingsTableViewController.swift */,
+				0218352C242E8DC700C8D8AA /* SwolTabBarController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -624,6 +627,7 @@
 				02C5BAE4242E790F007F57BE /* UserDefaultsNames.swift in Sources */,
 				02C5BAE2242E789D007F57BE /* SettingsTableViewController.swift in Sources */,
 				02C11C9823C38F5400920674 /* Intents.intentdefinition in Sources */,
+				0218352D242E8DC700C8D8AA /* SwolTabBarController.swift in Sources */,
 				02942E5523C3F4AB00EB2148 /* DataModel.xcdatamodeld in Sources */,
 				02D8486D23C057ED00675A14 /* AddingDeviceTableViewController.swift in Sources */,
 			);
