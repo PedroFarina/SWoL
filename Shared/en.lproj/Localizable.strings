@@ -35,3 +35,5 @@
 "Error!" = "Error!";
 "Couldn't convert device to send to Cloud" = "Couldn't convert device to send to Cloud";
 "Could not convert cloud data to local device" = "Could not convert cloud data to local device";
+"Start up device" = "Start up device";
+"Start up a device" = "Start up a device";

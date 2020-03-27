@@ -32,8 +32,10 @@
 		02A7DC7F23C4494C00ED7957 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020208C923C2F41500159427 /* StringExtension.swift */; };
 		02A7DC8023C4494F00ED7957 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 024024BE23C048500065B8DD /* Localizable.strings */; };
 		02A7DC8423C4498F00ED7957 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 02C11C8C23C38AAC00920674 /* Intents.intentdefinition */; };
-		02A7DC8823C44A2D00ED7957 /* NSUserActivities + IntentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028801B923C396D60079D8F6 /* NSUserActivities + IntentData.swift */; };
+		02A7DC8823C44A2D00ED7957 /* NSUserActivities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028801B923C396D60079D8F6 /* NSUserActivities.swift */; };
 		02C11C9823C38F5400920674 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 02C11C8C23C38AAC00920674 /* Intents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
+		02C490E7242E665400A388A1 /* NSUserActivities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028801B923C396D60079D8F6 /* NSUserActivities.swift */; };
+		02C490E8242E665900A388A1 /* NSUserActivities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028801B923C396D60079D8F6 /* NSUserActivities.swift */; };
 		02C98628241843570040242A /* SwolBackEnd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02A7DC6B23C448C200ED7957 /* SwolBackEnd.framework */; };
 		02C98629241843570040242A /* SwolBackEnd.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 02A7DC6B23C448C200ED7957 /* SwolBackEnd.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		02C9862C241843570040242A /* SwolIntents.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 02A1EF9223C44DA500625723 /* SwolIntents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -130,7 +132,7 @@
 		024C602623C4309A00C1071D /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
 		024C602723C4309A00C1071D /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		024C602823C4309A00C1071D /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		028801B923C396D60079D8F6 /* NSUserActivities + IntentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSUserActivities + IntentData.swift"; sourceTree = "<group>"; };
+		028801B923C396D60079D8F6 /* NSUserActivities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSUserActivities.swift; sourceTree = "<group>"; };
 		0289B22823C03DE300D610AB /* DevicesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesTableViewController.swift; sourceTree = "<group>"; };
 		028F58FA24181C65001C1A33 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = ../../Swol/View/en.lproj/Main.strings; sourceTree = "<group>"; };
 		02942E5723C3F6E800EB2148 /* NSPersistentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSPersistentContainer.swift; sourceTree = "<group>"; };
@@ -251,14 +253,6 @@
 			path = TableViewCells;
 			sourceTree = "<group>";
 		};
-		028801B823C396C10079D8F6 /* Support */ = {
-			isa = PBXGroup;
-			children = (
-				028801B923C396D60079D8F6 /* NSUserActivities + IntentData.swift */,
-			);
-			path = Support;
-			sourceTree = "<group>";
-		};
 		0289B22B23C03DF500D610AB /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -294,7 +288,6 @@
 				02D5786F23C03693001FA8A5 /* Awake.swift */,
 				02A7DC8B23C44B3100ED7957 /* Data */,
 				02A7DC8A23C44B2400ED7957 /* Intents */,
-				028801B823C396C10079D8F6 /* Support */,
 				020208B923C2EEF900159427 /* Model */,
 				02A7DC6D23C448C200ED7957 /* SwolBackEnd.h */,
 				02A7DC6E23C448C200ED7957 /* Info.plist */,
@@ -327,6 +320,7 @@
 		02C11C6323C3888500920674 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				028801B923C396D60079D8F6 /* NSUserActivities.swift */,
 				020208C923C2F41500159427 /* StringExtension.swift */,
 				02C11C8C23C38AAC00920674 /* Intents.intentdefinition */,
 				024024BE23C048500065B8DD /* Localizable.strings */,
@@ -558,6 +552,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				028F58F82418163B001C1A33 /* StringExtension.swift in Sources */,
+				02C490E8242E665900A388A1 /* NSUserActivities.swift in Sources */,
 				02A1EFA323C4512900625723 /* DataModel.xcdatamodeld in Sources */,
 				02A1EF9D23C44DBC00625723 /* Intents.intentdefinition in Sources */,
 				02A1EF9523C44DA500625723 /* IntentHandler.swift in Sources */,
@@ -589,7 +584,7 @@
 				02A7DC7823C448CF00ED7957 /* NSPersistentContainer.swift in Sources */,
 				02E3656A242D29250050C509 /* DeviceEntity+Intents.swift in Sources */,
 				02E3656E242D29FA0050C509 /* CloudKitController.swift in Sources */,
-				02A7DC8823C44A2D00ED7957 /* NSUserActivities + IntentData.swift in Sources */,
+				02A7DC8823C44A2D00ED7957 /* NSUserActivities.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -603,6 +598,7 @@
 				024024C123C050830065B8DD /* TextTableViewCell.swift in Sources */,
 				02D5785B23C03684001FA8A5 /* SceneDelegate.swift in Sources */,
 				0211BAB423C4080000867893 /* StringExtension.swift in Sources */,
+				02C490E7242E665400A388A1 /* NSUserActivities.swift in Sources */,
 				02C11C9823C38F5400920674 /* Intents.intentdefinition in Sources */,
 				02942E5523C3F4AB00EB2148 /* DataModel.xcdatamodeld in Sources */,
 				02D8486D23C057ED00675A14 /* AddingDeviceTableViewController.swift in Sources */,

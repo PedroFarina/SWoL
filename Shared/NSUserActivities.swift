@@ -15,6 +15,6 @@ extension NSUserActivity {
         case name
     }
 
-    public static let wakeDeviceActivityType = "PGF.SWoL.wakeUpDevice"
+    public static let wakeDeviceActivityType = "WakeDeviceIntent"
 }
 

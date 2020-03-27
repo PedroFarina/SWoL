@@ -13,7 +13,7 @@ extension Device {
         let wakeUp = WakeDeviceIntent()
         wakeUp.name = name
 
-        wakeUp.suggestedInvocationPhrase = "Wake up time".localized()
+        wakeUp.suggestedInvocationPhrase = "Start up device".localized()
 
         return wakeUp
     }
