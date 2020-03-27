@@ -105,6 +105,23 @@ internal class CloudKitDataController {
         saveData(entitiesToDelete: devices)
     }
 
+    public func overrideDevices(with devices: [DeviceProtocol]) {
+        var entitiesToSave: [EntityObject] = []
+        for device in devices {
+            if let oldDevice = findDeviceBy(id: device.cloudID ?? UUID()) {
+                oldDevice._name.value = device.name ?? ""
+                oldDevice._mac.value = device.mac ?? ""
+                oldDevice._address.value = device.address ?? ""
+                oldDevice._port.value = Int64(device.port)
+                entitiesToSave.append(oldDevice)
+            } else if let id = device.cloudID, let address = device.address, let mac = device.mac, let name = device.name {
+                let newDevice = DeviceEntity(id: id, address: address, mac: mac, name: name, port: Int64(device.port))
+                entitiesToSave.append(newDevice)
+            }
+        }
+        saveData(entitiesToSave: entitiesToSave)
+    }
+
     //MARK: Saving data
     private func saveData(entitiesToSave: [EntityObject] = [], entitiesToDelete: [EntityObject] = []) {
         DataConnector.saveData(database: .Private, entitiesToSave: entitiesToSave, entitiesToDelete: entitiesToDelete)

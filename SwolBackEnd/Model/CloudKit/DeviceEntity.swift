@@ -67,3 +67,15 @@ public class DeviceEntity: NSObject, EntityObject, DeviceProtocol {
         return newAddress
     }
 }
+
+infix operator <>
+extension DeviceEntity {
+    public static func <>(left: DeviceEntity, right: Device) -> Bool {
+        return (left.address != right.address) || (left.mac != right.mac) || (left.name != right.name) ||
+            (left.port != right.port) || (left.cloudID != right.cloudID)
+    }
+    public static func <>(left: Device, right: DeviceEntity) -> Bool {
+        return (left.address != right.address) || (left.mac != right.mac) || (left.name != right.name) ||
+            (left.port != right.port) || (left.cloudID != right.cloudID)
+    }
+}

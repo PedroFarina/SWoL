@@ -75,7 +75,27 @@ public class DataManager: DataSynchronizer {
             }
         }
 
-        //Check conflicts(implement it before adding any other target)
+        //Checking for conflicts
+        ckCopy = []
+        ckCopy.append(contentsOf: cloudKitDataController.devices)
+        cdCopy = []
+        cdCopy.append(contentsOf: coreDataController.devices)
+        for i in 0 ..< min(ckCopy.count, cdCopy.count) {
+            if ckCopy[i] <> cdCopy[i] {
+                conflictHandler.chooseVersion { (version) in
+                    if version == .Local {
+                        self.cloudKitDataController.overrideDevices(with: cdCopy)
+                    } else {
+                        do {
+                            try self.coreDataController.overrideDevices(with: ckCopy)
+                        } catch {
+                            self.conflictHandler.errDidOccur(err: error)
+                        }
+                    }
+                }
+                break
+            }
+        }
     }
 
     func dataChanged(to devices: [DeviceProtocol], in system: DataPermission) {

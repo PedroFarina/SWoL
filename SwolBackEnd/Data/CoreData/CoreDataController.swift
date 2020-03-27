@@ -122,6 +122,32 @@ internal class CoreDataController {
         }
     }
 
+    public func overrideDevices(with devices: [DeviceProtocol]) throws {
+        for device in self.devices {
+            context.delete(device)
+        }
+
+        var newDevices: [Device] = []
+        for device in devices {
+            guard let newDevice = NSEntityDescription.insertNewObject(forEntityName: "Device", into: context)
+                as? Device else {
+                    throw CDError.FailedToParseObject(reason: "Could not parse object as Device.".localized())
+            }
+            newDevice.name = device.name
+            newDevice.mac = device.mac
+            newDevice.cloudID = device.cloudID
+            newDevice.address = device.address
+            newDevice.port = device.port
+            newDevices.append(newDevice)
+        }
+        do {
+            try saveContext()
+            self.devices = newDevices
+        } catch {
+            throw CDError.FailedToSaveContext(reason: "Could not override devices.".localized())
+        }
+    }
+
     //MARK: Context
     private func saveContext() throws {
         if context.hasChanges {
