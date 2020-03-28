@@ -85,13 +85,16 @@ public class DataManager: DataSynchronizer {
                 conflictHandler.chooseVersion { (version) in
                     if version == .Local {
                         self.cloudKitDataController.overrideDevices(with: cdCopy)
+                        self._devices = cdCopy
                     } else {
                         do {
                             try self.coreDataController.overrideDevices(with: ckCopy)
+                            self._devices = ckCopy
                         } catch {
                             self.conflictHandler.errDidOccur(err: error)
                         }
                     }
+                    self.notifyWatchers()
                 }
                 break
             }
@@ -106,11 +109,14 @@ public class DataManager: DataSynchronizer {
     }
 
     //MARK: Devices
+    private func notifyWatchers() {
+        for watcher in watchers {
+            watcher.dataUpdated()
+        }
+    }
     private var _devices: [DeviceProtocol] = [] {
         didSet {
-            for watcher in watchers {
-                watcher.dataUpdated()
-            }
+            notifyWatchers()
         }
     }
     public var devices: [DeviceProtocol] {
