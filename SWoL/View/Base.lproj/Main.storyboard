@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -497,6 +498,30 @@ On the advanced settings, enable wake on Magic Packet settings.
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="Tutorial" id="ySD-2x-QMV">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Hsv-L7-O6e">
+                                        <rect key="frame" x="0.0" y="198.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hsv-L7-O6e" id="dve-7C-qW2">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Replay the tutorial" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Anm-6s-jvf">
+                                                    <rect key="frame" x="137.5" y="11.5" width="139" height="21"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <color key="textColor" name="Action Color"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Anm-6s-jvf" firstAttribute="centerY" secondItem="dve-7C-qW2" secondAttribute="centerY" id="F1F-of-5ox"/>
+                                                <constraint firstItem="Anm-6s-jvf" firstAttribute="centerX" secondItem="dve-7C-qW2" secondAttribute="centerX" id="vOi-99-gtX"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="erM-4b-10g" id="EEM-cL-Msx"/>
@@ -506,11 +531,20 @@ On the advanced settings, enable wake on Magic Packet settings.
                     <tabBarItem key="tabBarItem" title="Settings" image="ellipsis.circle" catalog="system" selectedImage="ellipsis.circle.fill" id="z6l-q0-Ddl"/>
                     <connections>
                         <outlet property="iCloudTableViewCell" destination="hxL-4h-FTe" id="UGc-fJ-lfV"/>
+                        <segue destination="1FS-Lb-OsE" kind="presentation" identifier="tutorial" modalPresentationStyle="automatic" id="Txo-nw-alN"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Swd-ht-22W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1490" y="471"/>
+        </scene>
+        <!--Tutorial-->
+        <scene sceneID="0dW-sM-3TO">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Tutorial" id="1FS-Lb-OsE" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AdK-rL-gj7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2257" y="320"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Njt-P0-bi5">
@@ -580,6 +614,9 @@ On the advanced settings, enable wake on Magic Packet settings.
         <image name="desktopcomputer" catalog="system" width="64" height="50"/>
         <image name="ellipsis.circle" catalog="system" width="64" height="60"/>
         <image name="ellipsis.circle.fill" catalog="system" width="64" height="60"/>
+        <namedColor name="Action Color">
+            <color red="0.24300000071525574" green="0.4779999852180481" blue="0.76099997758865356" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
     <color key="tintColor" red="0.24313725490196078" green="0.47843137254901957" blue="0.76078431372549016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

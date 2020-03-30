@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3b5-z8-dbu">
-    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7hW-bl-k7v">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -51,7 +51,7 @@
                                     <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="cEU-MY-gkE" kind="presentation" identifier="" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="jSc-Fm-909"/>
+                                    <segue destination="cEU-MY-gkE" kind="show" identifier="" id="jSc-Fm-909"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZPT-1L-7Hf">
@@ -85,10 +85,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="C0P-uE-GwV"/>
                     </view>
+                    <navigationItem key="navigationItem" id="OHD-eZ-TeG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DGh-wN-MFI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="108.69565217391305" y="80.357142857142847"/>
+            <point key="canvasLocation" x="1018.840579710145" y="80.357142857142847"/>
         </scene>
         <!--Tutorial View Controller-->
         <scene sceneID="r7W-kF-hj8">
@@ -137,7 +138,7 @@
                                     <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="w9v-dN-gRG" kind="presentation" identifier="" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="kOO-EJ-Q7g"/>
+                                    <segue destination="w9v-dN-gRG" kind="show" identifier="" id="kOO-EJ-Q7g"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QrD-kG-nS9">
@@ -152,7 +153,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xar-wo-zT1">
-                                <rect key="frame" x="15" y="44" width="46" height="46"/>
+                                <rect key="frame" x="15" y="54" width="46" height="46"/>
                                 <accessibility key="accessibilityConfiguration" label="Return to the previous step"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Xar-wo-zT1" secondAttribute="height" multiplier="1:1" id="dZd-DZ-fr9"/>
@@ -174,7 +175,7 @@
                             <constraint firstAttribute="trailing" secondItem="V3G-Ox-tGa" secondAttribute="trailing" constant="40" id="bhk-Sd-d3o"/>
                             <constraint firstItem="cuV-qi-KtZ" firstAttribute="centerX" secondItem="k6c-LI-Kan" secondAttribute="centerX" id="eb2-iE-MND"/>
                             <constraint firstItem="k6c-LI-Kan" firstAttribute="trailing" secondItem="RWo-Cr-u40" secondAttribute="trailing" constant="20" id="kaw-6w-TtG"/>
-                            <constraint firstItem="Xar-wo-zT1" firstAttribute="top" secondItem="k6c-LI-Kan" secondAttribute="top" id="kbd-tz-KYI"/>
+                            <constraint firstItem="Xar-wo-zT1" firstAttribute="top" secondItem="k6c-LI-Kan" secondAttribute="top" constant="10" id="kbd-tz-KYI"/>
                             <constraint firstItem="QrD-kG-nS9" firstAttribute="centerY" secondItem="k6c-LI-Kan" secondAttribute="centerY" multiplier="1.825" id="l1h-Rw-jw8"/>
                             <constraint firstItem="oHg-uq-w5I" firstAttribute="top" secondItem="V3G-Ox-tGa" secondAttribute="bottom" constant="25" id="lKb-XO-N2J"/>
                             <constraint firstItem="QrD-kG-nS9" firstAttribute="leading" secondItem="k6c-LI-Kan" secondAttribute="leading" id="mKN-lD-YLg"/>
@@ -189,7 +190,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dal-ty-VEU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="810" y="80"/>
+            <point key="canvasLocation" x="1718.840579710145" y="79.6875"/>
         </scene>
         <!--Tutorial View Controller-->
         <scene sceneID="lIN-MC-sR9">
@@ -199,7 +200,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select you OS" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpo-CW-RUm">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select your OS" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpo-CW-RUm">
                                 <rect key="frame" x="20" y="94" width="374" height="41"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration">
@@ -231,7 +232,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HCD-7E-F0B">
-                                <rect key="frame" x="15" y="44" width="46" height="46"/>
+                                <rect key="frame" x="15" y="54" width="46" height="46"/>
                                 <accessibility key="accessibilityConfiguration" label="Return to the previous step"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="ECj-Qk-CxD"/>
@@ -250,7 +251,7 @@
                                 </constraints>
                                 <state key="normal" backgroundImage="Apple Logo"/>
                                 <connections>
-                                    <segue destination="4td-ho-ScJ" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="qiz-NB-3u7"/>
+                                    <segue destination="4td-ho-ScJ" kind="show" id="qiz-NB-3u7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1P-BU-Ep2">
@@ -261,7 +262,7 @@
                                 </constraints>
                                 <state key="normal" backgroundImage="Windows Logo"/>
                                 <connections>
-                                    <segue destination="XQv-tW-hIP" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="BcF-24-G5s"/>
+                                    <segue destination="XQv-tW-hIP" kind="show" id="BcF-24-G5s"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -281,19 +282,19 @@
                             <constraint firstItem="8sH-BC-p8V" firstAttribute="trailing" secondItem="T1P-BU-Ep2" secondAttribute="trailing" constant="40" id="dAo-MX-qKz"/>
                             <constraint firstItem="V4f-04-LzJ" firstAttribute="centerY" secondItem="8sH-BC-p8V" secondAttribute="centerY" multiplier="1.85" id="gOa-dG-EAm"/>
                             <constraint firstItem="8sH-BC-p8V" firstAttribute="trailing" secondItem="V4f-04-LzJ" secondAttribute="trailing" id="uKL-Od-IVI"/>
-                            <constraint firstItem="HCD-7E-F0B" firstAttribute="top" secondItem="8sH-BC-p8V" secondAttribute="top" id="vo8-pu-9E3"/>
+                            <constraint firstItem="HCD-7E-F0B" firstAttribute="top" secondItem="8sH-BC-p8V" secondAttribute="top" constant="10" id="vo8-pu-9E3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8sH-BC-p8V"/>
                     </view>
+                    <navigationItem key="navigationItem" id="7iD-bK-7R4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U1j-F6-ngd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1558" y="80"/>
+            <point key="canvasLocation" x="2468.1159420289855" y="79.6875"/>
         </scene>
         <!--Tutorial View Controller-->
         <scene sceneID="JYr-Dc-aIo">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ON7-oU-1eX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="4td-ho-ScJ" customClass="TutorialViewController" customModule="Swol" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wR1-fY-5mt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
@@ -418,7 +419,7 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="TJK-QB-CeG"/>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWS-JD-h4F">
-                                <rect key="frame" x="15" y="44" width="46" height="46"/>
+                                <rect key="frame" x="15" y="54" width="46" height="46"/>
                                 <accessibility key="accessibilityConfiguration" label="Return to the previous step"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="0bf-g3-GoA"/>
@@ -434,7 +435,7 @@
                             <constraint firstItem="bdB-XG-Umb" firstAttribute="width" secondItem="bdB-XG-Umb" secondAttribute="height" multiplier="1:1" id="7W0-us-ZUT"/>
                             <constraint firstItem="DWS-JD-h4F" firstAttribute="width" secondItem="DWS-JD-h4F" secondAttribute="height" multiplier="1:1" id="ETj-Pn-LXR"/>
                             <constraint firstItem="iiL-OS-AxE" firstAttribute="leading" secondItem="Sid-Ut-lw7" secondAttribute="leading" id="LCs-ZR-zFN"/>
-                            <constraint firstItem="DWS-JD-h4F" firstAttribute="top" secondItem="Sid-Ut-lw7" secondAttribute="top" id="LEe-eU-sGX"/>
+                            <constraint firstItem="DWS-JD-h4F" firstAttribute="top" secondItem="Sid-Ut-lw7" secondAttribute="top" constant="10" id="LEe-eU-sGX"/>
                             <constraint firstItem="iiL-OS-AxE" firstAttribute="top" secondItem="Sid-Ut-lw7" secondAttribute="top" id="O61-cu-LfD"/>
                             <constraint firstItem="Sid-Ut-lw7" firstAttribute="bottom" secondItem="iiL-OS-AxE" secondAttribute="bottom" id="PXs-0c-Oie"/>
                             <constraint firstItem="bdB-XG-Umb" firstAttribute="leading" secondItem="Sid-Ut-lw7" secondAttribute="leading" constant="20" id="UAm-UD-PHp"/>
@@ -444,10 +445,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Sid-Ut-lw7"/>
                     </view>
+                    <navigationItem key="navigationItem" id="sBX-Uk-t4U"/>
                     <size key="freeformSize" width="414" height="1200"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ON7-oU-1eX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2236" y="181"/>
+            <point key="canvasLocation" x="3144.9275362318845" y="180.80357142857142"/>
         </scene>
         <!--Tutorial View Controller-->
         <scene sceneID="DCt-dn-QaS">
@@ -527,7 +530,7 @@ tab and enable all checkboxes</string>
                                                     <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="guc-yf-Y2G" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="OUz-9o-o7Y"/>
+                                                    <segue destination="guc-yf-Y2G" kind="show" id="OUz-9o-o7Y"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 2 of 3" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNU-OS-W7L">
@@ -578,10 +581,9 @@ tab and enable all checkboxes</string>
                                 <viewLayoutGuide key="frameLayoutGuide" id="lUs-H0-Dtc"/>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygQ-Qo-8JM">
-                                <rect key="frame" x="15" y="44" width="46" height="46"/>
+                                <rect key="frame" x="15" y="54" width="46" height="46"/>
                                 <accessibility key="accessibilityConfiguration" label="Return to the previous step"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="ygQ-Qo-8JM" secondAttribute="height" multiplier="1:1" id="h6T-h2-3sH"/>
                                     <constraint firstAttribute="height" constant="46" id="haM-fP-wlv"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="btnTutorialBack"/>
@@ -594,7 +596,7 @@ tab and enable all checkboxes</string>
                         <constraints>
                             <constraint firstItem="kSx-zP-9HG" firstAttribute="bottom" secondItem="iHT-dx-UcH" secondAttribute="bottom" id="4NL-Bd-aOm"/>
                             <constraint firstItem="kSx-zP-9HG" firstAttribute="trailing" secondItem="iHT-dx-UcH" secondAttribute="trailing" id="Kf8-Cb-Heh"/>
-                            <constraint firstItem="ygQ-Qo-8JM" firstAttribute="top" secondItem="kSx-zP-9HG" secondAttribute="top" id="XK4-Hl-X9K"/>
+                            <constraint firstItem="ygQ-Qo-8JM" firstAttribute="top" secondItem="kSx-zP-9HG" secondAttribute="top" constant="10" id="XK4-Hl-X9K"/>
                             <constraint firstItem="iHT-dx-UcH" firstAttribute="top" secondItem="kSx-zP-9HG" secondAttribute="top" id="Xye-9O-fFH"/>
                             <constraint firstItem="ygQ-Qo-8JM" firstAttribute="leading" secondItem="kSx-zP-9HG" secondAttribute="leading" constant="15" id="ZwE-o7-QNP"/>
                             <constraint firstItem="iHT-dx-UcH" firstAttribute="leading" secondItem="kSx-zP-9HG" secondAttribute="leading" id="iCj-60-yge"/>
@@ -602,11 +604,12 @@ tab and enable all checkboxes</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kSx-zP-9HG"/>
                     </view>
+                    <navigationItem key="navigationItem" id="sSj-bw-6aq"/>
                     <size key="freeformSize" width="414" height="1500"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vm6-pG-6ec" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3635" y="282"/>
+            <point key="canvasLocation" x="4544.927536231884" y="281.91964285714283"/>
         </scene>
         <!--Tutorial View Controller-->
         <scene sceneID="vMQ-nu-fIv">
@@ -713,7 +716,7 @@ And then disable "Turn on fast startup"</string>
                                 <viewLayoutGuide key="frameLayoutGuide" id="VQ4-yh-4W8"/>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n4t-ac-ZVY">
-                                <rect key="frame" x="15" y="44" width="46" height="46"/>
+                                <rect key="frame" x="15" y="54" width="46" height="46"/>
                                 <accessibility key="accessibilityConfiguration" label="Return to the previous step"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="KaQ-Sn-gCh"/>
@@ -732,15 +735,16 @@ And then disable "Turn on fast startup"</string>
                             <constraint firstItem="vGi-a2-9D2" firstAttribute="bottom" secondItem="7Ba-ri-1eO" secondAttribute="bottom" id="Zuv-O5-GjK"/>
                             <constraint firstItem="vGi-a2-9D2" firstAttribute="trailing" secondItem="7Ba-ri-1eO" secondAttribute="trailing" id="iMb-YH-OUl"/>
                             <constraint firstItem="n4t-ac-ZVY" firstAttribute="width" secondItem="n4t-ac-ZVY" secondAttribute="height" multiplier="1:1" id="pB0-Wk-MIe"/>
-                            <constraint firstItem="n4t-ac-ZVY" firstAttribute="top" secondItem="vGi-a2-9D2" secondAttribute="top" id="tH9-s3-dYM"/>
+                            <constraint firstItem="n4t-ac-ZVY" firstAttribute="top" secondItem="vGi-a2-9D2" secondAttribute="top" constant="10" id="tH9-s3-dYM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vGi-a2-9D2"/>
                     </view>
+                    <navigationItem key="navigationItem" id="I6s-WJ-jAr"/>
                     <size key="freeformSize" width="414" height="1000"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fcy-MI-xNL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4383" y="113"/>
+            <point key="canvasLocation" x="5292.753623188406" y="112.5"/>
         </scene>
         <!--Tutorial View Controller-->
         <scene sceneID="RDW-p1-GCm">
@@ -751,7 +755,7 @@ And then disable "Turn on fast startup"</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PBN-Pa-nyJ">
-                                <rect key="frame" x="20" y="44" width="46" height="46"/>
+                                <rect key="frame" x="20" y="54" width="46" height="46"/>
                                 <accessibility key="accessibilityConfiguration" label="Return to the previous step"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="PBN-Pa-nyJ" secondAttribute="height" multiplier="1:1" id="5DX-pT-SCg"/>
@@ -780,7 +784,7 @@ And then disable "Turn on fast startup"</string>
                                     <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="bwy-Gx-3Q1" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="b2J-qT-Rd3"/>
+                                    <segue destination="bwy-Gx-3Q1" kind="show" id="b2J-qT-Rd3"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 1 of 3" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iFW-kS-ctl">
@@ -818,14 +822,32 @@ And then disable "Turn on fast startup"</string>
                             <constraint firstItem="a3j-eX-P2y" firstAttribute="leading" secondItem="kU0-ux-PNZ" secondAttribute="leading" constant="20" id="tKs-Tb-U4B"/>
                             <constraint firstAttribute="trailing" secondItem="cgM-ko-npp" secondAttribute="trailing" constant="40" id="tWS-Vo-HvW"/>
                             <constraint firstItem="kU0-ux-PNZ" firstAttribute="trailing" secondItem="iFW-kS-ctl" secondAttribute="trailing" constant="40" id="uMO-Ge-0RL"/>
-                            <constraint firstItem="PBN-Pa-nyJ" firstAttribute="top" secondItem="kU0-ux-PNZ" secondAttribute="top" id="yhg-oy-gcb"/>
+                            <constraint firstItem="PBN-Pa-nyJ" firstAttribute="top" secondItem="kU0-ux-PNZ" secondAttribute="top" constant="10" id="yhg-oy-gcb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kU0-ux-PNZ"/>
                     </view>
+                    <navigationItem key="navigationItem" id="b9h-5M-Epm"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1OT-fI-y7A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2913" y="79"/>
+            <point key="canvasLocation" x="3821.739130434783" y="78.348214285714278"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="S6z-r2-KUm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="7hW-bl-k7v" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2Vn-Zy-Lvz">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3b5-z8-dbu" kind="relationship" relationship="rootViewController" id="OEq-6P-axW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L5O-p1-upu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="108.69565217391305" y="80.357142857142847"/>
         </scene>
     </scenes>
     <resources>
@@ -842,7 +864,7 @@ And then disable "Turn on fast startup"</string>
         <image name="btnTutorialBack" width="46" height="46"/>
         <image name="btnTutorialBackground" width="164" height="49"/>
         <namedColor name="Action Color">
-            <color red="0.24313725490196078" green="0.47843137254901957" blue="0.76078431372549016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.24300000071525574" green="0.4779999852180481" blue="0.76099997758865356" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
