@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Tutorial View Controller-->
         <scene sceneID="aP2-QZ-Igr">
             <objects>
-                <viewController id="3b5-z8-dbu" sceneMemberID="viewController">
+                <viewController id="3b5-z8-dbu" customClass="TutorialViewController" customModule="Swol" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zyC-bb-p8c">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -51,7 +51,7 @@
                                     <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="cEU-MY-gkE" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="jSc-Fm-909"/>
+                                    <segue destination="cEU-MY-gkE" kind="presentation" identifier="" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="jSc-Fm-909"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZPT-1L-7Hf">
@@ -61,6 +61,9 @@
                                 <state key="normal" title="Skip">
                                     <color key="titleColor" name="Action Color"/>
                                 </state>
+                                <connections>
+                                    <action selector="endTutorialTap:" destination="3b5-z8-dbu" eventType="touchUpInside" id="mMv-nb-CZZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -87,10 +90,10 @@
             </objects>
             <point key="canvasLocation" x="108.69565217391305" y="80.357142857142847"/>
         </scene>
-        <!--View Controller-->
+        <!--Tutorial View Controller-->
         <scene sceneID="r7W-kF-hj8">
             <objects>
-                <viewController id="cEU-MY-gkE" sceneMemberID="viewController">
+                <viewController id="cEU-MY-gkE" customClass="TutorialViewController" customModule="Swol" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hNW-G2-8zs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -134,7 +137,7 @@
                                     <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="w9v-dN-gRG" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="kOO-EJ-Q7g"/>
+                                    <segue destination="w9v-dN-gRG" kind="presentation" identifier="" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="kOO-EJ-Q7g"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QrD-kG-nS9">
@@ -144,15 +147,21 @@
                                 <state key="normal" title="Skip">
                                     <color key="titleColor" name="Action Color"/>
                                 </state>
+                                <connections>
+                                    <action selector="endTutorialTap:" destination="cEU-MY-gkE" eventType="touchUpInside" id="bFb-l0-dfP"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xar-wo-zT1">
-                                <rect key="frame" x="20" y="44" width="46" height="46"/>
+                                <rect key="frame" x="15" y="44" width="46" height="46"/>
                                 <accessibility key="accessibilityConfiguration" label="Return to the previous step"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Xar-wo-zT1" secondAttribute="height" multiplier="1:1" id="dZd-DZ-fr9"/>
                                     <constraint firstAttribute="height" constant="46" id="er2-vI-3Ka"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="btnTutorialBack"/>
+                                <connections>
+                                    <action selector="returnTap:" destination="cEU-MY-gkE" eventType="touchUpInside" id="WfT-hL-wI5"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -169,7 +178,7 @@
                             <constraint firstItem="QrD-kG-nS9" firstAttribute="centerY" secondItem="k6c-LI-Kan" secondAttribute="centerY" multiplier="1.825" id="l1h-Rw-jw8"/>
                             <constraint firstItem="oHg-uq-w5I" firstAttribute="top" secondItem="V3G-Ox-tGa" secondAttribute="bottom" constant="25" id="lKb-XO-N2J"/>
                             <constraint firstItem="QrD-kG-nS9" firstAttribute="leading" secondItem="k6c-LI-Kan" secondAttribute="leading" id="mKN-lD-YLg"/>
-                            <constraint firstItem="Xar-wo-zT1" firstAttribute="leading" secondItem="k6c-LI-Kan" secondAttribute="leading" constant="20" id="nef-85-6jT"/>
+                            <constraint firstItem="Xar-wo-zT1" firstAttribute="leading" secondItem="k6c-LI-Kan" secondAttribute="leading" constant="15" id="nef-85-6jT"/>
                             <constraint firstItem="k6c-LI-Kan" firstAttribute="trailing" secondItem="QrD-kG-nS9" secondAttribute="trailing" id="od9-Bd-TzQ"/>
                             <constraint firstItem="k6c-LI-Kan" firstAttribute="trailing" secondItem="oHg-uq-w5I" secondAttribute="trailing" constant="40" id="pP0-VF-7cL"/>
                             <constraint firstItem="RWo-Cr-u40" firstAttribute="leading" secondItem="k6c-LI-Kan" secondAttribute="leading" constant="20" id="q8Y-WV-B8R"/>
@@ -182,10 +191,10 @@
             </objects>
             <point key="canvasLocation" x="810" y="80"/>
         </scene>
-        <!--View Controller-->
+        <!--Tutorial View Controller-->
         <scene sceneID="lIN-MC-sR9">
             <objects>
-                <viewController id="w9v-dN-gRG" sceneMemberID="viewController">
+                <viewController id="w9v-dN-gRG" customClass="TutorialViewController" customModule="Swol" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eDb-Ul-IJH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -217,15 +226,21 @@
                                 <state key="normal" title="Skip">
                                     <color key="titleColor" name="Action Color"/>
                                 </state>
+                                <connections>
+                                    <action selector="endTutorialTap:" destination="w9v-dN-gRG" eventType="touchUpInside" id="oQA-dL-ztI"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HCD-7E-F0B">
-                                <rect key="frame" x="20" y="44" width="46" height="46"/>
+                                <rect key="frame" x="15" y="44" width="46" height="46"/>
                                 <accessibility key="accessibilityConfiguration" label="Return to the previous step"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="ECj-Qk-CxD"/>
                                     <constraint firstAttribute="width" secondItem="HCD-7E-F0B" secondAttribute="height" multiplier="1:1" id="UaU-9G-UDC"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="btnTutorialBack"/>
+                                <connections>
+                                    <action selector="returnTap:" destination="w9v-dN-gRG" eventType="touchUpInside" id="g2a-gE-1A2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="06c-AJ-XnT">
                                 <rect key="frame" x="40" y="573" width="131" height="157"/>
@@ -252,7 +267,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="HCD-7E-F0B" firstAttribute="leading" secondItem="8sH-BC-p8V" secondAttribute="leading" constant="20" id="FcE-eX-EZm"/>
+                            <constraint firstItem="HCD-7E-F0B" firstAttribute="leading" secondItem="8sH-BC-p8V" secondAttribute="leading" constant="15" id="FcE-eX-EZm"/>
                             <constraint firstItem="06c-AJ-XnT" firstAttribute="leading" secondItem="8sH-BC-p8V" secondAttribute="leading" constant="40" id="GqZ-bI-m6a"/>
                             <constraint firstAttribute="trailing" secondItem="CSz-xV-6hc" secondAttribute="trailing" id="HdU-Ek-Iz4"/>
                             <constraint firstItem="zpo-CW-RUm" firstAttribute="leading" secondItem="8sH-BC-p8V" secondAttribute="leading" constant="20" id="XEu-Hb-SxT"/>
@@ -275,11 +290,11 @@
             </objects>
             <point key="canvasLocation" x="1558" y="80"/>
         </scene>
-        <!--View Controller-->
+        <!--Tutorial View Controller-->
         <scene sceneID="JYr-Dc-aIo">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ON7-oU-1eX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController id="4td-ho-ScJ" sceneMemberID="viewController">
+                <viewController id="4td-ho-ScJ" customClass="TutorialViewController" customModule="Swol" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wR1-fY-5mt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -359,6 +374,9 @@
                                                 <state key="normal" title="Done" backgroundImage="btnTutorialBackground">
                                                     <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="endTutorialTap:" destination="4td-ho-ScJ" eventType="touchUpInside" id="thI-Fk-MsZ"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -406,6 +424,9 @@
                                     <constraint firstAttribute="height" constant="46" id="0bf-g3-GoA"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="btnTutorialBack"/>
+                                <connections>
+                                    <action selector="returnTap:" destination="4td-ho-ScJ" eventType="touchUpInside" id="ly0-up-uSC"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -428,10 +449,10 @@
             </objects>
             <point key="canvasLocation" x="2236" y="181"/>
         </scene>
-        <!--View Controller-->
+        <!--Tutorial View Controller-->
         <scene sceneID="DCt-dn-QaS">
             <objects>
-                <viewController id="bwy-Gx-3Q1" sceneMemberID="viewController">
+                <viewController id="bwy-Gx-3Q1" customClass="TutorialViewController" customModule="Swol" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gk7-xe-Auz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -564,6 +585,9 @@ tab and enable all checkboxes</string>
                                     <constraint firstAttribute="height" constant="46" id="haM-fP-wlv"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="btnTutorialBack"/>
+                                <connections>
+                                    <action selector="returnTap:" destination="bwy-Gx-3Q1" eventType="touchUpInside" id="7Xs-Lz-8ic"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -584,10 +608,10 @@ tab and enable all checkboxes</string>
             </objects>
             <point key="canvasLocation" x="3635" y="282"/>
         </scene>
-        <!--View Controller-->
+        <!--Tutorial View Controller-->
         <scene sceneID="vMQ-nu-fIv">
             <objects>
-                <viewController id="guc-yf-Y2G" sceneMemberID="viewController">
+                <viewController id="guc-yf-Y2G" customClass="TutorialViewController" customModule="Swol" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FcH-pA-Vqu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -643,6 +667,9 @@ And then disable "Turn on fast startup"</string>
                                                 <state key="normal" title="Done" backgroundImage="btnTutorialBackground">
                                                     <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="endTutorialTap:" destination="guc-yf-Y2G" eventType="touchUpInside" id="z2O-0z-heC"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 3 of 3" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="luU-v7-kBi">
                                                 <rect key="frame" x="20" y="843" width="374" height="20.5"/>
@@ -685,13 +712,27 @@ And then disable "Turn on fast startup"</string>
                                 <viewLayoutGuide key="contentLayoutGuide" id="idF-FM-eO4"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="VQ4-yh-4W8"/>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n4t-ac-ZVY">
+                                <rect key="frame" x="15" y="44" width="46" height="46"/>
+                                <accessibility key="accessibilityConfiguration" label="Return to the previous step"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="KaQ-Sn-gCh"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="btnTutorialBack"/>
+                                <connections>
+                                    <action selector="returnTap:" destination="bwy-Gx-3Q1" eventType="touchUpInside" id="5le-DA-wCg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="7Ba-ri-1eO" firstAttribute="leading" secondItem="vGi-a2-9D2" secondAttribute="leading" id="7V8-Bd-7VS"/>
                             <constraint firstItem="7Ba-ri-1eO" firstAttribute="top" secondItem="vGi-a2-9D2" secondAttribute="top" id="Llg-BL-g3Z"/>
+                            <constraint firstItem="n4t-ac-ZVY" firstAttribute="leading" secondItem="vGi-a2-9D2" secondAttribute="leading" constant="15" id="Yab-Xf-hlJ"/>
                             <constraint firstItem="vGi-a2-9D2" firstAttribute="bottom" secondItem="7Ba-ri-1eO" secondAttribute="bottom" id="Zuv-O5-GjK"/>
                             <constraint firstItem="vGi-a2-9D2" firstAttribute="trailing" secondItem="7Ba-ri-1eO" secondAttribute="trailing" id="iMb-YH-OUl"/>
+                            <constraint firstItem="n4t-ac-ZVY" firstAttribute="width" secondItem="n4t-ac-ZVY" secondAttribute="height" multiplier="1:1" id="pB0-Wk-MIe"/>
+                            <constraint firstItem="n4t-ac-ZVY" firstAttribute="top" secondItem="vGi-a2-9D2" secondAttribute="top" id="tH9-s3-dYM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vGi-a2-9D2"/>
                     </view>
@@ -701,10 +742,10 @@ And then disable "Turn on fast startup"</string>
             </objects>
             <point key="canvasLocation" x="4383" y="113"/>
         </scene>
-        <!--View Controller-->
+        <!--Tutorial View Controller-->
         <scene sceneID="RDW-p1-GCm">
             <objects>
-                <viewController id="XQv-tW-hIP" sceneMemberID="viewController">
+                <viewController id="XQv-tW-hIP" customClass="TutorialViewController" customModule="Swol" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iN3-mC-5Cp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -717,6 +758,9 @@ And then disable "Turn on fast startup"</string>
                                     <constraint firstAttribute="height" constant="46" id="hUM-pV-um3"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="btnTutorialBack"/>
+                                <connections>
+                                    <action selector="returnTap:" destination="XQv-tW-hIP" eventType="touchUpInside" id="5kj-1G-Fp4"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgM-ko-npp">
                                 <rect key="frame" x="40" y="175" width="334" height="86.5"/>
