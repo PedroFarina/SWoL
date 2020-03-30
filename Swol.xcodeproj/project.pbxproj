@@ -13,6 +13,7 @@
 		024024BC23C048500065B8DD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 024024BE23C048500065B8DD /* Localizable.strings */; };
 		024024C123C050830065B8DD /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024024C023C050830065B8DD /* TextTableViewCell.swift */; };
 		024024C323C050D70065B8DD /* TextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 024024C223C050D70065B8DD /* TextTableViewCell.xib */; };
+		0273BAE124328C38002173AC /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0273BAE024328C38002173AC /* Tutorial.storyboard */; };
 		0289B22923C03DE300D610AB /* DevicesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0289B22823C03DE300D610AB /* DevicesTableViewController.swift */; };
 		028F58F724181638001C1A33 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 024024BE23C048500065B8DD /* Localizable.strings */; };
 		028F58F82418163B001C1A33 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020208C923C2F41500159427 /* StringExtension.swift */; };
@@ -138,6 +139,7 @@
 		024C602623C4309A00C1071D /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
 		024C602723C4309A00C1071D /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		024C602823C4309A00C1071D /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		0273BAE024328C38002173AC /* Tutorial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Tutorial.storyboard; path = Swol/View/Tutorial.storyboard; sourceTree = SOURCE_ROOT; };
 		028801B923C396D60079D8F6 /* NSUserActivities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSUserActivities.swift; sourceTree = "<group>"; };
 		0289B22823C03DE300D610AB /* DevicesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesTableViewController.swift; sourceTree = "<group>"; };
 		028F58FA24181C65001C1A33 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = ../../Swol/View/en.lproj/Main.strings; sourceTree = "<group>"; };
@@ -269,6 +271,7 @@
 			children = (
 				024024BF23C050720065B8DD /* TableViewCells */,
 				02D5785E23C03684001FA8A5 /* Main.storyboard */,
+				0273BAE024328C38002173AC /* Tutorial.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -562,6 +565,7 @@
 				024024C323C050D70065B8DD /* TextTableViewCell.xib in Resources */,
 				024024BC23C048500065B8DD /* Localizable.strings in Resources */,
 				02D5786523C03685001FA8A5 /* Assets.xcassets in Resources */,
+				0273BAE124328C38002173AC /* Tutorial.storyboard in Resources */,
 				02D5786023C03684001FA8A5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
