@@ -4,217 +4,9 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Quick Guide-->
-        <scene sceneID="DXd-iq-38r">
-            <objects>
-                <viewController id="gH8-70-YlN" sceneMemberID="viewController">
-                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="mgR-jG-4JT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="3050"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView verifyAmbiguity="off" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLc-Je-XCp">
-                                <rect key="frame" x="0.0" y="88" width="414" height="2879"/>
-                                <subviews>
-                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mtJ-Nm-oKi" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="3050"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GNl-Xg-Aud">
-                                                <rect key="frame" x="16" y="16" width="382" height="218.5"/>
-                                                <string key="text">WOL(Wake-on-Lan) is a pattern that allows a device to be turned on or woken by a network message. It relies on your router settings and a receiver proper configured on your device.
-
-The easiest router setting is to foward(NAT) an UDP port as 9 to the broadcast address xxx.xxx.xxx.255. If your router arealdy has a configuration, you'll have to calculate its broadcast mask.</string>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enabling in MacOS" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6HV-fP-hFs">
-                                                <rect key="frame" x="16" y="258.5" width="382" height="41"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In &quot;System and Preferences&quot;, select &quot;Energy Saver&quot;, and check for &quot;Wake for network access&quot;" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lqv-wi-BS9">
-                                                <rect key="frame" x="16" y="315.5" width="382" height="42.5"/>
-                                                <accessibility key="accessibilityConfiguration">
-                                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
-                                                </accessibility>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MacOS Wake for Network" translatesAutoresizingMaskIntoConstraints="NO" id="UHd-DH-Sax">
-                                                <rect key="frame" x="16" y="374" width="382" height="253.5"/>
-                                                <accessibility key="accessibilityConfiguration" label="MacOS Energy Saver with Wake for network access checked">
-                                                    <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
-                                                    <bool key="isElement" value="YES"/>
-                                                </accessibility>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="UHd-DH-Sax" secondAttribute="height" multiplier="199:132" id="1iM-8c-HCK"/>
-                                                </constraints>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l9g-As-N0r">
-                                                <rect key="frame" x="16" y="643.5" width="382" height="64.5"/>
-                                                <accessibility key="accessibilityConfiguration">
-                                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
-                                                </accessibility>
-                                                <string key="text">It will also require the IP and the Mac address of the device. Which can also be found in "System and Preferences", "Network" then "Advanced"</string>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MacOS TCPIP" translatesAutoresizingMaskIntoConstraints="NO" id="jR0-aB-kVl">
-                                                <rect key="frame" x="16" y="724" width="382" height="320.5"/>
-                                                <accessibility key="accessibilityConfiguration" label="MacOS advanced network settings showing IP settings">
-                                                    <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
-                                                    <bool key="isElement" value="YES"/>
-                                                </accessibility>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="jR0-aB-kVl" secondAttribute="height" multiplier="31:26" id="bIb-1d-Mwh"/>
-                                                </constraints>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enabling in Windows 7 or later" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDz-9u-SY4">
-                                                <rect key="frame" x="16" y="1068.5" width="382" height="82"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sAc-G0-NLW">
-                                                <rect key="frame" x="16" y="1166.5" width="382" height="328.5"/>
-                                                <string key="text">Firstly you have to make sure your motherboard is equiped with a receiver, and activate it in its BIOS settings. Once its activated there's a few extra steps to activate it in your OS.
-
-• Open "Windows Settings".
-• Open "Network and Internet" settings.
-• Click on "Change adapter settings".
-• Right click the network connection you want to enable/disable power management support and click on Properties.
-
-On the advanced settings, enable wake on Magic Packet settings.
-</string>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Windows 10 Wake on magic packet" translatesAutoresizingMaskIntoConstraints="NO" id="xTe-bj-YU5">
-                                                <rect key="frame" x="16" y="1511" width="382" height="451"/>
-                                                <accessibility key="accessibilityConfiguration" label="Windows 10 on advanced settings with Wake on Magic Packet enabled.">
-                                                    <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
-                                                    <bool key="isElement" value="YES"/>
-                                                </accessibility>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="xTe-bj-YU5" secondAttribute="height" multiplier="382:451" id="vKu-uR-Cst"/>
-                                                </constraints>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now head to the Power Management settings, and enable all three checkboxes." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qu9-am-1Qs">
-                                                <rect key="frame" x="16" y="1978" width="382" height="42.5"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Windows 10 Power Management" translatesAutoresizingMaskIntoConstraints="NO" id="dMA-wC-ZUz">
-                                                <rect key="frame" x="16" y="2036.5" width="382" height="451"/>
-                                                <accessibility key="accessibilityConfiguration" label="Windows 10 Power Management with all checkboxes checked.">
-                                                    <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
-                                                    <bool key="isElement" value="YES"/>
-                                                </accessibility>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="dMA-wC-ZUz" secondAttribute="height" multiplier="382:451" id="peW-RL-BMB"/>
-                                                </constraints>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLv-Oi-RpP">
-                                                <rect key="frame" x="16" y="2503.5" width="382" height="196.5"/>
-                                                <string key="text">Usually, Windows has a hidden setting that helps your computer startup faster arealdy enable. In most cases it also disables Wake On Lan features.
-
-• Head to the Control Panel
-• Power Options
-• Choose what the power buttons do
-• Change settings that are currently unavailable
-• Disable "turn on fast startup"</string>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Windows 10 Fast startup" translatesAutoresizingMaskIntoConstraints="NO" id="tfG-sT-iz3">
-                                                <rect key="frame" x="16" y="2716" width="382" height="277"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="tfG-sT-iz3" secondAttribute="height" multiplier="313:227" id="naX-9P-nyx"/>
-                                                </constraints>
-                                            </imageView>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <constraints>
-                                            <constraint firstItem="l9g-As-N0r" firstAttribute="leading" secondItem="mtJ-Nm-oKi" secondAttribute="leading" constant="16" id="07D-EX-ind"/>
-                                            <constraint firstItem="6HV-fP-hFs" firstAttribute="top" secondItem="GNl-Xg-Aud" secondAttribute="bottom" constant="24" id="0Ln-hp-PjQ"/>
-                                            <constraint firstAttribute="trailing" secondItem="6HV-fP-hFs" secondAttribute="trailing" constant="16" id="0aj-y8-FcB"/>
-                                            <constraint firstItem="sAc-G0-NLW" firstAttribute="top" secondItem="lDz-9u-SY4" secondAttribute="bottom" constant="16" id="1Kr-MQ-rgt"/>
-                                            <constraint firstItem="dMA-wC-ZUz" firstAttribute="leading" secondItem="mtJ-Nm-oKi" secondAttribute="leading" constant="16" id="6co-lW-ZUD"/>
-                                            <constraint firstAttribute="trailing" secondItem="sAc-G0-NLW" secondAttribute="trailing" constant="16" id="6kr-hZ-enl"/>
-                                            <constraint firstItem="sAc-G0-NLW" firstAttribute="leading" secondItem="mtJ-Nm-oKi" secondAttribute="leading" constant="16" id="9JU-dM-RzZ"/>
-                                            <constraint firstItem="Lqv-wi-BS9" firstAttribute="leading" secondItem="mtJ-Nm-oKi" secondAttribute="leading" constant="16" id="Au3-2y-Xvy"/>
-                                            <constraint firstItem="Qu9-am-1Qs" firstAttribute="leading" secondItem="mtJ-Nm-oKi" secondAttribute="leading" constant="16" id="BD3-VO-KzA"/>
-                                            <constraint firstItem="bLv-Oi-RpP" firstAttribute="top" secondItem="dMA-wC-ZUz" secondAttribute="bottom" constant="16" id="Crs-vB-JOe"/>
-                                            <constraint firstAttribute="trailing" secondItem="dMA-wC-ZUz" secondAttribute="trailing" constant="16" id="FGm-Wy-Eo0"/>
-                                            <constraint firstItem="GNl-Xg-Aud" firstAttribute="top" secondItem="mtJ-Nm-oKi" secondAttribute="top" constant="16" id="Gss-xL-yAO"/>
-                                            <constraint firstAttribute="height" constant="3050" id="JSh-kh-JAL"/>
-                                            <constraint firstItem="dMA-wC-ZUz" firstAttribute="top" secondItem="Qu9-am-1Qs" secondAttribute="bottom" constant="16" id="JUF-nP-SWl"/>
-                                            <constraint firstAttribute="trailing" secondItem="l9g-As-N0r" secondAttribute="trailing" constant="16" id="M2c-3a-UOu"/>
-                                            <constraint firstItem="jR0-aB-kVl" firstAttribute="top" secondItem="l9g-As-N0r" secondAttribute="bottom" constant="16" id="NYi-Lu-0aj"/>
-                                            <constraint firstItem="tfG-sT-iz3" firstAttribute="top" secondItem="bLv-Oi-RpP" secondAttribute="bottom" constant="16" id="Okv-w6-6Nd"/>
-                                            <constraint firstAttribute="trailing" secondItem="UHd-DH-Sax" secondAttribute="trailing" constant="16" id="P1n-ZX-E24"/>
-                                            <constraint firstAttribute="trailing" secondItem="lDz-9u-SY4" secondAttribute="trailing" constant="16" id="PyY-77-6AQ"/>
-                                            <constraint firstItem="GNl-Xg-Aud" firstAttribute="leading" secondItem="mtJ-Nm-oKi" secondAttribute="leading" constant="16" id="Qsy-6l-W1B"/>
-                                            <constraint firstAttribute="trailing" secondItem="bLv-Oi-RpP" secondAttribute="trailing" constant="16" id="RxX-sI-5XC"/>
-                                            <constraint firstItem="tfG-sT-iz3" firstAttribute="leading" secondItem="mtJ-Nm-oKi" secondAttribute="leading" constant="16" id="UMO-ps-4Cq"/>
-                                            <constraint firstAttribute="trailing" secondItem="Lqv-wi-BS9" secondAttribute="trailing" constant="16" id="UQH-0X-Kwf"/>
-                                            <constraint firstAttribute="trailing" secondItem="GNl-Xg-Aud" secondAttribute="trailing" constant="16" id="Z02-dJ-yfM"/>
-                                            <constraint firstAttribute="trailing" secondItem="tfG-sT-iz3" secondAttribute="trailing" constant="16" id="Z7G-Ry-ANL"/>
-                                            <constraint firstAttribute="trailing" secondItem="jR0-aB-kVl" secondAttribute="trailing" constant="16" id="ZKI-zX-5YS"/>
-                                            <constraint firstItem="lDz-9u-SY4" firstAttribute="leading" secondItem="mtJ-Nm-oKi" secondAttribute="leading" constant="16" id="d6C-AC-JCp"/>
-                                            <constraint firstItem="UHd-DH-Sax" firstAttribute="leading" secondItem="mtJ-Nm-oKi" secondAttribute="leading" constant="16" id="dmH-yL-5pY"/>
-                                            <constraint firstItem="Lqv-wi-BS9" firstAttribute="top" secondItem="6HV-fP-hFs" secondAttribute="bottom" constant="16" id="k4d-8v-hX0"/>
-                                            <constraint firstItem="Qu9-am-1Qs" firstAttribute="top" secondItem="xTe-bj-YU5" secondAttribute="bottom" constant="16" id="kO3-p8-SQ7"/>
-                                            <constraint firstItem="jR0-aB-kVl" firstAttribute="leading" secondItem="mtJ-Nm-oKi" secondAttribute="leading" constant="16" id="lFj-fd-w2Q"/>
-                                            <constraint firstItem="UHd-DH-Sax" firstAttribute="top" secondItem="Lqv-wi-BS9" secondAttribute="bottom" constant="16" id="lUn-sy-x1X"/>
-                                            <constraint firstItem="lDz-9u-SY4" firstAttribute="top" secondItem="jR0-aB-kVl" secondAttribute="bottom" constant="24" id="lix-of-Uoi"/>
-                                            <constraint firstItem="xTe-bj-YU5" firstAttribute="leading" secondItem="mtJ-Nm-oKi" secondAttribute="leading" constant="16" id="nHX-nD-nQF"/>
-                                            <constraint firstItem="6HV-fP-hFs" firstAttribute="leading" secondItem="mtJ-Nm-oKi" secondAttribute="leading" constant="16" id="oC6-cE-XEt"/>
-                                            <constraint firstItem="bLv-Oi-RpP" firstAttribute="leading" secondItem="mtJ-Nm-oKi" secondAttribute="leading" constant="16" id="qZt-Pz-Y6T"/>
-                                            <constraint firstAttribute="trailing" secondItem="Qu9-am-1Qs" secondAttribute="trailing" constant="16" id="xOj-RI-5ij"/>
-                                            <constraint firstItem="l9g-As-N0r" firstAttribute="top" secondItem="UHd-DH-Sax" secondAttribute="bottom" constant="16" id="xme-i4-8eF"/>
-                                            <constraint firstItem="xTe-bj-YU5" firstAttribute="top" secondItem="sAc-G0-NLW" secondAttribute="bottom" constant="16" id="xvW-rb-weF"/>
-                                            <constraint firstAttribute="trailing" secondItem="xTe-bj-YU5" secondAttribute="trailing" constant="16" id="zpm-Pg-G3F"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="mtJ-Nm-oKi" firstAttribute="top" secondItem="kLc-Je-XCp" secondAttribute="top" id="C7y-Zr-1W9"/>
-                                    <constraint firstItem="mtJ-Nm-oKi" firstAttribute="width" secondItem="kLc-Je-XCp" secondAttribute="width" id="RK1-C9-b9j"/>
-                                    <constraint firstItem="mtJ-Nm-oKi" firstAttribute="leading" secondItem="kLc-Je-XCp" secondAttribute="leading" id="bxo-3E-wl3"/>
-                                    <constraint firstItem="mtJ-Nm-oKi" firstAttribute="bottom" secondItem="kLc-Je-XCp" secondAttribute="bottom" id="lJR-Z9-bBv"/>
-                                    <constraint firstAttribute="trailing" secondItem="mtJ-Nm-oKi" secondAttribute="trailing" constant="20" symbolic="YES" id="uvp-eF-RcH"/>
-                                </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="q0P-Wa-fMT"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="bQg-nr-ZG8"/>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="fe7-Ke-k7c" firstAttribute="trailing" secondItem="kLc-Je-XCp" secondAttribute="trailing" id="ZyC-Wu-8AP"/>
-                            <constraint firstItem="kLc-Je-XCp" firstAttribute="bottom" secondItem="fe7-Ke-k7c" secondAttribute="bottom" id="aCY-jX-eAd"/>
-                            <constraint firstItem="kLc-Je-XCp" firstAttribute="leading" secondItem="fe7-Ke-k7c" secondAttribute="leading" id="oir-y1-iul"/>
-                            <constraint firstItem="kLc-Je-XCp" firstAttribute="top" secondItem="fe7-Ke-k7c" secondAttribute="top" id="w01-hi-UDY"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="fe7-Ke-k7c"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Quick Guide" largeTitleDisplayMode="always" id="4jd-OI-xGJ"/>
-                    <size key="freeformSize" width="414" height="3050"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="r7r-a6-ixx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1345" y="-1730"/>
-        </scene>
         <!--Devices Menu-->
         <scene sceneID="TcF-bu-qGV">
             <objects>
@@ -223,11 +15,11 @@ On the advanced settings, enable wake on Magic Packet settings.
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="detailButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="deviceCell" editingAccessoryType="disclosureIndicator" textLabel="eve-Hy-DhF" detailTextLabel="7kR-MV-6VA" style="IBUITableViewCellStyleSubtitle" id="J8h-gd-GOO">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="deviceCell" editingAccessoryType="disclosureIndicator" textLabel="eve-Hy-DhF" detailTextLabel="7kR-MV-6VA" style="IBUITableViewCellStyleSubtitle" id="J8h-gd-GOO">
                                 <rect key="frame" x="20" y="55.5" width="374" height="57.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="J8h-gd-GOO" id="YIU-wQ-aek">
-                                    <rect key="frame" x="0.0" y="0.0" width="330" height="57.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="57.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" id="eve-Hy-DhF">
@@ -266,9 +58,6 @@ On the advanced settings, enable wake on Magic Packet settings.
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <segue destination="gH8-70-YlN" kind="show" identifier="detailTap" id="mHM-bg-GSm"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DSx-oT-GFa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -606,11 +395,6 @@ On the advanced settings, enable wake on Magic Packet settings.
         </scene>
     </scenes>
     <resources>
-        <image name="MacOS TCPIP" width="1334" height="1120"/>
-        <image name="MacOS Wake for Network" width="1338" height="892"/>
-        <image name="Windows 10 Fast startup" width="582" height="421"/>
-        <image name="Windows 10 Power Management" width="398" height="451"/>
-        <image name="Windows 10 Wake on magic packet" width="396" height="451"/>
         <image name="desktopcomputer" catalog="system" width="64" height="50"/>
         <image name="ellipsis.circle" catalog="system" width="64" height="60"/>
         <image name="ellipsis.circle.fill" catalog="system" width="64" height="60"/>
