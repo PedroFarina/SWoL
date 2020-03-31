@@ -629,7 +629,7 @@ tab and enable all checkboxes</string>
                                 <rect key="frame" x="0.0" y="44" width="414" height="872"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S0Z-X0-XgG">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="873.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="922.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Enabling in Windows" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YMb-qt-kqR">
                                                 <rect key="frame" x="20" y="50" width="374" height="41"/>
@@ -670,7 +670,7 @@ And then disable "Turn on fast startup"</string>
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DAD-gu-OfV">
-                                                <rect key="frame" x="125" y="779" width="164" height="49"/>
+                                                <rect key="frame" x="43" y="779" width="328" height="98"/>
                                                 <accessibility key="accessibilityConfiguration" label="Dismiss the tutorial."/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <state key="normal" title="Done" backgroundImage="btnTutorialBackground">
@@ -681,7 +681,7 @@ And then disable "Turn on fast startup"</string>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 3 of 3" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="luU-v7-kBi">
-                                                <rect key="frame" x="20" y="843" width="374" height="20.5"/>
+                                                <rect key="frame" x="20" y="892" width="374" height="20.5"/>
                                                 <accessibility key="accessibilityConfiguration">
                                                     <accessibilityTraits key="traits" notEnabled="YES"/>
                                                     <bool key="isElement" value="NO"/>

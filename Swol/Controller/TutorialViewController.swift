@@ -24,7 +24,6 @@ public class TutorialViewController: UIViewController {
     }
 
     public override func viewWillAppear(_ animated: Bool){
-        computer?.image = TutorialViewController.sleepingImages[0]
         computer?.animationImages = TutorialViewController.sleepingImages
         computer?.animationDuration = 1.2
         computer?.animationRepeatCount = Int.max
@@ -44,6 +43,7 @@ public class TutorialViewController: UIViewController {
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
             self.performSegue(withIdentifier: "continue", sender: self)
+            self.computer?.image = TutorialViewController.sleepingImages[0]
         }
     }
 
