@@ -34,11 +34,18 @@ public class SettingsTableViewController: UITableViewController {
     }
 
     public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 0 {
-            iCloudTableViewCell.isOn = !iCloudTableViewCell.isOn
-        } else if indexPath.row == 1 {
-            self.present(deleteAlert, animated: true)
+        if indexPath.section == 0 {
+            if indexPath.row == 0 {
+                iCloudTableViewCell.isOn = !iCloudTableViewCell.isOn
+            } else if indexPath.row == 1 {
+                self.present(deleteAlert, animated: true)
+            }
+        } else if indexPath.section == 1 {
+            if indexPath.row == 0 {
+                self.performSegue(withIdentifier: "tutorial", sender: self)
+            }
         }
+
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }

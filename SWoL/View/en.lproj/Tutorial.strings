@@ -1,0 +1,159 @@
+
+/* Class = "UIButton"; accessibilityLabel = "macOS"; ObjectID = "06c-AJ-XnT"; */
+"06c-AJ-XnT.accessibilityLabel" = "macOS";
+
+/* Class = "UILabel"; text = "Mostly known as WOL, it's a pattern that allows a device to be turned on by a network message.  It relies on your router settings and a receiver proper configured on your device."; ObjectID = "CDT-HU-DIi"; */
+"CDT-HU-DIi.text" = "Mostly known as WOL, it's a pattern that allows a device to be turned on by a network message.  It relies on your router settings and a receiver proper configured on your device.";
+
+/* Class = "UILabel"; text = "Now head into the Power Management\ntab and enable all checkboxes"; ObjectID = "Ckn-Ne-Abe"; */
+"Ckn-Ne-Abe.text" = "Now head into the Power Management\ntab and enable all checkboxes";
+
+/* Class = "UIButton"; accessibilityLabel = "Dismiss the tutorial."; ObjectID = "DAD-gu-OfV"; */
+"DAD-gu-OfV.accessibilityLabel" = "Dismiss the tutorial.";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "DAD-gu-OfV"; */
+"DAD-gu-OfV.normalTitle" = "Done";
+
+/* Class = "UIButton"; accessibilityLabel = "Return to the previous step"; ObjectID = "DWS-JD-h4F"; */
+"DWS-JD-h4F.accessibilityLabel" = "Return to the previous step";
+
+/* Class = "UIButton"; accessibilityLabel = "Return to the previous step"; ObjectID = "HCD-7E-F0B"; */
+"HCD-7E-F0B.accessibilityLabel" = "Return to the previous step";
+
+/* Class = "UILabel"; text = "What's wake on lan?"; ObjectID = "OSw-og-XOY"; */
+"OSw-og-XOY.text" = "What's wake on lan?";
+
+/* Class = "UIButton"; accessibilityLabel = "Return to the previous step"; ObjectID = "PBN-Pa-nyJ"; */
+"PBN-Pa-nyJ.accessibilityLabel" = "Return to the previous step";
+
+/* Class = "UIImageView"; accessibilityLabel = "Windows 10 Power Management with all checkboxes checked."; ObjectID = "QoH-KT-nMu"; */
+"QoH-KT-nMu.accessibilityLabel" = "Windows 10 Power Management with all checkboxes checked.";
+
+/* Class = "UIButton"; accessibilityLabel = "Skip the tutorial"; ObjectID = "QrD-kG-nS9"; */
+"QrD-kG-nS9.accessibilityLabel" = "Skip the tutorial";
+
+/* Class = "UIButton"; normalTitle = "Skip"; ObjectID = "QrD-kG-nS9"; */
+"QrD-kG-nS9.normalTitle" = "Skip";
+
+/* Class = "UILabel"; text = "Enabling in MacOS"; ObjectID = "Qv0-Ia-EG8"; */
+"Qv0-Ia-EG8.text" = "Enabling in MacOS";
+
+/* Class = "UILabel"; text = "Setting up your router"; ObjectID = "RWo-Cr-u40"; */
+"RWo-Cr-u40.text" = "Setting up your router";
+
+/* Class = "UIButton"; accessibilityLabel = "Windows"; ObjectID = "T1P-BU-Ep2"; */
+"T1P-BU-Ep2.accessibilityLabel" = "Windows";
+
+/* Class = "UIButton"; accessibilityLabel = "Dismiss the tutorial."; ObjectID = "Tb7-ZU-6la"; */
+"Tb7-ZU-6la.accessibilityLabel" = "Dismiss the tutorial.";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "Tb7-ZU-6la"; */
+"Tb7-ZU-6la.normalTitle" = "Done";
+
+/* Class = "UILabel"; text = "• Head to \"System and Preferences\" \n• Select \"Network\"\n• Go to advanced settings\n• Get your IP and Mac Address"; ObjectID = "Ui3-C3-Znp"; */
+"Ui3-C3-Znp.text" = "• Head to \"System and Preferences\" \n• Select \"Network\"\n• Go to advanced settings\n• Get your IP and Mac Address";
+
+/* Class = "UIImageView"; accessibilityLabel = "A cartoon router"; ObjectID = "V3G-Ox-tGa"; */
+"V3G-Ox-tGa.accessibilityLabel" = "A cartoon router";
+
+/* Class = "UIButton"; accessibilityLabel = "Skip the tutorial"; ObjectID = "V4f-04-LzJ"; */
+"V4f-04-LzJ.accessibilityLabel" = "Skip the tutorial";
+
+/* Class = "UIButton"; normalTitle = "Skip"; ObjectID = "V4f-04-LzJ"; */
+"V4f-04-LzJ.normalTitle" = "Skip";
+
+/* Class = "UILabel"; text = "Step 2 of 3"; ObjectID = "VNU-OS-W7L"; */
+"VNU-OS-W7L.text" = "Step 2 of 3";
+
+/* Class = "UIButton"; accessibilityLabel = "Next Step. Step 2 of 3."; ObjectID = "WJF-PL-DB7"; */
+"WJF-PL-DB7.accessibilityLabel" = "Next Step. Step 2 of 3.";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "WJF-PL-DB7"; */
+"WJF-PL-DB7.normalTitle" = "Next";
+
+/* Class = "UIButton"; accessibilityLabel = "Return to the previous step"; ObjectID = "Xar-wo-zT1"; */
+"Xar-wo-zT1.accessibilityLabel" = "Return to the previous step";
+
+/* Class = "UIImageView"; accessibilityLabel = "MacOS advanced network settings showing IP settings"; ObjectID = "YDs-qp-nwT"; */
+"YDs-qp-nwT.accessibilityLabel" = "MacOS advanced network settings showing IP settings";
+
+/* Class = "UILabel"; text = "Enabling in Windows"; ObjectID = "YMb-qt-kqR"; */
+"YMb-qt-kqR.text" = "Enabling in Windows";
+
+/* Class = "UIButton"; accessibilityLabel = "Continue to next step"; ObjectID = "YiS-2L-Gpm"; */
+"YiS-2L-Gpm.accessibilityLabel" = "Continue to next step";
+
+/* Class = "UIButton"; normalTitle = "Continue"; ObjectID = "YiS-2L-Gpm"; */
+"YiS-2L-Gpm.normalTitle" = "Continue";
+
+/* Class = "UIButton"; accessibilityLabel = "Skip the tutorial"; ObjectID = "ZPT-1L-7Hf"; */
+"ZPT-1L-7Hf.accessibilityLabel" = "Skip the tutorial";
+
+/* Class = "UIButton"; normalTitle = "Skip"; ObjectID = "ZPT-1L-7Hf"; */
+"ZPT-1L-7Hf.normalTitle" = "Skip";
+
+/* Class = "UILabel"; text = "Enabling in Windows"; ObjectID = "a3j-eX-P2y"; */
+"a3j-eX-P2y.text" = "Enabling in Windows";
+
+/* Class = "UIButton"; accessibilityLabel = "Return to the previous step"; ObjectID = "bdB-XG-Umb"; */
+"bdB-XG-Umb.accessibilityLabel" = "Return to the previous step";
+
+/* Class = "UILabel"; text = "Firstly you have to make sure your motherboard is equiped with a receiver and activate it in its BIOS settings. Once its activated proceed with this tutorial."; ObjectID = "cgM-ko-npp"; */
+"cgM-ko-npp.text" = "Firstly you have to make sure your motherboard is equiped with a receiver and activate it in its BIOS settings. Once its activated proceed with this tutorial.";
+
+/* Class = "UIButton"; accessibilityLabel = "Continue to next step"; ObjectID = "cuV-qi-KtZ"; */
+"cuV-qi-KtZ.accessibilityLabel" = "Continue to next step";
+
+/* Class = "UIButton"; normalTitle = "Continue"; ObjectID = "cuV-qi-KtZ"; */
+"cuV-qi-KtZ.normalTitle" = "Continue";
+
+/* Class = "UIImageView"; accessibilityLabel = "MacOS Energy Saver with Wake for network access checked"; ObjectID = "d9W-G9-vMY"; */
+"d9W-G9-vMY.accessibilityLabel" = "MacOS Energy Saver with Wake for network access checked";
+
+/* Class = "UILabel"; text = "• Head to \"System and Preferences\" \n• Select \"Energy Saver\"\n• Check \"Wake for network access\""; ObjectID = "dex-9b-e6Y"; */
+"dex-9b-e6Y.text" = "• Head to \"System and Preferences\" \n• Select \"Energy Saver\"\n• Check \"Wake for network access\"";
+
+/* Class = "UILabel"; text = "Some Windows might have a hidden settings that boosts your computer's startup.\n\nIn some cases it also disables WOL settings.\n\n• Head to \"Control Panel\"\n• Select \"Power Options\"\n• Click \"Choose what the power buttons do\"\n• Click \"Change settings that are currently unavailable\"\n\nAnd then disable \"Turn on fast startup\""; ObjectID = "emk-3n-ukZ"; */
+"emk-3n-ukZ.text" = "Some Windows might have a hidden settings that boosts your computer's startup.\n\nIn some cases it also disables WOL settings.\n\n• Head to \"Control Panel\"\n• Select \"Power Options\"\n• Click \"Choose what the power buttons do\"\n• Click \"Change settings that are currently unavailable\"\n\nAnd then disable \"Turn on fast startup\"";
+
+/* Class = "UIImageView"; accessibilityLabel = "Windows 10 on advanced settings with \"Wake on Magic Packet\" enabled."; ObjectID = "hlO-JE-u5O"; */
+"hlO-JE-u5O.accessibilityLabel" = "Windows 10 on advanced settings with \"Wake on Magic Packet\" enabled.";
+
+/* Class = "UILabel"; text = "Step 1 of 3"; ObjectID = "iFW-kS-ctl"; */
+"iFW-kS-ctl.text" = "Step 1 of 3";
+
+/* Class = "UIButton"; accessibilityLabel = "Next Step. Step 1 of 3."; ObjectID = "kqF-Mf-O9a"; */
+"kqF-Mf-O9a.accessibilityLabel" = "Next Step. Step 1 of 3.";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "kqF-Mf-O9a"; */
+"kqF-Mf-O9a.normalTitle" = "Next";
+
+/* Class = "UILabel"; text = "Step 3 of 3"; ObjectID = "luU-v7-kBi"; */
+"luU-v7-kBi.text" = "Step 3 of 3";
+
+/* Class = "UIButton"; accessibilityLabel = "Return to the previous step"; ObjectID = "n4t-ac-ZVY"; */
+"n4t-ac-ZVY.accessibilityLabel" = "Return to the previous step";
+
+/* Class = "UILabel"; text = "The easiest way to configure  your router, is to foward(NAT) an UDP port to the broadcast address xxx.xxx.xxx.255\n If your router arealdy has some sort of configuration, you'll need to calculate its broadcast mask."; ObjectID = "oHg-uq-w5I"; */
+"oHg-uq-w5I.text" = "The easiest way to configure  your router, is to foward(NAT) an UDP port to the broadcast address xxx.xxx.xxx.255\n If your router arealdy has some sort of configuration, you'll need to calculate its broadcast mask.";
+
+/* Class = "UILabel"; text = "Retrieving your IP/MAC"; ObjectID = "p5E-pC-47y"; */
+"p5E-pC-47y.text" = "Retrieving your IP/MAC";
+
+/* Class = "UIImageView"; accessibilityLabel = "An animation of a computer sleeping"; ObjectID = "pqb-hZ-fEz"; */
+"pqb-hZ-fEz.accessibilityLabel" = "An animation of a computer sleeping";
+
+/* Class = "UILabel"; text = "Enabling in Windows"; ObjectID = "uf3-pl-7km"; */
+"uf3-pl-7km.text" = "Enabling in Windows";
+
+/* Class = "UILabel"; text = "• Head to \"Windows Settings\"\n• Select \"Network and Internet\" settings\n• Click on  \"Change  adapter settings\" \n• Right click the network connection you want to enable power managment support and click on \"Properties\"\n\nOn the advanced settings, enable \"Wake on Magic Packet\""; ObjectID = "yDD-jN-C2Z"; */
+"yDD-jN-C2Z.text" = "• Head to \"Windows Settings\"\n• Select \"Network and Internet\" settings\n• Click on  \"Change  adapter settings\" \n• Right click the network connection you want to enable power managment support and click on \"Properties\"\n\nOn the advanced settings, enable \"Wake on Magic Packet\"";
+
+/* Class = "UIButton"; accessibilityLabel = "Return to the previous step"; ObjectID = "ygQ-Qo-8JM"; */
+"ygQ-Qo-8JM.accessibilityLabel" = "Return to the previous step";
+
+/* Class = "UIImageView"; accessibilityLabel = "Windows 10 Power Options with \"Turn on fast startup\" disabled."; ObjectID = "zhB-Ew-GcQ"; */
+"zhB-Ew-GcQ.accessibilityLabel" = "Windows 10 Power Options with \"Turn on fast startup\" disabled.";
+
+/* Class = "UILabel"; text = "Select your OS"; ObjectID = "zpo-CW-RUm"; */
+"zpo-CW-RUm.text" = "Select your OS";
