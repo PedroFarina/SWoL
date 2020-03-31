@@ -36,7 +36,7 @@
                                     <constraint firstAttribute="width" secondItem="pqb-hZ-fEz" secondAttribute="height" multiplier="1:1" id="8Ie-DE-dc8"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CDT-HU-DIi">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CDT-HU-DIi">
                                 <rect key="frame" x="40" y="534" width="334" height="130.5"/>
                                 <string key="text">Mostly known as WOL, it's a pattern that allows a device to be turned on by a network message.  It relies on your router settings and a receiver proper configured on your device.</string>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
@@ -80,6 +80,7 @@
                             <constraint firstItem="pqb-hZ-fEz" firstAttribute="top" secondItem="OSw-og-XOY" secondAttribute="bottom" constant="40" id="dNo-cM-7yS"/>
                             <constraint firstItem="C0P-uE-GwV" firstAttribute="trailing" secondItem="CDT-HU-DIi" secondAttribute="trailing" constant="40" id="fZS-IT-Fbf"/>
                             <constraint firstItem="YiS-2L-Gpm" firstAttribute="centerY" secondItem="C0P-uE-GwV" secondAttribute="centerY" multiplier="1.7" id="fsW-cU-ika"/>
+                            <constraint firstItem="YiS-2L-Gpm" firstAttribute="top" relation="greaterThanOrEqual" secondItem="CDT-HU-DIi" secondAttribute="bottom" constant="1" id="phf-Vj-pQR"/>
                             <constraint firstItem="ZPT-1L-7Hf" firstAttribute="leading" secondItem="C0P-uE-GwV" secondAttribute="leading" id="tml-xA-riS"/>
                             <constraint firstItem="ZPT-1L-7Hf" firstAttribute="centerY" secondItem="C0P-uE-GwV" secondAttribute="centerY" multiplier="1.825" id="uzl-aL-3E6"/>
                         </constraints>
@@ -119,7 +120,7 @@
                                     <constraint firstAttribute="width" secondItem="V3G-Ox-tGa" secondAttribute="height" multiplier="1:1" id="fIJ-72-RuU"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oHg-uq-w5I">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oHg-uq-w5I">
                                 <rect key="frame" x="40" y="534" width="334" height="152.5"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
@@ -183,6 +184,7 @@
                             <constraint firstItem="k6c-LI-Kan" firstAttribute="trailing" secondItem="QrD-kG-nS9" secondAttribute="trailing" id="od9-Bd-TzQ"/>
                             <constraint firstItem="k6c-LI-Kan" firstAttribute="trailing" secondItem="oHg-uq-w5I" secondAttribute="trailing" constant="40" id="pP0-VF-7cL"/>
                             <constraint firstItem="RWo-Cr-u40" firstAttribute="leading" secondItem="k6c-LI-Kan" secondAttribute="leading" constant="20" id="q8Y-WV-B8R"/>
+                            <constraint firstItem="cuV-qi-KtZ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="oHg-uq-w5I" secondAttribute="bottom" constant="1" id="vG6-gd-pDM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="k6c-LI-Kan"/>
                     </view>
@@ -297,7 +299,7 @@
             <objects>
                 <viewController id="4td-ho-ScJ" customClass="TutorialViewController" customModule="Swol" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wR1-fY-5mt">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1165"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdB-XG-Umb">
@@ -309,18 +311,18 @@
                                 <state key="normal" backgroundImage="btnTutorialBack"/>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iiL-OS-AxE">
-                                <rect key="frame" x="0.0" y="44" width="414" height="1122"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="1087"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RmJ-Gx-TXC" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1122"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1092"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enabling in MacOS" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qv0-Ia-EG8">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enabling in MacOS" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qv0-Ia-EG8">
                                                 <rect key="frame" x="20" y="50" width="374" height="41"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                                 <color key="textColor" red="0.23921568630000001" green="0.63921568630000003" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dex-9b-e6Y">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dex-9b-e6Y">
                                                 <rect key="frame" x="40" y="131" width="334" height="64.5"/>
                                                 <string key="text">• Head to "System and Preferences" 
 • Select "Energy Saver"
@@ -398,6 +400,7 @@
                                             <constraint firstAttribute="trailing" secondItem="Ui3-C3-Znp" secondAttribute="trailing" constant="40" id="ilq-ON-ihl"/>
                                             <constraint firstAttribute="trailing" secondItem="Qv0-Ia-EG8" secondAttribute="trailing" constant="20" symbolic="YES" id="jXR-Vc-zxa"/>
                                             <constraint firstItem="p5E-pC-47y" firstAttribute="top" secondItem="d9W-G9-vMY" secondAttribute="bottom" constant="40" id="kWw-fX-CWT"/>
+                                            <constraint firstAttribute="bottom" secondItem="Tb7-ZU-6la" secondAttribute="bottom" constant="15" id="plg-df-TDR"/>
                                             <constraint firstAttribute="trailing" secondItem="d9W-G9-vMY" secondAttribute="trailing" constant="20" id="qLq-Ny-nFU"/>
                                             <constraint firstAttribute="trailing" secondItem="dex-9b-e6Y" secondAttribute="trailing" constant="40" id="tFa-nL-c19"/>
                                             <constraint firstItem="d9W-G9-vMY" firstAttribute="leading" secondItem="RmJ-Gx-TXC" secondAttribute="leading" constant="20" id="vm4-0a-BWY"/>
@@ -410,7 +413,6 @@
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="RmJ-Gx-TXC" secondAttribute="bottom" id="09g-Jh-Isz"/>
                                     <constraint firstAttribute="trailing" secondItem="RmJ-Gx-TXC" secondAttribute="trailing" id="6Wv-69-1TB"/>
-                                    <constraint firstItem="RmJ-Gx-TXC" firstAttribute="centerY" secondItem="iiL-OS-AxE" secondAttribute="centerY" id="7mc-jj-MLX"/>
                                     <constraint firstItem="RmJ-Gx-TXC" firstAttribute="leading" secondItem="iiL-OS-AxE" secondAttribute="leading" id="F6V-0B-Tql"/>
                                     <constraint firstItem="RmJ-Gx-TXC" firstAttribute="top" secondItem="iiL-OS-AxE" secondAttribute="top" id="ON7-AV-1l7"/>
                                     <constraint firstItem="RmJ-Gx-TXC" firstAttribute="width" secondItem="iiL-OS-AxE" secondAttribute="width" id="aya-Dw-s9v"/>
@@ -446,7 +448,7 @@
                         <viewLayoutGuide key="safeArea" id="Sid-Ut-lw7"/>
                     </view>
                     <navigationItem key="navigationItem" id="sBX-Uk-t4U"/>
-                    <size key="freeformSize" width="414" height="1200"/>
+                    <size key="freeformSize" width="414" height="1165"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ON7-oU-1eX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -457,16 +459,16 @@
             <objects>
                 <viewController id="bwy-Gx-3Q1" customClass="TutorialViewController" customModule="Swol" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gk7-xe-Auz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1464.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iHT-dx-UcH">
-                                <rect key="frame" x="0.0" y="44" width="414" height="1422"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="1386.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wug-Rm-nsa" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1422"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1385.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enabling in Windows" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uf3-pl-7km">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Enabling in Windows" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uf3-pl-7km">
                                                 <rect key="frame" x="20" y="50" width="374" height="41"/>
                                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <accessibility key="accessibilityConfiguration">
@@ -501,7 +503,7 @@ On the advanced settings, enable "Wake on Magic Packet"</string>
                                                     <constraint firstAttribute="width" secondItem="hlO-JE-u5O" secondAttribute="height" multiplier="308:351" id="Jyn-8K-eCU"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ckn-Ne-Abe">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ckn-Ne-Abe">
                                                 <rect key="frame" x="40" y="773.5" width="334" height="42.5"/>
                                                 <accessibility key="accessibilityConfiguration">
                                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
@@ -522,7 +524,7 @@ tab and enable all checkboxes</string>
                                                     <constraint firstAttribute="width" secondItem="QoH-KT-nMu" secondAttribute="height" multiplier="22:25" id="xia-Q1-gRV"/>
                                                 </constraints>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WJF-PL-DB7">
+                                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WJF-PL-DB7">
                                                 <rect key="frame" x="125" y="1291" width="164" height="49"/>
                                                 <accessibility key="accessibilityConfiguration" label="Next Step. Step 2 of 3."/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
@@ -533,7 +535,7 @@ tab and enable all checkboxes</string>
                                                     <segue destination="guc-yf-Y2G" kind="show" id="OUz-9o-o7Y"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 2 of 3" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNU-OS-W7L">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Step 2 of 3" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNU-OS-W7L">
                                                 <rect key="frame" x="20" y="1355" width="374" height="20.5"/>
                                                 <accessibility key="accessibilityConfiguration">
                                                     <accessibilityTraits key="traits" notEnabled="YES"/>
@@ -549,6 +551,7 @@ tab and enable all checkboxes</string>
                                             <constraint firstItem="uf3-pl-7km" firstAttribute="leading" secondItem="wug-Rm-nsa" secondAttribute="leading" constant="20" symbolic="YES" id="0NQ-fv-bJR"/>
                                             <constraint firstItem="Ckn-Ne-Abe" firstAttribute="leading" secondItem="wug-Rm-nsa" secondAttribute="leading" constant="40" id="3nI-M1-ME2"/>
                                             <constraint firstItem="VNU-OS-W7L" firstAttribute="leading" secondItem="wug-Rm-nsa" secondAttribute="leading" constant="20" symbolic="YES" id="9FK-iJ-rpR"/>
+                                            <constraint firstAttribute="bottom" secondItem="VNU-OS-W7L" secondAttribute="bottom" constant="10" id="B8M-Yg-GiG"/>
                                             <constraint firstAttribute="trailing" secondItem="QoH-KT-nMu" secondAttribute="trailing" constant="20" id="Cy2-B1-gZp"/>
                                             <constraint firstItem="yDD-jN-C2Z" firstAttribute="leading" secondItem="wug-Rm-nsa" secondAttribute="leading" constant="40" id="Fgi-fL-CIF"/>
                                             <constraint firstItem="uf3-pl-7km" firstAttribute="top" secondItem="wug-Rm-nsa" secondAttribute="top" constant="50" id="GU7-vl-OAs"/>
@@ -571,7 +574,6 @@ tab and enable all checkboxes</string>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="wug-Rm-nsa" secondAttribute="bottom" id="5eU-oU-ULA"/>
-                                    <constraint firstItem="wug-Rm-nsa" firstAttribute="centerY" secondItem="iHT-dx-UcH" secondAttribute="centerY" id="6CV-Jg-4vW"/>
                                     <constraint firstItem="wug-Rm-nsa" firstAttribute="top" secondItem="iHT-dx-UcH" secondAttribute="top" id="FeY-uk-92i"/>
                                     <constraint firstItem="wug-Rm-nsa" firstAttribute="leading" secondItem="iHT-dx-UcH" secondAttribute="leading" id="HSX-fb-K6E"/>
                                     <constraint firstAttribute="trailing" secondItem="wug-Rm-nsa" secondAttribute="trailing" id="MgN-aq-xyl"/>
@@ -605,7 +607,7 @@ tab and enable all checkboxes</string>
                         <viewLayoutGuide key="safeArea" id="kSx-zP-9HG"/>
                     </view>
                     <navigationItem key="navigationItem" id="sSj-bw-6aq"/>
-                    <size key="freeformSize" width="414" height="1500"/>
+                    <size key="freeformSize" width="414" height="1464.5"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vm6-pG-6ec" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -616,16 +618,16 @@ tab and enable all checkboxes</string>
             <objects>
                 <viewController id="guc-yf-Y2G" customClass="TutorialViewController" customModule="Swol" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FcH-pA-Vqu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="950"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Ba-ri-1eO">
-                                <rect key="frame" x="0.0" y="44" width="414" height="922"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="872"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S0Z-X0-XgG">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="922"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="873.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enabling in Windows" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YMb-qt-kqR">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Enabling in Windows" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YMb-qt-kqR">
                                                 <rect key="frame" x="20" y="50" width="374" height="41"/>
                                                 <accessibility key="accessibilityConfiguration">
                                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
@@ -634,7 +636,7 @@ tab and enable all checkboxes</string>
                                                 <color key="textColor" red="0.23921568630000001" green="0.63921568630000003" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="emk-3n-ukZ">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="emk-3n-ukZ">
                                                 <rect key="frame" x="40" y="131" width="334" height="328.5"/>
                                                 <accessibility key="accessibilityConfiguration">
                                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
@@ -663,7 +665,7 @@ And then disable "Turn on fast startup"</string>
                                                     <constraint firstAttribute="width" secondItem="zhB-Ew-GcQ" secondAttribute="height" multiplier="154:111" id="ips-Us-yeA"/>
                                                 </constraints>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DAD-gu-OfV">
+                                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DAD-gu-OfV">
                                                 <rect key="frame" x="125" y="779" width="164" height="49"/>
                                                 <accessibility key="accessibilityConfiguration" label="Dismiss the tutorial."/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
@@ -697,6 +699,7 @@ And then disable "Turn on fast startup"</string>
                                             <constraint firstAttribute="trailing" secondItem="zhB-Ew-GcQ" secondAttribute="trailing" constant="20" id="YVm-wa-mto"/>
                                             <constraint firstItem="zhB-Ew-GcQ" firstAttribute="leading" secondItem="S0Z-X0-XgG" secondAttribute="leading" constant="20" id="YoH-wH-q8K"/>
                                             <constraint firstItem="luU-v7-kBi" firstAttribute="top" secondItem="DAD-gu-OfV" secondAttribute="bottom" constant="15" id="aGe-kb-93B"/>
+                                            <constraint firstAttribute="bottom" secondItem="luU-v7-kBi" secondAttribute="bottom" constant="10" id="cu7-dP-5sJ"/>
                                             <constraint firstItem="zhB-Ew-GcQ" firstAttribute="top" secondItem="emk-3n-ukZ" secondAttribute="bottom" constant="10" id="gh6-ny-Aaa"/>
                                             <constraint firstItem="DAD-gu-OfV" firstAttribute="centerX" secondItem="zhB-Ew-GcQ" secondAttribute="centerX" id="mhI-gK-TWw"/>
                                             <constraint firstItem="emk-3n-ukZ" firstAttribute="leading" secondItem="S0Z-X0-XgG" secondAttribute="leading" constant="40" id="nao-ch-AEw"/>
@@ -707,7 +710,6 @@ And then disable "Turn on fast startup"</string>
                                 <constraints>
                                     <constraint firstItem="S0Z-X0-XgG" firstAttribute="top" secondItem="7Ba-ri-1eO" secondAttribute="top" id="Dq2-ko-3PU"/>
                                     <constraint firstItem="S0Z-X0-XgG" firstAttribute="leading" secondItem="7Ba-ri-1eO" secondAttribute="leading" id="bNj-wW-G7q"/>
-                                    <constraint firstItem="S0Z-X0-XgG" firstAttribute="centerY" secondItem="7Ba-ri-1eO" secondAttribute="centerY" id="hFi-bA-5so"/>
                                     <constraint firstItem="S0Z-X0-XgG" firstAttribute="width" secondItem="7Ba-ri-1eO" secondAttribute="width" id="pD1-2w-dqO"/>
                                     <constraint firstAttribute="bottom" secondItem="S0Z-X0-XgG" secondAttribute="bottom" id="tqv-l7-3af"/>
                                     <constraint firstAttribute="trailing" secondItem="S0Z-X0-XgG" secondAttribute="trailing" id="wD6-Pl-rrM"/>
@@ -723,7 +725,7 @@ And then disable "Turn on fast startup"</string>
                                 </constraints>
                                 <state key="normal" backgroundImage="btnTutorialBack"/>
                                 <connections>
-                                    <action selector="returnTap:" destination="bwy-Gx-3Q1" eventType="touchUpInside" id="5le-DA-wCg"/>
+                                    <action selector="returnTap:" destination="guc-yf-Y2G" eventType="touchUpInside" id="m8a-2X-Uey"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -740,7 +742,7 @@ And then disable "Turn on fast startup"</string>
                         <viewLayoutGuide key="safeArea" id="vGi-a2-9D2"/>
                     </view>
                     <navigationItem key="navigationItem" id="I6s-WJ-jAr"/>
-                    <size key="freeformSize" width="414" height="1000"/>
+                    <size key="freeformSize" width="414" height="950"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fcy-MI-xNL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
