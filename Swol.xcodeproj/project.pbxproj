@@ -35,7 +35,12 @@
 		02A7DC8023C4494F00ED7957 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 024024BE23C048500065B8DD /* Localizable.strings */; };
 		02A7DC8423C4498F00ED7957 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 02C11C8C23C38AAC00920674 /* Intents.intentdefinition */; };
 		02A7DC8823C44A2D00ED7957 /* NSUserActivities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028801B923C396D60079D8F6 /* NSUserActivities.swift */; };
+		02B575E22436726900123B10 /* DevicesMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B575E12436726900123B10 /* DevicesMenuController.swift */; };
 		02C11C9823C38F5400920674 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 02C11C8C23C38AAC00920674 /* Intents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
+		02C22FB4243660E100FA8EE8 /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C22FB0243660E100FA8EE8 /* GoogleUtilities.framework */; };
+		02C22FB6243660E100FA8EE8 /* GoogleAppMeasurement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C22FB1243660E100FA8EE8 /* GoogleAppMeasurement.framework */; };
+		02C22FB8243660E100FA8EE8 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C22FB2243660E100FA8EE8 /* GoogleMobileAds.framework */; };
+		02C22FBA243660E100FA8EE8 /* nanopb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C22FB3243660E100FA8EE8 /* nanopb.framework */; };
 		02C490E7242E665400A388A1 /* NSUserActivities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028801B923C396D60079D8F6 /* NSUserActivities.swift */; };
 		02C490E8242E665900A388A1 /* NSUserActivities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028801B923C396D60079D8F6 /* NSUserActivities.swift */; };
 		02C5BAE0242E7790007F57BE /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C5BADF242E7790007F57BE /* SwitchTableViewCell.swift */; };
@@ -143,7 +148,7 @@
 		024C602623C4309A00C1071D /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
 		024C602723C4309A00C1071D /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		024C602823C4309A00C1071D /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		0273BAE32432A97D002173AC /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TutorialViewController.swift; path = Swol/Controller/TutorialViewController.swift; sourceTree = SOURCE_ROOT; };
+		0273BAE32432A97D002173AC /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TutorialViewController.swift; path = SWoL/Controller/Tutorial/TutorialViewController.swift; sourceTree = SOURCE_ROOT; };
 		028801B923C396D60079D8F6 /* NSUserActivities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSUserActivities.swift; sourceTree = "<group>"; };
 		0289B22823C03DE300D610AB /* DevicesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesTableViewController.swift; sourceTree = "<group>"; };
 		028F58FA24181C65001C1A33 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = ../../Swol/View/en.lproj/Main.strings; sourceTree = "<group>"; };
@@ -155,13 +160,18 @@
 		02A7DC6B23C448C200ED7957 /* SwolBackEnd.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwolBackEnd.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		02A7DC6D23C448C200ED7957 /* SwolBackEnd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwolBackEnd.h; sourceTree = "<group>"; };
 		02A7DC6E23C448C200ED7957 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02B575E12436726900123B10 /* DevicesMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DevicesMenuController.swift; path = Swol/Controller/Devices/DevicesMenuController.swift; sourceTree = SOURCE_ROOT; };
 		02C11C7323C389EB00920674 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
 		02C11C8923C38A6800920674 /* SWoL.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SWoL.entitlements; sourceTree = "<group>"; };
 		02C11C8C23C38AAC00920674 /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
 		02C11C8E23C38D5400920674 /* Device+Intents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Device+Intents.swift"; sourceTree = "<group>"; };
 		02C11C9A23C3915900920674 /* WakeDeviceIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakeDeviceIntentHandler.swift; sourceTree = "<group>"; };
+		02C22FB0243660E100FA8EE8 /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = "<group>"; };
+		02C22FB1243660E100FA8EE8 /* GoogleAppMeasurement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleAppMeasurement.framework; sourceTree = "<group>"; };
+		02C22FB2243660E100FA8EE8 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		02C22FB3243660E100FA8EE8 /* nanopb.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = nanopb.framework; sourceTree = "<group>"; };
 		02C5BADF242E7790007F57BE /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SwitchTableViewCell.swift; path = Swol/View/TableViewCells/SwitchTableViewCell.swift; sourceTree = SOURCE_ROOT; };
-		02C5BAE1242E789D007F57BE /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsTableViewController.swift; path = Swol/Controller/SettingsTableViewController.swift; sourceTree = SOURCE_ROOT; };
+		02C5BAE1242E789D007F57BE /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsTableViewController.swift; path = SWoL/Controller/Settings/SettingsTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		02C5BAE3242E790F007F57BE /* UserDefaultsNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsNames.swift; sourceTree = "<group>"; };
 		02C5BAE8242E7ADA007F57BE /* iCloudAccessManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = iCloudAccessManager.swift; path = Swol/Model/iCloudAccessManager.swift; sourceTree = SOURCE_ROOT; };
 		02D5785523C03684001FA8A5 /* Swol.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swol.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -206,7 +216,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02C22FB4243660E100FA8EE8 /* GoogleUtilities.framework in Frameworks */,
 				02C98628241843570040242A /* SwolBackEnd.framework in Frameworks */,
+				02C22FB8243660E100FA8EE8 /* GoogleMobileAds.framework in Frameworks */,
+				02C22FB6243660E100FA8EE8 /* GoogleAppMeasurement.framework in Frameworks */,
+				02C22FBA243660E100FA8EE8 /* nanopb.framework in Frameworks */,
 				02154854242CE71100EF7DDD /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,11 +297,10 @@
 		0289B22C23C03DF900D610AB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				0273BAE32432A97D002173AC /* TutorialViewController.swift */,
-				0289B22823C03DE300D610AB /* DevicesTableViewController.swift */,
-				02D8486C23C057ED00675A14 /* AddingDeviceTableViewController.swift */,
-				02C5BAE1242E789D007F57BE /* SettingsTableViewController.swift */,
 				0218352C242E8DC700C8D8AA /* SwolTabBarController.swift */,
+				02B575E02436721D00123B10 /* Settings */,
+				02B575DF2436720A00123B10 /* Devices */,
+				02B575DE2436720200123B10 /* Tutorial */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -337,6 +350,32 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		02B575DE2436720200123B10 /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				0273BAE32432A97D002173AC /* TutorialViewController.swift */,
+			);
+			path = Tutorial;
+			sourceTree = "<group>";
+		};
+		02B575DF2436720A00123B10 /* Devices */ = {
+			isa = PBXGroup;
+			children = (
+				02B575E12436726900123B10 /* DevicesMenuController.swift */,
+				0289B22823C03DE300D610AB /* DevicesTableViewController.swift */,
+				02D8486C23C057ED00675A14 /* AddingDeviceTableViewController.swift */,
+			);
+			path = Devices;
+			sourceTree = "<group>";
+		};
+		02B575E02436721D00123B10 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				02C5BAE1242E789D007F57BE /* SettingsTableViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		02C11C6323C3888500920674 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
@@ -352,6 +391,10 @@
 		02C11C7223C389EB00920674 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				02C22FB1243660E100FA8EE8 /* GoogleAppMeasurement.framework */,
+				02C22FB2243660E100FA8EE8 /* GoogleMobileAds.framework */,
+				02C22FB0243660E100FA8EE8 /* GoogleUtilities.framework */,
+				02C22FB3243660E100FA8EE8 /* nanopb.framework */,
 				02154853242CE71100EF7DDD /* CloudKit.framework */,
 				02C11C7323C389EB00920674 /* IntentsUI.framework */,
 			);
@@ -627,6 +670,7 @@
 			files = (
 				0289B22923C03DE300D610AB /* DevicesTableViewController.swift in Sources */,
 				02C5BAE0242E7790007F57BE /* SwitchTableViewCell.swift in Sources */,
+				02B575E22436726900123B10 /* DevicesMenuController.swift in Sources */,
 				02D5785923C03684001FA8A5 /* AppDelegate.swift in Sources */,
 				024024C123C050830065B8DD /* TextTableViewCell.swift in Sources */,
 				02D5785B23C03684001FA8A5 /* SceneDelegate.swift in Sources */,
@@ -934,11 +978,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BVZY57RJZG;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SWoL/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = PGF.SiriWOL;
 				PRODUCT_NAME = Swol;
 				SWIFT_VERSION = 5.0;
@@ -954,11 +1003,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BVZY57RJZG;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SWoL/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				"OTHER_LDFLAGS[sdk=*]" = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = PGF.SiriWOL;
 				PRODUCT_NAME = Swol;
 				SWIFT_VERSION = 5.0;
