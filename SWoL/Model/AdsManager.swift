@@ -10,9 +10,33 @@ import Foundation
 import UIKit
 import GoogleMobileAds
 
-public enum AdsIdentifiers: String {
-    case banner = "ca-app-pub-3940256099942544/2934735716"
-    case rewarded = "ca-app-pub-3940256099942544/1712485313"
+public enum AdsIdentifiers {
+    case banner
+    case rewarded
+    case interstitial
+
+    var value: String {
+        switch self {
+        case .banner:
+            if XcodeSchemeInfo.Debugging {
+                return "ca-app-pub-3940256099942544/2934735716"
+            } else {
+                return "otherKey"
+            }
+        case .rewarded:
+            if XcodeSchemeInfo.Debugging {
+                return "ca-app-pub-3940256099942544/1712485313"
+            } else {
+                return "otherKey"
+            }
+        case .interstitial:
+            if XcodeSchemeInfo.Debugging {
+                return "ca-app-pub-3940256099942544/4411468910"
+            } else {
+                return "otherKey"
+            }
+        }
+    }
 }
 
 public class AdManager {
@@ -55,7 +79,7 @@ public class AdManager {
     }
 
     private static func createRewardedAd() -> GADRewardedAd {
-        let newAd = GADRewardedAd(adUnitID: AdsIdentifiers.rewarded.rawValue)
+        let newAd = GADRewardedAd(adUnitID: AdsIdentifiers.rewarded.value)
         newAd.load(getRequest(), completionHandler: nil)
         return newAd
     }

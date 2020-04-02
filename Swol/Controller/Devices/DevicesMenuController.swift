@@ -22,7 +22,7 @@ public class DevicesMenuController: UIViewController, GADRewardedAdDelegate {
         super.viewDidLoad()
         rewardAd = AdManager.createAndLoadRewardedAd()
 
-        bannerView.adUnitID = AdsIdentifiers.banner.rawValue
+        bannerView.adUnitID = AdsIdentifiers.banner.value
         bannerView.rootViewController = self
     }
 
