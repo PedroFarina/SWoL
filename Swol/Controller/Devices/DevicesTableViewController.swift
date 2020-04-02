@@ -11,7 +11,7 @@ import SwolBackEnd
 
 public class DevicesTableViewController: UITableViewController, DataWatcher {
 
-    private var devices: [DeviceProtocol] = DataManager.shared(with: iCloudAccessManager.permission).devices
+    public private(set) var devices: [DeviceProtocol] = DataManager.shared(with: iCloudAccessManager.permission).devices
     public private(set) var selectedDevice: DeviceProtocol?
 
     public override func viewDidLoad() {
