@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7hW-bl-k7v">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7hW-bl-k7v">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -44,7 +44,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YiS-2L-Gpm">
-                                <rect key="frame" x="43" y="721" width="328" height="98"/>
+                                <rect key="frame" x="125" y="745.5" width="164" height="49"/>
                                 <accessibility key="accessibilityConfiguration" label="Continue to next step"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <state key="normal" title="Continue" backgroundImage="btnTutorialBackground">
@@ -136,7 +136,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cuV-qi-KtZ">
-                                <rect key="frame" x="43" y="721" width="328" height="98"/>
+                                <rect key="frame" x="125" y="745.5" width="164" height="49"/>
                                 <accessibility key="accessibilityConfiguration" label="Continue to next step"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <state key="normal" title="Continue" backgroundImage="btnTutorialBackground">
@@ -250,7 +250,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="06c-AJ-XnT">
-                                <rect key="frame" x="40" y="573" width="262" height="314"/>
+                                <rect key="frame" x="40" y="573" width="131" height="157"/>
                                 <accessibility key="accessibilityConfiguration" label="macOS"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="06c-AJ-XnT" secondAttribute="height" multiplier="131:157" id="D6L-Zy-cGL"/>
@@ -261,7 +261,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1P-BU-Ep2">
-                                <rect key="frame" x="128" y="609.5" width="246" height="270"/>
+                                <rect key="frame" x="251" y="597" width="123" height="135"/>
                                 <accessibility key="accessibilityConfiguration" label="Windows"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="T1P-BU-Ep2" secondAttribute="height" multiplier="41:45" id="gXn-z7-Dfn"/>
@@ -318,7 +318,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="1087"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RmJ-Gx-TXC" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1141"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1092"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enabling in MacOS" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qv0-Ia-EG8">
                                                 <rect key="frame" x="20" y="50" width="374" height="41"/>
@@ -375,7 +375,7 @@
                                                 </accessibility>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tb7-ZU-6la">
-                                                <rect key="frame" x="43" y="1028" width="328" height="98"/>
+                                                <rect key="frame" x="125" y="1028" width="164" height="49"/>
                                                 <accessibility key="accessibilityConfiguration" label="Dismiss the tutorial."/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <state key="normal" title="Done" backgroundImage="btnTutorialBackground">
@@ -470,7 +470,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="1386.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wug-Rm-nsa" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1434.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1385.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Enabling in Windows" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uf3-pl-7km">
                                                 <rect key="frame" x="20" y="50" width="374" height="41"/>
@@ -529,7 +529,7 @@ tab and enable all checkboxes</string>
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WJF-PL-DB7">
-                                                <rect key="frame" x="43" y="1291" width="328" height="98"/>
+                                                <rect key="frame" x="125" y="1291" width="164" height="49"/>
                                                 <accessibility key="accessibilityConfiguration" label="Next Step. Step 2 of 3."/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <state key="normal" title="Next" backgroundImage="btnTutorialBackground">
@@ -540,7 +540,7 @@ tab and enable all checkboxes</string>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Step 2 of 3" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNU-OS-W7L">
-                                                <rect key="frame" x="20" y="1404" width="374" height="20.5"/>
+                                                <rect key="frame" x="20" y="1355" width="374" height="20.5"/>
                                                 <accessibility key="accessibilityConfiguration">
                                                     <accessibilityTraits key="traits" notEnabled="YES"/>
                                                     <bool key="isElement" value="NO"/>
@@ -629,7 +629,7 @@ tab and enable all checkboxes</string>
                                 <rect key="frame" x="0.0" y="44" width="414" height="872"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S0Z-X0-XgG">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="922.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="873.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Enabling in Windows" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YMb-qt-kqR">
                                                 <rect key="frame" x="20" y="50" width="374" height="41"/>
@@ -670,7 +670,7 @@ And then disable "Turn on fast startup"</string>
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DAD-gu-OfV">
-                                                <rect key="frame" x="43" y="779" width="328" height="98"/>
+                                                <rect key="frame" x="125" y="779" width="164" height="49"/>
                                                 <accessibility key="accessibilityConfiguration" label="Dismiss the tutorial."/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <state key="normal" title="Done" backgroundImage="btnTutorialBackground">
@@ -681,7 +681,7 @@ And then disable "Turn on fast startup"</string>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 3 of 3" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="luU-v7-kBi">
-                                                <rect key="frame" x="20" y="892" width="374" height="20.5"/>
+                                                <rect key="frame" x="20" y="843" width="374" height="20.5"/>
                                                 <accessibility key="accessibilityConfiguration">
                                                     <accessibilityTraits key="traits" notEnabled="YES"/>
                                                     <bool key="isElement" value="NO"/>
@@ -783,7 +783,7 @@ And then disable "Turn on fast startup"</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kqF-Mf-O9a">
-                                <rect key="frame" x="43" y="301.5" width="328" height="98"/>
+                                <rect key="frame" x="125" y="301.5" width="164" height="49"/>
                                 <accessibility key="accessibilityConfiguration" label="Next Step. Step 1 of 3."/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <state key="normal" title="Next" backgroundImage="btnTutorialBackground">
@@ -794,7 +794,7 @@ And then disable "Turn on fast startup"</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 1 of 3" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iFW-kS-ctl">
-                                <rect key="frame" x="40" y="414.5" width="334" height="20.5"/>
+                                <rect key="frame" x="40" y="365.5" width="334" height="20.5"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" notEnabled="YES"/>
                                     <bool key="isElement" value="NO"/>

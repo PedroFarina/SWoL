@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Devices Menu-->
+        <!--Devices Table View Controller-->
         <scene sceneID="TcF-bu-qGV">
             <objects>
                 <tableViewController id="urX-mC-Z5J" customClass="DevicesTableViewController" customModule="Swol" customModuleProvider="target" sceneMemberID="viewController">
@@ -48,14 +48,6 @@
                             <outlet property="delegate" destination="urX-mC-Z5J" id="4AT-wa-pb4"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Devices Menu" largeTitleDisplayMode="always" id="zmM-bA-rcm">
-                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="kwC-3b-SKU">
-                            <color key="tintColor" red="0.24313725489999999" green="0.47843137250000001" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="hXL-Xc-sho">
-                            <color key="tintColor" red="0.24313725489999999" green="0.47843137250000001" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        </barButtonItem>
-                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DSx-oT-GFa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

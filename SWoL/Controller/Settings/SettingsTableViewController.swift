@@ -12,7 +12,7 @@ import SwolBackEnd
 public class SettingsTableViewController: UITableViewController {
     @IBOutlet weak var iCloudTableViewCell: SwitchTableViewCell!
     private var deleteAlert: UIAlertController = {
-        let cont = UIAlertController(title: "Are you sure?", message: "This action will delete all your devices from iCloud. It can't be undone.".localized(), preferredStyle: .alert)
+        let cont = UIAlertController(title: "Are you sure?".localized(), message: "This action will delete all your devices from iCloud. It can't be undone.".localized(), preferredStyle: .alert)
         let yesAction = UIAlertAction(title: "Yes".localized(), style: .destructive) { (_) in
             DataManager.shared(with: iCloudAccessManager.permission).deleteCloudData()
         }
