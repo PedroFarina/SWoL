@@ -111,3 +111,4 @@ iOSInjectionProject/
 
 # End of https://www.gitignore.io/api/macos,swift
 *.xcuserstate
+SWoL/Model/SuperSecretClass.swift

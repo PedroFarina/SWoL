@@ -11,9 +11,9 @@
 	<key>INIntentDefinitionSystemVersion</key>
 	<string>19C57</string>
 	<key>INIntentDefinitionToolsBuildVersion</key>
-	<string>11C504</string>
+	<string>11E146</string>
 	<key>INIntentDefinitionToolsVersion</key>
-	<string>11.3.1</string>
+	<string>11.4</string>
 	<key>INIntents</key>
 	<array>
 		<dict>
@@ -25,10 +25,6 @@
 			<string>Wake a device</string>
 			<key>INIntentDescriptionID</key>
 			<string>v4woRe</string>
-			<key>INIntentInput</key>
-			<string>name</string>
-			<key>INIntentKeyParameter</key>
-			<string>name</string>
 			<key>INIntentLastParameterTag</key>
 			<integer>5</integer>
 			<key>INIntentManagedParameterCombinations</key>
@@ -76,6 +72,8 @@
 					<dict>
 						<key>INIntentParameterMetadataCapitalization</key>
 						<string>Sentences</string>
+						<key>INIntentParameterMetadataDisableAutocorrect</key>
+						<true/>
 					</dict>
 					<key>INIntentParameterName</key>
 					<string>name</string>
