@@ -21,19 +21,19 @@ public enum AdsIdentifiers {
             if XcodeSchemeInfo.Debugging {
                 return "ca-app-pub-3940256099942544/2934735716"
             } else {
-                return "otherKey"
+                return SuperSecretClass.bannerKey
             }
         case .rewarded:
             if XcodeSchemeInfo.Debugging {
                 return "ca-app-pub-3940256099942544/1712485313"
             } else {
-                return "otherKey"
+                return SuperSecretClass.rewardedKey
             }
         case .interstitial:
             if XcodeSchemeInfo.Debugging {
                 return "ca-app-pub-3940256099942544/4411468910"
             } else {
-                return "otherKey"
+                return SuperSecretClass.interstitialKey
             }
         }
     }
