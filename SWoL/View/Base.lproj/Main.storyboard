@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ePr-kf-qA9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ePr-kf-qA9">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Devices Menu-->
+        <!--Devices Table View Controller-->
         <scene sceneID="TcF-bu-qGV">
             <objects>
                 <tableViewController id="urX-mC-Z5J" customClass="DevicesTableViewController" customModule="Swol" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" allowsSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Sni-WC-DZ0">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="deviceCell" editingAccessoryType="disclosureIndicator" textLabel="eve-Hy-DhF" detailTextLabel="7kR-MV-6VA" style="IBUITableViewCellStyleSubtitle" id="J8h-gd-GOO">
@@ -47,21 +48,10 @@
                             <outlet property="delegate" destination="urX-mC-Z5J" id="4AT-wa-pb4"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Devices Menu" largeTitleDisplayMode="always" id="zmM-bA-rcm">
-                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="kwC-3b-SKU">
-                            <color key="tintColor" red="0.24313725489999999" green="0.47843137250000001" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="hXL-Xc-sho">
-                            <color key="tintColor" red="0.24313725489999999" green="0.47843137250000001" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            <connections>
-                                <segue destination="S7d-eC-h4w" kind="presentation" identifier="newDevice" id="lkZ-wd-GDi"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DSx-oT-GFa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1614.4927536231885" y="-277.23214285714283"/>
+            <point key="canvasLocation" x="1554" y="-1022"/>
         </scene>
         <!--Register new device-->
         <scene sceneID="J9G-E7-kfn">
@@ -235,7 +225,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jg7-N5-x9s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3670" y="-277"/>
+            <point key="canvasLocation" x="3386" y="-277"/>
         </scene>
         <!--Settings-->
         <scene sceneID="C3M-hw-kbN">
@@ -351,7 +341,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z7G-hd-kh5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2683" y="-277"/>
+            <point key="canvasLocation" x="2545" y="-277"/>
         </scene>
         <!--Swol Tab Bar Controller-->
         <scene sceneID="MlG-rQ-Hll">
@@ -386,21 +376,84 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="urX-mC-Z5J" kind="relationship" relationship="rootViewController" id="lIV-dP-i6M"/>
+                        <segue destination="pjD-ik-cz4" kind="relationship" relationship="rootViewController" id="ys1-jk-Ncg"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eoA-Dl-US9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="705.79710144927537" y="-277.23214285714283"/>
         </scene>
+        <!--Devices Menu-->
+        <scene sceneID="KYj-J8-bpM">
+            <objects>
+                <viewController id="pjD-ik-cz4" customClass="DevicesMenuController" customModule="Swol" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Udi-LI-Vg3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iGg-9Q-Co3">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <connections>
+                                    <segue destination="urX-mC-Z5J" kind="embed" id="W0o-Yh-XvW"/>
+                                </connections>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="17k-tu-A7m" customClass="GADBannerView">
+                                <rect key="frame" x="0.0" y="748.5" width="414" height="64.5"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="17k-tu-A7m" secondAttribute="height" multiplier="32:5" id="rmd-mM-xBF"/>
+                                    <constraint firstAttribute="width" secondItem="17k-tu-A7m" secondAttribute="height" multiplier="404:45" id="uT6-09-HNW"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="uT6-09-HNW"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular">
+                                    <mask key="constraints">
+                                        <exclude reference="rmd-mM-xBF"/>
+                                        <include reference="uT6-09-HNW"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="17k-tu-A7m" firstAttribute="trailing" secondItem="KA4-uD-mRM" secondAttribute="trailing" id="5Sp-gO-WD3"/>
+                            <constraint firstItem="17k-tu-A7m" firstAttribute="leading" secondItem="KA4-uD-mRM" secondAttribute="leading" id="DsF-4B-w3Z"/>
+                            <constraint firstItem="KA4-uD-mRM" firstAttribute="bottom" secondItem="iGg-9Q-Co3" secondAttribute="bottom" id="Hvc-7g-wpl"/>
+                            <constraint firstItem="17k-tu-A7m" firstAttribute="bottom" secondItem="KA4-uD-mRM" secondAttribute="bottom" id="KrZ-5j-fTI"/>
+                            <constraint firstItem="iGg-9Q-Co3" firstAttribute="leading" secondItem="KA4-uD-mRM" secondAttribute="leading" id="kmR-ek-Mjl"/>
+                            <constraint firstItem="KA4-uD-mRM" firstAttribute="trailing" secondItem="iGg-9Q-Co3" secondAttribute="trailing" id="oVD-WY-2qZ"/>
+                            <constraint firstItem="iGg-9Q-Co3" firstAttribute="top" secondItem="KA4-uD-mRM" secondAttribute="top" id="pZX-GJ-YO7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KA4-uD-mRM"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Devices Menu" id="jgU-Jo-vX7">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="d3c-TM-Ctw">
+                            <connections>
+                                <action selector="newDeviceTap:" destination="pjD-ik-cz4" id="PYd-LY-I9T"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="bannerView" destination="17k-tu-A7m" id="GLn-0K-yNp"/>
+                        <segue destination="S7d-eC-h4w" kind="presentation" identifier="newDevice" id="6Ej-wE-AqL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DW0-tz-oTI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1554" y="-277"/>
+        </scene>
     </scenes>
+    <color key="tintColor" red="0.24313725490196078" green="0.47843137254901957" blue="0.76078431372549016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
-        <image name="desktopcomputer" catalog="system" width="64" height="50"/>
-        <image name="ellipsis.circle" catalog="system" width="64" height="60"/>
-        <image name="ellipsis.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="desktopcomputer" catalog="system" width="128" height="101"/>
+        <image name="ellipsis.circle" catalog="system" width="128" height="121"/>
+        <image name="ellipsis.circle.fill" catalog="system" width="128" height="121"/>
         <namedColor name="Action Color">
             <color red="0.24300000071525574" green="0.4779999852180481" blue="0.76099997758865356" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
-    <color key="tintColor" red="0.24313725490196078" green="0.47843137254901957" blue="0.76078431372549016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

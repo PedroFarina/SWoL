@@ -3,7 +3,7 @@
 "06c-AJ-XnT.accessibilityLabel" = "macOS";
 
 /* Class = "UILabel"; text = "Mostly known as WOL, it's a pattern that allows a device to be turned on by a network message.  It relies on your router settings and a receiver proper configured on your device."; ObjectID = "CDT-HU-DIi"; */
-"CDT-HU-DIi.text" = "Conhecido como WOL, é um padrã que permite um dipositivo ser acordado por uma mensagem da rede.  Para  isso é necessário configurar a sua rede e que seu dispositivo tenha essa capacidade.";
+"CDT-HU-DIi.text" = "Conhecido como WOL, é um padrão que permite um dipositivo ser acordado por uma mensagem da rede.  Para  isso é necessário configurar a sua rede e que seu dispositivo tenha essa capacidade.";
 
 /* Class = "UILabel"; text = "Now head into the Power Management\ntab and enable all checkboxes"; ObjectID = "Ckn-Ne-Abe"; */
 "Ckn-Ne-Abe.text" = "Agora vá para a configuração de energia, e marque todas as caixas de opção.";
