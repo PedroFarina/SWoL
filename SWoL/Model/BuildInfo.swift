@@ -7,12 +7,15 @@
 //
 
 import Foundation
-public class XcodeSchemeInfo {
+public class BuildInfo {
     private init() {
     }
 
-    public static let Debugging: Bool = {
-        let dic = ProcessInfo().environment
-        return dic["debug"] != nil
+    public static let isDev: Bool = {
+        #if DEBUG
+            return true
+        #else
+            return false
+        #endif
     }()
 }

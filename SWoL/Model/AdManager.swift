@@ -18,19 +18,19 @@ public enum AdsIdentifiers {
     var value: String {
         switch self {
         case .banner:
-            if XcodeSchemeInfo.Debugging {
+            if BuildInfo.isDev {
                 return "ca-app-pub-3940256099942544/2934735716"
             } else {
                 return SuperSecretClass.bannerKey
             }
         case .rewarded:
-            if XcodeSchemeInfo.Debugging {
+            if BuildInfo.isDev {
                 return "ca-app-pub-3940256099942544/1712485313"
             } else {
                 return SuperSecretClass.rewardedKey
             }
         case .interstitial:
-            if XcodeSchemeInfo.Debugging {
+            if BuildInfo.isDev {
                 return "ca-app-pub-3940256099942544/4411468910"
             } else {
                 return SuperSecretClass.interstitialKey
@@ -42,20 +42,14 @@ public enum AdsIdentifiers {
 public class AdManager {
     private init() {
     }
-
-    private static let adQueue = DispatchQueue(label: "adLoading")
-
-    public static func getSizeFromView(view: UIView) -> GADAdSize {
-        let frame = { () -> CGRect in
-            if #available(iOS 11.0, *) {
-                return view.frame.inset(by: view.safeAreaInsets)
-            } else {
-                return view.frame
-            }
-        }()
-        let viewWidth = frame.size.width
-        return GADCurrentOrientationAnchoredAdaptiveBannerAdSizeWithWidth(viewWidth)
+    public static func start() {
+        _ = requestReadyb
+        _ = rewardedAd
+        _ = interstitialAd
     }
+
+    //MARK: Commom to all ads
+    private static let adQueue = DispatchQueue(label: "adLoading")
 
     private static var requestReady: GADRequest? = GADRequest()
     public static func getRequest() -> GADRequest {
@@ -73,11 +67,25 @@ public class AdManager {
     }
 
 
+    //MARK: Banner ads
+    public static func getSizeFromView(view: UIView) -> GADAdSize {
+        let frame = { () -> CGRect in
+            if #available(iOS 11.0, *) {
+                return view.frame.inset(by: view.safeAreaInsets)
+            } else {
+                return view.frame
+            }
+        }()
+        let viewWidth = frame.size.width
+        return GADCurrentOrientationAnchoredAdaptiveBannerAdSizeWithWidth(viewWidth)
+    }
+
     public static func loadBannerAd(into adView: GADBannerView, from presentingView: UIView) {
         adView.adSize = getSizeFromView(view: presentingView)
         adView.load(getRequest())
     }
 
+    //MARK: Rewarded ads
     private static func createRewardedAd() -> GADRewardedAd {
         let newAd = GADRewardedAd(adUnitID: AdsIdentifiers.rewarded.value)
         newAd.load(getRequest(), completionHandler: nil)
@@ -94,6 +102,28 @@ public class AdManager {
             }
         } else {
             aux = createRewardedAd()
+        }
+
+        return aux
+    }
+
+    //MARK: InterstitialAd
+    private static func createInterstitialAd() -> GADInterstitial {
+        let newAd = GADInterstitial(adUnitID: AdsIdentifiers.interstitial.value)
+        newAd.load(getRequest())
+        return newAd
+    }
+    private static var interstitialAd: GADInterstitial? = createInterstitialAd()
+
+    public static func createAndLoadInterstitialAd() -> GADInterstitial {
+        let aux: GADInterstitial
+        if let interstitial = interstitialAd {
+            aux = interstitial
+            adQueue.async {
+                self.interstitialAd = self.createInterstitialAd()
+            }
+        } else {
+            aux = createInterstitialAd()
         }
 
         return aux

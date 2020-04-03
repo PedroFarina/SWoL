@@ -11,8 +11,8 @@
 		0211BAB423C4080000867893 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020208C923C2F41500159427 /* StringExtension.swift */; };
 		02154854242CE71100EF7DDD /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02154853242CE71100EF7DDD /* CloudKit.framework */; };
 		0218352D242E8DC700C8D8AA /* SwolTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0218352C242E8DC700C8D8AA /* SwolTabBarController.swift */; };
-		02290E6C2436911500E21A3C /* AdsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02290E6B2436911500E21A3C /* AdsManager.swift */; };
-		02290E6E243699FD00E21A3C /* XcodeSchemeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02290E6D243699FD00E21A3C /* XcodeSchemeInfo.swift */; };
+		02290E6C2436911500E21A3C /* AdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02290E6B2436911500E21A3C /* AdManager.swift */; };
+		02290E6E243699FD00E21A3C /* BuildInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02290E6D243699FD00E21A3C /* BuildInfo.swift */; };
 		02290E792437C43200E21A3C /* SuperSecretClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02290E782437C43200E21A3C /* SuperSecretClass.swift */; };
 		024024BC23C048500065B8DD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 024024BE23C048500065B8DD /* Localizable.strings */; };
 		024024C123C050830065B8DD /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024024C023C050830065B8DD /* TextTableViewCell.swift */; };
@@ -145,8 +145,8 @@
 		0202D75B2432CECE008A3448 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Tutorial.strings"; sourceTree = "<group>"; };
 		02154853242CE71100EF7DDD /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		0218352C242E8DC700C8D8AA /* SwolTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SwolTabBarController.swift; path = Swol/Controller/SwolTabBarController.swift; sourceTree = SOURCE_ROOT; };
-		02290E6B2436911500E21A3C /* AdsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AdsManager.swift; path = Swol/Model/AdsManager.swift; sourceTree = SOURCE_ROOT; };
-		02290E6D243699FD00E21A3C /* XcodeSchemeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = XcodeSchemeInfo.swift; path = Swol/Model/XcodeSchemeInfo.swift; sourceTree = SOURCE_ROOT; };
+		02290E6B2436911500E21A3C /* AdManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AdManager.swift; path = Swol/Model/AdManager.swift; sourceTree = SOURCE_ROOT; };
+		02290E6D243699FD00E21A3C /* BuildInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BuildInfo.swift; path = Swol/Model/BuildInfo.swift; sourceTree = SOURCE_ROOT; };
 		02290E7424369DB100E21A3C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		02290E7724369DD800E21A3C /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
 		02290E782437C43200E21A3C /* SuperSecretClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SuperSecretClass.swift; path = Swol/Model/SuperSecretClass.swift; sourceTree = SOURCE_ROOT; };
@@ -411,8 +411,8 @@
 			isa = PBXGroup;
 			children = (
 				02C5BAE8242E7ADA007F57BE /* iCloudAccessManager.swift */,
-				02290E6B2436911500E21A3C /* AdsManager.swift */,
-				02290E6D243699FD00E21A3C /* XcodeSchemeInfo.swift */,
+				02290E6B2436911500E21A3C /* AdManager.swift */,
+				02290E6D243699FD00E21A3C /* BuildInfo.swift */,
 				02290E782437C43200E21A3C /* SuperSecretClass.swift */,
 			);
 			path = Model;
@@ -689,11 +689,11 @@
 				0273BAE42432A97D002173AC /* TutorialViewController.swift in Sources */,
 				02C5BAE9242E7ADA007F57BE /* iCloudAccessManager.swift in Sources */,
 				02C5BAE4242E790F007F57BE /* UserDefaultsNames.swift in Sources */,
-				02290E6E243699FD00E21A3C /* XcodeSchemeInfo.swift in Sources */,
+				02290E6E243699FD00E21A3C /* BuildInfo.swift in Sources */,
 				02C5BAE2242E789D007F57BE /* SettingsTableViewController.swift in Sources */,
 				02C11C9823C38F5400920674 /* Intents.intentdefinition in Sources */,
 				0218352D242E8DC700C8D8AA /* SwolTabBarController.swift in Sources */,
-				02290E6C2436911500E21A3C /* AdsManager.swift in Sources */,
+				02290E6C2436911500E21A3C /* AdManager.swift in Sources */,
 				02942E5523C3F4AB00EB2148 /* DataModel.xcdatamodeld in Sources */,
 				02D8486D23C057ED00675A14 /* AddingDeviceTableViewController.swift in Sources */,
 			);
