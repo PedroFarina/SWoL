@@ -43,7 +43,7 @@ public class AdManager {
     private init() {
     }
     public static func start() {
-        _ = requestReadyb
+        _ = requestReady
         _ = rewardedAd
         _ = interstitialAd
     }
