@@ -24,6 +24,10 @@ public class DevicesMenuController: UIViewController, GADRewardedAdDelegate {
 
         bannerView.adUnitID = AdsIdentifiers.banner.value
         bannerView.rootViewController = self
+        if !UserDefaults.standard.bool(forKey: "tutorial") {
+            UserDefaults.standard.set(true, forKey: "tutorial")
+            self.performSegue(withIdentifier: "tutorial", sender: self)
+        }
     }
 
     public override func viewDidAppear(_ animated: Bool) {
