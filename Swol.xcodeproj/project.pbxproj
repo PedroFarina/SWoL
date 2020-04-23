@@ -142,7 +142,6 @@
 		020208C923C2F41500159427 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		0202D7562432CEC7008A3448 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Tutorial.storyboard; sourceTree = "<group>"; };
 		0202D7592432CECD008A3448 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Tutorial.strings; sourceTree = "<group>"; };
-		0202D75B2432CECE008A3448 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Tutorial.strings"; sourceTree = "<group>"; };
 		02154853242CE71100EF7DDD /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		0218352C242E8DC700C8D8AA /* SwolTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SwolTabBarController.swift; path = Swol/Controller/SwolTabBarController.swift; sourceTree = SOURCE_ROOT; };
 		02290E6B2436911500E21A3C /* AdManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AdManager.swift; path = Swol/Model/AdManager.swift; sourceTree = SOURCE_ROOT; };
@@ -200,6 +199,7 @@
 		02E3656B242D29690050C509 /* CloudKitDataConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitDataConnector.swift; sourceTree = "<group>"; };
 		02E3656D242D29FA0050C509 /* CloudKitController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitController.swift; sourceTree = "<group>"; };
 		02E3656F242D36C60050C509 /* DataProtocols+Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataProtocols+Enums.swift"; sourceTree = "<group>"; };
+		02FC54D82452234C0017AE8D /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Tutorial.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -725,7 +725,7 @@
 			children = (
 				0202D7562432CEC7008A3448 /* Base */,
 				0202D7592432CECD008A3448 /* en */,
-				0202D75B2432CECE008A3448 /* pt-BR */,
+				02FC54D82452234C0017AE8D /* pt-BR */,
 			);
 			name = Tutorial.storyboard;
 			path = Swol/View;
