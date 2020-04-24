@@ -23,7 +23,6 @@
 		028F58F82418163B001C1A33 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020208C923C2F41500159427 /* StringExtension.swift */; };
 		02942E5523C3F4AB00EB2148 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 020208B223C2EE9E00159427 /* DataModel.xcdatamodeld */; };
 		02A1EF9523C44DA500625723 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A1EF9423C44DA500625723 /* IntentHandler.swift */; };
-		02A1EF9D23C44DBC00625723 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 02C11C8C23C38AAC00920674 /* Intents.intentdefinition */; settings = {ATTRIBUTES = (project_codegen, ); }; };
 		02A1EFA023C4511D00625723 /* Device+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020208B623C2EED000159427 /* Device+CoreDataProperties.swift */; };
 		02A1EFA323C4512900625723 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 020208B223C2EE9E00159427 /* DataModel.xcdatamodeld */; };
 		02A1EFAA23C4525F00625723 /* Device+Intents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C11C8E23C38D5400920674 /* Device+Intents.swift */; };
@@ -36,10 +35,8 @@
 		02A7DC7B23C448DB00ED7957 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 020208B223C2EE9E00159427 /* DataModel.xcdatamodeld */; };
 		02A7DC7F23C4494C00ED7957 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020208C923C2F41500159427 /* StringExtension.swift */; };
 		02A7DC8023C4494F00ED7957 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 024024BE23C048500065B8DD /* Localizable.strings */; };
-		02A7DC8423C4498F00ED7957 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 02C11C8C23C38AAC00920674 /* Intents.intentdefinition */; };
 		02A7DC8823C44A2D00ED7957 /* NSUserActivities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028801B923C396D60079D8F6 /* NSUserActivities.swift */; };
 		02B575E22436726900123B10 /* DevicesMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B575E12436726900123B10 /* DevicesMenuController.swift */; };
-		02C11C9823C38F5400920674 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 02C11C8C23C38AAC00920674 /* Intents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
 		02C22FB4243660E100FA8EE8 /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C22FB0243660E100FA8EE8 /* GoogleUtilities.framework */; };
 		02C22FB6243660E100FA8EE8 /* GoogleAppMeasurement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C22FB1243660E100FA8EE8 /* GoogleAppMeasurement.framework */; };
 		02C22FB8243660E100FA8EE8 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C22FB2243660E100FA8EE8 /* GoogleMobileAds.framework */; };
@@ -73,6 +70,9 @@
 		02E3656C242D29690050C509 /* CloudKitDataConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E3656B242D29690050C509 /* CloudKitDataConnector.swift */; };
 		02E3656E242D29FA0050C509 /* CloudKitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E3656D242D29FA0050C509 /* CloudKitController.swift */; };
 		02E36570242D36C60050C509 /* DataProtocols+Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E3656F242D36C60050C509 /* DataProtocols+Enums.swift */; };
+		02FC54D9245332720017AE8D /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 02FC54DD245332720017AE8D /* Intents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
+		02FC54DA245332720017AE8D /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 02FC54DD245332720017AE8D /* Intents.intentdefinition */; };
+		02FC54DB245332720017AE8D /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 02FC54DD245332720017AE8D /* Intents.intentdefinition */; settings = {ATTRIBUTES = (project_codegen, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -168,7 +168,6 @@
 		02B575E12436726900123B10 /* DevicesMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DevicesMenuController.swift; path = Swol/Controller/Devices/DevicesMenuController.swift; sourceTree = SOURCE_ROOT; };
 		02C11C7323C389EB00920674 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
 		02C11C8923C38A6800920674 /* SWoL.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SWoL.entitlements; sourceTree = "<group>"; };
-		02C11C8C23C38AAC00920674 /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
 		02C11C8E23C38D5400920674 /* Device+Intents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Device+Intents.swift"; sourceTree = "<group>"; };
 		02C11C9A23C3915900920674 /* WakeDeviceIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakeDeviceIntentHandler.swift; sourceTree = "<group>"; };
 		02C22FB0243660E100FA8EE8 /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = "<group>"; };
@@ -200,6 +199,9 @@
 		02E3656D242D29FA0050C509 /* CloudKitController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitController.swift; sourceTree = "<group>"; };
 		02E3656F242D36C60050C509 /* DataProtocols+Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataProtocols+Enums.swift"; sourceTree = "<group>"; };
 		02FC54D82452234C0017AE8D /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Tutorial.strings"; sourceTree = "<group>"; };
+		02FC54DC245332720017AE8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; name = Base; path = Base.lproj/Intents.intentdefinition; sourceTree = "<group>"; };
+		02FC54DF2453333B0017AE8D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Intents.strings; sourceTree = "<group>"; };
+		02FC54E12453333C0017AE8D /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Intents.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -388,7 +390,7 @@
 				02C5BAE3242E790F007F57BE /* UserDefaultsNames.swift */,
 				028801B923C396D60079D8F6 /* NSUserActivities.swift */,
 				020208C923C2F41500159427 /* StringExtension.swift */,
-				02C11C8C23C38AAC00920674 /* Intents.intentdefinition */,
+				02FC54DD245332720017AE8D /* Intents.intentdefinition */,
 				024024BE23C048500065B8DD /* Localizable.strings */,
 			);
 			path = Shared;
@@ -638,7 +640,7 @@
 				02C490E8242E665900A388A1 /* NSUserActivities.swift in Sources */,
 				02A1EFA323C4512900625723 /* DataModel.xcdatamodeld in Sources */,
 				02C5BAE6242E7916007F57BE /* UserDefaultsNames.swift in Sources */,
-				02A1EF9D23C44DBC00625723 /* Intents.intentdefinition in Sources */,
+				02FC54DB245332720017AE8D /* Intents.intentdefinition in Sources */,
 				02A1EF9523C44DA500625723 /* IntentHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -658,7 +660,7 @@
 				02A1EFAA23C4525F00625723 /* Device+Intents.swift in Sources */,
 				02E3656C242D29690050C509 /* CloudKitDataConnector.swift in Sources */,
 				02A1EFAB23C4526300625723 /* WakeDeviceIntentHandler.swift in Sources */,
-				02A7DC8423C4498F00ED7957 /* Intents.intentdefinition in Sources */,
+				02FC54DA245332720017AE8D /* Intents.intentdefinition in Sources */,
 				02E3655F242D262A0050C509 /* DataActionAnswer.swift in Sources */,
 				02E36570242D36C60050C509 /* DataProtocols+Enums.swift in Sources */,
 				02A7DC7B23C448DB00ED7957 /* DataModel.xcdatamodeld in Sources */,
@@ -691,7 +693,7 @@
 				02C5BAE4242E790F007F57BE /* UserDefaultsNames.swift in Sources */,
 				02290E6E243699FD00E21A3C /* BuildInfo.swift in Sources */,
 				02C5BAE2242E789D007F57BE /* SettingsTableViewController.swift in Sources */,
-				02C11C9823C38F5400920674 /* Intents.intentdefinition in Sources */,
+				02FC54D9245332720017AE8D /* Intents.intentdefinition in Sources */,
 				0218352D242E8DC700C8D8AA /* SwolTabBarController.swift in Sources */,
 				02290E6C2436911500E21A3C /* AdManager.swift in Sources */,
 				02942E5523C3F4AB00EB2148 /* DataModel.xcdatamodeld in Sources */,
@@ -759,6 +761,16 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		02FC54DD245332720017AE8D /* Intents.intentdefinition */ = {
+			isa = PBXVariantGroup;
+			children = (
+				02FC54DC245332720017AE8D /* Base */,
+				02FC54DF2453333B0017AE8D /* en */,
+				02FC54E12453333C0017AE8D /* pt-BR */,
+			);
+			name = Intents.intentdefinition;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -768,7 +780,7 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_ENTITLEMENTS = SwolIntents/SwolIntents.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = BVZY57RJZG;
 				INFOPLIST_FILE = SwolIntents/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -790,7 +802,7 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_ENTITLEMENTS = SwolIntents/SwolIntents.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = BVZY57RJZG;
 				INFOPLIST_FILE = SwolIntents/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -812,7 +824,7 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = BVZY57RJZG;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -842,7 +854,7 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = BVZY57RJZG;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -988,7 +1000,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SWoL/SWoL.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = BVZY57RJZG;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1013,7 +1025,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SWoL/SWoL.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = BVZY57RJZG;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
