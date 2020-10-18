@@ -11,9 +11,7 @@
 		0211BAB423C4080000867893 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020208C923C2F41500159427 /* StringExtension.swift */; };
 		02154854242CE71100EF7DDD /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02154853242CE71100EF7DDD /* CloudKit.framework */; };
 		0218352D242E8DC700C8D8AA /* SwolTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0218352C242E8DC700C8D8AA /* SwolTabBarController.swift */; };
-		02290E6C2436911500E21A3C /* AdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02290E6B2436911500E21A3C /* AdManager.swift */; };
 		02290E6E243699FD00E21A3C /* BuildInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02290E6D243699FD00E21A3C /* BuildInfo.swift */; };
-		02290E792437C43200E21A3C /* SuperSecretClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02290E782437C43200E21A3C /* SuperSecretClass.swift */; };
 		024024BC23C048500065B8DD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 024024BE23C048500065B8DD /* Localizable.strings */; };
 		024024C123C050830065B8DD /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024024C023C050830065B8DD /* TextTableViewCell.swift */; };
 		024024C323C050D70065B8DD /* TextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 024024C223C050D70065B8DD /* TextTableViewCell.xib */; };
@@ -37,10 +35,6 @@
 		02A7DC8023C4494F00ED7957 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 024024BE23C048500065B8DD /* Localizable.strings */; };
 		02A7DC8823C44A2D00ED7957 /* NSUserActivities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028801B923C396D60079D8F6 /* NSUserActivities.swift */; };
 		02B575E22436726900123B10 /* DevicesMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B575E12436726900123B10 /* DevicesMenuController.swift */; };
-		02C22FB4243660E100FA8EE8 /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C22FB0243660E100FA8EE8 /* GoogleUtilities.framework */; };
-		02C22FB6243660E100FA8EE8 /* GoogleAppMeasurement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C22FB1243660E100FA8EE8 /* GoogleAppMeasurement.framework */; };
-		02C22FB8243660E100FA8EE8 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C22FB2243660E100FA8EE8 /* GoogleMobileAds.framework */; };
-		02C22FBA243660E100FA8EE8 /* nanopb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C22FB3243660E100FA8EE8 /* nanopb.framework */; };
 		02C490E7242E665400A388A1 /* NSUserActivities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028801B923C396D60079D8F6 /* NSUserActivities.swift */; };
 		02C490E8242E665900A388A1 /* NSUserActivities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028801B923C396D60079D8F6 /* NSUserActivities.swift */; };
 		02C5BAE0242E7790007F57BE /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C5BADF242E7790007F57BE /* SwitchTableViewCell.swift */; };
@@ -144,11 +138,9 @@
 		0202D7592432CECD008A3448 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Tutorial.strings; sourceTree = "<group>"; };
 		02154853242CE71100EF7DDD /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		0218352C242E8DC700C8D8AA /* SwolTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SwolTabBarController.swift; path = Swol/Controller/SwolTabBarController.swift; sourceTree = SOURCE_ROOT; };
-		02290E6B2436911500E21A3C /* AdManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AdManager.swift; path = Swol/Model/AdManager.swift; sourceTree = SOURCE_ROOT; };
 		02290E6D243699FD00E21A3C /* BuildInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BuildInfo.swift; path = Swol/Model/BuildInfo.swift; sourceTree = SOURCE_ROOT; };
 		02290E7424369DB100E21A3C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		02290E7724369DD800E21A3C /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
-		02290E782437C43200E21A3C /* SuperSecretClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SuperSecretClass.swift; path = Swol/Model/SuperSecretClass.swift; sourceTree = SOURCE_ROOT; };
 		024024BD23C048500065B8DD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		024024C023C050830065B8DD /* TextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
 		024024C223C050D70065B8DD /* TextTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextTableViewCell.xib; sourceTree = "<group>"; };
@@ -170,10 +162,6 @@
 		02C11C8923C38A6800920674 /* SWoL.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SWoL.entitlements; sourceTree = "<group>"; };
 		02C11C8E23C38D5400920674 /* Device+Intents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Device+Intents.swift"; sourceTree = "<group>"; };
 		02C11C9A23C3915900920674 /* WakeDeviceIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakeDeviceIntentHandler.swift; sourceTree = "<group>"; };
-		02C22FB0243660E100FA8EE8 /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = "<group>"; };
-		02C22FB1243660E100FA8EE8 /* GoogleAppMeasurement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleAppMeasurement.framework; sourceTree = "<group>"; };
-		02C22FB2243660E100FA8EE8 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
-		02C22FB3243660E100FA8EE8 /* nanopb.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = nanopb.framework; sourceTree = "<group>"; };
 		02C5BADF242E7790007F57BE /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SwitchTableViewCell.swift; path = Swol/View/TableViewCells/SwitchTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		02C5BAE1242E789D007F57BE /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsTableViewController.swift; path = SWoL/Controller/Settings/SettingsTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		02C5BAE3242E790F007F57BE /* UserDefaultsNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsNames.swift; sourceTree = "<group>"; };
@@ -224,11 +212,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02C22FB4243660E100FA8EE8 /* GoogleUtilities.framework in Frameworks */,
 				02C98628241843570040242A /* SwolBackEnd.framework in Frameworks */,
-				02C22FB8243660E100FA8EE8 /* GoogleMobileAds.framework in Frameworks */,
-				02C22FB6243660E100FA8EE8 /* GoogleAppMeasurement.framework in Frameworks */,
-				02C22FBA243660E100FA8EE8 /* nanopb.framework in Frameworks */,
 				02154854242CE71100EF7DDD /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,10 +383,6 @@
 		02C11C7223C389EB00920674 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				02C22FB1243660E100FA8EE8 /* GoogleAppMeasurement.framework */,
-				02C22FB2243660E100FA8EE8 /* GoogleMobileAds.framework */,
-				02C22FB0243660E100FA8EE8 /* GoogleUtilities.framework */,
-				02C22FB3243660E100FA8EE8 /* nanopb.framework */,
 				02154853242CE71100EF7DDD /* CloudKit.framework */,
 				02C11C7323C389EB00920674 /* IntentsUI.framework */,
 			);
@@ -413,9 +393,7 @@
 			isa = PBXGroup;
 			children = (
 				02C5BAE8242E7ADA007F57BE /* iCloudAccessManager.swift */,
-				02290E6B2436911500E21A3C /* AdManager.swift */,
 				02290E6D243699FD00E21A3C /* BuildInfo.swift */,
-				02290E782437C43200E21A3C /* SuperSecretClass.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -686,7 +664,6 @@
 				024024C123C050830065B8DD /* TextTableViewCell.swift in Sources */,
 				02D5785B23C03684001FA8A5 /* SceneDelegate.swift in Sources */,
 				0211BAB423C4080000867893 /* StringExtension.swift in Sources */,
-				02290E792437C43200E21A3C /* SuperSecretClass.swift in Sources */,
 				02C490E7242E665400A388A1 /* NSUserActivities.swift in Sources */,
 				0273BAE42432A97D002173AC /* TutorialViewController.swift in Sources */,
 				02C5BAE9242E7ADA007F57BE /* iCloudAccessManager.swift in Sources */,
@@ -695,7 +672,6 @@
 				02C5BAE2242E789D007F57BE /* SettingsTableViewController.swift in Sources */,
 				02FC54D9245332720017AE8D /* Intents.intentdefinition in Sources */,
 				0218352D242E8DC700C8D8AA /* SwolTabBarController.swift in Sources */,
-				02290E6C2436911500E21A3C /* AdManager.swift in Sources */,
 				02942E5523C3F4AB00EB2148 /* DataModel.xcdatamodeld in Sources */,
 				02D8486D23C057ED00675A14 /* AddingDeviceTableViewController.swift in Sources */,
 			);

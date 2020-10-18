@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ePr-kf-qA9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ePr-kf-qA9">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -24,7 +26,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" id="eve-Hy-DhF">
-                                            <rect key="frame" x="20" y="9" width="33.5" height="20.5"/>
+                                            <rect key="frame" x="20" y="9" width="33" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                             <nil key="textColor"/>
@@ -60,7 +62,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="ZNW-6D-1SV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                         <sections>
                             <tableViewSection headerTitle="Identifier" footerTitle="If no name is given the device will be called John." id="xPn-gD-aIA">
                                 <cells>
@@ -234,7 +236,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="bID-SJ-wuI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                         <sections>
                             <tableViewSection headerTitle="iCloud Settings" id="bfB-Tl-xzl">
                                 <cells>
@@ -263,9 +265,9 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Erase All iCloud Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IHL-mx-XCg">
-                                                    <rect key="frame" x="127" y="11.5" width="160" height="21"/>
+                                                    <rect key="frame" x="128" y="11.5" width="158.5" height="21"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                    <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="textColor" systemColor="systemRedColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -287,7 +289,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Replay the tutorial" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Anm-6s-jvf">
-                                                    <rect key="frame" x="137.5" y="11.5" width="139" height="21"/>
+                                                    <rect key="frame" x="138.5" y="11.5" width="137.5" height="21"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                     <color key="textColor" name="Action Color"/>
                                                     <nil key="highlightedColor"/>
@@ -397,38 +399,15 @@
                                     <segue destination="urX-mC-Z5J" kind="embed" id="W0o-Yh-XvW"/>
                                 </connections>
                             </containerView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="17k-tu-A7m" customClass="GADBannerView">
-                                <rect key="frame" x="0.0" y="748.5" width="414" height="64.5"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="17k-tu-A7m" secondAttribute="height" multiplier="32:5" id="rmd-mM-xBF"/>
-                                    <constraint firstAttribute="width" secondItem="17k-tu-A7m" secondAttribute="height" multiplier="404:45" id="uT6-09-HNW"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="uT6-09-HNW"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=compact-widthClass=regular">
-                                    <mask key="constraints">
-                                        <exclude reference="rmd-mM-xBF"/>
-                                        <include reference="uT6-09-HNW"/>
-                                    </mask>
-                                </variation>
-                            </view>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <viewLayoutGuide key="safeArea" id="KA4-uD-mRM"/>
+                        <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="17k-tu-A7m" firstAttribute="trailing" secondItem="KA4-uD-mRM" secondAttribute="trailing" id="5Sp-gO-WD3"/>
-                            <constraint firstItem="17k-tu-A7m" firstAttribute="leading" secondItem="KA4-uD-mRM" secondAttribute="leading" id="DsF-4B-w3Z"/>
                             <constraint firstItem="KA4-uD-mRM" firstAttribute="bottom" secondItem="iGg-9Q-Co3" secondAttribute="bottom" id="Hvc-7g-wpl"/>
-                            <constraint firstItem="17k-tu-A7m" firstAttribute="bottom" secondItem="KA4-uD-mRM" secondAttribute="bottom" id="KrZ-5j-fTI"/>
                             <constraint firstItem="iGg-9Q-Co3" firstAttribute="leading" secondItem="KA4-uD-mRM" secondAttribute="leading" id="kmR-ek-Mjl"/>
                             <constraint firstItem="KA4-uD-mRM" firstAttribute="trailing" secondItem="iGg-9Q-Co3" secondAttribute="trailing" id="oVD-WY-2qZ"/>
                             <constraint firstItem="iGg-9Q-Co3" firstAttribute="top" secondItem="KA4-uD-mRM" secondAttribute="top" id="pZX-GJ-YO7"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="KA4-uD-mRM"/>
                     </view>
                     <navigationItem key="navigationItem" title="Devices Menu" id="jgU-Jo-vX7">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="d3c-TM-Ctw">
@@ -438,7 +417,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="bannerView" destination="17k-tu-A7m" id="GLn-0K-yNp"/>
                         <segue destination="S7d-eC-h4w" kind="presentation" identifier="newDevice" id="6Ej-wE-AqL"/>
                         <segue destination="1FS-Lb-OsE" kind="presentation" identifier="tutorial" id="JDf-PI-p2b"/>
                     </connections>
@@ -459,5 +437,17 @@
         <namedColor name="Action Color">
             <color red="0.24300000071525574" green="0.4779999852180481" blue="0.76099997758865356" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
