@@ -17,6 +17,7 @@
 #import <GoogleMobileAds/GADUnifiedNativeAdAssetIdentifiers.h>
 #import <GoogleMobileAds/GADUnifiedNativeAdDelegate.h>
 #import <GoogleMobileAds/GADVideoController.h>
+#import <GoogleMobileAds/GoogleMobileAdsDefines.h>
 #import <UIKit/UIKit.h>
 
 /// Unified native ad. To request this ad type, pass kGADAdLoaderAdTypeUnifiedNative

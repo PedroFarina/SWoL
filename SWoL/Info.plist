@@ -31,15 +31,6 @@
 		<key>NSAllowsArbitraryLoadsInWebContent</key>
 		<true/>
 	</dict>
-    <key>NSUserTrackingUsageDescription</key>
-    <string>Your data will be used to show you personalized ads.</string>
-    <key>SKAdNetworkItems</key>
-    <array>
-        <dict>
-            <key>SKAdNetworkIdentifier</key>
-            <string>cstr6suwn9.skadnetwork</string>
-        </dict>
-    </array>
 	<key>NSSiriUsageDescription</key>
 	<string>Your device list will be sent to Siri.</string>
 	<key>NSUserActivityTypes</key>

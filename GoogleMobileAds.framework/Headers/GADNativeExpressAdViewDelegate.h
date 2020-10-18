@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import <GoogleMobileAds/GADRequestError.h>
+#import <GoogleMobileAds/GoogleMobileAdsDefines.h>
 
 @class GADNativeExpressAdView;
 

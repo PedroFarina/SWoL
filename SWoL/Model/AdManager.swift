@@ -9,8 +9,6 @@
 import Foundation
 import UIKit
 import GoogleMobileAds
-import AppTrackingTransparency
-import AdSupport
 
 public enum AdsIdentifiers {
     case banner
@@ -45,17 +43,9 @@ public class AdManager {
     private init() {
     }
     public static func start() {
-        if #available(iOS 14, *) {
-            ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in
-                _ = requestReady
-                _ = rewardedAd
-                _ = interstitialAd
-            })
-        } else {
-            _ = requestReady
-            _ = rewardedAd
-            _ = interstitialAd
-        }
+        _ = requestReady
+        _ = rewardedAd
+        _ = interstitialAd
     }
 
     //MARK: Commom to all ads

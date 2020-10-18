@@ -11,6 +11,7 @@
 #import <GoogleMobileAds/GADRequest.h>
 #import <GoogleMobileAds/GADRequestError.h>
 #import <GoogleMobileAds/GADResponseInfo.h>
+#import <GoogleMobileAds/GoogleMobileAdsDefines.h>
 #import <UIKit/UIKit.h>
 
 /// An interstitial ad. This is a full-screen advertisement shown at natural transition points in

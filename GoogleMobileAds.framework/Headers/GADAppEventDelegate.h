@@ -6,6 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <GoogleMobileAds/GoogleMobileAdsDefines.h>
 
 @class GADBannerView;
 @class GADInterstitial;

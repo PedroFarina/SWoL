@@ -6,7 +6,9 @@
 //
 
 #import <Foundation/Foundation.h>
+
 #import <GoogleMobileAds/GADUnifiedNativeAdAssetIdentifiers.h>
+#import <GoogleMobileAds/GoogleMobileAdsDefines.h>
 
 @class GADUnifiedNativeAd;
 

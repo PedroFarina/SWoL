@@ -7,6 +7,7 @@
 
 #import <GoogleMobileAds/GADAdLoader.h>
 #import <GoogleMobileAds/GADMediaAspectRatio.h>
+#import <GoogleMobileAds/GoogleMobileAdsDefines.h>
 
 /// Ad loader options for native ad media settings.
 @interface GADNativeAdMediaAdLoaderOptions : GADAdLoaderOptions

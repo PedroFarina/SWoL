@@ -6,6 +6,7 @@
 //
 
 #import <GoogleMobileAds/GADAdLoader.h>
+#import <GoogleMobileAds/GoogleMobileAdsDefines.h>
 
 /// Native ad image orientation preference.
 typedef NS_ENUM(NSInteger, GADNativeAdImageAdLoaderOptionsOrientation) {

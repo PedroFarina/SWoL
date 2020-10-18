@@ -6,6 +6,7 @@
 //
 
 #import <GoogleMobileAds/GADMediaContent.h>
+#import <GoogleMobileAds/GoogleMobileAdsDefines.h>
 #import <UIKit/UIKit.h>
 
 /// Displays native ad media content.

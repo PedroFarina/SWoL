@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import <GoogleMobileAds/GADRequestError.h>
+#import <GoogleMobileAds/GoogleMobileAdsDefines.h>
 
 /// Error codes in the Google Mobile Ads SDK domain that surface due to errors when attempting to
 /// present an ad.
@@ -23,11 +24,4 @@ typedef NS_ENUM(NSInteger, GADPresentationErrorCode) {
 
   /// Ad has already been used.
   GADPresentationErrorCodeAdAlreadyUsed = 18,
-
-  /// Attempted to present ad from a non-main thread.
-  GADPresentationErrorNotMainThread = 21,
-
-  /// A mediation ad network adapter failed to present the ad. The adapter's error is included as an
-  /// underlyingError.
-  GADPresentationErrorMediation = 22,
 };

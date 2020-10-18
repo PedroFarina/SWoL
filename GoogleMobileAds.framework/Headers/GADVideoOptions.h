@@ -6,6 +6,7 @@
 //
 
 #import <GoogleMobileAds/GADAdLoader.h>
+#import <GoogleMobileAds/GoogleMobileAdsDefines.h>
 
 /// Video ad options.
 @interface GADVideoOptions : GADAdLoaderOptions

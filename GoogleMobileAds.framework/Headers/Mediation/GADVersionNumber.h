@@ -8,14 +8,8 @@
 #import <Foundation/Foundation.h>
 
 /// Version number information.
-typedef struct GADVersionNumber GADVersionNumber;
-
-/// Version number information.
-struct GADVersionNumber {
-  /// Major version.
-  NSInteger majorVersion;
-  /// Minor version.
-  NSInteger minorVersion;
-  /// Patch version.
-  NSInteger patchVersion;
-};
+typedef struct {
+  NSInteger majorVersion;  ///< Major version.
+  NSInteger minorVersion;  ///< Minor version.
+  NSInteger patchVersion;  ///< Patch version.
+} GADVersionNumber;
