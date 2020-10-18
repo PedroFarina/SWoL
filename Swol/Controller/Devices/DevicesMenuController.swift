@@ -8,6 +8,7 @@
 
 import UIKit
 import SwolBackEnd
+import StoreKit
 
 public class DevicesMenuController: UIViewController {
     weak var tableViewController: DevicesTableViewController?
@@ -20,6 +21,12 @@ public class DevicesMenuController: UIViewController {
         if !UserDefaults.standard.bool(forKey: "tutorial") {
             UserDefaults.standard.set(true, forKey: "tutorial")
             self.performSegue(withIdentifier: "tutorial", sender: self)
+        }
+        let numberOfTimes = UserDefaults.standard.integer(forKey: "numberOfTimes")
+        if numberOfTimes >= 5 {
+            SKStoreReviewController.requestReview()
+        } else {
+            UserDefaults.standard.setValue(numberOfTimes + 1, forKey: "numberOfTimes")
         }
     }
 
