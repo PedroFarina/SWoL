@@ -36,6 +36,8 @@ public class DevicesMenuController: UIViewController {
         } else {
             UserDefaults.standard.setValue(numberOfTimes + 1, forKey: "numberOfTimes")
         }
+
+        navigationItem.leftBarButtonItem = tableViewController?.editButtonItem
     }
 
     @IBAction func newDeviceTap(_ sender: Any) {
