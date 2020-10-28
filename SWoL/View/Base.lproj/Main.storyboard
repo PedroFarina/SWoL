@@ -309,7 +309,7 @@
                             <outlet property="delegate" destination="erM-4b-10g" id="Uje-sh-5Gr"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Settings" image="ellipsis.circle" catalog="system" selectedImage="ellipsis.circle.fill" id="z6l-q0-Ddl"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="gearshape" catalog="system" selectedImage="gearshape.fill" id="z6l-q0-Ddl"/>
                     <connections>
                         <outlet property="iCloudTableViewCell" destination="hxL-4h-FTe" id="UGc-fJ-lfV"/>
                         <segue destination="1FS-Lb-OsE" kind="presentation" identifier="tutorial" modalPresentationStyle="automatic" id="Txo-nw-alN"/>
@@ -427,13 +427,13 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="JDf-PI-p2b"/>
+        <segue reference="Txo-nw-alN"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.24313725490196078" green="0.47843137254901957" blue="0.76078431372549016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
         <image name="desktopcomputer" catalog="system" width="128" height="101"/>
-        <image name="ellipsis.circle" catalog="system" width="128" height="121"/>
-        <image name="ellipsis.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="gearshape" catalog="system" width="128" height="121"/>
+        <image name="gearshape.fill" catalog="system" width="128" height="121"/>
         <namedColor name="Action Color">
             <color red="0.24300000071525574" green="0.4779999852180481" blue="0.76099997758865356" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
