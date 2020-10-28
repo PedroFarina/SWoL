@@ -126,12 +126,7 @@ public class DevicesTableViewController: UITableViewController, DataWatcher {
     private func wakeAction(on device: DeviceProtocol) {
         let cont = UIAlertController(title: "Waking confirmation".localized(), message: "Do you want to wake ".localized() + (device.name ?? "John") + "?", preferredStyle: .alert)
         let yes = UIAlertAction(title: "Yes".localized(), style: .default) { (_) in
-            let okAction = UIAlertAction(title: "Ok", style: .default) { (_) in
-                let ad = AdManager.createAndLoadInterstitialAd()
-                if let parent = self.parent, ad.isReady {
-                    ad.present(fromRootViewController: parent)
-                }
-            }
+            let okAction = UIAlertAction(title: "Ok", style: .default)
             if let err = Awake.target(device: device) {
                 DispatchQueue.main.async {
                     let error = UIAlertController(title: "Error!".localized(), message: err.localizedDescription, preferredStyle: .alert)

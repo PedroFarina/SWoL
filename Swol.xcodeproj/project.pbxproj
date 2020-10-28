@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,17 +11,6 @@
 		0211BAB423C4080000867893 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020208C923C2F41500159427 /* StringExtension.swift */; };
 		02154854242CE71100EF7DDD /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02154853242CE71100EF7DDD /* CloudKit.framework */; };
 		0218352D242E8DC700C8D8AA /* SwolTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0218352C242E8DC700C8D8AA /* SwolTabBarController.swift */; };
-		022034A824F8B009000C70B1 /* GoogleAppMeasurement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 022034A224F8B009000C70B1 /* GoogleAppMeasurement.framework */; };
-		022034AA24F8B009000C70B1 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 022034A324F8B009000C70B1 /* GoogleMobileAds.framework */; };
-		022034AC24F8B009000C70B1 /* UserMessagingPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 022034A424F8B009000C70B1 /* UserMessagingPlatform.framework */; };
-		022034AE24F8B009000C70B1 /* nanopb.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 022034A524F8B009000C70B1 /* nanopb.xcframework */; };
-		022034B024F8B009000C70B1 /* PromisesObjC.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 022034A624F8B009000C70B1 /* PromisesObjC.xcframework */; };
-		022034B224F8B009000C70B1 /* GoogleUtilities.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 022034A724F8B009000C70B1 /* GoogleUtilities.xcframework */; };
-		022034B424F8B051000C70B1 /* SwolBackEnd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02A7DC6B23C448C200ED7957 /* SwolBackEnd.framework */; };
-		022034B524F8B051000C70B1 /* SwolBackEnd.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 02A7DC6B23C448C200ED7957 /* SwolBackEnd.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		02290E6C2436911500E21A3C /* AdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02290E6B2436911500E21A3C /* AdManager.swift */; };
-		02290E6E243699FD00E21A3C /* BuildInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02290E6D243699FD00E21A3C /* BuildInfo.swift */; };
-		02290E792437C43200E21A3C /* SuperSecretClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02290E782437C43200E21A3C /* SuperSecretClass.swift */; };
 		024024BC23C048500065B8DD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 024024BE23C048500065B8DD /* Localizable.strings */; };
 		024024C123C050830065B8DD /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024024C023C050830065B8DD /* TextTableViewCell.swift */; };
 		024024C323C050D70065B8DD /* TextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 024024C223C050D70065B8DD /* TextTableViewCell.xib */; };
@@ -53,6 +42,8 @@
 		02C5BAE5242E7915007F57BE /* UserDefaultsNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C5BAE3242E790F007F57BE /* UserDefaultsNames.swift */; };
 		02C5BAE6242E7916007F57BE /* UserDefaultsNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C5BAE3242E790F007F57BE /* UserDefaultsNames.swift */; };
 		02C5BAE9242E7ADA007F57BE /* iCloudAccessManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C5BAE8242E7ADA007F57BE /* iCloudAccessManager.swift */; };
+		02C98628241843570040242A /* SwolBackEnd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02A7DC6B23C448C200ED7957 /* SwolBackEnd.framework */; };
+		02C98629241843570040242A /* SwolBackEnd.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 02A7DC6B23C448C200ED7957 /* SwolBackEnd.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		02C9862C241843570040242A /* SwolIntents.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 02A1EF9223C44DA500625723 /* SwolIntents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		02C98631241843600040242A /* SwolBackEnd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02A7DC6B23C448C200ED7957 /* SwolBackEnd.framework */; };
 		02D5785923C03684001FA8A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D5785823C03684001FA8A5 /* AppDelegate.swift */; };
@@ -108,7 +99,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				022034B524F8B051000C70B1 /* SwolBackEnd.framework in Embed Frameworks */,
+				02C98629241843570040242A /* SwolBackEnd.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,17 +137,8 @@
 		0202D7592432CECD008A3448 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Tutorial.strings; sourceTree = "<group>"; };
 		02154853242CE71100EF7DDD /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		0218352C242E8DC700C8D8AA /* SwolTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SwolTabBarController.swift; path = Swol/Controller/SwolTabBarController.swift; sourceTree = SOURCE_ROOT; };
-		022034A224F8B009000C70B1 /* GoogleAppMeasurement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleAppMeasurement.framework; sourceTree = "<group>"; };
-		022034A324F8B009000C70B1 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
-		022034A424F8B009000C70B1 /* UserMessagingPlatform.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UserMessagingPlatform.framework; sourceTree = "<group>"; };
-		022034A524F8B009000C70B1 /* nanopb.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = nanopb.xcframework; sourceTree = "<group>"; };
-		022034A624F8B009000C70B1 /* PromisesObjC.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = PromisesObjC.xcframework; sourceTree = "<group>"; };
-		022034A724F8B009000C70B1 /* GoogleUtilities.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = GoogleUtilities.xcframework; sourceTree = "<group>"; };
-		02290E6B2436911500E21A3C /* AdManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AdManager.swift; path = Swol/Model/AdManager.swift; sourceTree = SOURCE_ROOT; };
-		02290E6D243699FD00E21A3C /* BuildInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BuildInfo.swift; path = Swol/Model/BuildInfo.swift; sourceTree = SOURCE_ROOT; };
 		02290E7424369DB100E21A3C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		02290E7724369DD800E21A3C /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
-		02290E782437C43200E21A3C /* SuperSecretClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SuperSecretClass.swift; path = Swol/Model/SuperSecretClass.swift; sourceTree = SOURCE_ROOT; };
 		024024BD23C048500065B8DD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		024024C023C050830065B8DD /* TextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
 		024024C223C050D70065B8DD /* TextTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextTableViewCell.xib; sourceTree = "<group>"; };
@@ -228,14 +210,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02C98628241843570040242A /* SwolBackEnd.framework in Frameworks */,
 				02154854242CE71100EF7DDD /* CloudKit.framework in Frameworks */,
-				022034AC24F8B009000C70B1 /* UserMessagingPlatform.framework in Frameworks */,
-				022034B224F8B009000C70B1 /* GoogleUtilities.xcframework in Frameworks */,
-				022034B024F8B009000C70B1 /* PromisesObjC.xcframework in Frameworks */,
-				022034AE24F8B009000C70B1 /* nanopb.xcframework in Frameworks */,
-				022034AA24F8B009000C70B1 /* GoogleMobileAds.framework in Frameworks */,
-				022034B424F8B051000C70B1 /* SwolBackEnd.framework in Frameworks */,
-				022034A824F8B009000C70B1 /* GoogleAppMeasurement.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,12 +381,6 @@
 		02C11C7223C389EB00920674 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				022034A224F8B009000C70B1 /* GoogleAppMeasurement.framework */,
-				022034A324F8B009000C70B1 /* GoogleMobileAds.framework */,
-				022034A724F8B009000C70B1 /* GoogleUtilities.xcframework */,
-				022034A524F8B009000C70B1 /* nanopb.xcframework */,
-				022034A624F8B009000C70B1 /* PromisesObjC.xcframework */,
-				022034A424F8B009000C70B1 /* UserMessagingPlatform.framework */,
 				02154853242CE71100EF7DDD /* CloudKit.framework */,
 				02C11C7323C389EB00920674 /* IntentsUI.framework */,
 			);
@@ -421,9 +391,6 @@
 			isa = PBXGroup;
 			children = (
 				02C5BAE8242E7ADA007F57BE /* iCloudAccessManager.swift */,
-				02290E6B2436911500E21A3C /* AdManager.swift */,
-				02290E6D243699FD00E21A3C /* BuildInfo.swift */,
-				02290E782437C43200E21A3C /* SuperSecretClass.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -694,16 +661,13 @@
 				024024C123C050830065B8DD /* TextTableViewCell.swift in Sources */,
 				02D5785B23C03684001FA8A5 /* SceneDelegate.swift in Sources */,
 				0211BAB423C4080000867893 /* StringExtension.swift in Sources */,
-				02290E792437C43200E21A3C /* SuperSecretClass.swift in Sources */,
 				02C490E7242E665400A388A1 /* NSUserActivities.swift in Sources */,
 				0273BAE42432A97D002173AC /* TutorialViewController.swift in Sources */,
 				02C5BAE9242E7ADA007F57BE /* iCloudAccessManager.swift in Sources */,
 				02C5BAE4242E790F007F57BE /* UserDefaultsNames.swift in Sources */,
-				02290E6E243699FD00E21A3C /* BuildInfo.swift in Sources */,
 				02C5BAE2242E789D007F57BE /* SettingsTableViewController.swift in Sources */,
 				02FC54D9245332720017AE8D /* Intents.intentdefinition in Sources */,
 				0218352D242E8DC700C8D8AA /* SwolTabBarController.swift in Sources */,
-				02290E6C2436911500E21A3C /* AdManager.swift in Sources */,
 				02942E5523C3F4AB00EB2148 /* DataModel.xcdatamodeld in Sources */,
 				02D8486D23C057ED00675A14 /* AddingDeviceTableViewController.swift in Sources */,
 			);
@@ -788,7 +752,7 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_ENTITLEMENTS = SwolIntents/SwolIntents.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BVZY57RJZG;
 				INFOPLIST_FILE = SwolIntents/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -796,6 +760,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = PGF.SiriWOL.Intents;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -810,7 +775,7 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_ENTITLEMENTS = SwolIntents/SwolIntents.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BVZY57RJZG;
 				INFOPLIST_FILE = SwolIntents/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -818,6 +783,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = PGF.SiriWOL.Intents;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -832,7 +798,7 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = BVZY57RJZG;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -845,6 +811,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = PGF.SiriWOLBackend;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -862,7 +829,7 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = BVZY57RJZG;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -875,6 +842,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = PGF.SiriWOLBackend;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -1008,7 +976,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SWoL/SWoL.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BVZY57RJZG;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1019,6 +987,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = PGF.SiriWOL;
 				PRODUCT_NAME = Swol;
@@ -1033,7 +1002,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SWoL/SWoL.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BVZY57RJZG;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1044,6 +1013,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				"OTHER_LDFLAGS[sdk=*]" = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = PGF.SiriWOL;
 				PRODUCT_NAME = Swol;
