@@ -24,7 +24,15 @@ public class DevicesMenuController: UIViewController {
         }
         let numberOfTimes = UserDefaults.standard.integer(forKey: "numberOfTimes")
         if numberOfTimes >= 5 {
-            SKStoreReviewController.requestReview()
+            if #available(iOS 14, *) {
+                if let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
+                    #if !targetEnvironment(macCatalyst)
+                    SKStoreReviewController.requestReview(in: scene)
+                    #endif
+                }
+            } else {
+                SKStoreReviewController.requestReview()
+            }
         } else {
             UserDefaults.standard.setValue(numberOfTimes + 1, forKey: "numberOfTimes")
         }

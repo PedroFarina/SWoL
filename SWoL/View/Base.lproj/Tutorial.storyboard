@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7hW-bl-k7v">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7hW-bl-k7v">
+    <device id="mac" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,11 +15,11 @@
             <objects>
                 <viewController id="3b5-z8-dbu" customClass="TutorialViewController" customModule="Swol" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zyC-bb-p8c">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's wake on lan?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OSw-og-XOY">
-                                <rect key="frame" x="20" y="94" width="374" height="41"/>
+                                <rect key="frame" x="20" y="50" width="760" height="40"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
@@ -26,36 +28,26 @@
                                 <color key="textColor" red="0.23921568627450979" green="0.63921568627450975" blue="0.79607843137254897" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sleeping01" translatesAutoresizingMaskIntoConstraints="NO" id="pqb-hZ-fEz">
-                                <rect key="frame" x="40" y="175" width="334" height="334"/>
-                                <accessibility key="accessibilityConfiguration" label="An animation of a computer sleeping">
-                                    <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
-                                    <bool key="isElement" value="YES"/>
-                                </accessibility>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="pqb-hZ-fEz" secondAttribute="height" multiplier="1:1" id="8Ie-DE-dc8"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CDT-HU-DIi">
-                                <rect key="frame" x="40" y="534" width="334" height="130.5"/>
+                                <rect key="frame" x="40" y="335" width="720" height="86"/>
                                 <string key="text">Mostly known as WOL, it's a pattern that allows a device to be turned on by a network message.  It relies on your router settings and a receiver proper configured on your device.</string>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="textColor" red="0.23921568630000001" green="0.63921568630000003" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YiS-2L-Gpm">
-                                <rect key="frame" x="125" y="745.5" width="164" height="49"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YiS-2L-Gpm">
+                                <rect key="frame" x="318" y="486" width="164" height="49"/>
                                 <accessibility key="accessibilityConfiguration" label="Continue to next step"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <state key="normal" title="Continue" backgroundImage="btnTutorialBackground">
-                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
                                 </state>
                                 <connections>
                                     <action selector="continueTapWithAnimation:" destination="3b5-z8-dbu" eventType="touchUpInside" id="Ozf-eR-hHn"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZPT-1L-7Hf">
-                                <rect key="frame" x="0.0" y="810" width="414" height="33"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZPT-1L-7Hf">
+                                <rect key="frame" x="0.0" y="532" width="800" height="32"/>
                                 <accessibility key="accessibilityConfiguration" label="Skip the tutorial"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <state key="normal" title="Skip">
@@ -65,17 +57,28 @@
                                     <action selector="endTutorialTap:" destination="3b5-z8-dbu" eventType="touchUpInside" id="mMv-nb-CZZ"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sleeping01" translatesAutoresizingMaskIntoConstraints="NO" id="pqb-hZ-fEz">
+                                <rect key="frame" x="310" y="130" width="180" height="180"/>
+                                <accessibility key="accessibilityConfiguration" label="An animation of a computer sleeping">
+                                    <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="pqb-hZ-fEz" secondAttribute="height" multiplier="1:1" id="8Ie-DE-dc8"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="C0P-uE-GwV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="C0P-uE-GwV" firstAttribute="trailing" secondItem="OSw-og-XOY" secondAttribute="trailing" constant="20" id="5Qf-Oq-cPb"/>
                             <constraint firstItem="OSw-og-XOY" firstAttribute="top" secondItem="C0P-uE-GwV" secondAttribute="top" constant="50" id="5xL-ew-Lj8"/>
-                            <constraint firstItem="pqb-hZ-fEz" firstAttribute="leading" secondItem="zyC-bb-p8c" secondAttribute="leading" constant="40" id="Efd-pw-Fdz"/>
                             <constraint firstItem="OSw-og-XOY" firstAttribute="leading" secondItem="C0P-uE-GwV" secondAttribute="leading" constant="20" id="KIb-CY-3c2"/>
                             <constraint firstItem="YiS-2L-Gpm" firstAttribute="centerX" secondItem="C0P-uE-GwV" secondAttribute="centerX" id="MWC-Nw-F3g"/>
-                            <constraint firstAttribute="trailing" secondItem="pqb-hZ-fEz" secondAttribute="trailing" constant="40" id="Ove-ZS-vfZ"/>
+                            <constraint firstItem="pqb-hZ-fEz" firstAttribute="centerX" secondItem="C0P-uE-GwV" secondAttribute="centerX" id="Mbx-Tn-MWA"/>
                             <constraint firstItem="C0P-uE-GwV" firstAttribute="trailing" secondItem="ZPT-1L-7Hf" secondAttribute="trailing" id="Wd2-al-BAq"/>
                             <constraint firstItem="CDT-HU-DIi" firstAttribute="top" secondItem="pqb-hZ-fEz" secondAttribute="bottom" constant="25" id="YRW-he-XDb"/>
+                            <constraint firstItem="pqb-hZ-fEz" firstAttribute="width" secondItem="zyC-bb-p8c" secondAttribute="height" multiplier="0.3" id="YnB-yB-9GK"/>
                             <constraint firstItem="CDT-HU-DIi" firstAttribute="leading" secondItem="C0P-uE-GwV" secondAttribute="leading" constant="40" id="byt-Py-vrZ"/>
                             <constraint firstItem="pqb-hZ-fEz" firstAttribute="top" secondItem="OSw-og-XOY" secondAttribute="bottom" constant="40" id="dNo-cM-7yS"/>
                             <constraint firstItem="C0P-uE-GwV" firstAttribute="trailing" secondItem="CDT-HU-DIi" secondAttribute="trailing" constant="40" id="fZS-IT-Fbf"/>
@@ -84,7 +87,6 @@
                             <constraint firstItem="ZPT-1L-7Hf" firstAttribute="leading" secondItem="C0P-uE-GwV" secondAttribute="leading" id="tml-xA-riS"/>
                             <constraint firstItem="ZPT-1L-7Hf" firstAttribute="centerY" secondItem="C0P-uE-GwV" secondAttribute="centerY" multiplier="1.825" id="uzl-aL-3E6"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="C0P-uE-GwV"/>
                     </view>
                     <navigationItem key="navigationItem" id="OHD-eZ-TeG"/>
                     <connections>
@@ -101,11 +103,11 @@
             <objects>
                 <viewController id="cEU-MY-gkE" customClass="TutorialViewController" customModule="Swol" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hNW-G2-8zs">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Setting up your router" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RWo-Cr-u40">
-                                <rect key="frame" x="20" y="94" width="374" height="41"/>
+                                <rect key="frame" x="20" y="50" width="760" height="40"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
@@ -115,7 +117,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Router" translatesAutoresizingMaskIntoConstraints="NO" id="V3G-Ox-tGa">
-                                <rect key="frame" x="40" y="175" width="334" height="334"/>
+                                <rect key="frame" x="310" y="130" width="180" height="180"/>
                                 <accessibility key="accessibilityConfiguration" label="A cartoon router">
                                     <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
                                     <bool key="isElement" value="YES"/>
@@ -125,7 +127,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oHg-uq-w5I">
-                                <rect key="frame" x="40" y="534" width="334" height="152.5"/>
+                                <rect key="frame" x="40" y="335" width="720" height="108"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                                 </accessibility>
@@ -135,19 +137,19 @@
                                 <color key="textColor" red="0.23921568630000001" green="0.63921568630000003" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cuV-qi-KtZ">
-                                <rect key="frame" x="125" y="745.5" width="164" height="49"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cuV-qi-KtZ">
+                                <rect key="frame" x="318" y="486" width="164" height="49"/>
                                 <accessibility key="accessibilityConfiguration" label="Continue to next step"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <state key="normal" title="Continue" backgroundImage="btnTutorialBackground">
-                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
                                 </state>
                                 <connections>
                                     <segue destination="w9v-dN-gRG" kind="show" identifier="" id="kOO-EJ-Q7g"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QrD-kG-nS9">
-                                <rect key="frame" x="0.0" y="810" width="414" height="33"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QrD-kG-nS9">
+                                <rect key="frame" x="0.0" y="532" width="800" height="32"/>
                                 <accessibility key="accessibilityConfiguration" label="Skip the tutorial"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <state key="normal" title="Skip">
@@ -157,8 +159,8 @@
                                     <action selector="endTutorialTap:" destination="cEU-MY-gkE" eventType="touchUpInside" id="bFb-l0-dfP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xar-wo-zT1">
-                                <rect key="frame" x="15" y="54" width="46" height="46"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xar-wo-zT1">
+                                <rect key="frame" x="15" y="10" width="46" height="46"/>
                                 <accessibility key="accessibilityConfiguration" label="Return to the previous step"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Xar-wo-zT1" secondAttribute="height" multiplier="1:1" id="dZd-DZ-fr9"/>
@@ -170,14 +172,15 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="k6c-LI-Kan"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="V3G-Ox-tGa" firstAttribute="height" secondItem="hNW-G2-8zs" secondAttribute="height" multiplier="0.3" id="5mF-uX-6TN"/>
                             <constraint firstItem="V3G-Ox-tGa" firstAttribute="top" secondItem="RWo-Cr-u40" secondAttribute="bottom" constant="40" id="AlW-Jt-Pdz"/>
                             <constraint firstItem="cuV-qi-KtZ" firstAttribute="centerY" secondItem="k6c-LI-Kan" secondAttribute="centerY" multiplier="1.7" id="EvM-Vc-6MP"/>
                             <constraint firstItem="RWo-Cr-u40" firstAttribute="top" secondItem="k6c-LI-Kan" secondAttribute="top" constant="50" id="JpE-AM-BSC"/>
                             <constraint firstItem="oHg-uq-w5I" firstAttribute="leading" secondItem="k6c-LI-Kan" secondAttribute="leading" constant="40" id="L5k-Ev-wpk"/>
-                            <constraint firstItem="V3G-Ox-tGa" firstAttribute="leading" secondItem="hNW-G2-8zs" secondAttribute="leading" constant="40" id="XDR-A3-LJk"/>
-                            <constraint firstAttribute="trailing" secondItem="V3G-Ox-tGa" secondAttribute="trailing" constant="40" id="bhk-Sd-d3o"/>
+                            <constraint firstItem="V3G-Ox-tGa" firstAttribute="centerX" secondItem="k6c-LI-Kan" secondAttribute="centerX" id="Otd-S8-JNf"/>
                             <constraint firstItem="cuV-qi-KtZ" firstAttribute="centerX" secondItem="k6c-LI-Kan" secondAttribute="centerX" id="eb2-iE-MND"/>
                             <constraint firstItem="k6c-LI-Kan" firstAttribute="trailing" secondItem="RWo-Cr-u40" secondAttribute="trailing" constant="20" id="kaw-6w-TtG"/>
                             <constraint firstItem="Xar-wo-zT1" firstAttribute="top" secondItem="k6c-LI-Kan" secondAttribute="top" constant="10" id="kbd-tz-KYI"/>
@@ -190,7 +193,6 @@
                             <constraint firstItem="RWo-Cr-u40" firstAttribute="leading" secondItem="k6c-LI-Kan" secondAttribute="leading" constant="20" id="q8Y-WV-B8R"/>
                             <constraint firstItem="cuV-qi-KtZ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="oHg-uq-w5I" secondAttribute="bottom" constant="1" id="vG6-gd-pDM"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="k6c-LI-Kan"/>
                     </view>
                     <navigationItem key="navigationItem" id="zko-Nc-XRE"/>
                 </viewController>
@@ -203,11 +205,11 @@
             <objects>
                 <viewController id="w9v-dN-gRG" customClass="TutorialViewController" customModule="Swol" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eDb-Ul-IJH">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select your OS" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpo-CW-RUm">
-                                <rect key="frame" x="20" y="94" width="374" height="41"/>
+                                <rect key="frame" x="20" y="50" width="760" height="40"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
@@ -217,7 +219,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OSBackground" translatesAutoresizingMaskIntoConstraints="NO" id="CSz-xV-6hc">
-                                <rect key="frame" x="0.0" y="175" width="414" height="318"/>
+                                <rect key="frame" x="0.0" y="-82" width="800" height="614"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
                                     <bool key="isElement" value="NO"/>
@@ -226,8 +228,8 @@
                                     <constraint firstAttribute="width" secondItem="CSz-xV-6hc" secondAttribute="height" multiplier="125:96" id="eZz-dO-gTo"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V4f-04-LzJ">
-                                <rect key="frame" x="0.0" y="821.5" width="414" height="33"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V4f-04-LzJ">
+                                <rect key="frame" x="0.0" y="539" width="800" height="32"/>
                                 <accessibility key="accessibilityConfiguration" label="Skip the tutorial"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <state key="normal" title="Skip">
@@ -237,8 +239,8 @@
                                     <action selector="endTutorialTap:" destination="w9v-dN-gRG" eventType="touchUpInside" id="oQA-dL-ztI"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HCD-7E-F0B">
-                                <rect key="frame" x="15" y="54" width="46" height="46"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HCD-7E-F0B">
+                                <rect key="frame" x="15" y="10" width="46" height="46"/>
                                 <accessibility key="accessibilityConfiguration" label="Return to the previous step"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="ECj-Qk-CxD"/>
@@ -249,8 +251,8 @@
                                     <action selector="returnTap:" destination="w9v-dN-gRG" eventType="touchUpInside" id="g2a-gE-1A2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="06c-AJ-XnT">
-                                <rect key="frame" x="40" y="573" width="131" height="157"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="06c-AJ-XnT">
+                                <rect key="frame" x="156" y="397" width="88" height="105"/>
                                 <accessibility key="accessibilityConfiguration" label="macOS"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="06c-AJ-XnT" secondAttribute="height" multiplier="131:157" id="D6L-Zy-cGL"/>
@@ -260,8 +262,8 @@
                                     <segue destination="4td-ho-ScJ" kind="show" id="qiz-NB-3u7"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1P-BU-Ep2">
-                                <rect key="frame" x="251" y="597" width="123" height="135"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1P-BU-Ep2">
+                                <rect key="frame" x="559" y="414" width="82" height="90"/>
                                 <accessibility key="accessibilityConfiguration" label="Windows"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="T1P-BU-Ep2" secondAttribute="height" multiplier="41:45" id="gXn-z7-Dfn"/>
@@ -272,25 +274,27 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="8sH-BC-p8V"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="CSz-xV-6hc" firstAttribute="centerY" secondItem="8sH-BC-p8V" secondAttribute="centerY" multiplier="0.75" id="6RQ-RJ-z8w"/>
                             <constraint firstItem="HCD-7E-F0B" firstAttribute="leading" secondItem="8sH-BC-p8V" secondAttribute="leading" constant="15" id="FcE-eX-EZm"/>
-                            <constraint firstItem="06c-AJ-XnT" firstAttribute="leading" secondItem="8sH-BC-p8V" secondAttribute="leading" constant="40" id="GqZ-bI-m6a"/>
                             <constraint firstAttribute="trailing" secondItem="CSz-xV-6hc" secondAttribute="trailing" id="HdU-Ek-Iz4"/>
+                            <constraint firstItem="T1P-BU-Ep2" firstAttribute="centerX" secondItem="8sH-BC-p8V" secondAttribute="centerX" multiplier="1.5" id="JSV-t7-YWL"/>
+                            <constraint firstItem="06c-AJ-XnT" firstAttribute="centerX" secondItem="8sH-BC-p8V" secondAttribute="centerX" multiplier="0.5" id="QNt-1t-4vd"/>
+                            <constraint firstItem="06c-AJ-XnT" firstAttribute="height" secondItem="eDb-Ul-IJH" secondAttribute="height" multiplier="0.175223" id="VRz-92-eH6"/>
+                            <constraint firstItem="T1P-BU-Ep2" firstAttribute="height" secondItem="eDb-Ul-IJH" secondAttribute="height" multiplier="0.15067" id="X5U-Ib-1ys"/>
                             <constraint firstItem="zpo-CW-RUm" firstAttribute="leading" secondItem="8sH-BC-p8V" secondAttribute="leading" constant="20" id="XEu-Hb-SxT"/>
-                            <constraint firstItem="CSz-xV-6hc" firstAttribute="top" secondItem="zpo-CW-RUm" secondAttribute="bottom" constant="40" id="Z5p-p5-7i1"/>
                             <constraint firstItem="V4f-04-LzJ" firstAttribute="leading" secondItem="8sH-BC-p8V" secondAttribute="leading" id="ZXw-gs-fkq"/>
                             <constraint firstItem="zpo-CW-RUm" firstAttribute="top" secondItem="8sH-BC-p8V" secondAttribute="top" constant="50" id="Zk0-7I-Dke"/>
                             <constraint firstItem="CSz-xV-6hc" firstAttribute="leading" secondItem="eDb-Ul-IJH" secondAttribute="leading" id="aKb-fR-clO"/>
                             <constraint firstItem="8sH-BC-p8V" firstAttribute="trailing" secondItem="zpo-CW-RUm" secondAttribute="trailing" constant="20" id="bZR-KT-xMz"/>
                             <constraint firstItem="T1P-BU-Ep2" firstAttribute="centerY" secondItem="06c-AJ-XnT" secondAttribute="centerY" multiplier="1.02" id="boS-WW-CRv"/>
-                            <constraint firstItem="06c-AJ-XnT" firstAttribute="top" secondItem="CSz-xV-6hc" secondAttribute="bottom" constant="80" id="d0U-vv-ic0"/>
-                            <constraint firstItem="8sH-BC-p8V" firstAttribute="trailing" secondItem="T1P-BU-Ep2" secondAttribute="trailing" constant="40" id="dAo-MX-qKz"/>
                             <constraint firstItem="V4f-04-LzJ" firstAttribute="centerY" secondItem="8sH-BC-p8V" secondAttribute="centerY" multiplier="1.85" id="gOa-dG-EAm"/>
+                            <constraint firstItem="06c-AJ-XnT" firstAttribute="centerY" secondItem="8sH-BC-p8V" secondAttribute="centerY" multiplier="1.5" id="qwH-DS-di7"/>
                             <constraint firstItem="8sH-BC-p8V" firstAttribute="trailing" secondItem="V4f-04-LzJ" secondAttribute="trailing" id="uKL-Od-IVI"/>
                             <constraint firstItem="HCD-7E-F0B" firstAttribute="top" secondItem="8sH-BC-p8V" secondAttribute="top" constant="10" id="vo8-pu-9E3"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="8sH-BC-p8V"/>
                     </view>
                     <navigationItem key="navigationItem" id="7iD-bK-7R4"/>
                 </viewController>
@@ -306,8 +310,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1165"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdB-XG-Umb">
-                                <rect key="frame" x="20" y="44" width="46" height="46"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdB-XG-Umb">
+                                <rect key="frame" x="20" y="0.0" width="46" height="46"/>
                                 <accessibility key="accessibilityConfiguration" label="Return to the previous step"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="pHh-Ag-npi"/>
@@ -315,19 +319,19 @@
                                 <state key="normal" backgroundImage="btnTutorialBack"/>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iiL-OS-AxE">
-                                <rect key="frame" x="0.0" y="44" width="414" height="1087"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="1165"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RmJ-Gx-TXC" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1092"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1089"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enabling in MacOS" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qv0-Ia-EG8">
-                                                <rect key="frame" x="20" y="50" width="374" height="41"/>
+                                                <rect key="frame" x="20" y="50" width="374" height="40"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                                 <color key="textColor" red="0.23921568630000001" green="0.63921568630000003" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dex-9b-e6Y">
-                                                <rect key="frame" x="40" y="131" width="334" height="64.5"/>
+                                                <rect key="frame" x="40" y="130" width="334" height="64"/>
                                                 <string key="text">• Head to "System and Preferences" 
 • Select "Energy Saver"
 • Check "Wake for network access"</string>
@@ -336,7 +340,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MacOS Wake for Network" translatesAutoresizingMaskIntoConstraints="NO" id="d9W-G9-vMY">
-                                                <rect key="frame" x="20" y="205.5" width="374" height="252"/>
+                                                <rect key="frame" x="20" y="204" width="374" height="252"/>
                                                 <accessibility key="accessibilityConfiguration" label="MacOS Energy Saver with Wake for network access checked">
                                                     <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
                                                     <bool key="isElement" value="YES"/>
@@ -346,7 +350,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Retrieving your IP/MAC" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p5E-pC-47y">
-                                                <rect key="frame" x="20" y="497.5" width="374" height="41"/>
+                                                <rect key="frame" x="20" y="496" width="374" height="40"/>
                                                 <accessibility key="accessibilityConfiguration">
                                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                                                 </accessibility>
@@ -355,7 +359,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ui3-C3-Znp">
-                                                <rect key="frame" x="40" y="578.5" width="334" height="86.5"/>
+                                                <rect key="frame" x="40" y="576" width="334" height="86"/>
                                                 <accessibility key="accessibilityConfiguration">
                                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                                                 </accessibility>
@@ -368,25 +372,25 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MacOS TCPIP" translatesAutoresizingMaskIntoConstraints="NO" id="YDs-qp-nwT">
-                                                <rect key="frame" x="20" y="675" width="374" height="313"/>
+                                                <rect key="frame" x="20" y="672" width="374" height="313"/>
                                                 <accessibility key="accessibilityConfiguration" label="MacOS advanced network settings showing IP settings">
                                                     <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
                                                     <bool key="isElement" value="YES"/>
                                                 </accessibility>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tb7-ZU-6la">
-                                                <rect key="frame" x="125" y="1028" width="164" height="49"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tb7-ZU-6la">
+                                                <rect key="frame" x="125" y="1025" width="164" height="49"/>
                                                 <accessibility key="accessibilityConfiguration" label="Dismiss the tutorial."/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <state key="normal" title="Done" backgroundImage="btnTutorialBackground">
-                                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="endTutorialTap:" destination="4td-ho-ScJ" eventType="touchUpInside" id="thI-Fk-MsZ"/>
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="dex-9b-e6Y" firstAttribute="top" secondItem="Qv0-Ia-EG8" secondAttribute="bottom" constant="40" id="8Qs-fw-V09"/>
                                             <constraint firstItem="dex-9b-e6Y" firstAttribute="leading" secondItem="RmJ-Gx-TXC" secondAttribute="leading" constant="40" id="CMl-ht-1I6"/>
@@ -424,8 +428,8 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="Uur-P8-Trr"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="TJK-QB-CeG"/>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWS-JD-h4F">
-                                <rect key="frame" x="15" y="54" width="46" height="46"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWS-JD-h4F">
+                                <rect key="frame" x="15" y="10" width="46" height="46"/>
                                 <accessibility key="accessibilityConfiguration" label="Return to the previous step"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="0bf-g3-GoA"/>
@@ -436,7 +440,8 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Sid-Ut-lw7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="bdB-XG-Umb" firstAttribute="width" secondItem="bdB-XG-Umb" secondAttribute="height" multiplier="1:1" id="7W0-us-ZUT"/>
                             <constraint firstItem="DWS-JD-h4F" firstAttribute="width" secondItem="DWS-JD-h4F" secondAttribute="height" multiplier="1:1" id="ETj-Pn-LXR"/>
@@ -449,7 +454,6 @@
                             <constraint firstItem="DWS-JD-h4F" firstAttribute="leading" secondItem="Sid-Ut-lw7" secondAttribute="leading" constant="15" id="aE0-y7-QLT"/>
                             <constraint firstItem="Sid-Ut-lw7" firstAttribute="trailing" secondItem="iiL-OS-AxE" secondAttribute="trailing" id="wbP-nh-AW1"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Sid-Ut-lw7"/>
                     </view>
                     <navigationItem key="navigationItem" id="sBX-Uk-t4U"/>
                     <size key="freeformSize" width="414" height="1165"/>
@@ -463,17 +467,17 @@
             <objects>
                 <viewController id="bwy-Gx-3Q1" customClass="TutorialViewController" customModule="Swol" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gk7-xe-Auz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1464.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1465"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iHT-dx-UcH">
-                                <rect key="frame" x="0.0" y="44" width="414" height="1386.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="1465"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wug-Rm-nsa" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1385.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1383"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Enabling in Windows" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uf3-pl-7km">
-                                                <rect key="frame" x="20" y="50" width="374" height="41"/>
+                                                <rect key="frame" x="20" y="50" width="374" height="40"/>
                                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <accessibility key="accessibilityConfiguration">
                                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
@@ -483,7 +487,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yDD-jN-C2Z">
-                                                <rect key="frame" x="40" y="131" width="334" height="196.5"/>
+                                                <rect key="frame" x="40" y="130" width="334" height="196"/>
                                                 <accessibility key="accessibilityConfiguration">
                                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                                                 </accessibility>
@@ -498,7 +502,7 @@ On the advanced settings, enable "Wake on Magic Packet"</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Windows 10 Wake on magic packet" translatesAutoresizingMaskIntoConstraints="NO" id="hlO-JE-u5O">
-                                                <rect key="frame" x="20" y="337.5" width="374" height="426"/>
+                                                <rect key="frame" x="20" y="336" width="374" height="426"/>
                                                 <accessibility key="accessibilityConfiguration" label="Windows 10 on advanced settings with &quot;Wake on Magic Packet&quot; enabled.">
                                                     <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
                                                     <bool key="isElement" value="YES"/>
@@ -508,7 +512,7 @@ On the advanced settings, enable "Wake on Magic Packet"</string>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ckn-Ne-Abe">
-                                                <rect key="frame" x="40" y="773.5" width="334" height="42.5"/>
+                                                <rect key="frame" x="40" y="772" width="334" height="42"/>
                                                 <accessibility key="accessibilityConfiguration">
                                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                                                 </accessibility>
@@ -519,7 +523,7 @@ tab and enable all checkboxes</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Windows 10 Power Management" translatesAutoresizingMaskIntoConstraints="NO" id="QoH-KT-nMu">
-                                                <rect key="frame" x="20" y="826" width="374" height="425"/>
+                                                <rect key="frame" x="20" y="824" width="374" height="425"/>
                                                 <accessibility key="accessibilityConfiguration" label="Windows 10 Power Management with all checkboxes checked.">
                                                     <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
                                                     <bool key="isElement" value="YES"/>
@@ -528,19 +532,19 @@ tab and enable all checkboxes</string>
                                                     <constraint firstAttribute="width" secondItem="QoH-KT-nMu" secondAttribute="height" multiplier="22:25" id="xia-Q1-gRV"/>
                                                 </constraints>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WJF-PL-DB7">
-                                                <rect key="frame" x="125" y="1291" width="164" height="49"/>
+                                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WJF-PL-DB7">
+                                                <rect key="frame" x="125" y="1289" width="164" height="49"/>
                                                 <accessibility key="accessibilityConfiguration" label="Next Step. Step 2 of 3."/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <state key="normal" title="Next" backgroundImage="btnTutorialBackground">
-                                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
                                                 </state>
                                                 <connections>
                                                     <segue destination="guc-yf-Y2G" kind="show" id="OUz-9o-o7Y"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Step 2 of 3" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNU-OS-W7L">
-                                                <rect key="frame" x="20" y="1355" width="374" height="20.5"/>
+                                                <rect key="frame" x="20" y="1353" width="374" height="20"/>
                                                 <accessibility key="accessibilityConfiguration">
                                                     <accessibilityTraits key="traits" notEnabled="YES"/>
                                                     <bool key="isElement" value="NO"/>
@@ -550,7 +554,7 @@ tab and enable all checkboxes</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="uf3-pl-7km" firstAttribute="leading" secondItem="wug-Rm-nsa" secondAttribute="leading" constant="20" symbolic="YES" id="0NQ-fv-bJR"/>
                                             <constraint firstItem="Ckn-Ne-Abe" firstAttribute="leading" secondItem="wug-Rm-nsa" secondAttribute="leading" constant="40" id="3nI-M1-ME2"/>
@@ -586,8 +590,8 @@ tab and enable all checkboxes</string>
                                 <viewLayoutGuide key="contentLayoutGuide" id="zkt-8u-8fO"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="lUs-H0-Dtc"/>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygQ-Qo-8JM">
-                                <rect key="frame" x="15" y="54" width="46" height="46"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygQ-Qo-8JM">
+                                <rect key="frame" x="15" y="10" width="46" height="46"/>
                                 <accessibility key="accessibilityConfiguration" label="Return to the previous step"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="haM-fP-wlv"/>
@@ -598,7 +602,8 @@ tab and enable all checkboxes</string>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="kSx-zP-9HG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="kSx-zP-9HG" firstAttribute="bottom" secondItem="iHT-dx-UcH" secondAttribute="bottom" id="4NL-Bd-aOm"/>
                             <constraint firstItem="kSx-zP-9HG" firstAttribute="trailing" secondItem="iHT-dx-UcH" secondAttribute="trailing" id="Kf8-Cb-Heh"/>
@@ -608,7 +613,6 @@ tab and enable all checkboxes</string>
                             <constraint firstItem="iHT-dx-UcH" firstAttribute="leading" secondItem="kSx-zP-9HG" secondAttribute="leading" id="iCj-60-yge"/>
                             <constraint firstItem="ygQ-Qo-8JM" firstAttribute="width" secondItem="ygQ-Qo-8JM" secondAttribute="height" multiplier="1:1" id="rTk-oy-Z2v"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="kSx-zP-9HG"/>
                     </view>
                     <navigationItem key="navigationItem" id="sSj-bw-6aq"/>
                     <size key="freeformSize" width="414" height="1464.5"/>
@@ -626,13 +630,13 @@ tab and enable all checkboxes</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Ba-ri-1eO">
-                                <rect key="frame" x="0.0" y="44" width="414" height="872"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="950"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S0Z-X0-XgG">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="873.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="872"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Enabling in Windows" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YMb-qt-kqR">
-                                                <rect key="frame" x="20" y="50" width="374" height="41"/>
+                                                <rect key="frame" x="20" y="50" width="374" height="40"/>
                                                 <accessibility key="accessibilityConfiguration">
                                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                                                 </accessibility>
@@ -641,7 +645,7 @@ tab and enable all checkboxes</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="emk-3n-ukZ">
-                                                <rect key="frame" x="40" y="131" width="334" height="328.5"/>
+                                                <rect key="frame" x="40" y="130" width="334" height="328"/>
                                                 <accessibility key="accessibilityConfiguration">
                                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                                                 </accessibility>
@@ -660,7 +664,7 @@ And then disable "Turn on fast startup"</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Windows 10 Fast startup" translatesAutoresizingMaskIntoConstraints="NO" id="zhB-Ew-GcQ">
-                                                <rect key="frame" x="20" y="469.5" width="374" height="269.5"/>
+                                                <rect key="frame" x="20" y="468" width="374" height="270"/>
                                                 <accessibility key="accessibilityConfiguration" label="Windows 10 Power Options with &quot;Turn on fast startup&quot; disabled.">
                                                     <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
                                                     <bool key="isElement" value="YES"/>
@@ -669,19 +673,19 @@ And then disable "Turn on fast startup"</string>
                                                     <constraint firstAttribute="width" secondItem="zhB-Ew-GcQ" secondAttribute="height" multiplier="154:111" id="ips-Us-yeA"/>
                                                 </constraints>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DAD-gu-OfV">
-                                                <rect key="frame" x="125" y="779" width="164" height="49"/>
+                                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DAD-gu-OfV">
+                                                <rect key="frame" x="125" y="778" width="164" height="49"/>
                                                 <accessibility key="accessibilityConfiguration" label="Dismiss the tutorial."/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <state key="normal" title="Done" backgroundImage="btnTutorialBackground">
-                                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="endTutorialTap:" destination="guc-yf-Y2G" eventType="touchUpInside" id="z2O-0z-heC"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 3 of 3" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="luU-v7-kBi">
-                                                <rect key="frame" x="20" y="843" width="374" height="20.5"/>
+                                                <rect key="frame" x="20" y="842" width="374" height="20"/>
                                                 <accessibility key="accessibilityConfiguration">
                                                     <accessibilityTraits key="traits" notEnabled="YES"/>
                                                     <bool key="isElement" value="NO"/>
@@ -691,7 +695,7 @@ And then disable "Turn on fast startup"</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="YMb-qt-kqR" firstAttribute="leading" secondItem="S0Z-X0-XgG" secondAttribute="leading" constant="20" symbolic="YES" id="61V-zk-8yk"/>
                                             <constraint firstItem="YMb-qt-kqR" firstAttribute="top" secondItem="S0Z-X0-XgG" secondAttribute="top" constant="50" id="Bbt-ex-hDF"/>
@@ -721,8 +725,8 @@ And then disable "Turn on fast startup"</string>
                                 <viewLayoutGuide key="contentLayoutGuide" id="idF-FM-eO4"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="VQ4-yh-4W8"/>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n4t-ac-ZVY">
-                                <rect key="frame" x="15" y="54" width="46" height="46"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n4t-ac-ZVY">
+                                <rect key="frame" x="15" y="10" width="46" height="46"/>
                                 <accessibility key="accessibilityConfiguration" label="Return to the previous step"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="KaQ-Sn-gCh"/>
@@ -733,7 +737,8 @@ And then disable "Turn on fast startup"</string>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="vGi-a2-9D2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="7Ba-ri-1eO" firstAttribute="leading" secondItem="vGi-a2-9D2" secondAttribute="leading" id="7V8-Bd-7VS"/>
                             <constraint firstItem="7Ba-ri-1eO" firstAttribute="top" secondItem="vGi-a2-9D2" secondAttribute="top" id="Llg-BL-g3Z"/>
@@ -743,7 +748,6 @@ And then disable "Turn on fast startup"</string>
                             <constraint firstItem="n4t-ac-ZVY" firstAttribute="width" secondItem="n4t-ac-ZVY" secondAttribute="height" multiplier="1:1" id="pB0-Wk-MIe"/>
                             <constraint firstItem="n4t-ac-ZVY" firstAttribute="top" secondItem="vGi-a2-9D2" secondAttribute="top" constant="10" id="tH9-s3-dYM"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="vGi-a2-9D2"/>
                     </view>
                     <navigationItem key="navigationItem" id="I6s-WJ-jAr"/>
                     <size key="freeformSize" width="414" height="950"/>
@@ -757,11 +761,11 @@ And then disable "Turn on fast startup"</string>
             <objects>
                 <viewController id="XQv-tW-hIP" customClass="TutorialViewController" customModule="Swol" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iN3-mC-5Cp">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PBN-Pa-nyJ">
-                                <rect key="frame" x="20" y="54" width="46" height="46"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PBN-Pa-nyJ">
+                                <rect key="frame" x="20" y="10" width="46" height="46"/>
                                 <accessibility key="accessibilityConfiguration" label="Return to the previous step"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="PBN-Pa-nyJ" secondAttribute="height" multiplier="1:1" id="5DX-pT-SCg"/>
@@ -773,7 +777,7 @@ And then disable "Turn on fast startup"</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgM-ko-npp">
-                                <rect key="frame" x="40" y="175" width="334" height="86.5"/>
+                                <rect key="frame" x="40" y="130" width="720" height="42"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                                 </accessibility>
@@ -782,19 +786,19 @@ And then disable "Turn on fast startup"</string>
                                 <color key="textColor" red="0.23921568630000001" green="0.63921568630000003" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kqF-Mf-O9a">
-                                <rect key="frame" x="125" y="301.5" width="164" height="49"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kqF-Mf-O9a">
+                                <rect key="frame" x="318" y="212" width="164" height="49"/>
                                 <accessibility key="accessibilityConfiguration" label="Next Step. Step 1 of 3."/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <state key="normal" title="Next" backgroundImage="btnTutorialBackground">
-                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
                                 </state>
                                 <connections>
                                     <segue destination="bwy-Gx-3Q1" kind="show" id="b2J-qT-Rd3"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 1 of 3" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iFW-kS-ctl">
-                                <rect key="frame" x="40" y="365.5" width="334" height="20.5"/>
+                                <rect key="frame" x="40" y="276" width="720" height="20"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" notEnabled="YES"/>
                                     <bool key="isElement" value="NO"/>
@@ -804,7 +808,7 @@ And then disable "Turn on fast startup"</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enabling in Windows" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a3j-eX-P2y">
-                                <rect key="frame" x="20" y="94" width="374" height="41"/>
+                                <rect key="frame" x="20" y="50" width="760" height="40"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
@@ -814,7 +818,8 @@ And then disable "Turn on fast startup"</string>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="kU0-ux-PNZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="kqF-Mf-O9a" firstAttribute="top" secondItem="cgM-ko-npp" secondAttribute="bottom" constant="40" id="1Gs-Gf-c2M"/>
                             <constraint firstItem="cgM-ko-npp" firstAttribute="leading" secondItem="kU0-ux-PNZ" secondAttribute="leading" constant="40" id="1bc-8q-L3Q"/>
@@ -830,7 +835,6 @@ And then disable "Turn on fast startup"</string>
                             <constraint firstItem="kU0-ux-PNZ" firstAttribute="trailing" secondItem="iFW-kS-ctl" secondAttribute="trailing" constant="40" id="uMO-Ge-0RL"/>
                             <constraint firstItem="PBN-Pa-nyJ" firstAttribute="top" secondItem="kU0-ux-PNZ" secondAttribute="top" constant="10" id="yhg-oy-gcb"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="kU0-ux-PNZ"/>
                     </view>
                     <navigationItem key="navigationItem" id="b9h-5M-Epm"/>
                 </viewController>
@@ -872,5 +876,8 @@ And then disable "Turn on fast startup"</string>
         <namedColor name="Action Color">
             <color red="0.24300000071525574" green="0.4779999852180481" blue="0.76099997758865356" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
