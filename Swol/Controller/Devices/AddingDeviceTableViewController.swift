@@ -49,26 +49,13 @@ public class AddingDeviceTableViewController: UITableViewController {
             portTableViewCell.txtText = String(device.port)
             footerText = "footer7".localized()
         }
-        ipTableViewCell.changedCharacters = IPChanged(_:)
+        ipTableViewCell.changedCharacters = checkDone(_:)
         macTableViewCell.changedCharacters = checkDone(_:)
         portTableViewCell.changedCharacters = checkDone(_:)
         footerTableViewCell.textLabel?.text = footerText
         footerTableViewCell.accessibilityLabel = footerText
         footerTableViewCell.accessibilityNavigationStyle = .combined
         footerTableViewCell.backgroundColor = mockTint
-    }
-
-    private var currentIP: String? = nil
-    private func IPChanged(_ text:String?) {
-        if let txt = text,
-            let old = currentIP{
-            if txt.count > old.count
-                && (txt.count == 3 || txt.count == 7 || txt.count == 11) {
-                ipTableViewCell.txtText = txt + "."
-            }
-        }
-        currentIP = text
-        checkDone(text)
     }
 
     private func checkDone(_ text: String?) {
