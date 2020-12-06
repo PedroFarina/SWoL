@@ -29,17 +29,18 @@ public class Awake {
     }
     
     public enum WakeError: Error {
-        case SocketSetupFailed(reason: String)
-        case SetSocketOptionsFailed(reason: String)
-        case SendMagicPacketFailed(reason: String)
-        case DeviceIncomplete(reason: String)
+        case SocketSetupFailed(reason: Error)
+        case SetSocketOptionsFailed(reason: Error)
+        case SendMagicPacketFailed(reason: Error)
+        case DeviceIncomplete(reason: Error)
     }
 
     public static func target(device: DeviceProtocol) -> Error? {
         donateInteraction(for: device)
         guard let broadcastAddress = device.getBroadcast(),
             let macAddress = device.mac else {
-                return WakeError.DeviceIncomplete(reason: "")
+            let err = NSError(domain: "Device Incomplete Error", code: Int(errSecParam), userInfo: nil)
+            return WakeError.DeviceIncomplete(reason: err)
         }
         let port = UInt16(device.port)
 
@@ -55,11 +56,16 @@ public class Awake {
         // Setup the packet socket
         sock = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP)
         if sock < 0 {
-            let err = String(utf8String: strerror(errno)) ?? ""
+            let err = NSError(domain: "Socket Error", code: Int(errSecNetworkFailure), userInfo: nil)
             return WakeError.SocketSetupFailed(reason: err)
         }
 
-        let packet = Awake.createMagicPacket(mac: macAddress)
+        var packet: [CUnsignedChar] = []
+        do {
+            packet = try Awake.createMagicPacket(mac: macAddress)
+        } catch {
+            return WakeError.SocketSetupFailed(reason: error)
+        }
         let sockaddrLen = socklen_t(MemoryLayout<sockaddr>.stride)
         let intLen = socklen_t(MemoryLayout<Int>.stride)
 
@@ -67,7 +73,7 @@ public class Awake {
         var broadcast = 1
         if setsockopt(sock, SOL_SOCKET, SO_BROADCAST, &broadcast, intLen) == -1 {
             close(sock)
-            let err = String(utf8String: strerror(errno)) ?? ""
+            let err = NSError(domain: "Broadcast Error", code: Int(errSecNetworkFailure), userInfo: nil)
             return WakeError.SetSocketOptionsFailed(reason: err)
         }
 
@@ -75,7 +81,7 @@ public class Awake {
         var targetCast = unsafeBitCast(target, to: sockaddr.self)
         if sendto(sock, packet, packet.count, 0, &targetCast, sockaddrLen) != packet.count {
             close(sock)
-            let err = String(utf8String: strerror(errno)) ?? ""
+            let err = NSError(domain: "Sending error", code: Int(errSecNetworkFailure), userInfo: nil)
             return WakeError.SendMagicPacketFailed(reason: err)
         }
 
@@ -84,7 +90,7 @@ public class Awake {
         return nil
     }
 
-    private static func createMagicPacket(mac: String) -> [CUnsignedChar] {
+    private static func createMagicPacket(mac: String) throws -> [CUnsignedChar] {
         var buffer = [CUnsignedChar]()
 
         // Create header
@@ -95,6 +101,9 @@ public class Awake {
         let components = mac.components(separatedBy: ":")
         let numbers = components.map {
             return strtoul($0, nil, 16)
+        }
+        if numbers.contains(where: { $0 > 255 || $0 < 0 }) {
+            throw NSError(domain: "Mac Address Error", code: Int(errSSLBufferOverflow), userInfo: nil)
         }
 
         // Repeat MAC address 16 times

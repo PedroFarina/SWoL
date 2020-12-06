@@ -129,7 +129,20 @@ public class DevicesTableViewController: UITableViewController, DataWatcher {
             let okAction = UIAlertAction(title: "Ok", style: .default)
             if let err = Awake.target(device: device) {
                 DispatchQueue.main.async {
-                    let error = UIAlertController(title: "Error!".localized(), message: err.localizedDescription, preferredStyle: .alert)
+                    var message = err.localizedDescription
+                    if let wakeErr = err as? Awake.WakeError {
+                        switch wakeErr {
+                        case .DeviceIncomplete(let reason):
+                            message = "deviceIncomplete".localized() + " \( reason.localizedDescription)"
+                        case .SendMagicPacketFailed(let reason):
+                            message = "magicPacketFailed".localized() + " \( reason.localizedDescription)"
+                        case .SetSocketOptionsFailed(let reason):
+                            message = "socketOptionsFailed".localized() + " \( reason.localizedDescription)"
+                        case .SocketSetupFailed(let reason):
+                            message = "socketSetupFailed".localized() + " \( reason.localizedDescription)"
+                        }
+                    }
+                    let error = UIAlertController(title: "Error!".localized(), message: message, preferredStyle: .alert)
                     error.addAction(okAction)
                     self.parent?.present(error, animated: true)
                 }

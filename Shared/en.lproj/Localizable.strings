@@ -54,3 +54,7 @@
 "Keep cloud data" = "Keep cloud data";
 "This app uses ads to support the developer, please consider watching them." = "This app uses ads to support the developer, please consider watching them.";
 "Are you sure?" = "Are you sure?";
+"deviceIncomplete" = "The device has not enough information to send a packet.";
+"magicPacketFailed" = "Failed to send a magic packet.";
+"socketOptionsFailed" = "Failed to set socket options.";
+"socketSetupFailed" = "Failed to setup socket.";
