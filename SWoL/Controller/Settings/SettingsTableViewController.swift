@@ -57,7 +57,7 @@ public class SettingsTableViewController: UITableViewController {
                     devicesString = nil
                 }
                 let controller: UIViewController
-                if let devicesString = devicesString {
+                if let devicesString = devicesString, devicesString.count != 2 {
                     controller = UIActivityViewController(activityItems: [devicesString], applicationActivities: nil)
                 } else {
                     let alertController = UIAlertController(title: "Oops!".localized(),
@@ -66,6 +66,7 @@ public class SettingsTableViewController: UITableViewController {
                     alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
                     controller = alertController
                 }
+                controller.popoverPresentationController?.sourceView = tableView.cellForRow(at: indexPath) ?? tableView
                 self.present(controller, animated: true)
             }
         }
