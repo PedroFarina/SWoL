@@ -20,3 +20,16 @@ public protocol DeviceProtocol {
     var intent: WakeDeviceIntent { get }
     static func getDevice(from intent: WakeDeviceIntent) -> DeviceProtocol?
 }
+
+public extension DeviceProtocol {
+    func toCodable() -> CodableDevice {
+        return CodableDevice(address: address, mac: mac, name: name, port: port)
+    }
+}
+
+public struct CodableDevice: Codable {
+    var address: String?
+    var mac: String?
+    var name: String?
+    var port: Int32?
+}

@@ -137,7 +137,6 @@
 		0202D7592432CECD008A3448 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Tutorial.strings; sourceTree = "<group>"; };
 		02154853242CE71100EF7DDD /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		0218352C242E8DC700C8D8AA /* SwolTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SwolTabBarController.swift; path = Swol/Controller/SwolTabBarController.swift; sourceTree = SOURCE_ROOT; };
-		02290E7424369DB100E21A3C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		02290E7724369DD800E21A3C /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
 		024024BD23C048500065B8DD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		024024C023C050830065B8DD /* TextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
@@ -155,6 +154,7 @@
 		02A7DC6B23C448C200ED7957 /* SwolBackEnd.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwolBackEnd.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		02A7DC6D23C448C200ED7957 /* SwolBackEnd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwolBackEnd.h; sourceTree = "<group>"; };
 		02A7DC6E23C448C200ED7957 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02AFA4272597E16500F84D2C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = ../../Swol/View/en.lproj/Main.strings; sourceTree = "<group>"; };
 		02B575E12436726900123B10 /* DevicesMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DevicesMenuController.swift; path = Swol/Controller/Devices/DevicesMenuController.swift; sourceTree = SOURCE_ROOT; };
 		02C11C7323C389EB00920674 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
 		02C11C8923C38A6800920674 /* SWoL.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SWoL.entitlements; sourceTree = "<group>"; };
@@ -720,8 +720,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				02D5785F23C03684001FA8A5 /* Base */,
-				02290E7424369DB100E21A3C /* en */,
 				02290E7724369DD800E21A3C /* pt-BR */,
+				02AFA4272597E16500F84D2C /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

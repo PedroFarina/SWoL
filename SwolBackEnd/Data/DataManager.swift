@@ -126,6 +126,11 @@ public class DataManager: DataSynchronizer {
             return copy
         }
     }
+    public var codableDevices: [CodableDevice] {
+        get {
+            _devices.map({ CodableDevice(address: $0.address, mac: $0.mac, name: $0.name, port: $0.port) })
+        }
+    }
 
     public func registerDevice(name: String, address: String, macAddress: String, port: Int32?) throws {
         var device: Device?

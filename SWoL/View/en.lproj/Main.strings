@@ -26,6 +26,9 @@
 /* Class = "UINavigationItem"; title = "Register new device"; ObjectID = "Clc-iE-gYG"; */
 "Clc-iE-gYG.title" = "Register new device";
 
+/* Class = "UITableViewSection"; headerTitle = "Devices"; ObjectID = "Hyi-jc-dRM"; */
+"Hyi-jc-dRM.headerTitle" = "Devices";
+
 /* Class = "UILabel"; text = "Erase All iCloud Data"; ObjectID = "IHL-mx-XCg"; */
 "IHL-mx-XCg.text" = "Erase All iCloud Data";
 
@@ -52,6 +55,12 @@
 
 /* Class = "UILabel"; text = "Title"; ObjectID = "eve-Hy-DhF"; */
 "eve-Hy-DhF.text" = "Title";
+
+/* Class = "UILabel"; text = "Export Devices"; ObjectID = "f2O-2z-JB0"; */
+"f2O-2z-JB0.text" = "Export Devices";
+
+/* Class = "UILabel"; text = "Import Devices"; ObjectID = "fun-UP-pUe"; */
+"fun-UP-pUe.text" = "Import Devices";
 
 /* Class = "UIBarButtonItem"; title = "Done"; ObjectID = "hTk-p2-1Lv"; */
 "hTk-p2-1Lv.title" = "Done";

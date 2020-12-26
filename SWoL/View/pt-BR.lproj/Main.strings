@@ -85,3 +85,12 @@
 
 /* Class = "UITabBarItem"; title = "Settings"; ObjectID = "z6l-q0-Ddl"; */
 "z6l-q0-Ddl.title" = "Ajustes";
+
+/* Class = "UITableViewSection"; headerTitle = "Devices"; ObjectID = "Hyi-jc-dRM"; */
+"Hyi-jc-dRM.headerTitle" = "Dispositivos";
+
+/* Class = "UILabel"; text = "Export Devices"; ObjectID = "f2O-2z-JB0"; */
+"f2O-2z-JB0.text" = "Exportar Dispositivos";
+
+/* Class = "UILabel"; text = "Import Devices"; ObjectID = "fun-UP-pUe"; */
+"fun-UP-pUe.text" = "Importar Dispositivos";

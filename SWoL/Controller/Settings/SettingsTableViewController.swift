@@ -44,6 +44,30 @@ public class SettingsTableViewController: UITableViewController {
             if indexPath.row == 0 {
                 self.performSegue(withIdentifier: "tutorial", sender: self)
             }
+        } else if indexPath.section == 2  {
+            if indexPath.row == 0 {
+                
+            } else if indexPath.row == 1 {
+                let jsonEncoder = JSONEncoder()
+                let devicesString: String?
+                if let jsonData = try? jsonEncoder.encode(DataManager.shared(with: .CoreData).codableDevices),
+                   let json = String(data: jsonData, encoding: .utf8) {
+                    devicesString = json
+                } else {
+                    devicesString = nil
+                }
+                let controller: UIViewController
+                if let devicesString = devicesString {
+                    controller = UIActivityViewController(activityItems: [devicesString], applicationActivities: nil)
+                } else {
+                    let alertController = UIAlertController(title: "Oops!".localized(),
+                                                            message: "You have no devices yet. Create one to export.".localized(),
+                                                            preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                    controller = alertController
+                }
+                self.present(controller, animated: true)
+            }
         }
 
         tableView.deselectRow(at: indexPath, animated: true)

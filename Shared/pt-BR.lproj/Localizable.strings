@@ -24,7 +24,6 @@
 "Waking confirmation" = "Confirmação de envio";
 "Do you want to wake " = "Você deseja acordar ";
 "Yes" = "Sim";
-"Error!" = "Erro!";
 "Success" = "Successo";
 "Packet sent to " = "Pacote enviado para ";
 "No" = "Não";
@@ -45,7 +44,6 @@
 "Seems that you're not connected to the internet." = "Parece que você não está conectado a internet.";
 "Your changes will not be saved to iCloud, but you can still use the app." = "Suas modificações não serão salvas no iCloud, mas você ainda pode usar o aplicativo.";
 "Unkown Error!" = "Erro desconhecido!";
-"Error!" = "Erro!";
 "Unable to save data locally!" = "Não foi possível salvar o dado localmente!";
 "The cloud data are different from local data!" = "Os dados na nuvem estão diferentes dos locais";
 "There was a conflict in the data from the cloud." = "Houve um conflito de dados na nuvem.";
@@ -57,3 +55,5 @@
 "magicPacketFailed" = "Falha em enviar o pacote.";
 "socketOptionsFailed" = "Fallha em configurar o pacote.";
 "socketSetupFailed" = "Falha em configurar o pacote.";
+"Oops!" = "Oops!";
+"You have no devices yet. Create one to export." = "Você  ainda não tem dispositivos. Crie um para exportar.";
