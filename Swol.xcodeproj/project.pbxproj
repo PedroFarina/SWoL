@@ -46,6 +46,7 @@
 		02C98629241843570040242A /* SwolBackEnd.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 02A7DC6B23C448C200ED7957 /* SwolBackEnd.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		02C9862C241843570040242A /* SwolIntents.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 02A1EF9223C44DA500625723 /* SwolIntents.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		02C98631241843600040242A /* SwolBackEnd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02A7DC6B23C448C200ED7957 /* SwolBackEnd.framework */; platformFilter = ios; };
+		02C9AD922598085200397E99 /* AlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C9AD912598085200397E99 /* AlertControllerExtension.swift */; };
 		02D5785923C03684001FA8A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D5785823C03684001FA8A5 /* AppDelegate.swift */; };
 		02D5785B23C03684001FA8A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D5785A23C03684001FA8A5 /* SceneDelegate.swift */; };
 		02D5786023C03684001FA8A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02D5785E23C03684001FA8A5 /* Main.storyboard */; };
@@ -164,6 +165,7 @@
 		02C5BAE1242E789D007F57BE /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsTableViewController.swift; path = SWoL/Controller/Settings/SettingsTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		02C5BAE3242E790F007F57BE /* UserDefaultsNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsNames.swift; sourceTree = "<group>"; };
 		02C5BAE8242E7ADA007F57BE /* iCloudAccessManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = iCloudAccessManager.swift; path = Swol/Model/iCloudAccessManager.swift; sourceTree = SOURCE_ROOT; };
+		02C9AD912598085200397E99 /* AlertControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlertControllerExtension.swift; path = Swol/Controller/AlertControllerExtension.swift; sourceTree = SOURCE_ROOT; };
 		02D5785523C03684001FA8A5 /* Swol.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swol.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02D5785823C03684001FA8A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02D5785A23C03684001FA8A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -291,6 +293,7 @@
 				02B575E02436721D00123B10 /* Settings */,
 				02B575DF2436720A00123B10 /* Devices */,
 				02B575DE2436720200123B10 /* Tutorial */,
+				02C9AD912598085200397E99 /* AlertControllerExtension.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -662,6 +665,7 @@
 				02D5785B23C03684001FA8A5 /* SceneDelegate.swift in Sources */,
 				0211BAB423C4080000867893 /* StringExtension.swift in Sources */,
 				02C490E7242E665400A388A1 /* NSUserActivities.swift in Sources */,
+				02C9AD922598085200397E99 /* AlertControllerExtension.swift in Sources */,
 				0273BAE42432A97D002173AC /* TutorialViewController.swift in Sources */,
 				02C5BAE9242E7ADA007F57BE /* iCloudAccessManager.swift in Sources */,
 				02C5BAE4242E790F007F57BE /* UserDefaultsNames.swift in Sources */,

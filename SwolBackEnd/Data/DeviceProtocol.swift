@@ -28,8 +28,8 @@ public extension DeviceProtocol {
 }
 
 public struct CodableDevice: Codable {
-    var address: String?
-    var mac: String?
-    var name: String?
-    var port: Int32?
+    public var address: String?
+    public var mac: String?
+    public var name: String?
+    public var port: Int32?
 }

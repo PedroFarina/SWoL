@@ -43,7 +43,7 @@ public class SwolTabBarController: UITabBarController, ConflictHandler {
             cont.present(cdError.getAlert(), animated: true)
         } else {
             let alert = UIAlertController(title: "Unkown Error!".localized(), message: err.localizedDescription, preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            alert.addOkAction()
             cont.present(alert, animated: true)
         }
     }
@@ -60,7 +60,7 @@ extension CDError {
 
     private static var failAlert: UIAlertController {
         let alert = UIAlertController(title: "Error!".localized(), message: "Unable to save data locally!".localized(), preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+        alert.addOkAction()
         return alert
     }
 }
@@ -101,7 +101,7 @@ extension CKError {
             message: "Seems that you're not connected to the internet.".localized() + " " +
                 "Your changes will not be saved to iCloud, but you can still use the app.".localized(), preferredStyle: .alert)
 
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        alert.addOkAction()
         return alert
     }
 }

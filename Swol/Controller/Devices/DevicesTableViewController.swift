@@ -106,7 +106,7 @@ public class DevicesTableViewController: UITableViewController, DataWatcher {
             } catch let err {
                 DispatchQueue.main.async {
                     let error = UIAlertController(title: "Error!".localized(), message: err.localizedDescription, preferredStyle: .alert)
-                    error.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                    error.addOkAction()
                     self.parent?.present(error, animated: true)
                 }
             }
@@ -126,7 +126,6 @@ public class DevicesTableViewController: UITableViewController, DataWatcher {
     private func wakeAction(on device: DeviceProtocol) {
         let cont = UIAlertController(title: "Waking confirmation".localized(), message: "Do you want to wake ".localized() + (device.name ?? "John") + "?", preferredStyle: .alert)
         let yes = UIAlertAction(title: "Yes".localized(), style: .default) { (_) in
-            let okAction = UIAlertAction(title: "Ok", style: .default)
             if let err = Awake.target(device: device) {
                 DispatchQueue.main.async {
                     var message = err.localizedDescription
@@ -143,13 +142,13 @@ public class DevicesTableViewController: UITableViewController, DataWatcher {
                         }
                     }
                     let error = UIAlertController(title: "Error!".localized(), message: message, preferredStyle: .alert)
-                    error.addAction(okAction)
+                    error.addOkAction()
                     self.parent?.present(error, animated: true)
                 }
             } else {
                 DispatchQueue.main.async {
                     let success = UIAlertController(title: "Success".localized(), message: "Packet sent to ".localized() + (device.getBroadcast() ?? ""), preferredStyle: .alert)
-                    success.addAction(okAction)
+                    success.addOkAction()
                     self.parent?.present(success, animated: true)
                 }
             }
