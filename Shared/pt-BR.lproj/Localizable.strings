@@ -64,3 +64,4 @@
 "Success" = "Sucesso";
 "Successfully imported your devices" = "A operação de importação de dispositivos foi concluída com êxito.";
 "Unable to proccess your order." = "Algo deu errado e não fio possível processar seu pedido.";
+"Unable to import devices." = "Não foi possível importar os dispositivos.";
