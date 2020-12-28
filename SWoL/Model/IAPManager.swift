@@ -11,12 +11,14 @@ import SwolBackEnd
 
 public typealias ProductIdentifier = String
 public typealias ProductsRequestCompletionHandler = (_ success: Bool, _ products: [SKProduct]?) -> Void
+public typealias PurchaseRequestFailedHandler = (Error) -> Void
 
 open class IAPHelper: NSObject  {
 
     private let productIdentifiers: Set<ProductIdentifier>
     private var productsRequest: SKProductsRequest?
     private var productsRequestCompletionHandler: ProductsRequestCompletionHandler?
+    public var purchaseRequestFailedHandler: PurchaseRequestFailedHandler?
 
     public static let shared = IAPHelper(productIds: ["SwolDevCoffee"])
     private init(productIds: Set<ProductIdentifier>) {
@@ -92,7 +94,7 @@ extension IAPHelper: SKPaymentTransactionObserver {
     func completeTransaction(_ transaction: SKPaymentTransaction) {
         if let transactionError = transaction.error as NSError?,
            transactionError.code != SKError.paymentCancelled.rawValue {
-            DataManager.shared(with: iCloudAccessManager.permission).conflictHandler.errDidOccur(err: transactionError)
+            purchaseRequestFailedHandler?(transactionError)
         }
         SKPaymentQueue.default().finishTransaction(transaction)
     }

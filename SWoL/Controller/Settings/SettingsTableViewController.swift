@@ -27,6 +27,13 @@ public class SettingsTableViewController: UITableViewController {
         iCloudTableViewCell.onOffChanged = { (onOffSwitch) in
             iCloudAccessManager.isEnabled = onOffSwitch.isOn
         }
+        IAPHelper.shared.purchaseRequestFailedHandler = { [weak self] error in
+            let alert = UIAlertController(title: "Oops!".localized(), message: error.localizedDescription, preferredStyle: .alert)
+            alert.addOkAction()
+            DispatchQueue.main.async {
+                self?.present(alert, animated: true)
+            }
+        }
     }
 
     public override func viewWillAppear(_ animated: Bool){
