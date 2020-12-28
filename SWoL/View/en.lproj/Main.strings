@@ -17,6 +17,9 @@
 /* Class = "UITextField"; placeholder = "Device IP"; ObjectID = "2xf-Qb-t4e"; */
 "2xf-Qb-t4e.placeholder" = "Device IP";
 
+/* Class = "UILabel"; text = "Buy the developer a cup of coffee"; ObjectID = "4gP-On-fE8"; */
+"4gP-On-fE8.text" = "Buy the developer a cup of coffee";
+
 /* Class = "UILabel"; text = "Subtitle"; ObjectID = "7kR-MV-6VA"; */
 "7kR-MV-6VA.text" = "Subtitle";
 
@@ -73,6 +76,9 @@
 
 /* Class = "UILabel"; text = "Footnote"; ObjectID = "rSu-fQ-hQc"; */
 "rSu-fQ-hQc.text" = "Footnote";
+
+/* Class = "UITableViewSection"; headerTitle = "Purchases"; ObjectID = "rsh-0H-aPO"; */
+"rsh-0H-aPO.headerTitle" = "Purchases";
 
 /* Class = "UITextField"; accessibilityHint = "The optional identifier to the device"; ObjectID = "vCY-ES-V5E"; */
 "vCY-ES-V5E.accessibilityHint" = "The optional identifier to the device";

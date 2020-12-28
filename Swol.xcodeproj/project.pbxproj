@@ -47,6 +47,9 @@
 		02C9862C241843570040242A /* SwolIntents.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 02A1EF9223C44DA500625723 /* SwolIntents.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		02C98631241843600040242A /* SwolBackEnd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02A7DC6B23C448C200ED7957 /* SwolBackEnd.framework */; platformFilter = ios; };
 		02C9AD922598085200397E99 /* AlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C9AD912598085200397E99 /* AlertControllerExtension.swift */; };
+		02CA0E74259A8DF200D82273 /* IAPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CA0E73259A8DF200D82273 /* IAPManager.swift */; };
+		02CA0E77259A962800D82273 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02CA0E76259A962800D82273 /* StoreKit.framework */; };
+		02CA0E7B259A997400D82273 /* ImportExportDevices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CA0E7A259A997400D82273 /* ImportExportDevices.swift */; };
 		02D5785923C03684001FA8A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D5785823C03684001FA8A5 /* AppDelegate.swift */; };
 		02D5785B23C03684001FA8A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D5785A23C03684001FA8A5 /* SceneDelegate.swift */; };
 		02D5786023C03684001FA8A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02D5785E23C03684001FA8A5 /* Main.storyboard */; };
@@ -155,7 +158,6 @@
 		02A7DC6B23C448C200ED7957 /* SwolBackEnd.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwolBackEnd.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		02A7DC6D23C448C200ED7957 /* SwolBackEnd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwolBackEnd.h; sourceTree = "<group>"; };
 		02A7DC6E23C448C200ED7957 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		02AFA4272597E16500F84D2C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = ../../Swol/View/en.lproj/Main.strings; sourceTree = "<group>"; };
 		02B575E12436726900123B10 /* DevicesMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DevicesMenuController.swift; path = Swol/Controller/Devices/DevicesMenuController.swift; sourceTree = SOURCE_ROOT; };
 		02C11C7323C389EB00920674 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
 		02C11C8923C38A6800920674 /* SWoL.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SWoL.entitlements; sourceTree = "<group>"; };
@@ -166,6 +168,11 @@
 		02C5BAE3242E790F007F57BE /* UserDefaultsNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsNames.swift; sourceTree = "<group>"; };
 		02C5BAE8242E7ADA007F57BE /* iCloudAccessManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = iCloudAccessManager.swift; path = Swol/Model/iCloudAccessManager.swift; sourceTree = SOURCE_ROOT; };
 		02C9AD912598085200397E99 /* AlertControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlertControllerExtension.swift; path = Swol/Controller/AlertControllerExtension.swift; sourceTree = SOURCE_ROOT; };
+		02CA0E73259A8DF200D82273 /* IAPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IAPManager.swift; path = Swol/Model/IAPManager.swift; sourceTree = SOURCE_ROOT; };
+		02CA0E76259A962800D82273 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		02CA0E7A259A997400D82273 /* ImportExportDevices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImportExportDevices.swift; path = Swol/Controller/Settings/ImportExportDevices.swift; sourceTree = SOURCE_ROOT; };
+		02CA0E7E259A9CD100D82273 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = ../../Swol/View/en.lproj/Main.strings; sourceTree = "<group>"; };
+		02CA0E80259A9F9800D82273 /* DebugAppPurchases.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; name = DebugAppPurchases.storekit; path = Swol/Model/DebugAppPurchases.storekit; sourceTree = SOURCE_ROOT; };
 		02D5785523C03684001FA8A5 /* Swol.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swol.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02D5785823C03684001FA8A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02D5785A23C03684001FA8A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -212,6 +219,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02CA0E77259A962800D82273 /* StoreKit.framework in Frameworks */,
 				02C98628241843570040242A /* SwolBackEnd.framework in Frameworks */,
 				02154854242CE71100EF7DDD /* CloudKit.framework in Frameworks */,
 			);
@@ -365,6 +373,7 @@
 			isa = PBXGroup;
 			children = (
 				02C5BAE1242E789D007F57BE /* SettingsTableViewController.swift */,
+				02CA0E7A259A997400D82273 /* ImportExportDevices.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -384,6 +393,7 @@
 		02C11C7223C389EB00920674 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				02CA0E76259A962800D82273 /* StoreKit.framework */,
 				02154853242CE71100EF7DDD /* CloudKit.framework */,
 				02C11C7323C389EB00920674 /* IntentsUI.framework */,
 			);
@@ -394,6 +404,8 @@
 			isa = PBXGroup;
 			children = (
 				02C5BAE8242E7ADA007F57BE /* iCloudAccessManager.swift */,
+				02CA0E73259A8DF200D82273 /* IAPManager.swift */,
+				02CA0E80259A9F9800D82273 /* DebugAppPurchases.storekit */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -657,11 +669,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02CA0E74259A8DF200D82273 /* IAPManager.swift in Sources */,
 				0289B22923C03DE300D610AB /* DevicesTableViewController.swift in Sources */,
 				02C5BAE0242E7790007F57BE /* SwitchTableViewCell.swift in Sources */,
 				02B575E22436726900123B10 /* DevicesMenuController.swift in Sources */,
 				02D5785923C03684001FA8A5 /* AppDelegate.swift in Sources */,
 				024024C123C050830065B8DD /* TextTableViewCell.swift in Sources */,
+				02CA0E7B259A997400D82273 /* ImportExportDevices.swift in Sources */,
 				02D5785B23C03684001FA8A5 /* SceneDelegate.swift in Sources */,
 				0211BAB423C4080000867893 /* StringExtension.swift in Sources */,
 				02C490E7242E665400A388A1 /* NSUserActivities.swift in Sources */,
@@ -725,7 +739,7 @@
 			children = (
 				02D5785F23C03684001FA8A5 /* Base */,
 				02290E7724369DD800E21A3C /* pt-BR */,
-				02AFA4272597E16500F84D2C /* en */,
+				02CA0E7E259A9CD100D82273 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -758,7 +772,7 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_ENTITLEMENTS = SwolIntents/SwolIntents.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = BVZY57RJZG;
 				INFOPLIST_FILE = SwolIntents/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -766,7 +780,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.2.1;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = PGF.SiriWOL.Intents;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -782,7 +796,7 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_ENTITLEMENTS = SwolIntents/SwolIntents.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = BVZY57RJZG;
 				INFOPLIST_FILE = SwolIntents/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -790,7 +804,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.2.1;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = PGF.SiriWOL.Intents;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -806,7 +820,7 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = BVZY57RJZG;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -820,7 +834,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.1;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = PGF.SiriWOLBackend;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -838,7 +852,7 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = BVZY57RJZG;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -852,7 +866,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.1;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = PGF.SiriWOLBackend;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -988,7 +1002,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SWoL/SWoL.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = BVZY57RJZG;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -999,7 +1013,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.1;
+				MARKETING_VERSION = 1.3;
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = PGF.SiriWOL;
 				PRODUCT_NAME = Swol;
@@ -1015,7 +1029,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SWoL/SWoL.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = BVZY57RJZG;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1026,7 +1040,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.1;
+				MARKETING_VERSION = 1.3;
 				"OTHER_LDFLAGS[sdk=*]" = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = PGF.SiriWOL;
 				PRODUCT_NAME = Swol;

@@ -1,0 +1,34 @@
+{
+  "products" : [
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "4D6D6C60",
+      "localizations" : [
+        {
+          "description" : "☕️ Buy the developer a cup of coffee ☕️",
+          "displayName" : "Cup of Coffee",
+          "locale" : "en_US"
+        },
+        {
+          "description" : "🫖 Doe uma xícara de chá ao desenvolvedor 🫖",
+          "displayName" : "Xícara de chá",
+          "locale" : "pt_BR"
+        }
+      ],
+      "productID" : "SwolDevCoffee",
+      "referenceName" : "Swol Developer Coffee",
+      "type" : "Consumable"
+    }
+  ],
+  "settings" : {
+
+  },
+  "subscriptionGroups" : [
+
+  ],
+  "version" : {
+    "major" : 1,
+    "minor" : 0
+  }
+}
