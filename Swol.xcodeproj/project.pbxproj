@@ -34,6 +34,7 @@
 		02A7DC8023C4494F00ED7957 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 024024BE23C048500065B8DD /* Localizable.strings */; };
 		02A7DC8823C44A2D00ED7957 /* NSUserActivities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028801B923C396D60079D8F6 /* NSUserActivities.swift */; };
 		02B575E22436726900123B10 /* DevicesMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B575E12436726900123B10 /* DevicesMenuController.swift */; };
+		02C0C9AC25ADFEE900DCF628 /* UDPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C0C9AB25ADFEE900DCF628 /* UDPClient.swift */; };
 		02C490E7242E665400A388A1 /* NSUserActivities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028801B923C396D60079D8F6 /* NSUserActivities.swift */; };
 		02C490E8242E665900A388A1 /* NSUserActivities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028801B923C396D60079D8F6 /* NSUserActivities.swift */; };
 		02C5BAE0242E7790007F57BE /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C5BADF242E7790007F57BE /* SwitchTableViewCell.swift */; };
@@ -159,6 +160,7 @@
 		02A7DC6D23C448C200ED7957 /* SwolBackEnd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwolBackEnd.h; sourceTree = "<group>"; };
 		02A7DC6E23C448C200ED7957 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02B575E12436726900123B10 /* DevicesMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DevicesMenuController.swift; path = Swol/Controller/Devices/DevicesMenuController.swift; sourceTree = SOURCE_ROOT; };
+		02C0C9AB25ADFEE900DCF628 /* UDPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDPClient.swift; sourceTree = "<group>"; };
 		02C11C7323C389EB00920674 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
 		02C11C8923C38A6800920674 /* SWoL.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SWoL.entitlements; sourceTree = "<group>"; };
 		02C11C8E23C38D5400920674 /* Device+Intents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Device+Intents.swift"; sourceTree = "<group>"; };
@@ -319,7 +321,7 @@
 		02A7DC6C23C448C200ED7957 /* SwolBackEnd */ = {
 			isa = PBXGroup;
 			children = (
-				02D5786F23C03693001FA8A5 /* Awake.swift */,
+				02C0C9AA25ADFEC700DCF628 /* Waking up */,
 				02A7DC8B23C44B3100ED7957 /* Data */,
 				02A7DC8A23C44B2400ED7957 /* Intents */,
 				020208B923C2EEF900159427 /* Model */,
@@ -376,6 +378,15 @@
 				02CA0E7A259A997400D82273 /* ImportExportDevices.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		02C0C9AA25ADFEC700DCF628 /* Waking up */ = {
+			isa = PBXGroup;
+			children = (
+				02D5786F23C03693001FA8A5 /* Awake.swift */,
+				02C0C9AB25ADFEE900DCF628 /* UDPClient.swift */,
+			);
+			path = "Waking up";
 			sourceTree = "<group>";
 		};
 		02C11C6323C3888500920674 /* Shared */ = {
@@ -657,6 +668,7 @@
 				02A7DC7A23C448D800ED7957 /* Device+CoreDataClass.swift in Sources */,
 				02E3655B242D25F60050C509 /* EntityObject.swift in Sources */,
 				02A7DC7923C448D100ED7957 /* DataManager.swift in Sources */,
+				02C0C9AC25ADFEE900DCF628 /* UDPClient.swift in Sources */,
 				02E36561242D26410050C509 /* DataFetchAnswer.swift in Sources */,
 				02A7DC7823C448CF00ED7957 /* NSPersistentContainer.swift in Sources */,
 				02E3656A242D29250050C509 /* DeviceEntity+Intents.swift in Sources */,

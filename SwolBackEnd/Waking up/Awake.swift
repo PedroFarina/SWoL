@@ -12,6 +12,8 @@ import Intents
 import os.log
 
 public class Awake {
+    private init(){
+    }
 
     private static func donateInteraction(for device: DeviceProtocol) {
         let interaction = INInteraction(intent: device.intent, response: nil)
@@ -35,10 +37,19 @@ public class Awake {
         case DeviceIncomplete(reason: Error)
     }
 
-    public static func target(device: DeviceProtocol) -> Error? {
+    public static func target(device: DeviceProtocol, usingUDP: Bool) -> Error? {
         donateInteraction(for: device)
+        if usingUDP {
+            return UDPClient.sendWakePacket(to: device)
+        } else {
+            return wakeLan(device)
+        }
+    }
+
+
+    private static func wakeLan(_ device: DeviceProtocol) -> Error? {
         guard let broadcastAddress = device.getBroadcast(),
-            let macAddress = device.mac else {
+              let macAddress = device.mac else {
             let err = NSError(domain: "Device Incomplete Error", code: Int(errSecParam), userInfo: nil)
             return WakeError.DeviceIncomplete(reason: err)
         }
@@ -86,11 +97,10 @@ public class Awake {
         }
 
         close(sock)
-
         return nil
     }
 
-    private static func createMagicPacket(mac: String) throws -> [CUnsignedChar] {
+    internal static func createMagicPacket(mac: String) throws -> [CUnsignedChar] {
         var buffer = [CUnsignedChar]()
 
         // Create header

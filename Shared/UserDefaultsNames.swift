@@ -8,4 +8,5 @@
 
 public enum UserDefaultsNames: String {
     case iCloudEnabled
+    case udpEnabled
 }
