@@ -49,7 +49,7 @@ public class SwolTabBarController: UITabBarController, ConflictHandler {
     }
 
     public override func viewDidLoad() {
-        DataManager.shared(with: iCloudAccessManager.permission).conflictHandler = self
+        DataManager.shared(with: AccessManager.cloudKitPermission).conflictHandler = self
     }
 }
 
@@ -84,7 +84,7 @@ extension CKError {
                 "To activate it, go into your device's Settings, iCloud, and sign in with your Apple ID.".localized(), preferredStyle: .alert)
 
         alert.addAction(UIAlertAction(title: "Deactivate iCloud Sync".localized(), style: .cancel, handler: { (_) in
-            iCloudAccessManager.isEnabled = false
+            AccessManager.isCloudKitEnabled = false
         }))
         alert.addAction(UIAlertAction(title: "Open Settings".localized(), style: .default, handler: { (_) in
             if let url = URL(string: UIApplication.openSettingsURLString) {

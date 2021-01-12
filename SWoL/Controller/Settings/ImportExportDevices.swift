@@ -31,7 +31,7 @@ public class ImportExportDevices {
                                                             if let name = device.name,
                                                                let address = device.address,
                                                                let mac = device.mac {
-                                                                try? DataManager.shared(with: iCloudAccessManager.permission).registerDevice(
+                                                                try? DataManager.shared(with: AccessManager.cloudKitPermission).registerDevice(
                                                                     name: name,
                                                                     address: address,
                                                                     macAddress: mac,
@@ -48,7 +48,7 @@ public class ImportExportDevices {
     public static func exportDevicesViewController() -> UIViewController {
         let jsonEncoder = JSONEncoder()
         let devicesString: String?
-        if let jsonData = try? jsonEncoder.encode(DataManager.shared(with: iCloudAccessManager.permission).codableDevices),
+        if let jsonData = try? jsonEncoder.encode(DataManager.shared(with: AccessManager.cloudKitPermission).codableDevices),
            let json = String(data: jsonData, encoding: .utf8) {
             devicesString = json
         } else {

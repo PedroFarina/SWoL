@@ -14,7 +14,7 @@ public class SettingsTableViewController: UITableViewController {
     private var deleteAlert: UIAlertController = {
         let cont = UIAlertController(title: "Are you sure?".localized(), message: "This action will delete all your devices from iCloud. It can't be undone.".localized(), preferredStyle: .alert)
         let yesAction = UIAlertAction(title: "Yes".localized(), style: .destructive) { (_) in
-            DataManager.shared(with: iCloudAccessManager.permission).deleteCloudData()
+            DataManager.shared(with: AccessManager.cloudKitPermission).deleteCloudData()
         }
         let noAction = UIAlertAction(title: "No".localized(), style: .cancel, handler: nil)
 
@@ -25,7 +25,7 @@ public class SettingsTableViewController: UITableViewController {
 
     public override func viewDidLoad() {
         iCloudTableViewCell.onOffChanged = { (onOffSwitch) in
-            iCloudAccessManager.isEnabled = onOffSwitch.isOn
+            AccessManager.isCloudKitEnabled = onOffSwitch.isOn
         }
         IAPHelper.shared.purchaseRequestFailedHandler = { [weak self] error in
             let alert = UIAlertController(title: "Oops!".localized(), message: error.localizedDescription, preferredStyle: .alert)
@@ -37,7 +37,7 @@ public class SettingsTableViewController: UITableViewController {
     }
 
     public override func viewWillAppear(_ animated: Bool){
-        iCloudTableViewCell.onOff.isOn = iCloudAccessManager.isEnabled
+        iCloudTableViewCell.onOff.isOn = AccessManager.isCloudKitEnabled
     }
 
     public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

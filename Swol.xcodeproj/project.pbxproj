@@ -41,7 +41,7 @@
 		02C5BAE4242E790F007F57BE /* UserDefaultsNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C5BAE3242E790F007F57BE /* UserDefaultsNames.swift */; };
 		02C5BAE5242E7915007F57BE /* UserDefaultsNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C5BAE3242E790F007F57BE /* UserDefaultsNames.swift */; };
 		02C5BAE6242E7916007F57BE /* UserDefaultsNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C5BAE3242E790F007F57BE /* UserDefaultsNames.swift */; };
-		02C5BAE9242E7ADA007F57BE /* iCloudAccessManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C5BAE8242E7ADA007F57BE /* iCloudAccessManager.swift */; };
+		02C5BAE9242E7ADA007F57BE /* AccessManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C5BAE8242E7ADA007F57BE /* AccessManager.swift */; };
 		02C98628241843570040242A /* SwolBackEnd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02A7DC6B23C448C200ED7957 /* SwolBackEnd.framework */; };
 		02C98629241843570040242A /* SwolBackEnd.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 02A7DC6B23C448C200ED7957 /* SwolBackEnd.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		02C9862C241843570040242A /* SwolIntents.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 02A1EF9223C44DA500625723 /* SwolIntents.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -166,7 +166,7 @@
 		02C5BADF242E7790007F57BE /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SwitchTableViewCell.swift; path = Swol/View/TableViewCells/SwitchTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		02C5BAE1242E789D007F57BE /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsTableViewController.swift; path = SWoL/Controller/Settings/SettingsTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		02C5BAE3242E790F007F57BE /* UserDefaultsNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsNames.swift; sourceTree = "<group>"; };
-		02C5BAE8242E7ADA007F57BE /* iCloudAccessManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = iCloudAccessManager.swift; path = Swol/Model/iCloudAccessManager.swift; sourceTree = SOURCE_ROOT; };
+		02C5BAE8242E7ADA007F57BE /* AccessManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AccessManager.swift; path = Swol/Model/AccessManager.swift; sourceTree = SOURCE_ROOT; };
 		02C9AD912598085200397E99 /* AlertControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlertControllerExtension.swift; path = Swol/Controller/AlertControllerExtension.swift; sourceTree = SOURCE_ROOT; };
 		02CA0E73259A8DF200D82273 /* IAPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IAPManager.swift; path = Swol/Model/IAPManager.swift; sourceTree = SOURCE_ROOT; };
 		02CA0E76259A962800D82273 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
@@ -403,7 +403,7 @@
 		02C5BAE7242E7AB9007F57BE /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				02C5BAE8242E7ADA007F57BE /* iCloudAccessManager.swift */,
+				02C5BAE8242E7ADA007F57BE /* AccessManager.swift */,
 				02CA0E73259A8DF200D82273 /* IAPManager.swift */,
 				02CA0E80259A9F9800D82273 /* DebugAppPurchases.storekit */,
 			);
@@ -681,7 +681,7 @@
 				02C490E7242E665400A388A1 /* NSUserActivities.swift in Sources */,
 				02C9AD922598085200397E99 /* AlertControllerExtension.swift in Sources */,
 				0273BAE42432A97D002173AC /* TutorialViewController.swift in Sources */,
-				02C5BAE9242E7ADA007F57BE /* iCloudAccessManager.swift in Sources */,
+				02C5BAE9242E7ADA007F57BE /* AccessManager.swift in Sources */,
 				02C5BAE4242E790F007F57BE /* UserDefaultsNames.swift in Sources */,
 				02C5BAE2242E789D007F57BE /* SettingsTableViewController.swift in Sources */,
 				02FC54D9245332720017AE8D /* Intents.intentdefinition in Sources */,

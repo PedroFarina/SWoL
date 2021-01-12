@@ -9,22 +9,22 @@
 import Foundation
 import SwolBackEnd
 
-public class iCloudAccessManager {
+public class AccessManager {
     private init() {
     }
 
     private static let userDefaults = UserDefaults.standard
-    public static var isEnabled: Bool {
+    public static var isCloudKitEnabled: Bool {
         get {
             return userDefaults.bool(forKey: UserDefaultsNames.iCloudEnabled.rawValue)
         }
         set {
             userDefaults.set(newValue, forKey: UserDefaultsNames.iCloudEnabled.rawValue)
-            _ = DataManager.shared(with: permission)
+            _ = DataManager.shared(with: cloudKitPermission)
         }
     }
 
-    public static var permission: DataPermission {
-        return isEnabled ? .Both : .CoreData
+    public static var cloudKitPermission: DataPermission {
+        return isCloudKitEnabled ? .Both : .CoreData
     }
 }

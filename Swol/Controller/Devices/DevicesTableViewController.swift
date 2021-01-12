@@ -11,7 +11,7 @@ import SwolBackEnd
 
 public class DevicesTableViewController: UITableViewController, DataWatcher {
 
-    public private(set) var devices: [DeviceProtocol] = DataManager.shared(with: iCloudAccessManager.permission).devices
+    public private(set) var devices: [DeviceProtocol] = DataManager.shared(with: AccessManager.cloudKitPermission).devices
     public private(set) var selectedDevice: DeviceProtocol?
 
     public override func viewDidLoad() {
@@ -19,10 +19,10 @@ public class DevicesTableViewController: UITableViewController, DataWatcher {
         navigationItem.leftBarButtonItem = self.editButtonItem
     }
     public override func viewWillDisappear(_ animated: Bool) {
-        DataManager.shared(with: iCloudAccessManager.permission).removeAsWatcher(self)
+        DataManager.shared(with: AccessManager.cloudKitPermission).removeAsWatcher(self)
     }
     public override func viewWillAppear(_ animated: Bool) {
-        DataManager.shared(with: iCloudAccessManager.permission).addAsWatcher(self)
+        DataManager.shared(with: AccessManager.cloudKitPermission).addAsWatcher(self)
         updateData()
     }
 
@@ -31,7 +31,7 @@ public class DevicesTableViewController: UITableViewController, DataWatcher {
     }
 
     private func updateData() {
-        devices = DataManager.shared(with: iCloudAccessManager.permission).devices
+        devices = DataManager.shared(with: AccessManager.cloudKitPermission).devices
         tableView.reloadData()
     }
 
@@ -102,7 +102,7 @@ public class DevicesTableViewController: UITableViewController, DataWatcher {
         let cont = UIAlertController(title: "Deletion confirmation".localized(), message: "Do you want to delete ".localized() + (device.name ?? "John".localized()), preferredStyle: .alert)
         let yes = UIAlertAction(title: "Yes".localized(), style: .destructive) { (_) in
             do {
-                try DataManager.shared(with: iCloudAccessManager.permission).removeDevice(device)
+                try DataManager.shared(with: AccessManager.cloudKitPermission).removeDevice(device)
             } catch let err {
                 DispatchQueue.main.async {
                     let error = UIAlertController(title: "Error!".localized(), message: err.localizedDescription, preferredStyle: .alert)
