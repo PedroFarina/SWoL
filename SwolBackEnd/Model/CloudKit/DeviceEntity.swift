@@ -13,6 +13,7 @@ public class DeviceEntity: NSObject, EntityObject, DeviceProtocol {
     public private(set) var record: CKRecord
 
     public internal(set) var _address: DataProperty<String>
+    public internal(set) var _externalAddress: DataProperty<String>
     public internal(set) var _mac: DataProperty<String>
     public internal(set) var _name: DataProperty<String>
     public internal(set) var _port: DataProperty<Int64>
@@ -23,6 +24,7 @@ public class DeviceEntity: NSObject, EntityObject, DeviceProtocol {
         _mac = DataProperty(record: record, key: "mac")
         _name = DataProperty(record: record, key: "name")
         _port = DataProperty(record: record, key: "port")
+        _externalAddress = DataProperty(record: record, key: "externalAddress")
         super.init()
     }
 
@@ -41,6 +43,9 @@ public class DeviceEntity: NSObject, EntityObject, DeviceProtocol {
 
     public var address: String? {
         return _address.value
+    }
+    public var externalAddress: String? {
+        return _externalAddress.value
     }
     public var mac: String? {
         return _mac.value

@@ -48,7 +48,7 @@ public class Awake {
 
 
     private static func wakeLan(_ device: DeviceProtocol) -> Error? {
-        guard let broadcastAddress = device.getBroadcast(),
+        guard let address = device.address,
               let macAddress = device.mac else {
             let err = NSError(domain: "Device Incomplete Error", code: Int(errSecParam), userInfo: nil)
             return WakeError.DeviceIncomplete(reason: err)
@@ -59,7 +59,7 @@ public class Awake {
         var target = sockaddr_in()
 
         target.sin_family = sa_family_t(AF_INET)
-        target.sin_addr.s_addr = inet_addr(broadcastAddress)
+        target.sin_addr.s_addr = inet_addr(address)
 
         let isLittleEndian = Int(OSHostByteOrder()) == OSLittleEndian
         target.sin_port = isLittleEndian ? _OSSwapInt16(port) : port

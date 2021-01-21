@@ -120,8 +120,50 @@
                                             <outlet property="txtField" destination="2xf-Qb-t4e" id="Mly-hj-evN"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="KXk-6r-Wta" customClass="TextTableViewCell" customModule="Swol" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="ym2-pk-d5Y" style="IBUITableViewCellStyleDefault" id="YaD-ty-DM9" customClass="SwitchTableViewCell" customModule="Swol" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="210.33333206176758" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YaD-ty-DM9" id="v8q-kJ-Ef5">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Configured for external WOL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ym2-pk-d5Y">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="DFS-FZ-XMS" customClass="TextTableViewCell" customModule="Swol" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="253.83333206176758" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DFS-FZ-XMS" id="d2a-bi-fcA">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="External IP" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cSK-8j-2T6">
+                                                    <rect key="frame" x="20" y="11" width="394" height="22"/>
+                                                    <accessibility key="accessibilityConfiguration" hint="The IP address of the device" label="Device IP"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="cSK-8j-2T6" secondAttribute="trailing" id="EQx-I5-Dri"/>
+                                                <constraint firstItem="cSK-8j-2T6" firstAttribute="top" secondItem="d2a-bi-fcA" secondAttribute="topMargin" id="Ty3-TP-zKq"/>
+                                                <constraint firstItem="cSK-8j-2T6" firstAttribute="leading" secondItem="d2a-bi-fcA" secondAttribute="leading" constant="20" symbolic="YES" id="XGO-q6-Uou"/>
+                                                <constraint firstItem="cSK-8j-2T6" firstAttribute="bottom" secondItem="d2a-bi-fcA" secondAttribute="bottomMargin" id="Zdz-3m-t4k"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="txtField" destination="cSK-8j-2T6" id="BHh-zq-hBS"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="KXk-6r-Wta" customClass="TextTableViewCell" customModule="Swol" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="297.33333206176758" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KXk-6r-Wta" id="7od-ZV-LI5">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -146,7 +188,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="9GK-Mi-oFx" customClass="TextTableViewCell" customModule="Swol" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="253.83333206176758" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="340.83333206176758" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9GK-Mi-oFx" id="X1c-9b-ddN">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -171,7 +213,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="rSu-fQ-hQc" style="IBUITableViewCellStyleDefault" id="pEF-1w-mvG">
-                                        <rect key="frame" x="0.0" y="297.33333206176758" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="384.33333206176758" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pEF-1w-mvG" id="ILH-Vg-Ysj">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>

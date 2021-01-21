@@ -28,7 +28,7 @@ public class AccessManager {
         return isCloudKitEnabled ? .Both : .CoreData
     }
 
-    public static var udpEnabled: Bool {
+    public static var isUDPEnabled: Bool {
         get {
             return userDefaults.bool(forKey: UserDefaultsNames.udpEnabled.rawValue)
         }

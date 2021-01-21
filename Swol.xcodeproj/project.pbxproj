@@ -46,7 +46,7 @@
 		02C98628241843570040242A /* SwolBackEnd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02A7DC6B23C448C200ED7957 /* SwolBackEnd.framework */; };
 		02C98629241843570040242A /* SwolBackEnd.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 02A7DC6B23C448C200ED7957 /* SwolBackEnd.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		02C9862C241843570040242A /* SwolIntents.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 02A1EF9223C44DA500625723 /* SwolIntents.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		02C98631241843600040242A /* SwolBackEnd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02A7DC6B23C448C200ED7957 /* SwolBackEnd.framework */; platformFilter = ios; };
+		02C98631241843600040242A /* SwolBackEnd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02A7DC6B23C448C200ED7957 /* SwolBackEnd.framework */; };
 		02C9AD922598085200397E99 /* AlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C9AD912598085200397E99 /* AlertControllerExtension.swift */; };
 		02CA0E74259A8DF200D82273 /* IAPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CA0E73259A8DF200D82273 /* IAPManager.swift */; };
 		02CA0E77259A962800D82273 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02CA0E76259A962800D82273 /* StoreKit.framework */; };
@@ -195,10 +195,10 @@
 		02E3656B242D29690050C509 /* CloudKitDataConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitDataConnector.swift; sourceTree = "<group>"; };
 		02E3656D242D29FA0050C509 /* CloudKitController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitController.swift; sourceTree = "<group>"; };
 		02E3656F242D36C60050C509 /* DataProtocols+Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataProtocols+Enums.swift"; sourceTree = "<group>"; };
+		02E9549B25BA263C00167AB9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Intents.strings; sourceTree = "<group>"; };
+		02E9549F25BA26B800167AB9 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Intents.strings"; sourceTree = "<group>"; };
 		02FC54D82452234C0017AE8D /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Tutorial.strings"; sourceTree = "<group>"; };
 		02FC54DC245332720017AE8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; name = Base; path = Base.lproj/Intents.intentdefinition; sourceTree = "<group>"; };
-		02FC54DF2453333B0017AE8D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Intents.strings; sourceTree = "<group>"; };
-		02FC54E12453333C0017AE8D /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Intents.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -719,7 +719,6 @@
 		};
 		02C98634241843600040242A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			platformFilter = ios;
 			target = 02A7DC6A23C448C200ED7957 /* SwolBackEnd */;
 			targetProxy = 02C98633241843600040242A /* PBXContainerItemProxy */;
 		};
@@ -769,8 +768,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				02FC54DC245332720017AE8D /* Base */,
-				02FC54DF2453333B0017AE8D /* en */,
-				02FC54E12453333C0017AE8D /* pt-BR */,
+				02E9549B25BA263C00167AB9 /* en */,
+				02E9549F25BA26B800167AB9 /* pt-BR */,
 			);
 			name = Intents.intentdefinition;
 			sourceTree = "<group>";

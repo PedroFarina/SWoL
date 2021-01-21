@@ -1,6 +1,12 @@
 "1rS7KC" = "Name";
 
+"3T6a9n" = "Use External Address";
+
+"3y8ra3" = "false";
+
 "7WL1q6" = "Packet successfully sent to ${address}.";
+
+"BsAan8" = "Send a packet to its address";
 
 "HDXdkP" = "${name} could not be found.";
 
@@ -10,13 +16,15 @@
 
 "JkTGSC" = "Sorry, could not find ${name}.";
 
+"JzecDr" = "Start ${name} up";
+
 "MuS6He" = "Sorry, could not find ${name}.";
 
 "UxkjQs" = "Address";
 
-"Wtjez8" = "Send a packet to its address";
+"V8mu5s" = "Use external address?";
 
-"gfwkjp" = "Start ${name} up";
+"bMJT5i" = "Send a packet to its internal address";
 
 "hEUn8Z" = "Start device";
 
@@ -24,9 +32,13 @@
 
 "mGG9LN" = "Unable to reach ${address}.";
 
+"neKrkp" = "Start ${name} up";
+
 "ryua6J" = "Start ${name} up";
 
 "sTqlDP" = "Name";
+
+"tP5QU6" = "true";
 
 "v4woRe" = "Wake a device";
 

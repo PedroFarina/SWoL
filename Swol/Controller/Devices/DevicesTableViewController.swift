@@ -124,9 +124,9 @@ public class DevicesTableViewController: UITableViewController, DataWatcher {
     }
 
     private func wakeAction(on device: DeviceProtocol) {
-        let cont = UIAlertController(title: "Waking confirmation".localized(), message: "Do you want to wake ".localized() + (device.name ?? "John") + "?", preferredStyle: .alert)
+        let cont = UIAlertController(title: "Waking confirmation".localized(), message: "Do you want to wake ".localized() + (device.name ?? "John".localized()) + "?", preferredStyle: .alert)
         let yes = UIAlertAction(title: "Yes".localized(), style: .default) { (_) in
-            if let err = Awake.target(device: device) {
+            if let err = Awake.target(device: device, usingUDP: false) {
                 DispatchQueue.main.async {
                     var message = err.localizedDescription
                     if let wakeErr = err as? Awake.WakeError {
@@ -147,7 +147,7 @@ public class DevicesTableViewController: UITableViewController, DataWatcher {
                 }
             } else {
                 DispatchQueue.main.async {
-                    let success = UIAlertController(title: "Success".localized(), message: "Packet sent to ".localized() + (device.getBroadcast() ?? ""), preferredStyle: .alert)
+                    let success = UIAlertController(title: "Success".localized(), message: "Packet sent to ".localized() + (device.address ?? ""), preferredStyle: .alert)
                     success.addOkAction()
                     self.parent?.present(success, animated: true)
                 }
