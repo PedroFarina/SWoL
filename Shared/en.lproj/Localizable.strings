@@ -34,6 +34,7 @@
 "Do you want to delete " = "Do you want to delete ";
 "Couldn't convert device to send to Cloud" = "Couldn't convert device to send to Cloud";
 "Could not convert cloud data to local device" = "Could not convert cloud data to local device";
+"Start up" = "Start up";
 "Start up device" = "Start up device";
 "Start up a device" = "Start up a device";
 "This action will delete all your devices from iCloud. It can't be undone." = "This action will delete all your devices from iCloud. It can't be undone.";

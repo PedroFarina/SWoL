@@ -19,16 +19,16 @@ public class WakeDeviceIntentHandler: NSObject, WakeDeviceIntentHandling {
         let usesUDP = (intent.useExternalAddress ?? 0) == true
 
         let userActivity = NSUserActivity(activityType: NSUserActivity.wakeDeviceActivityType)
-        userActivity.title = "Start up a device".localized()
+        userActivity.title = "Start up".localized() + " \(device.name ?? "")"
         userActivity.suggestedInvocationPhrase = "Start up device".localized()
-        userActivity.persistentIdentifier = NSUserActivity.wakeDeviceActivityType
+        userActivity.isEligibleForPrediction = true
         userActivity.isEligibleForSearch = true
 
         let response: WakeDeviceIntentResponse
         if let deviceName = device.name,
-           let address = usesUDP ? device.address : device.externalAddress {
+           let address = usesUDP ? device.externalAddress : device.address {
+            userActivity.persistentIdentifier = device.mac
             userActivity.addUserInfoEntries(from: [NSUserActivity.ActivityKeys.name.rawValue: deviceName])
-
             if Awake.target(device: device, usingUDP: usesUDP) != nil {
                 response = WakeDeviceIntentResponse.failureAddress(name: deviceName, address: address)
             } else {

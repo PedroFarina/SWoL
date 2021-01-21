@@ -70,7 +70,7 @@
 		02E561CF25BA2A3000ECB953 /* AddingDeviceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E561CE25BA2A3000ECB953 /* AddingDeviceTableViewController.swift */; };
 		02FC54D9245332720017AE8D /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 02FC54DD245332720017AE8D /* Intents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
 		02FC54DA245332720017AE8D /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 02FC54DD245332720017AE8D /* Intents.intentdefinition */; };
-		02FC54DB245332720017AE8D /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 02FC54DD245332720017AE8D /* Intents.intentdefinition */; settings = {ATTRIBUTES = (project_codegen, ); }; };
+		02FC54DB245332720017AE8D /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 02FC54DD245332720017AE8D /* Intents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
