@@ -27,13 +27,4 @@ public class AccessManager {
     public static var cloudKitPermission: DataPermission {
         return isCloudKitEnabled ? .Both : .CoreData
     }
-
-    public static var isUDPEnabled: Bool {
-        get {
-            return userDefaults.bool(forKey: UserDefaultsNames.udpEnabled.rawValue)
-        }
-        set {
-            userDefaults.set(newValue, forKey: UserDefaultsNames.udpEnabled.rawValue)
-        }
-    }
 }

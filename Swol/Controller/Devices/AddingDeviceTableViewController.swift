@@ -9,7 +9,7 @@
 import UIKit
 import SwolBackEnd
 
-public class AddingDeviceTableViewController: UITableViewController, UICollectionViewDelegateFlowLayout {
+public class AddingDeviceTableViewController: UITableViewController {
 
     public var mockTint: UIColor = {
         if #available(iOS 13, *) {
