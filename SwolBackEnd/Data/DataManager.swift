@@ -80,8 +80,11 @@ public class DataManager: DataSynchronizer {
         ckCopy.append(contentsOf: cloudKitDataController.devices)
         cdCopy = []
         cdCopy.append(contentsOf: coreDataController.devices)
-        for i in 0 ..< min(ckCopy.count, cdCopy.count) {
-            if ckCopy[i] <> cdCopy[i] {
+        for cdDevice in cdCopy {
+            guard let ckDevice = ckCopy.first(where: { $0.cloudID == cdDevice.cloudID }) else {
+                continue
+            }
+            if cdDevice <> ckDevice {
                 conflictHandler.chooseVersion { (version) in
                     if version == .Local {
                         self.cloudKitDataController.overrideDevices(with: cdCopy)

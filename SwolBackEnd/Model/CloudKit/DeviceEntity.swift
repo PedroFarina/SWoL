@@ -66,10 +66,10 @@ infix operator <>
 extension DeviceEntity {
     public static func <>(left: DeviceEntity, right: Device) -> Bool {
         return (left.address != right.address) || (left.mac != right.mac) || (left.name != right.name) ||
-            (left.port != right.port) || (left.cloudID != right.cloudID)
+            (left.port != right.port) || (left.cloudID != right.cloudID) || (left.externalAddress != right.externalAddress)
     }
     public static func <>(left: Device, right: DeviceEntity) -> Bool {
         return (left.address != right.address) || (left.mac != right.mac) || (left.name != right.name) ||
-            (left.port != right.port) || (left.cloudID != right.cloudID)
+            (left.port != right.port) || (left.cloudID != right.cloudID) || (left.externalAddress != right.externalAddress)
     }
 }
