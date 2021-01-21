@@ -155,7 +155,7 @@ public class DevicesTableViewController: UITableViewController, DataWatcher {
         let cont = UIAlertController(title: "Waking confirmation".localized(), message: "Do you want to wake ".localized() + (device.name ?? "John".localized()) + "?", preferredStyle: .alert)
         let yes = UIAlertAction(title: "Yes".localized(), style: .default) { (_) in
             if (device.externalAddress) != nil {
-                let cont = UIAlertController(title: "Where to?".localized(), message: "What IP you want to wake up?", preferredStyle: .alert)
+                let cont = UIAlertController(title: "Where to?".localized(), message: "To which IP do you want to send the message?".localized(), preferredStyle: .alert)
                 cont.addAction(UIAlertAction(title: "Internal".localized(), style: .default, handler: { (_) in
                     wakeDevice(device: device, usingUDP: false)
                 }))

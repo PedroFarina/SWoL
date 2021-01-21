@@ -143,6 +143,7 @@
 		02154853242CE71100EF7DDD /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		0218352C242E8DC700C8D8AA /* SwolTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SwolTabBarController.swift; path = Swol/Controller/SwolTabBarController.swift; sourceTree = SOURCE_ROOT; };
 		02290E7724369DD800E21A3C /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
+		023D707125BA43180062FC6B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = ../../Swol/View/en.lproj/Main.strings; sourceTree = "<group>"; };
 		024024BD23C048500065B8DD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		024024C023C050830065B8DD /* TextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
 		024024C223C050D70065B8DD /* TextTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextTableViewCell.xib; sourceTree = "<group>"; };
@@ -173,7 +174,6 @@
 		02CA0E73259A8DF200D82273 /* IAPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IAPManager.swift; path = Swol/Model/IAPManager.swift; sourceTree = SOURCE_ROOT; };
 		02CA0E76259A962800D82273 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		02CA0E7A259A997400D82273 /* ImportExportDevices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImportExportDevices.swift; path = Swol/Controller/Settings/ImportExportDevices.swift; sourceTree = SOURCE_ROOT; };
-		02CA0E7E259A9CD100D82273 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = ../../Swol/View/en.lproj/Main.strings; sourceTree = "<group>"; };
 		02CA0E80259A9F9800D82273 /* DebugAppPurchases.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; name = DebugAppPurchases.storekit; path = Swol/Model/DebugAppPurchases.storekit; sourceTree = SOURCE_ROOT; };
 		02D5785523C03684001FA8A5 /* Swol.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swol.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02D5785823C03684001FA8A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -750,7 +750,7 @@
 			children = (
 				02D5785F23C03684001FA8A5 /* Base */,
 				02290E7724369DD800E21A3C /* pt-BR */,
-				02CA0E7E259A9CD100D82273 /* en */,
+				023D707125BA43180062FC6B /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

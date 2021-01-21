@@ -99,4 +99,13 @@
 "rsh-0H-aPO.headerTitle" = "Compras";
 
 /* Class = "UILabel"; text = "Buy the developer a cup of coffe"; ObjectID = "4gP-On-fE8"; */
-"4gP-On-fE8.text" = "Doe uma xícara de chá ao dev";
+"4gP-On-fE8.text" = "Doe uma xícara de chá para o desenvolvedor";
+
+/* Class = "UITextField"; accessibilityHint = "The IP address of the device"; ObjectID = "cSK-8j-2T6"; */
+"cSK-8j-2T6.accessibilityHint" = "O endereço externo de IP do dispositivo.";
+
+/* Class = "UITextField"; accessibilityLabel = "External IP (Optional)"; ObjectID = "cSK-8j-2T6"; */
+"cSK-8j-2T6.accessibilityLabel" = "IP Externo (Opcional)";
+
+/* Class = "UITextField"; placeholder = "External IP (Optional)"; ObjectID = "cSK-8j-2T6"; */
+"cSK-8j-2T6.placeholder" = "IP Externo (Opcional)";

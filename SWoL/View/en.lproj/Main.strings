@@ -50,6 +50,15 @@
 /* Class = "UITableViewSection"; headerTitle = "iCloud Settings"; ObjectID = "bfB-Tl-xzl"; */
 "bfB-Tl-xzl.headerTitle" = "iCloud Settings";
 
+/* Class = "UITextField"; accessibilityHint = "The external IP address of the device"; ObjectID = "cSK-8j-2T6"; */
+"cSK-8j-2T6.accessibilityHint" = "The external IP address of the device";
+
+/* Class = "UITextField"; accessibilityLabel = "External IP (Optional)"; ObjectID = "cSK-8j-2T6"; */
+"cSK-8j-2T6.accessibilityLabel" = "External IP (Optional)";
+
+/* Class = "UITextField"; placeholder = "External IP (Optional)"; ObjectID = "cSK-8j-2T6"; */
+"cSK-8j-2T6.placeholder" = "External IP (Optional)";
+
 /* Class = "UILabel"; text = "iCloud Synchronization"; ObjectID = "dax-Ki-isc"; */
 "dax-Ki-isc.text" = "iCloud Synchronization";
 

@@ -66,3 +66,7 @@
 "Successfully imported your devices" = "Successfully imported your devices.";
 "Unable to proccess your order." = "Unable to proccess your order.";
 "Unable to import devices." = "Unable to import devices.";
+"Where to?" = "Where to?";
+"To which IP do you want to send the message?" = "To which IP do you want to send the message?";
+"Internal" = "Internal";
+"External" = "External";
