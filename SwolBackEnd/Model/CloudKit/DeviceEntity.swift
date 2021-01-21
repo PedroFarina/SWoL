@@ -28,9 +28,10 @@ public class DeviceEntity: NSObject, EntityObject, DeviceProtocol {
         super.init()
     }
 
-    internal convenience init(id: UUID, address: String, mac: String, name: String, port: Int64) {
+    internal convenience init(id: UUID, address: String, externalAddress: String?, mac: String, name: String, port: Int64) {
         self.init(id)
         _address.value = address
+        _externalAddress.value = externalAddress
         _mac.value = mac
         _name.value = name
         _port.value = port
@@ -54,22 +55,10 @@ public class DeviceEntity: NSObject, EntityObject, DeviceProtocol {
         return _name.value
     }
     public var port: Int32 {
-        return Int32(_port.value)
+        return Int32(_port.value ?? 9)
     }
     public var cloudID: UUID? {
         return UUID(uuidString: record.recordID.recordName)
-    }
-
-    public func getBroadcast() -> String? {
-        let address = _address.value
-        var newAddress = ""
-        let groups = address.components(separatedBy: ".")
-
-        for i in 0..<min(3, groups.count) {
-            newAddress += "\(groups[i])."
-        }
-        newAddress += "255"
-        return newAddress
     }
 }
 

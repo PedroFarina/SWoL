@@ -36,11 +36,11 @@ internal class CloudKitDataController {
     var devices: [DeviceEntity] = []
 
     //MARK: CloudKit Devices
-    public func registerDevice(id: UUID, name: String?, address: String, macAddress: String, port: Int32) {
+    public func registerDevice(id: UUID, name: String?, address: String, externalAddress: String?, macAddress: String, port: Int32) {
         let realName = name ?? ""
         let finalName = realName.isEmpty ? "John".localized() : realName
 
-        let device = DeviceEntity(id: id, address: address, mac: macAddress, name: finalName, port: Int64(port))
+        let device = DeviceEntity(id: id, address: address, externalAddress: externalAddress, mac: macAddress, name: finalName, port: Int64(port))
 
         devices.append(device)
         saveData(entitiesToSave: [device])
@@ -49,7 +49,7 @@ internal class CloudKitDataController {
         guard let id = device.cloudID, let name = device.name, let address = device.address, let mac = device.mac else {
             throw CDError.FailedToParseObject(reason: "Couldn't convert device to send to Cloud".localized())
         }
-        registerDevice(id: id, name: name, address: address, macAddress: mac, port: device.port)
+        registerDevice(id: id, name: name, address: address, externalAddress: device.externalAddress, macAddress: mac, port: device.port)
     }
 
     public func findDeviceBy(id: UUID) -> DeviceEntity? {
@@ -59,11 +59,13 @@ internal class CloudKitDataController {
     }
 
     public func editDevice(_ device:DeviceEntity, newName name: String?, newAddress address: String?,
+                           newExternalAddress externalAddress: String?,
                            newMacAddress macAddress: String?,
                            newPort port: Int32?) {
         var modified: Bool = false
         let oldName = device.name
         let oldAddress = device.address
+        let oldExternalAddress = device.externalAddress
         let oldMac = device.mac
         let oldPort = device.port
 
@@ -82,6 +84,10 @@ internal class CloudKitDataController {
         }
         if let port = port, port != oldPort {
             device._port.value = Int64(port)
+            modified = true
+        }
+        if oldExternalAddress != externalAddress {
+            device._externalAddress.value = externalAddress
             modified = true
         }
 
@@ -115,7 +121,7 @@ internal class CloudKitDataController {
                 oldDevice._port.value = Int64(device.port)
                 entitiesToSave.append(oldDevice)
             } else if let id = device.cloudID, let address = device.address, let mac = device.mac, let name = device.name {
-                let newDevice = DeviceEntity(id: id, address: address, mac: mac, name: name, port: Int64(device.port))
+                let newDevice = DeviceEntity(id: id, address: address, externalAddress: device.externalAddress, mac: mac, name: name, port: Int64(device.port))
                 entitiesToSave.append(newDevice)
             }
         }

@@ -36,7 +36,7 @@ internal class CoreDataController {
     private lazy var context:NSManagedObjectContext = persistentContainer.viewContext
 
     //MARK: Core Data Devices
-    public func registerDevice(id: UUID = UUID(), name: String, address: String, macAddress: String, port: Int32?) throws -> Device {
+    public func registerDevice(id: UUID = UUID(), name: String, address: String, externalAddress: String?, macAddress: String, port: Int32?) throws -> Device {
         let newAddress = address.isEmpty ? nil : address
         let newMacAddress = macAddress.isEmpty ? nil : macAddress
         guard let device = NSEntityDescription.insertNewObject(forEntityName: "Device", into: context)
@@ -45,6 +45,7 @@ internal class CoreDataController {
         }
         device.name = name
         device.address = newAddress
+        device.externalAddress = externalAddress
         device.mac = newMacAddress
         device.cloudID = id
         if let port = port {
@@ -61,17 +62,22 @@ internal class CoreDataController {
         }
     }
     public func registerDevice(_ device: DeviceEntity) throws -> Device {
-        guard let id = UUID(uuidString: device.record.recordID.recordName) else {
+        guard let id = UUID(uuidString: device.record.recordID.recordName),
+              let name = device.name,
+              let address = device.address,
+              let macAddress = device.mac else {
             throw CDError.FailedToParseObject(reason: "Could not convert cloud data to local device".localized())
         }
-        return try registerDevice(id: id, name: device._name.value, address: device._address.value, macAddress: device._mac.value, port: device.port)
+        return try registerDevice(id: id, name: name, address: address, externalAddress: device.externalAddress , macAddress: macAddress, port: device.port)
     }
 
     public func editDevice(_ device:Device, newName name: String?, newAddress address: String?,
+                           newExternalAddress externalAddress: String?,
                            newMacAddress macAddress: String?,
                            newPort port: Int32?) throws {
         var modified: Bool = false
         let oldName = device.name
+        let oldExternalAddress = device.externalAddress
         let oldAddress = device.address
         let oldMac = device.mac
         let oldPort = device.port
@@ -93,12 +99,17 @@ internal class CoreDataController {
             device.port = port
             modified = true
         }
+        if externalAddress != oldExternalAddress {
+            device.externalAddress = externalAddress
+            modified = true
+        }
 
         if modified {
             do {
                 try saveContext()
             } catch {
                 device.address = oldAddress
+                device.externalAddress = oldExternalAddress
                 device.mac = oldMac
                 device.port = oldPort
                 throw CDError.FailedToSaveContext(reason: "Could not edit device.".localized())

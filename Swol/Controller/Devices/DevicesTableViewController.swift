@@ -35,7 +35,6 @@ public class DevicesTableViewController: UITableViewController, DataWatcher {
         tableView.reloadData()
     }
 
-
     public override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }

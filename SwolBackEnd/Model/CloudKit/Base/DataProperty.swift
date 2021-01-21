@@ -11,12 +11,9 @@ import CloudKit
 public class DataProperty<T: Equatable> {
     private let record: CKRecord
     private let key: String
-    public var value: T {
+    public var value: T? {
         get {
-            guard let val = record.value(forKey: key) as? T else {
-                fatalError("Não foi possível converter a data para a tipagem indicada.")
-            }
-            return val
+            return record.value(forKey: key) as? T
         }
         set {
             record.setValue(newValue, forKey: key)

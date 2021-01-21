@@ -53,10 +53,8 @@
 		02CA0E7B259A997400D82273 /* ImportExportDevices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CA0E7A259A997400D82273 /* ImportExportDevices.swift */; };
 		02D5785923C03684001FA8A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D5785823C03684001FA8A5 /* AppDelegate.swift */; };
 		02D5785B23C03684001FA8A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D5785A23C03684001FA8A5 /* SceneDelegate.swift */; };
-		02D5786023C03684001FA8A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02D5785E23C03684001FA8A5 /* Main.storyboard */; };
 		02D5786523C03685001FA8A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02D5786423C03685001FA8A5 /* Assets.xcassets */; };
 		02D5786823C03685001FA8A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02D5786623C03685001FA8A5 /* LaunchScreen.storyboard */; };
-		02D8486D23C057ED00675A14 /* AddingDeviceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8486C23C057ED00675A14 /* AddingDeviceTableViewController.swift */; };
 		02E36552242CEAD80050C509 /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E36551242CEAD80050C509 /* CoreDataController.swift */; };
 		02E36554242CEC0B0050C509 /* DeviceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E36553242CEC0B0050C509 /* DeviceProtocol.swift */; };
 		02E3655B242D25F60050C509 /* EntityObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E3655A242D25F60050C509 /* EntityObject.swift */; };
@@ -68,6 +66,8 @@
 		02E3656C242D29690050C509 /* CloudKitDataConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E3656B242D29690050C509 /* CloudKitDataConnector.swift */; };
 		02E3656E242D29FA0050C509 /* CloudKitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E3656D242D29FA0050C509 /* CloudKitController.swift */; };
 		02E36570242D36C60050C509 /* DataProtocols+Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E3656F242D36C60050C509 /* DataProtocols+Enums.swift */; };
+		02E561CB25BA2A1700ECB953 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02D5785E23C03684001FA8A5 /* Main.storyboard */; };
+		02E561CF25BA2A3000ECB953 /* AddingDeviceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E561CE25BA2A3000ECB953 /* AddingDeviceTableViewController.swift */; };
 		02FC54D9245332720017AE8D /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 02FC54DD245332720017AE8D /* Intents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
 		02FC54DA245332720017AE8D /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 02FC54DD245332720017AE8D /* Intents.intentdefinition */; };
 		02FC54DB245332720017AE8D /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 02FC54DD245332720017AE8D /* Intents.intentdefinition */; settings = {ATTRIBUTES = (project_codegen, ); }; };
@@ -183,7 +183,6 @@
 		02D5786723C03685001FA8A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		02D5786923C03685001FA8A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02D5786F23C03693001FA8A5 /* Awake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Awake.swift; sourceTree = "<group>"; };
-		02D8486C23C057ED00675A14 /* AddingDeviceTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingDeviceTableViewController.swift; sourceTree = "<group>"; };
 		02E36551242CEAD80050C509 /* CoreDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
 		02E36553242CEC0B0050C509 /* DeviceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceProtocol.swift; sourceTree = "<group>"; };
 		02E3655A242D25F60050C509 /* EntityObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityObject.swift; sourceTree = "<group>"; };
@@ -195,6 +194,7 @@
 		02E3656B242D29690050C509 /* CloudKitDataConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitDataConnector.swift; sourceTree = "<group>"; };
 		02E3656D242D29FA0050C509 /* CloudKitController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitController.swift; sourceTree = "<group>"; };
 		02E3656F242D36C60050C509 /* DataProtocols+Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataProtocols+Enums.swift"; sourceTree = "<group>"; };
+		02E561CE25BA2A3000ECB953 /* AddingDeviceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddingDeviceTableViewController.swift; path = Swol/Controller/Devices/AddingDeviceTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		02E9549B25BA263C00167AB9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Intents.strings; sourceTree = "<group>"; };
 		02E9549F25BA26B800167AB9 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Intents.strings"; sourceTree = "<group>"; };
 		02FC54D82452234C0017AE8D /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Tutorial.strings"; sourceTree = "<group>"; };
@@ -366,7 +366,7 @@
 			children = (
 				02B575E12436726900123B10 /* DevicesMenuController.swift */,
 				0289B22823C03DE300D610AB /* DevicesTableViewController.swift */,
-				02D8486C23C057ED00675A14 /* AddingDeviceTableViewController.swift */,
+				02E561CE25BA2A3000ECB953 /* AddingDeviceTableViewController.swift */,
 			);
 			path = Devices;
 			sourceTree = "<group>";
@@ -624,9 +624,9 @@
 				02D5786823C03685001FA8A5 /* LaunchScreen.storyboard in Resources */,
 				024024C323C050D70065B8DD /* TextTableViewCell.xib in Resources */,
 				024024BC23C048500065B8DD /* Localizable.strings in Resources */,
+				02E561CB25BA2A1700ECB953 /* Main.storyboard in Resources */,
 				02D5786523C03685001FA8A5 /* Assets.xcassets in Resources */,
 				0202D7552432CEC7008A3448 /* Tutorial.storyboard in Resources */,
-				02D5786023C03684001FA8A5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -682,6 +682,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				02CA0E74259A8DF200D82273 /* IAPManager.swift in Sources */,
+				02E561CF25BA2A3000ECB953 /* AddingDeviceTableViewController.swift in Sources */,
 				0289B22923C03DE300D610AB /* DevicesTableViewController.swift in Sources */,
 				02C5BAE0242E7790007F57BE /* SwitchTableViewCell.swift in Sources */,
 				02B575E22436726900123B10 /* DevicesMenuController.swift in Sources */,
@@ -699,7 +700,6 @@
 				02FC54D9245332720017AE8D /* Intents.intentdefinition in Sources */,
 				0218352D242E8DC700C8D8AA /* SwolTabBarController.swift in Sources */,
 				02942E5523C3F4AB00EB2148 /* DataModel.xcdatamodeld in Sources */,
-				02D8486D23C057ED00675A14 /* AddingDeviceTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

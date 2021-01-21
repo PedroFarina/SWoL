@@ -132,26 +132,31 @@ public class DataManager: DataSynchronizer {
         }
     }
 
-    public func registerDevice(name: String, address: String, macAddress: String, port: Int32?) throws {
+    public func registerDevice(name: String, address: String, externalAddress: String?, macAddress: String, port: Int32?) throws {
         var device: Device?
         let newName = name.isEmpty ? "John".localized() : name
         if hasPermissionTo(access: .CoreData) {
-            device = try coreDataController.registerDevice(name: newName, address: address, macAddress: macAddress, port: port)
+            device = try coreDataController.registerDevice(name: newName, address: address, externalAddress: externalAddress, macAddress: macAddress, port: port)
         }
         if hasPermissionTo(access: .CloudKit) {
             cloudKitDataController.registerDevice(id: device?.cloudID ?? UUID(),
-                                                  name: newName, address: address, macAddress: macAddress, port: port ?? 9)
+                                                  name: newName,
+                                                  address: address,
+                                                  externalAddress: externalAddress,
+                                                  macAddress: macAddress,
+                                                  port: port ?? 9)
         }
     }
 
     public func editDevice(_ device:DeviceProtocol, newName name: String?, newAddress address: String?,
+                           newExternalAddress externalAddress: String?,
                            newMacAddress macAddress: String?,
                            newPort port: Int32?) throws {
         if hasPermissionTo(access: .CoreData), let device = device as? Device {
-            try coreDataController.editDevice(device, newName: name, newAddress: address, newMacAddress: macAddress, newPort: port)
+            try coreDataController.editDevice(device, newName: name, newAddress: address, newExternalAddress: externalAddress, newMacAddress: macAddress, newPort: port)
         }
         if hasPermissionTo(access: .CloudKit), let device = cloudKitDataController.findDeviceBy(id: device.cloudID ?? UUID()) {
-            cloudKitDataController.editDevice(device, newName: name, newAddress: address, newMacAddress: macAddress, newPort: port)
+            cloudKitDataController.editDevice(device, newName: name, newAddress: address, newExternalAddress: externalAddress, newMacAddress: macAddress, newPort: port)
         }
     }
 
