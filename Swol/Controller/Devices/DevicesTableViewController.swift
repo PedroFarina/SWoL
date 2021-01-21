@@ -123,9 +123,8 @@ public class DevicesTableViewController: UITableViewController, DataWatcher {
     }
 
     private func wakeAction(on device: DeviceProtocol) {
-        let cont = UIAlertController(title: "Waking confirmation".localized(), message: "Do you want to wake ".localized() + (device.name ?? "John".localized()) + "?", preferredStyle: .alert)
-        let yes = UIAlertAction(title: "Yes".localized(), style: .default) { (_) in
-            if let err = Awake.target(device: device, usingUDP: false) {
+        func wakeDevice(device: DeviceProtocol, usingUDP: Bool) {
+            if let err = Awake.target(device: device, usingUDP: usingUDP) {
                 DispatchQueue.main.async {
                     var message = err.localizedDescription
                     if let wakeErr = err as? Awake.WakeError {
@@ -146,10 +145,26 @@ public class DevicesTableViewController: UITableViewController, DataWatcher {
                 }
             } else {
                 DispatchQueue.main.async {
-                    let success = UIAlertController(title: "Success".localized(), message: "Packet sent to ".localized() + (device.address ?? ""), preferredStyle: .alert)
+                    let success = UIAlertController(title: "Success".localized(), message: "Packet sent to ".localized() + ((usingUDP ? device.externalAddress : device.address) ?? ""), preferredStyle: .alert)
                     success.addOkAction()
                     self.parent?.present(success, animated: true)
                 }
+            }
+        }
+
+        let cont = UIAlertController(title: "Waking confirmation".localized(), message: "Do you want to wake ".localized() + (device.name ?? "John".localized()) + "?", preferredStyle: .alert)
+        let yes = UIAlertAction(title: "Yes".localized(), style: .default) { (_) in
+            if (device.externalAddress) != nil {
+                let cont = UIAlertController(title: "Where to?".localized(), message: "What IP you want to wake up?", preferredStyle: .alert)
+                cont.addAction(UIAlertAction(title: "Internal".localized(), style: .default, handler: { (_) in
+                    wakeDevice(device: device, usingUDP: false)
+                }))
+                cont.addAction(UIAlertAction(title: "External".localized(), style: .default, handler: { (_) in
+                    wakeDevice(device: device, usingUDP: true)
+                }))
+                self.parent?.present(cont, animated: true, completion: nil)
+            } else {
+                wakeDevice(device: device, usingUDP: false)
             }
         }
         let no = UIAlertAction(title: "No".localized(), style: .cancel, handler: nil)

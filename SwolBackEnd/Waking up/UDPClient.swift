@@ -42,8 +42,11 @@ internal class UDPClient {
     }
 
     private static func connectTo(device: DeviceProtocol) -> NSError? {
-        guard let newAddress = device.address,
-            let codedPort = NWEndpoint.Port(rawValue: NWEndpoint.Port.RawValue(device.port)) else {
+        guard let newAddress = device.externalAddress else {
+            let err = NSError(domain: "Address Error", code: Int(errSecParam), userInfo: nil)
+            return err
+        }
+        guard let codedPort = NWEndpoint.Port(rawValue: NWEndpoint.Port.RawValue(device.port)) else {
             let err = NSError(domain: "Port Error", code: Int(errSecParam), userInfo: nil)
             return err
         }
