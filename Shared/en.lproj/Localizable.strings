@@ -71,3 +71,5 @@
 "To which IP do you want to send the message?" = "To which IP do you want to send the message?";
 "Internal" = "Internal";
 "External" = "External";
+"What's new" =  "What's new";
+"whatsnew" = "Swol is going through some changes :)\n\nI'm working with a company named KaçaFalcão on a redesign for the app to bring a better experience to you.\n\nThe main news right now are on your devices:\n\nEvery device now has an External IP so you can wake up your device outside LAN.\n\nAlso, please check your old devices for the internal IP will be used instead of the broadcast IP (ending in 255).";
