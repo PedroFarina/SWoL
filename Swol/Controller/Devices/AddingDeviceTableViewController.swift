@@ -30,6 +30,7 @@ public class AddingDeviceTableViewController: UITableViewController {
 
     @IBOutlet weak var nameTableViewCell: TextTableViewCell!
     @IBOutlet weak var ipTableViewCell: TextTableViewCell!
+    @IBOutlet weak var externalIPTableViewCell: TextTableViewCell!
     @IBOutlet weak var macTableViewCell: TextTableViewCell!
     @IBOutlet weak var portTableViewCell: TextTableViewCell!
     @IBOutlet weak var btnDone: UIBarButtonItem!
@@ -45,6 +46,7 @@ public class AddingDeviceTableViewController: UITableViewController {
             btnDone.isEnabled = true
             nameTableViewCell.txtText = device.name
             ipTableViewCell.txtText = device.address
+            externalIPTableViewCell.txtText = device.externalAddress
             macTableViewCell.txtText = device.mac
             portTableViewCell.txtText = String(device.port)
             footerText = "footer7".localized()
@@ -93,11 +95,15 @@ public class AddingDeviceTableViewController: UITableViewController {
                 return
         }
         mac = mac.replacingOccurrences(of: "-", with: ":").uppercased()
+        var externalAddress = externalIPTableViewCell.txtText
+        if externalAddress?.isEmpty ?? false {
+            externalAddress = nil
+        }
         do {
             if let device = device {
-                try DataManager.shared(with: AccessManager.cloudKitPermission).editDevice(device, newName: name, newAddress: ip, newMacAddress: mac, newPort: port)
+                try DataManager.shared(with: AccessManager.cloudKitPermission).editDevice(device, newName: name, newAddress: ip, newExternalAddress: externalAddress, newMacAddress: mac, newPort: port)
             } else {
-                try DataManager.shared(with: AccessManager.cloudKitPermission).registerDevice(name: name, address: ip, macAddress: mac, port: port)
+                try DataManager.shared(with: AccessManager.cloudKitPermission).registerDevice(name: name, address: ip, externalAddress: externalAddress, macAddress: mac, port: port)
             }
             self.dismiss(animated: true)
         } catch let err {

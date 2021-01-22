@@ -16,22 +16,23 @@ public class WakeDeviceIntentHandler: NSObject, WakeDeviceIntentHandling {
                 completion(WakeDeviceIntentResponse.failureNotFound(name: intent.name ?? ""))
                 return
         }
+        let usesUDP = (intent.useExternalAddress ?? 0) == true
 
         let userActivity = NSUserActivity(activityType: NSUserActivity.wakeDeviceActivityType)
-        userActivity.title = "Start up a device".localized()
+        userActivity.title = "Start up".localized() + " \(device.name ?? "")"
         userActivity.suggestedInvocationPhrase = "Start up device".localized()
-        userActivity.persistentIdentifier = NSUserActivity.wakeDeviceActivityType
+        userActivity.isEligibleForPrediction = true
         userActivity.isEligibleForSearch = true
 
         let response: WakeDeviceIntentResponse
         if let deviceName = device.name,
-            let broadcast = device.getBroadcast() {
+           let address = usesUDP ? device.externalAddress : device.address {
+            userActivity.persistentIdentifier = device.mac
             userActivity.addUserInfoEntries(from: [NSUserActivity.ActivityKeys.name.rawValue: deviceName])
-
-            if Awake.target(device: device) != nil {
-                response = WakeDeviceIntentResponse.failureAddress(name: deviceName, address: broadcast)
+            if Awake.target(device: device, usingUDP: usesUDP) != nil {
+                response = WakeDeviceIntentResponse.failureAddress(name: deviceName, address: address)
             } else {
-                response = WakeDeviceIntentResponse.success(name: deviceName, address: broadcast)
+                response = WakeDeviceIntentResponse.success(name: deviceName, address: address)
             }
         } else {
             response = WakeDeviceIntentResponse.failureInsuficientData(name: intentName)
@@ -49,5 +50,11 @@ public class WakeDeviceIntentHandler: NSObject, WakeDeviceIntentHandling {
         }
     }
 
-
+    public func resolveUseExternalAddress(for intent: WakeDeviceIntent, with completion: @escaping (INBooleanResolutionResult) -> Void) {
+        if let usesExternalAddress = intent.useExternalAddress {
+            completion(INBooleanResolutionResult.success(with: usesExternalAddress == true ))
+        } else {
+            completion(INBooleanResolutionResult.confirmationRequired(with: false))
+        }
+    }
 }

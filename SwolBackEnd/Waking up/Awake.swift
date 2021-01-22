@@ -12,6 +12,8 @@ import Intents
 import os.log
 
 public class Awake {
+    private init(){
+    }
 
     private static func donateInteraction(for device: DeviceProtocol) {
         let interaction = INInteraction(intent: device.intent, response: nil)
@@ -35,10 +37,19 @@ public class Awake {
         case DeviceIncomplete(reason: Error)
     }
 
-    public static func target(device: DeviceProtocol) -> Error? {
+    public static func target(device: DeviceProtocol, usingUDP: Bool) -> Error? {
         donateInteraction(for: device)
-        guard let broadcastAddress = device.getBroadcast(),
-            let macAddress = device.mac else {
+        if usingUDP {
+            return UDPClient.sendWakePacket(to: device)
+        } else {
+            return wakeLan(device)
+        }
+    }
+
+
+    private static func wakeLan(_ device: DeviceProtocol) -> Error? {
+        guard let address = device.address,
+              let macAddress = device.mac else {
             let err = NSError(domain: "Device Incomplete Error", code: Int(errSecParam), userInfo: nil)
             return WakeError.DeviceIncomplete(reason: err)
         }
@@ -48,7 +59,7 @@ public class Awake {
         var target = sockaddr_in()
 
         target.sin_family = sa_family_t(AF_INET)
-        target.sin_addr.s_addr = inet_addr(broadcastAddress)
+        target.sin_addr.s_addr = inet_addr(address)
 
         let isLittleEndian = Int(OSHostByteOrder()) == OSLittleEndian
         target.sin_port = isLittleEndian ? _OSSwapInt16(port) : port
@@ -86,11 +97,10 @@ public class Awake {
         }
 
         close(sock)
-
         return nil
     }
 
-    private static func createMagicPacket(mac: String) throws -> [CUnsignedChar] {
+    internal static func createMagicPacket(mac: String) throws -> [CUnsignedChar] {
         var buffer = [CUnsignedChar]()
 
         // Create header

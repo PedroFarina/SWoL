@@ -1,6 +1,12 @@
 "1rS7KC" = "Nome";
 
+"3T6a9n" = "Usar endereço externo";
+
+"3y8ra3" = "não";
+
 "7WL1q6" = "Pacote enviado com sucesso para ${address}.";
+
+"BsAan8" = "Enviar um pacote ao endereço do dispositivo";
 
 "HDXdkP" = "${name} não foi encontrado.";
 
@@ -8,25 +14,31 @@
 
 "Id5A7H" = "Desculpe, não consegui me conectar à ${name}.";
 
-"JkTGSC" = "Desculpe, ${name} não foi encontrado.";
+"JkTGSC" = "Desculpe, não consegui me conectar à ${name}.";
+
+"JzecDr" = "Ligar ${name}";
 
 "MuS6He" = "Desculpe, ${name} não foi encontrado.";
 
 "UxkjQs" = "Endereço";
 
-"Wtjez8" = "Enviar um pacote ao endereço do dispositivo";
+"V8mu5s" = "Usar endereço externo?";
 
-"gfwkjp" = "Ligar ${name}";
+"bMJT5i" = "Enviar um pacote ao endereço do dispositivo";
 
-"hEUn8Z" = "Ligar despositivo";
+"hEUn8Z" = "Ligar dispositivo";
 
 "kOqBVD" = "Um pacote foi enviado à ${name}.";
 
 "mGG9LN" = "Não consegui me conectar à ${address}.";
 
+"neKrkp" = "Ligar ${name}";
+
 "ryua6J" = "Ligar ${name}";
 
 "sTqlDP" = "Nome";
+
+"tP5QU6" = "sim";
 
 "v4woRe" = "Ligar um dispositivo";
 

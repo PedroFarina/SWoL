@@ -34,6 +34,7 @@
 "Do you want to delete " = "Do you want to delete ";
 "Couldn't convert device to send to Cloud" = "Couldn't convert device to send to Cloud";
 "Could not convert cloud data to local device" = "Could not convert cloud data to local device";
+"Start up" = "Start up";
 "Start up device" = "Start up device";
 "Start up a device" = "Start up a device";
 "This action will delete all your devices from iCloud. It can't be undone." = "This action will delete all your devices from iCloud. It can't be undone.";
@@ -66,3 +67,9 @@
 "Successfully imported your devices" = "Successfully imported your devices.";
 "Unable to proccess your order." = "Unable to proccess your order.";
 "Unable to import devices." = "Unable to import devices.";
+"Where to?" = "Where to?";
+"To which IP do you want to send the message?" = "To which IP do you want to send the message?";
+"Internal" = "Internal";
+"External" = "External";
+"What's new" =  "What's new";
+"whatsnew" = "Swol is going through some changes :)\n\nI'm working with a company named KaçaFalcão on a redesign for the app to bring a better experience to you.\n\nThe main news right now are on your devices:\n\nEvery device now has an External IP so you can wake up your device outside LAN.\n\nAlso, please check your old devices for the internal IP will be used instead of the broadcast IP (ending in 255).";

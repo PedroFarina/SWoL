@@ -34,6 +34,7 @@ public class ImportExportDevices {
                                                                 try? DataManager.shared(with: AccessManager.cloudKitPermission).registerDevice(
                                                                     name: name,
                                                                     address: address,
+                                                                    externalAddress: device.externalAdress,
                                                                     macAddress: mac,
                                                                     port: device.port)
                                                             }
