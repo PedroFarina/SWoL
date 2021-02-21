@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol DeviceProtocol {
+public protocol DeviceProtocol: class {
     var address: String? { get }
     var externalAddress: String? { get }
     var mac: String? { get }
