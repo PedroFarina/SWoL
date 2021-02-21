@@ -14,6 +14,7 @@
 		024024BC23C048500065B8DD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 024024BE23C048500065B8DD /* Localizable.strings */; };
 		024024C123C050830065B8DD /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024024C023C050830065B8DD /* TextTableViewCell.swift */; };
 		024024C323C050D70065B8DD /* TextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 024024C223C050D70065B8DD /* TextTableViewCell.xib */; };
+		026E42DF25E2ABC9003D5F4E /* SimplePing.m in Sources */ = {isa = PBXBuildFile; fileRef = 026E42DE25E2ABC9003D5F4E /* SimplePing.m */; };
 		0273BAE42432A97D002173AC /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0273BAE32432A97D002173AC /* TutorialViewController.swift */; };
 		0289B22923C03DE300D610AB /* DevicesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0289B22823C03DE300D610AB /* DevicesTableViewController.swift */; };
 		028F58F724181638001C1A33 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 024024BE23C048500065B8DD /* Localizable.strings */; };
@@ -149,6 +150,9 @@
 		024024C223C050D70065B8DD /* TextTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextTableViewCell.xib; sourceTree = "<group>"; };
 		024C602723C4309A00C1071D /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		024C602823C4309A00C1071D /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		026E42DC25E2ABC8003D5F4E /* Swol-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swol-Bridging-Header.h"; sourceTree = "<group>"; };
+		026E42DD25E2ABC9003D5F4E /* SimplePing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplePing.h; sourceTree = "<group>"; };
+		026E42DE25E2ABC9003D5F4E /* SimplePing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimplePing.m; sourceTree = "<group>"; };
 		0273BAE32432A97D002173AC /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TutorialViewController.swift; path = SWoL/Controller/Tutorial/TutorialViewController.swift; sourceTree = SOURCE_ROOT; };
 		028801B923C396D60079D8F6 /* NSUserActivities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSUserActivities.swift; sourceTree = "<group>"; };
 		0289B22823C03DE300D610AB /* DevicesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesTableViewController.swift; sourceTree = "<group>"; };
@@ -284,6 +288,16 @@
 				02C5BADF242E7790007F57BE /* SwitchTableViewCell.swift */,
 			);
 			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		026E42D625E2AA53003D5F4E /* SimplePing */ = {
+			isa = PBXGroup;
+			children = (
+				026E42DD25E2ABC9003D5F4E /* SimplePing.h */,
+				026E42DE25E2ABC9003D5F4E /* SimplePing.m */,
+				026E42DC25E2ABC8003D5F4E /* Swol-Bridging-Header.h */,
+			);
+			path = SimplePing;
 			sourceTree = "<group>";
 		};
 		0289B22B23C03DF500D610AB /* View */ = {
@@ -424,6 +438,7 @@
 		02D5784C23C03684001FA8A5 = {
 			isa = PBXGroup;
 			children = (
+				026E42D625E2AA53003D5F4E /* SimplePing */,
 				02C11C6323C3888500920674 /* Shared */,
 				02D5785723C03684001FA8A5 /* SWoL */,
 				02A7DC6C23C448C200ED7957 /* SwolBackEnd */,
@@ -576,6 +591,7 @@
 					};
 					02D5785423C03684001FA8A5 = {
 						CreatedOnToolsVersion = 11.3;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -684,6 +700,7 @@
 				02CA0E74259A8DF200D82273 /* IAPManager.swift in Sources */,
 				02E561CF25BA2A3000ECB953 /* AddingDeviceTableViewController.swift in Sources */,
 				0289B22923C03DE300D610AB /* DevicesTableViewController.swift in Sources */,
+				026E42DF25E2ABC9003D5F4E /* SimplePing.m in Sources */,
 				02C5BAE0242E7790007F57BE /* SwitchTableViewCell.swift in Sources */,
 				02B575E22436726900123B10 /* DevicesMenuController.swift in Sources */,
 				02D5785923C03684001FA8A5 /* AppDelegate.swift in Sources */,
@@ -783,7 +800,7 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_ENTITLEMENTS = SwolIntents/SwolIntents.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = BVZY57RJZG;
 				INFOPLIST_FILE = SwolIntents/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -791,7 +808,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = PGF.SiriWOL.Intents;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -807,7 +824,7 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_ENTITLEMENTS = SwolIntents/SwolIntents.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = BVZY57RJZG;
 				INFOPLIST_FILE = SwolIntents/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -815,7 +832,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = PGF.SiriWOL.Intents;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -831,7 +848,7 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = BVZY57RJZG;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -845,7 +862,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = PGF.SiriWOLBackend;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -863,7 +880,7 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = BVZY57RJZG;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -877,7 +894,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = PGF.SiriWOLBackend;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -1011,9 +1028,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = SWoL/SWoL.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = BVZY57RJZG;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1024,11 +1042,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = PGF.SiriWOL;
 				PRODUCT_NAME = Swol;
 				SUPPORTS_MACCATALYST = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SimplePing/Swol-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1038,9 +1058,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = SWoL/SWoL.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = BVZY57RJZG;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1051,11 +1072,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				"OTHER_LDFLAGS[sdk=*]" = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = PGF.SiriWOL;
 				PRODUCT_NAME = Swol;
 				SUPPORTS_MACCATALYST = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SimplePing/Swol-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
