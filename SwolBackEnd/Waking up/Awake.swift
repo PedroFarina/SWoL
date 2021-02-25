@@ -16,16 +16,16 @@ public class Awake {
     }
 
     private static func donateInteraction(for device: DeviceProtocol) {
-        let interaction = INInteraction(intent: device.intent, response: nil)
-        if let mac = device.mac {
-            interaction.identifier = mac
-        }
+        device.getIntent { (intent) in
+            let interaction = INInteraction(intent: intent, response: nil)
+            if let mac = device.mac {
+                interaction.identifier = mac
+            }
 
-        interaction.donate { (error) in
-            if let error = error as NSError? {
-                os_log("Interaction donation failed: %@", log: OSLog.default, type: .error, error)
-            } else {
-                os_log("Successfully donated interaction")
+            interaction.donate { (error) in
+                if let error = error as NSError? {
+                    os_log("Interaction donation failed: %@", log: OSLog.default, type: .error, error)
+                }
             }
         }
     }

@@ -20,16 +20,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F06-FS-dya">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <connections>
-                                    <segue destination="eJK-ac-Nnc" kind="embed" id="4vo-y8-j6b"/>
+                                    <segue destination="9KX-5q-GpK" kind="embed" id="z9E-fg-Dbg"/>
                                 </connections>
                             </containerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vKU-Rf-Jx0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vKU-Rf-Jx0" firstAttribute="bottom" secondItem="F06-FS-dya" secondAttribute="bottom" id="OK9-hK-0iC"/>
+                            <constraint firstAttribute="bottom" secondItem="F06-FS-dya" secondAttribute="bottom" id="OK9-hK-0iC"/>
                             <constraint firstItem="F06-FS-dya" firstAttribute="leading" secondItem="vKU-Rf-Jx0" secondAttribute="leading" id="RER-Mx-MJb"/>
                             <constraint firstItem="F06-FS-dya" firstAttribute="top" secondItem="vKU-Rf-Jx0" secondAttribute="top" id="cTm-16-8El"/>
                             <constraint firstItem="vKU-Rf-Jx0" firstAttribute="trailing" secondItem="F06-FS-dya" secondAttribute="trailing" id="yVw-x6-DJM"/>
@@ -51,13 +51,13 @@
         <!--Devices View Controller-->
         <scene sceneID="wbv-D5-YFa">
             <objects>
-                <viewController id="eJK-ac-Nnc" customClass="DevicesViewController" customModule="Swol" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="noDevices" id="eJK-ac-Nnc" customClass="DevicesViewController" customModule="Swol" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WXC-CQ-ZFX">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kdq-Jg-2aO" userLabel="placeholderView">
-                                <rect key="frame" x="0.0" y="260.5" width="414" height="92.5"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kdq-Jg-2aO" userLabel="placeholderView">
+                                <rect key="frame" x="0.0" y="293.5" width="414" height="92.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have no available devices. How about we create a new one?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Fe-qi-3T7">
                                         <rect key="frame" x="20" y="0.0" width="374" height="42.5"/>
@@ -94,38 +94,30 @@
                                     <constraint firstAttribute="trailing" secondItem="1Fe-qi-3T7" secondAttribute="trailing" constant="20" id="sYd-rp-4rs"/>
                                 </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kep-1b-IBG">
-                                <rect key="frame" x="0.0" y="44" width="414" height="730"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6lw-mH-Qb2">
-                                    <size key="itemSize" width="128" height="128"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells/>
-                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JLU-oB-Xjq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="JLU-oB-Xjq" firstAttribute="bottom" secondItem="kep-1b-IBG" secondAttribute="bottom" id="0tE-ys-fM2"/>
-                            <constraint firstItem="kep-1b-IBG" firstAttribute="leading" secondItem="JLU-oB-Xjq" secondAttribute="leading" id="AO4-xc-pV7"/>
-                            <constraint firstItem="JLU-oB-Xjq" firstAttribute="trailing" secondItem="kep-1b-IBG" secondAttribute="trailing" id="LFm-nA-HDT"/>
                             <constraint firstItem="JLU-oB-Xjq" firstAttribute="trailing" secondItem="kdq-Jg-2aO" secondAttribute="trailing" id="Vi5-4c-q73"/>
                             <constraint firstItem="kdq-Jg-2aO" firstAttribute="centerY" secondItem="JLU-oB-Xjq" secondAttribute="centerY" multiplier="0.75" id="q5s-Kt-YY6"/>
                             <constraint firstItem="kdq-Jg-2aO" firstAttribute="leading" secondItem="JLU-oB-Xjq" secondAttribute="leading" id="sHe-W2-WF2"/>
-                            <constraint firstItem="kep-1b-IBG" firstAttribute="top" secondItem="JLU-oB-Xjq" secondAttribute="top" id="szn-Hl-Om7"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="devicesCollectionView" destination="kep-1b-IBG" id="SY1-lf-QRq"/>
                         <outlet property="placeholderView" destination="kdq-Jg-2aO" id="nSh-q8-BSQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gy0-Fz-Uac" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1913" y="-469"/>
+            <point key="canvasLocation" x="3042" y="-538"/>
+        </scene>
+        <!--Devices Page View Controller-->
+        <scene sceneID="RXm-Um-pFU">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="9KX-5q-GpK" customClass="DevicesPageViewController" customModule="Swol" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nxt-Ib-SEH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1954" y="-238"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="V8Q-vw-MuP">
@@ -156,10 +148,10 @@
         <image name="gear" catalog="system" width="128" height="119"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <namedColor name="Action">
-            <color red="0.17254901960784313" green="0.45882352941176469" blue="0.76862745098039209" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.17299999296665192" green="0.45899999141693115" blue="0.76899999380111694" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Label">
-            <color red="0.26666666666666666" green="0.36470588235294116" blue="0.46666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.2669999897480011" green="0.36500000953674316" blue="0.46700000762939453" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

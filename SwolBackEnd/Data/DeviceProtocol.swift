@@ -16,7 +16,7 @@ public protocol DeviceProtocol: class {
     var port: Int32 { get }
     var cloudID: UUID? { get }
 
-    var intent: WakeDeviceIntent { get }
+    func getIntent(completionHandler: @escaping (WakeDeviceIntent) -> Void)
     static func getDevice(from intent: WakeDeviceIntent) -> DeviceProtocol?
 }
 

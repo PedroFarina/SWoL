@@ -19,8 +19,9 @@ public class WakeDeviceIntentHandler: NSObject, WakeDeviceIntentHandling {
         let usesUDP = (intent.useExternalAddress ?? 0) == true
 
         let userActivity = NSUserActivity(activityType: NSUserActivity.wakeDeviceActivityType)
-        userActivity.title = "Start up".localized() + " \(device.name ?? "")"
-        userActivity.suggestedInvocationPhrase = "Start up device".localized()
+        let start = "Start up".localized() + " \(device.name ?? "")"
+        userActivity.title = start
+        userActivity.suggestedInvocationPhrase = start
         userActivity.isEligibleForPrediction = true
         userActivity.isEligibleForSearch = true
 

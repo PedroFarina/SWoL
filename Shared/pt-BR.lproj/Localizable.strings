@@ -34,7 +34,7 @@
 "Couldn't convert device to send to Cloud" = "Não foi possível enviar o objeto local para nuvem";
 "Could not convert cloud data to local device" = "Não foi possível converter o dado da nuvem para objeto local";
 "Start up a device" = "Ligar um dispositivo";
-"Start up device" = "Ligar dispositivo";
+"Start up" = "Ligar";
 "This action will delete all your devices from iCloud. It can't be undone." = "Essa ação removerá todos seus dispositivos do iCloud. Essa ação não pode ser desfeita.";
 "You are not connected to iCloud" = "Você não está conectado ao iCloud";
 "This app uses iCloud to synchronize your data accross devices." = "Esse aplicativo usa iCloud para sincronizar os seus dados entre os dispositivos.";

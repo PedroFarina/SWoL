@@ -9,13 +9,20 @@
 import Intents
 
 extension Device {
-    public var intent: WakeDeviceIntent {
-        let wakeUp = WakeDeviceIntent()
-        wakeUp.name = name
 
-        wakeUp.suggestedInvocationPhrase = "Start up device".localized()
+    public func getIntent(completionHandler: @escaping (WakeDeviceIntent) -> Void) {
+        INVoiceShortcutCenter.shared.getAllVoiceShortcuts { [weak self] (shortcuts, error) in
+            if let voiceShortcut = shortcuts?.first(where: { ($0.shortcut.intent as? WakeDeviceIntent)?.name == self?.name }),
+               let intent = voiceShortcut.shortcut.intent as? WakeDeviceIntent {
+                completionHandler(intent)
+            } else {
+                let wakeUp = WakeDeviceIntent()
+                wakeUp.name = self?.name
+                wakeUp.suggestedInvocationPhrase = "Start up".localized() + " \(self?.name ?? "")"
 
-        return wakeUp
+                completionHandler(wakeUp)
+            }
+        }
     }
 
     public static func getDevice(from intent: WakeDeviceIntent) -> DeviceProtocol? {
