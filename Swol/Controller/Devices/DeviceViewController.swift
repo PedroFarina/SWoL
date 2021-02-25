@@ -99,9 +99,7 @@ internal class DeviceViewController: UIViewController, INUIAddVoiceShortcutButto
     }()
 
     private lazy var siriButton: INUIAddVoiceShortcutButton = {
-        let button: INUIAddVoiceShortcutButton
-        button = INUIAddVoiceShortcutButton(style: .black)
-        button.backgroundColor = backView.backgroundColor
+        let button: INUIAddVoiceShortcutButton = INUIAddVoiceShortcutButton(style: .black)
         button.delegate = self
         button.translatesAutoresizingMaskIntoConstraints = false
 
@@ -179,7 +177,26 @@ internal class DeviceViewController: UIViewController, INUIAddVoiceShortcutButto
         view.addSubview(externalIPDescLabel)
         view.addSubview(wakeUpButton)
         view.addSubview(siriButton)
+        setSiriBackground()
+        SceneDelegate.willEnterForeground = { [weak self] in
+            DispatchQueue.main.async {
+                self?.setSiriBackground()
+            }
+        }
         activateConstraints()
+    }
+
+    deinit {
+        SceneDelegate.willEnterForeground = nil
+    }
+
+    private func setSiriBackground() {
+        if traitCollection.userInterfaceStyle == .dark {
+            siriButton.setStyle(.black)
+        } else {
+            siriButton.setStyle(.white)
+        }
+        siriButton.backgroundColor = backView.backgroundColor
     }
 
     private func activateConstraints() {
@@ -202,7 +219,7 @@ internal class DeviceViewController: UIViewController, INUIAddVoiceShortcutButto
             wakeUpButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             wakeUpButton.centerYAnchor.constraint(equalTo: backView.bottomAnchor),
             wakeUpButton.widthAnchor.constraint(equalTo: wakeUpButton.heightAnchor),
-            wakeUpButton.heightAnchor.constraint(equalToConstant: 150)
+            wakeUpButton.heightAnchor.constraint(equalToConstant: 150),
         ]
         constraints.append(contentsOf: centralizedConstraints(of: nameLabel, relativeTo: editButton, constant: 20))
         constraints.append(contentsOf: centralizedConstraints(of: macLabel, relativeTo: nameLabel, constant: 15))
