@@ -103,9 +103,6 @@
                             <constraint firstItem="kdq-Jg-2aO" firstAttribute="leading" secondItem="JLU-oB-Xjq" secondAttribute="leading" id="sHe-W2-WF2"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="placeholderView" destination="kdq-Jg-2aO" id="nSh-q8-BSQ"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gy0-Fz-Uac" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

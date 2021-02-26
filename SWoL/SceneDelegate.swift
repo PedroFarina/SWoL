@@ -26,26 +26,27 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func sceneWillResignActive(_ scene: UIScene) {
     }
 
-    var firstTime: Bool = true
     func sceneWillEnterForeground(_ scene: UIScene) {
         SceneDelegate.willEnterForeground?()
         DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
-            let isDarkMode: Bool
+            let userDefaults = UserDefaults.standard
             let interfaceStyle = self.window?.traitCollection.userInterfaceStyle
-            if self.firstTime {
-                isDarkMode = interfaceStyle != .dark
-                UserDefaults.standard.setValue(isDarkMode, forKey: UserDefaultsNames.darkMode.rawValue)
-                self.firstTime = false
-            } else {
-                isDarkMode = UserDefaults.standard.bool(forKey: UserDefaultsNames.darkMode.rawValue)
+
+            if !userDefaults.bool(forKey: UserDefaultsNames.notFirstTime.rawValue) && interfaceStyle == .dark {
+                userDefaults.setValue(true, forKey: UserDefaultsNames.darkMode.rawValue)
+                userDefaults.setValue(true, forKey: UserDefaultsNames.notFirstTime.rawValue)
+                self.changeIcon(to: "DarkIcon")
+                return
             }
+
+            let isDarkMode = userDefaults.bool(forKey: UserDefaultsNames.darkMode.rawValue)
 
             if interfaceStyle == .dark && !isDarkMode {
                 self.changeIcon(to: "DarkIcon")
-                UserDefaults.standard.setValue(true, forKey: UserDefaultsNames.darkMode.rawValue)
+                userDefaults.setValue(true, forKey: UserDefaultsNames.darkMode.rawValue)
             } else if interfaceStyle == .light && isDarkMode {
                 self.changeIcon(to: nil)
-                UserDefaults.standard.setValue(false, forKey: UserDefaultsNames.darkMode.rawValue)
+                userDefaults.setValue(false, forKey: UserDefaultsNames.darkMode.rawValue)
             }
         }
     }

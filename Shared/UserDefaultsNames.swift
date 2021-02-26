@@ -10,4 +10,5 @@ public enum UserDefaultsNames: String {
     case iCloudEnabled
     case packetShouldAskPath
     case darkMode
+    case notFirstTime
 }
