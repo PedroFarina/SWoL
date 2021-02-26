@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -56,51 +55,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kdq-Jg-2aO" userLabel="placeholderView">
-                                <rect key="frame" x="0.0" y="293.5" width="414" height="92.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have no available devices. How about we create a new one?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Fe-qi-3T7">
-                                        <rect key="frame" x="20" y="0.0" width="374" height="42.5"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                        <color key="textColor" name="Label"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AKG-BC-6ob" customClass="RoundButton" customModule="Swol" customModuleProvider="target">
-                                        <rect key="frame" x="132" y="62.5" width="150" height="30"/>
-                                        <color key="backgroundColor" name="Action"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="3tX-QY-DfO"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" secondItem="AKG-BC-6ob" secondAttribute="height" multiplier="150:30" id="Cf7-Sh-niD"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Create Device">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <imageReference key="image" image="plus" catalog="system" renderingMode="template"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="8"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="AKG-BC-6ob" firstAttribute="centerX" secondItem="kdq-Jg-2aO" secondAttribute="centerX" id="I2m-Je-aax"/>
-                                    <constraint firstItem="AKG-BC-6ob" firstAttribute="top" secondItem="1Fe-qi-3T7" secondAttribute="bottom" constant="20" id="Jcs-f6-B5p"/>
-                                    <constraint firstItem="1Fe-qi-3T7" firstAttribute="leading" secondItem="kdq-Jg-2aO" secondAttribute="leading" constant="20" id="LDs-sS-WTC"/>
-                                    <constraint firstAttribute="bottom" secondItem="AKG-BC-6ob" secondAttribute="bottom" id="apN-zU-YqJ"/>
-                                    <constraint firstItem="1Fe-qi-3T7" firstAttribute="top" secondItem="kdq-Jg-2aO" secondAttribute="top" id="fAS-lB-p7e"/>
-                                    <constraint firstAttribute="trailing" secondItem="1Fe-qi-3T7" secondAttribute="trailing" constant="20" id="sYd-rp-4rs"/>
-                                </constraints>
-                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have no available devices. How about we create a new one? Tap the '+' button to continue" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IMq-ad-aSx">
+                                <rect key="frame" x="20" y="318.5" width="374" height="42.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" name="Label"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JLU-oB-Xjq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="JLU-oB-Xjq" firstAttribute="trailing" secondItem="kdq-Jg-2aO" secondAttribute="trailing" id="Vi5-4c-q73"/>
-                            <constraint firstItem="kdq-Jg-2aO" firstAttribute="centerY" secondItem="JLU-oB-Xjq" secondAttribute="centerY" multiplier="0.75" id="q5s-Kt-YY6"/>
-                            <constraint firstItem="kdq-Jg-2aO" firstAttribute="leading" secondItem="JLU-oB-Xjq" secondAttribute="leading" id="sHe-W2-WF2"/>
+                            <constraint firstItem="IMq-ad-aSx" firstAttribute="leading" secondItem="WXC-CQ-ZFX" secondAttribute="leading" constant="20" id="0Mx-Yk-NuJ"/>
+                            <constraint firstItem="IMq-ad-aSx" firstAttribute="centerX" secondItem="JLU-oB-Xjq" secondAttribute="centerX" id="FLO-4P-gfm"/>
+                            <constraint firstAttribute="trailing" secondItem="IMq-ad-aSx" secondAttribute="trailing" constant="20" id="MFc-jY-wYO"/>
+                            <constraint firstItem="IMq-ad-aSx" firstAttribute="centerY" secondItem="JLU-oB-Xjq" secondAttribute="centerY" multiplier="0.75" id="pEQ-mn-xCN"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -135,15 +103,9 @@
             <point key="canvasLocation" x="121.73913043478262" y="37.5"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="AKG-BC-6ob">
-            <size key="intrinsicContentSize" width="125" height="21"/>
-        </designable>
-    </designables>
     <color key="tintColor" name="Action"/>
     <resources>
         <image name="gear" catalog="system" width="128" height="119"/>
-        <image name="plus" catalog="system" width="128" height="113"/>
         <namedColor name="Action">
             <color red="0.17299999296665192" green="0.45899999141693115" blue="0.76899999380111694" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

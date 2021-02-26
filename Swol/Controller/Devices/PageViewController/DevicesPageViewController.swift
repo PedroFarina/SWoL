@@ -28,8 +28,9 @@ internal class DevicesPageViewController: UIPageViewController, DeviceHolderDele
         } else if devicesDataSource.isEmpty() {
             if let vc = storyboard?.instantiateViewController(identifier: "noDevices") {
                 setViewControllers([vc], direction: .forward, animated: false, completion: nil)
+            } else {
+                setViewControllers(nil, direction: .forward, animated: false, completion: nil)
             }
-            setViewControllers(nil, direction: .forward, animated: false, completion: nil)
         }
     }
 
