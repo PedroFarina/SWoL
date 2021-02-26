@@ -11,6 +11,8 @@
 		0211BAB423C4080000867893 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020208C923C2F41500159427 /* StringExtension.swift */; };
 		02154854242CE71100EF7DDD /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02154853242CE71100EF7DDD /* CloudKit.framework */; };
 		0218352D242E8DC700C8D8AA /* SwolTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0218352C242E8DC700C8D8AA /* SwolTabBarController.swift */; };
+		021E2F2D25E8BAE600A667B5 /* DarkIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 021E2F2B25E8BAE600A667B5 /* DarkIcon@2x.png */; };
+		021E2F2E25E8BAE600A667B5 /* DarkIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 021E2F2C25E8BAE600A667B5 /* DarkIcon@3x.png */; };
 		024024BC23C048500065B8DD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 024024BE23C048500065B8DD /* Localizable.strings */; };
 		024024C123C050830065B8DD /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024024C023C050830065B8DD /* TextTableViewCell.swift */; };
 		024024C323C050D70065B8DD /* TextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 024024C223C050D70065B8DD /* TextTableViewCell.xib */; };
@@ -153,6 +155,8 @@
 		0202D7592432CECD008A3448 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Tutorial.strings; sourceTree = "<group>"; };
 		02154853242CE71100EF7DDD /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		0218352C242E8DC700C8D8AA /* SwolTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SwolTabBarController.swift; path = Swol/Controller/SwolTabBarController.swift; sourceTree = SOURCE_ROOT; };
+		021E2F2B25E8BAE600A667B5 /* DarkIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DarkIcon@2x.png"; sourceTree = "<group>"; };
+		021E2F2C25E8BAE600A667B5 /* DarkIcon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DarkIcon@3x.png"; sourceTree = "<group>"; };
 		02290E7724369DD800E21A3C /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
 		023D707125BA43180062FC6B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = ../../Swol/View/en.lproj/Main.strings; sourceTree = "<group>"; };
 		024024BD23C048500065B8DD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -418,6 +422,15 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		02B8C19D25E8B4C900D1D648 /* DarkIcon */ = {
+			isa = PBXGroup;
+			children = (
+				021E2F2B25E8BAE600A667B5 /* DarkIcon@2x.png */,
+				021E2F2C25E8BAE600A667B5 /* DarkIcon@3x.png */,
+			);
+			path = DarkIcon;
+			sourceTree = "<group>";
+		};
 		02C0C9AA25ADFEC700DCF628 /* Waking up */ = {
 			isa = PBXGroup;
 			children = (
@@ -485,6 +498,7 @@
 		02D5785723C03684001FA8A5 /* SWoL */ = {
 			isa = PBXGroup;
 			children = (
+				02B8C19D25E8B4C900D1D648 /* DarkIcon */,
 				02C11C8923C38A6800920674 /* SWoL.entitlements */,
 				02C5BAE7242E7AB9007F57BE /* Model */,
 				0289B22B23C03DF500D610AB /* View */,
@@ -681,9 +695,11 @@
 				024024BC23C048500065B8DD /* Localizable.strings in Resources */,
 				02E561CB25BA2A1700ECB953 /* Main.storyboard in Resources */,
 				02DF234625E2B7A100BC934B /* Devices.storyboard in Resources */,
+				021E2F2E25E8BAE600A667B5 /* DarkIcon@3x.png in Resources */,
 				02D5786523C03685001FA8A5 /* Assets.xcassets in Resources */,
 				0202D7552432CEC7008A3448 /* Tutorial.storyboard in Resources */,
 				02DF234325E2B59800BC934B /* Colors.xcassets in Resources */,
+				021E2F2D25E8BAE600A667B5 /* DarkIcon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

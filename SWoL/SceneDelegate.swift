@@ -18,7 +18,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
-        
     }
 
     func sceneDidBecomeActive(_ scene: UIScene) {
@@ -27,15 +26,41 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func sceneWillResignActive(_ scene: UIScene) {
     }
 
+    var firstTime: Bool = true
     func sceneWillEnterForeground(_ scene: UIScene) {
         SceneDelegate.willEnterForeground?()
-        // Called as the scene transitions from the background to the foreground.
-        // Use this method to undo the changes made on entering the background.
+        DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
+            let isDarkMode: Bool
+            let interfaceStyle = self.window?.traitCollection.userInterfaceStyle
+            if self.firstTime {
+                isDarkMode = interfaceStyle != .dark
+                UserDefaults.standard.setValue(isDarkMode, forKey: UserDefaultsNames.darkMode.rawValue)
+                self.firstTime = false
+            } else {
+                isDarkMode = UserDefaults.standard.bool(forKey: UserDefaultsNames.darkMode.rawValue)
+            }
+
+            if interfaceStyle == .dark && !isDarkMode {
+                self.changeIcon(to: "DarkIcon")
+                UserDefaults.standard.setValue(true, forKey: UserDefaultsNames.darkMode.rawValue)
+            } else if interfaceStyle == .light && isDarkMode {
+                self.changeIcon(to: nil)
+                UserDefaults.standard.setValue(false, forKey: UserDefaultsNames.darkMode.rawValue)
+            }
+        }
     }
 
     func sceneDidEnterBackground(_ scene: UIScene) {
     }
 
     internal static var willEnterForeground: (() -> Void)?
+
+    private func changeIcon(to iconName: String?) {
+        guard UIApplication.shared.supportsAlternateIcons else {
+            return
+        }
+
+        UIApplication.shared.setAlternateIconName(iconName)
+    }
 }
 
