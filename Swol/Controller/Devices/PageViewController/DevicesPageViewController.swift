@@ -60,7 +60,7 @@ internal class DevicesPageViewController: UIPageViewController, DeviceHolderDele
             }
         }
 
-        if !AccessManager.packetShouldAskPath {
+        if AccessManager.packetShouldAskPath {
             if (device.externalAddress) != nil {
                 let cont = UIAlertController(title: "Where to?".localized(), message: "To which IP do you want to send the message?".localized(), preferredStyle: .alert)
                 cont.addAction(UIAlertAction(title: "Internal".localized(), style: .default, handler: { (_) in
