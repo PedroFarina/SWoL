@@ -13,9 +13,11 @@ internal class DevicesPageViewControllerDataSource: NSObject, UIPageViewControll
     private var devices = DataManager.shared(with: AccessManager.cloudKitPermission).devices
     internal var firstViewController: UIViewController? { devicesVC.first }
     private var devicesVC: [UIViewController] = []
+    private weak var delegate: DeviceHolderDelegate?
 
-    override init() {
+    init(delegate: DeviceHolderDelegate) {
         super.init()
+        self.delegate = delegate
         self.createViewControllers()
     }
 
@@ -28,6 +30,7 @@ internal class DevicesPageViewControllerDataSource: NSObject, UIPageViewControll
         devicesVC = devices.map({
             let deviceVC = DeviceViewController()
             deviceVC.device = $0
+            deviceVC.delegate = delegate
             return deviceVC
         })
     }

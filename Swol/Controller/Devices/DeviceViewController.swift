@@ -20,6 +20,7 @@ internal class DeviceViewController: UIViewController, INUIAddVoiceShortcutButto
             internalIPBroadcastLabel.text = device?.address
             externalIPBroadcastLabel.text = device?.externalAddress
             externalIPLabel.text = "123.456.789.101"
+            portLabel.text = "\(device?.port ?? 9)"
 
             if let value = device {
                 value.getIntent(completionHandler: { [weak self] (intent) in
@@ -30,6 +31,7 @@ internal class DeviceViewController: UIViewController, INUIAddVoiceShortcutButto
             }
         }
     }
+    internal weak var delegate: DeviceHolderDelegate?
 
     private let backView: DeviceBackgroundView = {
         let view = DeviceBackgroundView(frame: .zero)
@@ -98,6 +100,14 @@ internal class DeviceViewController: UIViewController, INUIAddVoiceShortcutButto
         return label
     }()
 
+    private let portLabel: UILabel = .createStrongLabel(with: .title2)
+    private let portDescLabel: UILabel = {
+        let label = UILabel.createWeakLabel(with: .callout)
+        label.text = "Port".localized()
+
+        return label
+    }()
+
     private lazy var siriButton: INUIAddVoiceShortcutButton = {
         let button: INUIAddVoiceShortcutButton = INUIAddVoiceShortcutButton(style: .black)
         button.delegate = self
@@ -117,15 +127,27 @@ internal class DeviceViewController: UIViewController, INUIAddVoiceShortcutButto
     }()
 
     @objc func shareTap() {
-        print("Share")
+        guard let device = device else {
+            //Throw error
+            return
+        }
+        delegate?.shareDevice(device)
     }
 
     @objc func editTap() {
-        print("Edit")
+        guard let device = device else {
+            //Throw error
+            return
+        }
+        delegate?.editDevice(device)
     }
 
     @objc func wakeUpTap() {
-        print("Wake Up")
+        guard let device = device else {
+            //Throw error
+            return
+        }
+        delegate?.wakeDevice(device)
     }
 
     func present(_ addVoiceShortcutViewController: INUIAddVoiceShortcutViewController, for addVoiceShortcutButton: INUIAddVoiceShortcutButton) {
@@ -175,8 +197,10 @@ internal class DeviceViewController: UIViewController, INUIAddVoiceShortcutButto
         view.addSubview(externalIPBroadcastDescLabel)
         view.addSubview(externalIPLabel)
         view.addSubview(externalIPDescLabel)
-        view.addSubview(wakeUpButton)
+        view.addSubview(portLabel)
+        view.addSubview(portDescLabel)
         view.addSubview(siriButton)
+        view.addSubview(wakeUpButton)
         setSiriBackground()
         SceneDelegate.willEnterForeground = { [weak self] in
             DispatchQueue.main.async {
@@ -230,7 +254,9 @@ internal class DeviceViewController: UIViewController, INUIAddVoiceShortcutButto
         constraints.append(contentsOf: centralizedConstraints(of: externalIPBroadcastDescLabel, relativeTo: externalIPBroadcastLabel))
         constraints.append(contentsOf: centralizedConstraints(of: externalIPLabel, relativeTo: externalIPBroadcastDescLabel, constant: 10))
         constraints.append(contentsOf: centralizedConstraints(of: externalIPDescLabel, relativeTo: externalIPLabel))
-        constraints.append(contentsOf: centralizedConstraints(of: siriButton, relativeTo: externalIPDescLabel, constant: 30))
+        constraints.append(contentsOf: centralizedConstraints(of: portLabel, relativeTo: externalIPDescLabel, constant: 10))
+        constraints.append(contentsOf: centralizedConstraints(of: portDescLabel, relativeTo: portLabel))
+        constraints.append(contentsOf: centralizedConstraints(of: siriButton, relativeTo: portDescLabel, constant: 30))
 
         NSLayoutConstraint.activate(constraints)
     }
