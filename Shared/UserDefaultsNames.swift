@@ -8,4 +8,6 @@
 
 public enum UserDefaultsNames: String {
     case iCloudEnabled
+    case newSwolPopupAcknowledged
+    case terminationPopupAcknowledged
 }

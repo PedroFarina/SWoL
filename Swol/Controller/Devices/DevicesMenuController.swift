@@ -23,13 +23,6 @@ public class DevicesMenuController: UIViewController {
             self.performSegue(withIdentifier: "tutorial", sender: self)
         }
         let numberOfTimes = UserDefaults.standard.integer(forKey: "numberOfTimes")
-        if numberOfTimes >= 5  {
-            UserDefaults.standard.setValue(4, forKey: "numberOfTimes")
-            UserDefaults.standard.setValue("1.4", forKey: "version")
-            let cont = UIAlertController(title: "What's new".localized(), message: "whatsnew".localized(), preferredStyle: .alert)
-            cont.addOkAction()
-            self.present(cont, animated: true, completion: nil)
-        }
         if numberOfTimes >= 4 {
             #if !DEBUG
             if #available(iOS 14, *) {

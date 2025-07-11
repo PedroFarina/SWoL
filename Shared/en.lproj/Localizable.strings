@@ -71,5 +71,10 @@
 "To which IP do you want to send the message?" = "To which IP do you want to send the message?";
 "Internal" = "Internal";
 "External" = "External";
-"What's new" =  "What's new";
-"whatsnew" = "Swol is going through some changes :)\n\nI'm working with a company named KaçaFalcão on a redesign for the app to bring a better experience to you.\n\nThe main news right now are on your devices:\n\nEvery device now has an External IP so you can wake up your device outside LAN.\n\nAlso, please check your old devices for the internal IP will be used instead of the broadcast IP (ending in 255).";
+"Big news!" = "Big news!";
+"This app will soon be removed from the app store. There'll be a new version available for iOS + macOS 26 as soon as possible with the new Glass effect!" = "This app will soon be removed from the App Store. There'll be a new version available for iOS + macOS 26 as soon as possible with the new Glass effect!";
+"Bookmark the developer apps" = "Bookmark the developer apps";
+"Don't show this again" = "Don't show this again";
+"Great news!" = "Great news!";
+"There's a new Swol app available for download! This version will not receive further updates and will soon leave the store. Try out the new version and leave some feedback!" = "There's a new Swol app available for download! This version will not receive further updates and will soon leave the store. Try out the new version and leave some feedback!";
+"Try it now" = "Try it now";

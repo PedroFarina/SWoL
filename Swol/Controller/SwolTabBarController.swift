@@ -10,9 +10,128 @@ import UIKit
 import CloudKit
 import SwolBackEnd
 import Foundation
+import StoreKit
+import SafariServices
 import NotificationCenter
 
-public class SwolTabBarController: UITabBarController, ConflictHandler {
+public class SwolTabBarController: UITabBarController, ConflictHandler, SKStoreProductViewControllerDelegate {
+
+    func terminatedAppPopup() {
+        guard let url = URL(string: "https://apps.apple.com/br/developer/pedro-giuliano-farina/id1473472102") else { return }
+
+        DispatchQueue.main.async { [self] in
+            guard let cont = selectedViewController else { return }
+            loadURLAndShowPopup(url: url) { safariViewController in
+                if !AccessManager.terminationPopupAcknowledged {
+                    let alert = UIAlertController(
+                        title: "Big news!".localized(),
+                        message: "This app will soon be removed from the app store. There'll be a new version available for iOS + macOS 26 as soon as possible with the new Glass effect!".localized(),
+                        preferredStyle: .alert
+                    )
+
+                    let downloadAction = UIAlertAction(
+                        title: "Bookmark the developer apps".localized(),
+                        style: .default) { _ in
+                            cont.present(safariViewController, animated: true)
+                        }
+
+                    let acknowledgeAction = UIAlertAction(
+                        title: "Don't show this again".localized(),
+                        style: .destructive) { _ in
+                            AccessManager.terminationPopupAcknowledged = true
+                        }
+                    alert.addAction(acknowledgeAction)
+                    alert.addAction(downloadAction)
+                    DispatchQueue.main.async {
+                        cont.present(alert, animated: true)
+                    }
+                }
+            }
+        }
+    }
+
+    func popNewAppAlert() {
+        let gistLink = "https://gist.githubusercontent.com/PedroFarina/5fa4993ac80bc766ebc841ccf94095cc/raw/swol-id.txt"
+
+        guard let url = URL(string: gistLink) else { return }
+
+        URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
+            if let data = data, let content = String(data: data, encoding: .utf8) {
+                if let intId = Int(content) {
+                    self?.loadAppAndShowPopup(id: NSNumber(value: intId))
+                } else if let url = URL(string: content) {
+                    self?.loadURLAndShowPopup(url: url) {
+                        self?.showNewAppPopup(vc: $0)
+                    }
+                } else {
+                    self?.terminatedAppPopup()
+                }
+            } else {
+                self?.terminatedAppPopup()
+            }
+        }.resume()
+    }
+
+    private func loadAppAndShowPopup(id: NSNumber) {
+        DispatchQueue.main.async {
+            let vc = SKStoreProductViewController()
+            vc.delegate = self
+
+            let parameters = [SKStoreProductParameterITunesItemIdentifier: id]
+
+            vc.loadProduct(withParameters: parameters) { [weak self] (loaded, error) in
+                if loaded {
+                    self?.showNewAppPopup(vc: vc)
+                } else {
+                    self?.terminatedAppPopup()
+                }
+            }
+        }
+    }
+    private func loadURLAndShowPopup(url: URL, completion: @escaping (UIViewController) -> Void) {
+        DispatchQueue.main.async {
+            let vc = SFSafariViewController(url: url)
+            completion(vc)
+        }
+    }
+
+    private func showNewAppPopup(vc: UIViewController) {
+        guard let cont = selectedViewController else { return }
+
+        if !AccessManager.newSwolPopupAcknowledged {
+            let alert = UIAlertController(
+                title: "Great news!".localized(),
+                message: "There's a new Swol app available for download! This version will not receive further updates and will soon leave the store. Try out the new version and leave some feedback!".localized(),
+                preferredStyle: .alert
+            )
+
+            let downloadAction = UIAlertAction(
+                title: "Try it now".localized(),
+                style: .default) { _ in
+                    DispatchQueue.main.async {
+                        cont.present(vc, animated: true)
+                    }
+                }
+
+            let acknowledgeAction = UIAlertAction(
+                title: "Don't show this again".localized(),
+                style: .destructive) { _ in
+                    AccessManager.newSwolPopupAcknowledged = true
+                }
+            alert.addAction(acknowledgeAction)
+            alert.addAction(downloadAction)
+            DispatchQueue.main.async {
+                cont.present(alert, animated: true)
+            }
+        } else {
+            self.terminatedAppPopup()
+        }
+    }
+
+    public func productViewControllerDidFinish(_ viewController: SKStoreProductViewController) {
+        viewController.dismiss(animated: true)
+    }
+
 
     public func chooseVersion(completionHandler: @escaping (DataVersion) -> Void) {
         guard let cont = selectedViewController else {
@@ -50,6 +169,7 @@ public class SwolTabBarController: UITabBarController, ConflictHandler {
 
     public override func viewDidLoad() {
         DataManager.shared(with: AccessManager.cloudKitPermission).conflictHandler = self
+        popNewAppAlert()
     }
 }
 

@@ -69,5 +69,10 @@
 "To which IP do you want to send the message?" = "Para qual IP você quer mandar a mensagem?";
 "Internal" = "Interno";
 "External" = "Externo";
-"What's new" =  "Novidades!";
-"whatsnew" = "O Swol está mudando :)\n\nEstou trabalhando com uma empresa chamada KaçaFalcão num novo design pra trazer uma experiência ainda melhor pra vocês.\n\nPor enquanto a grande mudança é nos dispositivos:\n\nTodo dispositivo tem um IP externo para acordar fora da rede interna(LAN).\n\nAdicionalmente, por favor cheque seus dispositivos antigos pois o IP Interno será usado ao invés do IP broadcast (terminado em 255).";
+"Big news!" = "Boas notícias!";
+"This app will soon be removed from the app store. There'll be a new version available for iOS + macOS 26 as soon as possible with the new Glass effect!" = "Em breve este aplicativo será removido da App Store. Em breve uma nova versão será lançada no novo iOS + macOS 26 assim que possível!";
+"Bookmark the developer apps" = "Ver os apps do desenvolvedor";
+"Don't show this again" = "Não mostrar novamente";
+"Great news!" = "Ótimas notícias!";
+"There's a new Swol app available for download! This version will not receive further updates and will soon leave the store. Try out the new version and leave some feedback!" = "A nova versão do Swol já está disponível para download! Essa versão não receberá mais alterações. Experimente o novo app e deixe sua opinião!";
+"Try it now" = "Experimentar agora";
